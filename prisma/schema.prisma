@@ -1,0 +1,334 @@
+generator client {
+	provider = "prisma-client-js"
+}
+
+datasource db {
+	provider = "postgresql"
+	url = env("DATABASE_URL")
+	directUrl = env("DIRECT_URL")
+}
+
+enum UserRole {
+	ADMIN
+	STUDENT
+}
+
+enum AccountStatus {
+	ACTIVE
+	DISABLED
+}
+
+enum CertificateStatus {
+	LOCKED
+	UNLOCKED
+	PENDING_SUBMISSION
+	SUBMITTED
+	PENDING_VERIFICATION
+	VERIFIED
+	REJECTED
+	NEEDS_RESUBMISSION
+}
+
+enum QuestionType {
+	SINGLE_CHOICE
+	MULTIPLE_CHOICE
+	TRUE_FALSE
+	CODING
+	FILL_BLANK
+	PRACTICAL
+}
+
+enum Difficulty {
+	EASY
+	MEDIUM
+	HARD
+}
+
+model User {
+	id String @id @default(cuid())
+	email String @unique
+	passwordHash String
+	role UserRole
+	status AccountStatus @default(ACTIVE)
+	mustChangePassword Boolean @default(false)
+	lastLoginAt DateTime?
+	createdAt DateTime @default(now())
+	updatedAt DateTime @updatedAt
+	studentProfile StudentProfile?
+	activityLogs ActivityLog[]
+	verifiedCertificates Certificate[] @relation("VerifiedBy")
+	certificateReviews CertificateReview[]
+}
+
+model StudentProfile {
+	id String @id @default(cuid())
+	userId String @unique
+	fullName String
+	registerNumber String @unique
+	departmentId String
+	year Int
+	sectionId String
+	user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+	department Department @relation(fields: [departmentId], references: [id])
+	section Section @relation(fields: [sectionId], references: [id])
+	skills StudentSkill[]
+	attempts AssessmentAttempt[]
+	certificates Certificate[]
+	violations AssessmentViolation[]
+	activities ActivityLog[]
+	createdAt DateTime @default(now())
+	updatedAt DateTime @updatedAt
+}
+
+model Department {
+	id String @id @default(cuid())
+	name String @unique
+	active Boolean @default(true)
+	students StudentProfile[]
+	sections Section[]
+}
+
+model Section {
+	id String @id @default(cuid())
+	name String
+	departmentId String
+	department Department @relation(fields: [departmentId], references: [id], onDelete: Cascade)
+	students StudentProfile[]
+	@@unique([name, departmentId])
+}
+
+model SkillLevel {
+	id String @id @default(cuid())
+	name String @unique
+	order Int @unique
+	passMark Int
+	active Boolean @default(true)
+	skills Skill[]
+	courses Course[]
+	questions Question[]
+}
+
+model SkillCategory {
+	id String @id @default(cuid())
+	name String @unique
+	slug String @unique
+	active Boolean @default(true)
+	skills Skill[]
+}
+
+model Skill {
+	id String @id @default(cuid())
+	name String
+	slug String @unique
+	description String?
+	active Boolean @default(true)
+	categoryId String
+	levelId String
+	category SkillCategory @relation(fields: [categoryId], references: [id])
+	level SkillLevel @relation(fields: [levelId], references: [id])
+	courses Course[]
+	questions Question[]
+	studentSkills StudentSkill[]
+	prerequisites SkillPrerequisite[] @relation("SkillPrerequisiteTarget")
+	requiredFor SkillPrerequisite[] @relation("SkillPrerequisiteSource")
+	certificates Certificate[]
+	assessmentConfig AssessmentConfig?
+	attempts AssessmentAttempt[]
+	createdAt DateTime @default(now())
+	updatedAt DateTime @updatedAt
+}
+
+model SkillPrerequisite {
+	skillId String
+	prerequisiteId String
+	skill Skill @relation("SkillPrerequisiteTarget", fields: [skillId], references: [id], onDelete: Cascade)
+	prerequisite Skill @relation("SkillPrerequisiteSource", fields: [prerequisiteId], references: [id], onDelete: Cascade)
+	@@id([skillId, prerequisiteId])
+}
+
+model Provider {
+	id String @id @default(cuid())
+	name String @unique
+	website String?
+	description String?
+	active Boolean @default(true)
+	courses Course[]
+}
+
+model Course {
+	id String @id @default(cuid())
+	skillId String
+	providerId String
+	levelId String
+	name String
+	officialUrl String
+	durationMinutes Int?
+	isFree Boolean @default(true)
+	certificateAvailable Boolean @default(false)
+	description String?
+	prerequisites String?
+	active Boolean @default(true)
+	progress CourseProgress[]
+	skill Skill @relation(fields: [skillId], references: [id])
+	provider Provider @relation(fields: [providerId], references: [id])
+	level SkillLevel @relation(fields: [levelId], references: [id])
+	createdAt DateTime @default(now())
+}
+
+model StudentSkill {
+	id String @id @default(cuid())
+	studentId String
+	skillId String
+	startedAt DateTime @default(now())
+	completedAt DateTime?
+	verifiedAt DateTime?
+	state String @default("LEARNING")
+	courseProgress CourseProgress[]
+	student StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
+	skill Skill @relation(fields: [skillId], references: [id])
+	@@unique([studentId, skillId])
+}
+
+model Question {
+	id String @id @default(cuid())
+	skillId String
+	levelId String
+	type QuestionType
+	difficulty Difficulty
+	prompt String
+	options Json?
+	correctAnswer Json
+	explanation String?
+	active Boolean @default(true)
+	skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+	level SkillLevel @relation(fields: [levelId], references: [id])
+	answers AssessmentAnswer[]
+}
+
+model AssessmentConfig {
+	id String @id @default(cuid())
+	skillId String @unique
+	questionCount Int @default(50)
+	durationMinutes Int @default(45)
+	violationLimit Int @default(3)
+	cooldownHours Int @default(6)
+	active Boolean @default(true)
+	skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+}
+
+model AssessmentAttempt {
+	id String @id @default(cuid())
+	token String @unique
+	studentId String
+	skillId String
+	startedAt DateTime @default(now())
+	expiresAt DateTime
+	submittedAt DateTime?
+	score Int?
+	passed Boolean?
+	terminated Boolean @default(false)
+	attemptNumber Int @default(1)
+	questionCount Int @default(50)
+	passMark Int @default(30)
+	violationLimit Int @default(3)
+	cooldownHours Int @default(6)
+	autoSubmitOnViolation Boolean @default(true)
+	certificateRequired Boolean @default(true)
+	autoSubmitted Boolean @default(false)
+	submissionReason String?
+	reexamAvailableAt DateTime?
+	clientId String?
+	clientLeaseUntil DateTime?
+	skill Skill @relation(fields: [skillId], references: [id])
+	student StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
+	answers AssessmentAnswer[]
+	violations AssessmentViolation[]
+	@@index([studentId, submittedAt])
+}
+
+model AssessmentAnswer {
+	id String @id @default(cuid())
+	attemptId String
+	questionId String
+	answer Json
+	answeredAt DateTime @default(now())
+	position Int @default(0)
+	questionSnapshot Json?
+	correctAnswerSnapshot Json?
+	attempt AssessmentAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+	question Question @relation(fields: [questionId], references: [id])
+	@@unique([attemptId, questionId])
+}
+
+model AssessmentViolation {
+	id String @id @default(cuid())
+	attemptId String
+	studentId String
+	type String
+	occurredAt DateTime @default(now())
+	metadata Json?
+	attempt AssessmentAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+	student StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
+}
+
+model Certificate {
+	id String @id @default(cuid())
+	studentId String
+	skillId String
+	status CertificateStatus @default(LOCKED)
+	officialUrl String?
+	credentialId String?
+	filePath String?
+	remarks String?
+	verifiedById String?
+	submittedAt DateTime?
+	verifiedAt DateTime?
+	issuedAt DateTime?
+	reviews CertificateReview[]
+	student StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
+	skill Skill @relation(fields: [skillId], references: [id])
+	verifiedBy User? @relation("VerifiedBy", fields: [verifiedById], references: [id])
+	@@unique([studentId, skillId])
+}
+
+model ActivityLog {
+	id String @id @default(cuid())
+	userId String?
+	studentId String?
+	action String
+	metadata Json?
+	createdAt DateTime @default(now())
+	user User? @relation(fields: [userId], references: [id])
+	student StudentProfile? @relation(fields: [studentId], references: [id])
+}
+
+model AdminSetting {
+	key String @id
+	value Json
+	updatedAt DateTime @updatedAt
+}
+
+model CourseProgress {
+	id String @id @default(cuid())
+	studentSkillId String
+	courseId String
+	startedAt DateTime @default(now())
+	completedAt DateTime?
+	studentSkill StudentSkill @relation(fields: [studentSkillId], references: [id], onDelete: Cascade)
+	course Course @relation(fields: [courseId], references: [id])
+	@@unique([studentSkillId, courseId])
+}
+
+model CertificateReview {
+	id String @id @default(cuid())
+	certificateId String
+	actorId String
+	status CertificateStatus
+	remarks String?
+	officialUrl String?
+	credentialId String?
+	issuedAt DateTime?
+	createdAt DateTime @default(now())
+	certificate Certificate @relation(fields: [certificateId], references: [id], onDelete: Cascade)
+	actor User @relation(fields: [actorId], references: [id])
+}
