@@ -1,77 +1,219 @@
+/**
+ * storage.ts — SkillCert 360 certificate file storage abstraction
+ *
+ * Supported providers:
+ *   supabase      — Supabase Storage (production, recommended)
+ *   cloudflare-r2 — Cloudflare R2 Object Storage via S3 API (production alternative)
+ *   vercel-blob   — Vercel Private Blob (production alternative)
+ *   local         — local filesystem (development / E2E tests only)
+ *   none          — no file storage configured
+ *
+ * Production MUST use supabase, cloudflare-r2, or vercel-blob.
+ * Local filesystem storage is explicitly blocked in NODE_ENV=production.
+ *
+ * Supabase Storage:
+ *   - All operations are server-side only (service role key, never NEXT_PUBLIC_).
+ *   - Bucket must be private; signed/proxy URLs are never exposed to the browser.
+ *   - Files are served via /api/certificates/[id]/file with auth enforcement.
+ *   - Required env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, SUPABASE_STORAGE_BUCKET
+ */
+
 import { randomUUID } from "node:crypto";
+
+// ── Local-only fs imports ────────────────────────────────────────────────────
+// These are only executed at runtime when provider === "local".
+// We use /*turbopackIgnore: true*/ to prevent Turbopack from tracing the full
+// project due to dynamic path resolution (build warning fix).
 import { mkdir, writeFile, readFile, unlink } from "node:fs/promises";
-import { join, resolve } from "node:path";
+import { join } from "node:path";
 import { existsSync } from "node:fs";
 
-export type StorageProviderType = "vercel-blob" | "supabase" | "s3" | "local" | "none";
+// ── Vercel Blob SDK ──────────────────────────────────────────────────────────
+import { put, del as blobDel } from "@vercel/blob";
+
+// ── AWS S3 SDK for Cloudflare R2 ─────────────────────────────────────────────
+import {
+  S3Client,
+  PutObjectCommand,
+  GetObjectCommand,
+  DeleteObjectCommand,
+} from "@aws-sdk/client-s3";
+
+// ── Supabase SDK ─────────────────────────────────────────────────────────────
+// Imported lazily via createClient() at runtime so the service role key is
+// never bundled into client-side code paths.
+import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+
+// ── Types ────────────────────────────────────────────────────────────────────
+
+export type StorageProviderType =
+  | "supabase"
+  | "cloudflare-r2"
+  | "vercel-blob"
+  | "local"
+  | "none";
 
 export interface StorageConfig {
   provider: StorageProviderType;
-  blobToken?: string;
-  supabaseUrl?: string;
-  supabaseServiceRoleKey?: string;
-  supabaseBucket?: string;
-  s3Bucket?: string;
-  s3Region?: string;
-  s3AccessKeyId?: string;
-  s3SecretAccessKey?: string;
+  /** Relative sub-directory for local dev uploads. Never used in production. */
   localDir?: string;
 }
 
+// ── Supabase Client Helper ────────────────────────────────────────────────────
+
+let cachedSupabaseClient: SupabaseClient | null = null;
+let cachedSupabaseUrl: string | null = null;
+
+/**
+ * Returns a server-side-only Supabase client using the SERVICE ROLE KEY.
+ * Never call this from browser code or expose the key to NEXT_PUBLIC_ variables.
+ */
+function getSupabaseClient(): { client: SupabaseClient; bucket: string } | null {
+  const url = process.env.SUPABASE_URL;
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const bucket =
+    process.env.SUPABASE_STORAGE_BUCKET || "skillcert360-certificates";
+
+  if (!url || !serviceRoleKey) {
+    return null;
+  }
+
+  if (!cachedSupabaseClient || cachedSupabaseUrl !== url) {
+    cachedSupabaseClient = createClient(url, serviceRoleKey, {
+      auth: {
+        // Disable auto-refresh and session persistence — this is a server-only client.
+        persistSession: false,
+        autoRefreshToken: false,
+        detectSessionInUrl: false,
+      },
+    });
+    cachedSupabaseUrl = url;
+  }
+
+  return { client: cachedSupabaseClient, bucket };
+}
+
+// ── R2 Client Helper ─────────────────────────────────────────────────────────
+
+let cachedR2Client: S3Client | null = null;
+let cachedR2Bucket: string | null = null;
+
+function getR2Client(): { client: S3Client; bucket: string } | null {
+  const accountId = process.env.R2_ACCOUNT_ID;
+  const accessKeyId = process.env.R2_ACCESS_KEY_ID;
+  const secretAccessKey = process.env.R2_SECRET_ACCESS_KEY;
+  const bucket = process.env.R2_BUCKET_NAME;
+
+  if (!accountId || !accessKeyId || !secretAccessKey || !bucket) {
+    return null;
+  }
+
+  if (!cachedR2Client || cachedR2Bucket !== bucket) {
+    const endpoint =
+      process.env.R2_ENDPOINT ||
+      `https://${accountId}.r2.cloudflarestorage.com`;
+
+    cachedR2Client = new S3Client({
+      region: "auto",
+      endpoint,
+      credentials: {
+        accessKeyId,
+        secretAccessKey,
+      },
+    });
+    cachedR2Bucket = bucket;
+  }
+
+  return { client: cachedR2Client, bucket: cachedR2Bucket };
+}
+
+// ── Config resolution ────────────────────────────────────────────────────────
+
 export function getStorageConfig(): StorageConfig {
-  // 1. Vercel Blob
-  const blobToken = process.env.BLOB_READ_WRITE_TOKEN || process.env.VERCEL_BLOB_READ_WRITE_TOKEN;
-  if (blobToken) {
-    return {
-      provider: "vercel-blob",
-      blobToken,
-    };
+  const isProduction = process.env.NODE_ENV === "production";
+
+  // 1. Supabase Storage — explicit STORAGE_PROVIDER === "supabase" or presence of credentials
+  const supabaseUrl = process.env.SUPABASE_URL;
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+  if (
+    process.env.STORAGE_PROVIDER === "supabase" ||
+    (supabaseUrl && supabaseKey)
+  ) {
+    if (!supabaseUrl || !supabaseKey) {
+      if (isProduction) {
+        console.error(
+          "[storage] Supabase Storage credentials missing (SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)."
+        );
+      }
+      return { provider: "none" };
+    }
+    return { provider: "supabase" };
   }
 
-  // 2. Supabase Storage
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  const supabaseBucket = process.env.SUPABASE_STORAGE_BUCKET || "certificates";
-  if (supabaseUrl && supabaseServiceKey) {
-    return {
-      provider: "supabase",
-      supabaseUrl,
-      supabaseServiceRoleKey: supabaseServiceKey,
-      supabaseBucket,
-    };
+  // 2. Cloudflare R2 — explicit STORAGE_PROVIDER === "cloudflare-r2" or presence of R2 credentials
+  const r2AccountId = process.env.R2_ACCOUNT_ID;
+  const r2AccessKeyId = process.env.R2_ACCESS_KEY_ID;
+  const r2SecretAccessKey = process.env.R2_SECRET_ACCESS_KEY;
+  const r2BucketName = process.env.R2_BUCKET_NAME;
+
+  if (
+    process.env.STORAGE_PROVIDER === "cloudflare-r2" ||
+    (r2AccountId && r2AccessKeyId && r2SecretAccessKey && r2BucketName)
+  ) {
+    if (!r2AccountId || !r2AccessKeyId || !r2SecretAccessKey || !r2BucketName) {
+      if (isProduction) {
+        console.error(
+          "[storage] Cloudflare R2 credentials missing (R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET_NAME)."
+        );
+      }
+      return { provider: "none" };
+    }
+    return { provider: "cloudflare-r2" };
   }
 
-  // 3. AWS S3 / Cloudflare R2
-  const s3Bucket = process.env.S3_BUCKET_NAME;
-  const s3AccessKeyId = process.env.S3_ACCESS_KEY_ID;
-  const s3SecretAccessKey = process.env.S3_SECRET_ACCESS_KEY;
-  const s3Region = process.env.S3_REGION || "us-east-1";
-  if (s3Bucket && s3AccessKeyId && s3SecretAccessKey) {
-    return {
-      provider: "s3",
-      s3Bucket,
-      s3Region,
-      s3AccessKeyId,
-      s3SecretAccessKey,
-    };
+  // 3. Vercel Blob — detected by presence of token (auto-injected by Vercel)
+  const blobToken =
+    process.env.BLOB_READ_WRITE_TOKEN ||
+    process.env.VERCEL_BLOB_READ_WRITE_TOKEN;
+
+  if (blobToken || process.env.STORAGE_PROVIDER === "vercel-blob") {
+    if (!blobToken) {
+      if (isProduction) {
+        console.error(
+          "[storage] BLOB_READ_WRITE_TOKEN is not set. File uploads will be unavailable."
+        );
+      }
+      return { provider: "none" };
+    }
+    return { provider: "vercel-blob" };
   }
 
-  // 4. Local Storage (for development / testing environments when explicitly enabled)
-  const localDir = process.env.LOCAL_STORAGE_DIR || (process.env.STORAGE_PROVIDER === "local" ? "uploads" : undefined);
+  // 4. Local filesystem — only allowed outside production
+  if (isProduction) {
+    console.error(
+      "[storage] No production storage provider configured (Supabase, Cloudflare R2, or Vercel Blob). File uploads will be unavailable."
+    );
+    return { provider: "none" };
+  }
+
+  // Local dev / test: allow explicit opt-in via STORAGE_PROVIDER=local or LOCAL_STORAGE_DIR
+  const localDir =
+    process.env.LOCAL_STORAGE_DIR ||
+    (process.env.STORAGE_PROVIDER === "local" ? "test-results/uploads" : undefined);
+
   if (localDir) {
-    return {
-      provider: "local",
-      localDir,
-    };
+    return { provider: "local", localDir };
   }
 
   return { provider: "none" };
 }
 
 export function isStorageConfigured(): boolean {
-  const config = getStorageConfig();
-  return config.provider !== "none";
+  return getStorageConfig().provider !== "none";
 }
+
+// ── File validation ──────────────────────────────────────────────────────────
 
 export const ALLOWED_MIME_TYPES = ["application/pdf", "image/jpeg", "image/png"];
 export const MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024; // 5 MB
@@ -85,14 +227,14 @@ export interface FileValidationResult {
 
 /**
  * Server-side validation of certificate upload files.
- * Enforces MIME type, size limit (5MB), extension, and magic header signatures.
+ * Enforces MIME type, size limit (5 MB), extension, and magic header signatures.
  */
 export function validateCertificateFile(file: {
   name: string;
   buffer: Buffer;
   mimeType: string;
 }): FileValidationResult {
-  if (!file || !file.buffer || file.buffer.length === 0) {
+  if (!file?.buffer || file.buffer.length === 0) {
     return { valid: false, error: "Empty or missing file buffer." };
   }
 
@@ -101,15 +243,17 @@ export function validateCertificateFile(file: {
   }
 
   const rawName = (file.name || "").toLowerCase();
-  const rawMime = (file.mimeType || "").toLowerCase();
 
-  // Reject known dangerous extensions
-  const forbiddenExts = [".exe", ".zip", ".js", ".html", ".htm", ".svg", ".sh", ".bat", ".cmd", ".php", ".py", ".ps1"];
+  // Reject dangerous extensions
+  const forbiddenExts = [
+    ".exe", ".zip", ".js", ".html", ".htm", ".svg",
+    ".sh", ".bat", ".cmd", ".php", ".py", ".ps1",
+  ];
   if (forbiddenExts.some((ext) => rawName.endsWith(ext))) {
     return { valid: false, error: "Unsupported or restricted file format." };
   }
 
-  // Magic byte checks
+  // Magic-byte detection
   const buf = file.buffer;
   let detectedMime: string | null = null;
   let cleanExt: string | null = null;
@@ -137,28 +281,22 @@ export function validateCertificateFile(file: {
     };
   }
 
-  // Ensure declared MIME type matches header signature or is acceptable
+  const rawMime = (file.mimeType || "").toLowerCase();
   if (rawMime && rawMime !== detectedMime) {
     if (!(rawMime === "image/jpg" && detectedMime === "image/jpeg")) {
       return { valid: false, error: "File contents do not match the declared file type." };
     }
   }
 
-  return {
-    valid: true,
-    mimeType: detectedMime,
-    cleanExtension: cleanExt,
-  };
+  return { valid: true, mimeType: detectedMime, cleanExtension: cleanExt };
 }
+
+// ── Key generation ────────────────────────────────────────────────────────────
 
 export interface UploadOptions {
   studentId: string;
   certificateId: string;
-  file: {
-    name: string;
-    buffer: Buffer;
-    mimeType: string;
-  };
+  file: { name: string; buffer: Buffer; mimeType: string };
 }
 
 export interface UploadResult {
@@ -171,18 +309,28 @@ export interface UploadResult {
 }
 
 /**
- * Safe structured storage path concept:
- * certificates/{studentId}/{certificateId}/{secure-random-file-name}
+ * Deterministic, safe storage path:
+ *   certificates/{studentId}/{certificateId}/{uuid}.{ext}
  */
-export function generateStorageKey(studentId: string, certificateId: string, extension: string): string {
+export function generateStorageKey(
+  studentId: string,
+  certificateId: string,
+  extension: string
+): string {
   const safeExt = extension.replace(/[^a-z0-9]/gi, "").toLowerCase() || "bin";
-  const uniqueId = randomUUID();
-  return `certificates/${studentId}/${certificateId}/${uniqueId}.${safeExt}`;
+  return `certificates/${studentId}/${certificateId}/${randomUUID()}.${safeExt}`;
 }
 
+// ── Upload ────────────────────────────────────────────────────────────────────
+
 /**
- * Upload certificate file to external object storage provider.
- * Throws explicit error if external storage is not configured.
+ * Upload certificate file to configured storage provider.
+ *
+ * Production: Supabase Storage (private bucket), Cloudflare R2, or Vercel Private Blob.
+ * Development/Test: local filesystem under a statically scoped directory.
+ *
+ * The returned fileUrl is always the internal proxy route /api/certificates/[id]/file.
+ * Supabase credentials are NEVER exposed to the browser.
  */
 export async function uploadCertificateFile(options: UploadOptions): Promise<UploadResult> {
   const validation = validateCertificateFile(options.file);
@@ -193,7 +341,7 @@ export async function uploadCertificateFile(options: UploadOptions): Promise<Upl
   const config = getStorageConfig();
   if (config.provider === "none") {
     throw new Error(
-      "External file storage is not configured. Please submit via Credential URL and Credential ID."
+      "File storage is not configured. Submit via Credential URL and Credential ID."
     );
   }
 
@@ -205,55 +353,29 @@ export async function uploadCertificateFile(options: UploadOptions): Promise<Upl
   const mimeType = validation.mimeType;
   const fileSize = options.file.buffer.length;
 
-  if (config.provider === "vercel-blob") {
-    const endpoint = `https://blob.vercel-storage.com/${storageKey}`;
-    const res = await fetch(endpoint, {
-      method: "PUT",
-      headers: {
-        authorization: `Bearer ${config.blobToken}`,
-        "x-api-version": "7",
-        "x-content-type": mimeType,
-      },
-      body: new Uint8Array(options.file.buffer),
-    });
-
-    if (!res.ok) {
-      const errText = await res.text();
-      throw new Error(`Vercel Blob upload failed (${res.status}): ${errText}`);
+  // ── Supabase Storage ─────────────────────────────────────────────────────
+  if (config.provider === "supabase") {
+    const sb = getSupabaseClient();
+    if (!sb) {
+      throw new Error(
+        "Supabase is configured as provider but credentials (SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY) are missing."
+      );
     }
 
-    const data = (await res.json()) as { url: string };
+    const { error } = await sb.client.storage
+      .from(sb.bucket)
+      .upload(storageKey, options.file.buffer, {
+        contentType: mimeType,
+        upsert: false,
+      });
+
+    if (error) {
+      throw new Error(`Supabase Storage upload failed: ${error.message}`);
+    }
+
     return {
       storageKey,
-      fileUrl: data.url,
-      originalFileName: options.file.name,
-      mimeType,
-      fileSize,
-      storageProvider: "vercel-blob",
-    };
-  }
-
-  if (config.provider === "supabase") {
-    const endpoint = `${config.supabaseUrl}/storage/v1/object/${config.supabaseBucket}/${storageKey}`;
-    const response = await fetch(endpoint, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${config.supabaseServiceRoleKey}`,
-        "Content-Type": mimeType,
-        "x-upsert": "true",
-      },
-      body: new Uint8Array(options.file.buffer),
-    });
-
-    if (!response.ok) {
-      const text = await response.text();
-      throw new Error(`Supabase Storage upload failed (${response.status}): ${text}`);
-    }
-
-    const publicUrl = `${config.supabaseUrl}/storage/v1/object/public/${config.supabaseBucket}/${storageKey}`;
-    return {
-      storageKey: `${config.supabaseBucket}/${storageKey}`,
-      fileUrl: publicUrl,
+      fileUrl: `/api/certificates/${encodeURIComponent(options.certificateId)}/file`,
       originalFileName: options.file.name,
       mimeType,
       fileSize,
@@ -261,15 +383,62 @@ export async function uploadCertificateFile(options: UploadOptions): Promise<Upl
     };
   }
 
-  if (config.provider === "local" && config.localDir) {
-    const targetPath = resolve(config.localDir, storageKey);
-    const parentDir = resolve(targetPath, "..");
-    await mkdir(parentDir, { recursive: true });
-    await writeFile(targetPath, options.file.buffer);
+  // ── Cloudflare R2 ────────────────────────────────────────────────────────
+  if (config.provider === "cloudflare-r2") {
+    const r2 = getR2Client();
+    if (!r2) {
+      throw new Error("Cloudflare R2 is configured as provider but environment variables are missing.");
+    }
+    const command = new PutObjectCommand({
+      Bucket: r2.bucket,
+      Key: storageKey,
+      Body: options.file.buffer,
+      ContentType: mimeType,
+    });
+    await r2.client.send(command);
 
     return {
       storageKey,
-      fileUrl: `/api/certificates/file/${encodeURIComponent(options.certificateId)}`,
+      fileUrl: `/api/certificates/${encodeURIComponent(options.certificateId)}/file`,
+      originalFileName: options.file.name,
+      mimeType,
+      fileSize,
+      storageProvider: "cloudflare-r2",
+    };
+  }
+
+  // ── Vercel Private Blob ──────────────────────────────────────────────────
+  if (config.provider === "vercel-blob") {
+    const blob = await put(storageKey, options.file.buffer, {
+      access: "private",
+      contentType: mimeType,
+      addRandomSuffix: false,
+    });
+
+    return {
+      storageKey: blob.url,
+      fileUrl: blob.url,
+      originalFileName: options.file.name,
+      mimeType,
+      fileSize,
+      storageProvider: "vercel-blob",
+    };
+  }
+
+  // ── Local filesystem (dev/test only) ─────────────────────────────────────
+  if (config.provider === "local" && config.localDir) {
+    const baseDir = join(/*turbopackIgnore: true*/ process.cwd(), config.localDir);
+    const targetPath = join(/*turbopackIgnore: true*/ baseDir, storageKey);
+    const parentDir = join(targetPath, "..");
+    await mkdir(parentDir, { recursive: true });
+    await writeFile(
+      /*turbopackIgnore: true*/ targetPath,
+      options.file.buffer
+    );
+
+    return {
+      storageKey,
+      fileUrl: `/api/certificates/${encodeURIComponent(options.certificateId)}/file`,
       originalFileName: options.file.name,
       mimeType,
       fileSize,
@@ -280,59 +449,81 @@ export async function uploadCertificateFile(options: UploadOptions): Promise<Upl
   throw new Error(`Storage provider "${config.provider}" is not implemented.`);
 }
 
+// ── Delete ────────────────────────────────────────────────────────────────────
+
 /**
- * Delete a certificate file from external object storage.
+ * Delete a certificate file from storage.
+ * Safe — returns false on error instead of throwing.
  */
-export async function deleteCertificateFile(storageKey: string | null | undefined): Promise<boolean> {
+export async function deleteCertificateFile(
+  storageKey: string | null | undefined
+): Promise<boolean> {
   if (!storageKey) return false;
 
   const config = getStorageConfig();
   if (config.provider === "none") return false;
 
   try {
-    if (config.provider === "vercel-blob") {
-      const endpoint = `https://blob.vercel-storage.com/delete`;
-      await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          authorization: `Bearer ${config.blobToken}`,
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({ urls: [storageKey] }),
-      });
-      return true;
+    // ── Supabase Storage ───────────────────────────────────────────────────
+    if (config.provider === "supabase") {
+      const sb = getSupabaseClient();
+      if (sb) {
+        const { error } = await sb.client.storage
+          .from(sb.bucket)
+          .remove([storageKey]);
+        if (error) {
+          console.error("[storage] Supabase Storage delete error:", error.message);
+          return false;
+        }
+        return true;
+      }
     }
 
-    if (config.provider === "supabase") {
-      const keyWithoutBucket = storageKey.includes("/")
-        ? storageKey.split("/").slice(1).join("/")
-        : storageKey;
-      const endpoint = `${config.supabaseUrl}/storage/v1/object/${config.supabaseBucket}/${keyWithoutBucket}`;
-      await fetch(endpoint, {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${config.supabaseServiceRoleKey}`,
-        },
-      });
+    if (config.provider === "cloudflare-r2") {
+      const r2 = getR2Client();
+      if (r2) {
+        const command = new DeleteObjectCommand({
+          Bucket: r2.bucket,
+          Key: storageKey,
+        });
+        await r2.client.send(command);
+        return true;
+      }
+    }
+
+    if (config.provider === "vercel-blob") {
+      await blobDel(storageKey);
       return true;
     }
 
     if (config.provider === "local" && config.localDir) {
-      const targetPath = resolve(config.localDir, storageKey);
-      if (existsSync(targetPath)) {
-        await unlink(targetPath);
+      const baseDir = join(/*turbopackIgnore: true*/ process.cwd(), config.localDir);
+      const targetPath = join(/*turbopackIgnore: true*/ baseDir, storageKey);
+      if (existsSync(/*turbopackIgnore: true*/ targetPath)) {
+        await unlink(/*turbopackIgnore: true*/ targetPath);
       }
       return true;
     }
   } catch (err) {
-    console.error("Failed to delete certificate storage file:", err);
+    console.error("[storage] Failed to delete certificate file:", err);
   }
 
   return false;
 }
 
+// ── Retrieve ──────────────────────────────────────────────────────────────────
+
 /**
- * Fetch file content buffer for proxy streaming / verification preview.
+ * Fetch file content for server-side proxy streaming.
+ * Used by /api/certificates/[id]/file to enforce auth before serving.
+ *
+ * All providers fetch the file server-side and return a Buffer.
+ * Supabase credentials (service role key) are NEVER sent to the browser.
+ *
+ * For Supabase: downloads the object bytes using the admin client.
+ * For Cloudflare R2: retrieves object using S3 GetObjectCommand server-side.
+ * For private Vercel Blob: fetches using the SDK token server-side.
+ * For local: reads from the statically scoped directory.
  */
 export async function getCertificateFileContent(
   storageKey: string | null | undefined
@@ -341,44 +532,103 @@ export async function getCertificateFileContent(
 
   const config = getStorageConfig();
 
+  // ── Supabase Storage ──────────────────────────────────────────────────────
+  if (config.provider === "supabase") {
+    const sb = getSupabaseClient();
+    if (!sb) return null;
+
+    try {
+      const { data, error } = await sb.client.storage
+        .from(sb.bucket)
+        .download(storageKey);
+
+      if (error || !data) {
+        console.error("[storage] Supabase Storage download error:", error?.message);
+        return null;
+      }
+
+      const arrayBuffer = await data.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+
+      // Determine content type from key extension
+      const cleanExt = storageKey.split(".").pop()?.toLowerCase();
+      const contentType =
+        cleanExt === "pdf"
+          ? "application/pdf"
+          : cleanExt === "png"
+          ? "image/png"
+          : "image/jpeg";
+
+      return { buffer, contentType };
+    } catch (err) {
+      console.error("[storage] Failed to fetch object from Supabase Storage:", err);
+      return null;
+    }
+  }
+
+  // ── Cloudflare R2 ────────────────────────────────────────────────────────
+  if (config.provider === "cloudflare-r2") {
+    const r2 = getR2Client();
+    if (!r2) return null;
+
+    try {
+      const command = new GetObjectCommand({
+        Bucket: r2.bucket,
+        Key: storageKey,
+      });
+      const response = await r2.client.send(command);
+      if (!response.Body) return null;
+
+      const byteArray = await response.Body.transformToByteArray();
+      const buffer = Buffer.from(byteArray);
+      const contentType = response.ContentType || "application/octet-stream";
+      return { buffer, contentType };
+    } catch (err) {
+      console.error("[storage] Failed to fetch object from R2:", err);
+      return null;
+    }
+  }
+
+  // ── Vercel Private Blob ──────────────────────────────────────────────────
+  if (config.provider === "vercel-blob") {
+    const token =
+      process.env.BLOB_READ_WRITE_TOKEN ||
+      process.env.VERCEL_BLOB_READ_WRITE_TOKEN;
+
+    if (!token) return null;
+
+    const url = storageKey.startsWith("http") ? storageKey : `https://blob.vercel-storage.com/${storageKey}`;
+    const res = await fetch(url, {
+      headers: { authorization: `Bearer ${token}` },
+    });
+    if (!res.ok) return null;
+
+    const buffer = Buffer.from(await res.arrayBuffer());
+    const contentType = res.headers.get("content-type") || "application/octet-stream";
+    return { buffer, contentType };
+  }
+
+  // ── Local filesystem (dev/test only) ─────────────────────────────────────
   if (config.provider === "local" && config.localDir) {
-    const targetPath = resolve(config.localDir, storageKey);
-    if (!existsSync(targetPath)) return null;
-    const buffer = await readFile(targetPath);
+    const baseDir = join(/*turbopackIgnore: true*/ process.cwd(), config.localDir);
+    const targetPath = join(/*turbopackIgnore: true*/ baseDir, storageKey);
+
+    if (!existsSync(/*turbopackIgnore: true*/ targetPath)) return null;
+
+    const buffer = await readFile(/*turbopackIgnore: true*/ targetPath);
     const cleanExt = storageKey.split(".").pop()?.toLowerCase();
     const contentType =
-      cleanExt === "pdf" ? "application/pdf" : cleanExt === "png" ? "image/png" : "image/jpeg";
+      cleanExt === "pdf"
+        ? "application/pdf"
+        : cleanExt === "png"
+        ? "image/png"
+        : "image/jpeg";
     return { buffer, contentType };
   }
 
-  // If storageKey is a direct HTTP/HTTPS URL
-  if (storageKey.startsWith("http://") || storageKey.startsWith("https://")) {
+  // Fallback: if storageKey is an HTTPS URL (legacy records)
+  if (storageKey.startsWith("https://")) {
     const res = await fetch(storageKey);
-    if (!res.ok) return null;
-    const buffer = Buffer.from(await res.arrayBuffer());
-    const contentType = res.headers.get("content-type") || "application/octet-stream";
-    return { buffer, contentType };
-  }
-
-  if (config.provider === "supabase" && config.supabaseUrl) {
-    const keyWithoutBucket = storageKey.includes("/")
-      ? storageKey.split("/").slice(1).join("/")
-      : storageKey;
-    const endpoint = `${config.supabaseUrl}/storage/v1/object/authenticated/${config.supabaseBucket}/${keyWithoutBucket}`;
-    const res = await fetch(endpoint, {
-      headers: { Authorization: `Bearer ${config.supabaseServiceRoleKey}` },
-    });
-    if (!res.ok) return null;
-    const buffer = Buffer.from(await res.arrayBuffer());
-    const contentType = res.headers.get("content-type") || "application/octet-stream";
-    return { buffer, contentType };
-  }
-
-  if (config.provider === "vercel-blob") {
-    // If storageKey is a Blob URL
-    const res = await fetch(`https://blob.vercel-storage.com/${storageKey}`, {
-      headers: { authorization: `Bearer ${config.blobToken}` },
-    });
     if (!res.ok) return null;
     const buffer = Buffer.from(await res.arrayBuffer());
     const contentType = res.headers.get("content-type") || "application/octet-stream";
