@@ -69,6 +69,11 @@ export async function securityChecks(db: PrismaClient, admin: BrowserContext, st
   }
   expect((await api.post("/api/admin/settings", { form: {} })).status()).toBe(403);
   const key = attempt.data.questions[0].id;
+  const unassignedRes = await post("/api/student/assessment/" + attempt.id + "/save", { clientId: attempt.clientId, responses: { "invalid-question-id": "Correct" } });
+  expect(unassignedRes.status()).toBe(400);
+  const tamperRes = await post("/api/student/assessment/" + attempt.id + "/submit", { clientId: attempt.clientId, score: 100, passed: true, responses: { [key]: "Correct" } });
+  expect(tamperRes.status()).toBe(400);
+  checks("Answer injection and score tampering payloads strictly rejected");
   await post("/api/student/assessment/" + attempt.id + "/save", { clientId: attempt.clientId, responses: { [key]: "Correct" } });
   // Force a near-boundary expiry on this isolated fixture, then let real server time elapse.
   await db.assessmentAttempt.update({ where: { id: attempt.id }, data: { expiresAt: new Date(Date.now() + 1500), passMark: 2 } });
@@ -76,7 +81,11 @@ export async function securityChecks(db: PrismaClient, admin: BrowserContext, st
   await post("/api/student/assessment/" + attempt.id + "/submit", { clientId: attempt.clientId, responses: Object.fromEntries(attempt.data.questions.map((q: { id: string }) => [q.id, "Correct"])) });
   const timeout = await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attempt.id } });
   expect(timeout.score).toBe(1); expect(timeout.passed).toBe(false); expect(timeout.autoSubmitted).toBe(true); expect(timeout.submissionReason).toBe("TIMEOUT");
-  checks("Cross-student ownership and admin role checks; late answers excluded by server deadline");
+  const dupRes = await post("/api/student/assessment/" + attempt.id + "/submit", { clientId: attempt.clientId, responses: {} });
+  expect(dupRes.status()).toBe(200);
+  const dupAttempt = await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attempt.id } });
+  expect(dupAttempt.score).toBe(1); expect(dupAttempt.submittedAt?.getTime()).toBe(timeout.submittedAt?.getTime());
+  checks("Cross-student ownership and admin role checks; late answers excluded by server deadline; duplicate submission idempotency verified");
   await db.assessmentAttempt.update({ where: { id: attempt.id }, data: { reexamAvailableAt: new Date(Date.now() - 1000) } });
   attempt = await begin();
   expect((await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attempt.id } })).autoSubmitOnViolation).toBe(false);

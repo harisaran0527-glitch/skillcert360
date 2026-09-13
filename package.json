@@ -9,9 +9,12 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test:e2e": "tsx scripts/e2e-workflow.ts",
+    "test:security": "tsx scripts/e2e-security.ts",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
-    "db:seed": "tsx prisma/seed.ts"
+    "db:seed": "tsx prisma/seed.ts",
+    "db:seed:skills": "tsx scripts/seed-beginner-skills.ts",
+    "db:restore-defaults": "tsx scripts/restore-defaults.ts"
   },
   "dependencies": {
     "@prisma/client": "6.19.3",

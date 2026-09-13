@@ -12,7 +12,7 @@ Existing features were retained, including the Playwright `Emulation.setFocusEmu
 | `npx.cmd tsc --noEmit` | PASS |
 | `npm.cmd run build` | PASS; 38 pages generated |
 | `npx.cmd tsx scripts/e2e-workflow.ts` | PASS; exit 0, 21 check groups, `completed: true`, no page errors |
-| `npx.cmd tsx scripts/e2e-security.ts` | Standalone final run in progress |
+| `npx.cmd tsx scripts/e2e-security.ts` | PASS; exit 0, 12 check groups, no test data left behind |
 
 The `.cmd` commands are the Windows equivalents of the requested `npm`/`npx` commands. This machine's PowerShell policy blocks the `.ps1` wrappers; its execution policy was not changed.
 
