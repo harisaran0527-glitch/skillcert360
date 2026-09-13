@@ -4,6 +4,7 @@ import { cataloguePage, param, type CatalogueParams } from "@/lib/catalog";
 import { ActiveField, CatalogueFilters, CataloguePagination, catalogueInput } from "@/components/catalog-admin-controls";
 import { CatalogueSkillPicker } from "@/components/catalog-skill-picker";
 import { db } from "@/lib/db";
+import { deduplicateByNormalizedKey } from "@/lib/academic";
 import { GraduationCap, Plus, ExternalLink, Building, BookOpen } from "lucide-react";
 
 export default async function AdminCoursesPage({ searchParams }: { searchParams: Promise<CatalogueParams> }) {
@@ -20,11 +21,15 @@ export default async function AdminCoursesPage({ searchParams }: { searchParams:
   const page = Math.min(cataloguePage(param(params, "page")), Math.max(1, Math.ceil(total / 24)));
   const editing = param(params, "edit") ? await db.course.findUnique({ where: { id: param(params, "edit") }, include: { skill: { include: { level: true } } } }) : null;
   const targetSkill = editing?.skill ?? (param(params, "skill") ? await db.skill.findUnique({ where: { id: param(params, "skill") }, include: { level: true } }) : null);
-  const [courses, providers, levels] = await Promise.all([
+  const [rawCourses, rawProviders, rawLevels] = await Promise.all([
     db.course.findMany({ where, include: { skill: true, provider: true, level: true }, orderBy: [{ name: "asc" }, { id: "asc" }], skip: (page - 1) * 24, take: 24 }),
     db.provider.findMany({ select: { id: true, name: true }, orderBy: { name: "asc" } }),
     db.skillLevel.findMany({ orderBy: { order: "asc" } }),
   ]);
+
+  const courses = deduplicateByNormalizedKey(rawCourses, (c) => `${c.providerId}:${c.skillId}:${c.name}`);
+  const providers = deduplicateByNormalizedKey(rawProviders, (p) => p.name);
+  const levels = deduplicateByNormalizedKey(rawLevels, (l) => l.name);
 
   return (
     <div className="space-y-8 pb-12">

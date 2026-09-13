@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Prisma } from "@prisma/client";
 import { db } from "@/lib/db";
 import { expireStudentAttempts } from "@/lib/assessment";
-import { getCleanDepartments, getCleanSections } from "@/lib/academic";
+import { getCleanDepartments, getCleanSections, ACADEMIC_YEARS, deduplicateByNormalizedKey } from "@/lib/academic";
 import {
   Award,
   Filter,
@@ -30,7 +30,7 @@ export default async function AssessmentAdminPage({
 
   const student: Prisma.StudentProfileWhereInput = {};
   if (value("department")) student.departmentId = value("department");
-  if (/^[1-8]$/.test(value("year"))) student.year = Number(value("year"));
+  if (/^[1-4]$/.test(value("year"))) student.year = Number(value("year"));
   if (value("section")) student.sectionId = value("section");
 
   const where: Prisma.AssessmentAttemptWhereInput = { student };
@@ -39,7 +39,7 @@ export default async function AssessmentAdminPage({
   if (date && Number.isFinite(date.getTime()))
     where.startedAt = { gte: date, lt: new Date(date.getTime() + 86400000) };
 
-  const [attempts, departments, sections, skills] = await Promise.all([
+  const [attempts, departments, sections, rawSkills] = await Promise.all([
     db.assessmentAttempt.findMany({
       where,
       include: {
@@ -53,6 +53,8 @@ export default async function AssessmentAdminPage({
     getCleanSections(),
     db.skill.findMany({ orderBy: { name: "asc" } }),
   ]);
+
+  const skills = deduplicateByNormalizedKey(rawSkills, (s) => s.name);
 
   return (
     <div className="space-y-8 pb-12">
@@ -93,7 +95,7 @@ export default async function AssessmentAdminPage({
 
           <select name="year" defaultValue={value("year")} className="rounded-xl border border-slate-800 bg-slate-900/90 px-3 py-2.5 text-xs text-slate-200 focus:border-indigo-500 focus:outline-none">
             <option value="">Year: All</option>
-            {Array.from({ length: 8 }, (_, i) => <option key={i} value={i + 1}>Year {i + 1}</option>)}
+            {ACADEMIC_YEARS.map((y) => <option key={y} value={y}>Year {y}</option>)}
           </select>
 
           <select name="section" defaultValue={value("section")} className="rounded-xl border border-slate-800 bg-slate-900/90 px-3 py-2.5 text-xs text-slate-200 focus:border-indigo-500 focus:outline-none">

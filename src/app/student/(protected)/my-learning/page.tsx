@@ -4,6 +4,7 @@ import { getSession } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { getSkillProgressState } from "@/lib/progress";
 import { expireStudentAttempts } from "@/lib/assessment";
+import { deduplicateByNormalizedKey } from "@/lib/academic";
 import {
   BookOpen,
   Award,
@@ -27,7 +28,7 @@ export default async function StudentMyLearningPage() {
 
   await expireStudentAttempts(profile.id);
 
-  const skills = await db.studentSkill.findMany({
+  const rawSkills = await db.studentSkill.findMany({
     where: { studentId: profile.id },
     include: {
       selectedCourse: { include: { provider: true } },
@@ -40,6 +41,8 @@ export default async function StudentMyLearningPage() {
     },
     orderBy: { startedAt: "desc" },
   });
+
+  const skills = deduplicateByNormalizedKey(rawSkills, (s) => s.skillId);
 
   const [attempts, certificates] = await Promise.all([
     db.assessmentAttempt.findMany({

@@ -3,6 +3,7 @@ import type { Prisma } from "@prisma/client";
 import { cataloguePage, param, type CatalogueParams } from "@/lib/catalog";
 import { ActiveField, CatalogueFilters, CataloguePagination, catalogueInput } from "@/components/catalog-admin-controls";
 import { db } from "@/lib/db";
+import { deduplicateByNormalizedKey } from "@/lib/academic";
 import { BookOpen, Plus, Sparkles, Layers, ShieldCheck } from "lucide-react";
 
 export default async function AdminSkillsPage({ searchParams }: { searchParams: Promise<CatalogueParams> }) {
@@ -16,11 +17,14 @@ export default async function AdminSkillsPage({ searchParams }: { searchParams: 
   const total = await db.skill.count({ where });
   const page = Math.min(cataloguePage(param(params, "page")), Math.max(1, Math.ceil(total / 24)));
   const editing = param(params, "edit") ? await db.skill.findUnique({ where: { id: param(params, "edit") } }) : null;
-  const [categories, levels, skills] = await Promise.all([
+  const [rawCategories, rawLevels, skills] = await Promise.all([
     db.skillCategory.findMany({ orderBy: { name: "asc" } }),
     db.skillLevel.findMany({ orderBy: { order: "asc" } }),
     db.skill.findMany({ where, include: { category: true, level: true, _count: { select: { courses: true } } }, orderBy: [{ name: "asc" }, { id: "asc" }], skip: (page - 1) * 24, take: 24 }),
   ]);
+
+  const categories = deduplicateByNormalizedKey(rawCategories, (c) => c.name);
+  const levels = deduplicateByNormalizedKey(rawLevels, (l) => l.name);
 
   return (
     <div className="space-y-8 pb-12">

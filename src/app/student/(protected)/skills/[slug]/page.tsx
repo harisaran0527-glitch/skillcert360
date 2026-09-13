@@ -5,6 +5,7 @@ import { db } from "@/lib/db";
 import { getSession } from "@/lib/auth";
 import { getSkillProgressState } from "@/lib/progress";
 import { getStudentProgression, UNLOCK_THRESHOLDS, GATING_LEVEL, LEVEL_NAMES, type LevelName } from "@/lib/progression";
+import { deduplicateByNormalizedKey } from "@/lib/academic";
 import { LearnOfficialButton } from "@/components/skill-actions";
 import {
   ArrowLeft,
@@ -135,7 +136,7 @@ export default async function StudentSkillDetailPage({
 
   const levelColor = skillLevelColor(skillLevelName);
 
-  const courses = skill.courses;
+  const courses = deduplicateByNormalizedKey(skill.courses, (c) => `${c.providerId}:${c.name}`);
   const totalProviders = new Set(courses.map((c) => c.providerId)).size;
   const credentialCourses = courses.filter((c) => c.credentialAvailable);
 

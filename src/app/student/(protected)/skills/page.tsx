@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Prisma } from "@prisma/client";
+import { deduplicateByNormalizedKey } from "@/lib/academic";
 import { availableCourseWhere, cataloguePage, skillLevelColor } from "@/lib/catalog";
 import type { StudentProgression } from "@/lib/progression";
 import { redirect } from "next/navigation";
@@ -40,12 +41,16 @@ export default async function StudentSkillsPage({
   if (!profile) redirect("/student/login");
   await expireStudentAttempts(profile.id);
 
-  const [levels, categories, providers, progression] = await Promise.all([
+  const [rawLevels, rawCategories, rawProviders, progression] = await Promise.all([
     db.skillLevel.findMany({ where: { active: true }, select: { id: true, name: true }, orderBy: { order: "asc" } }),
     db.skillCategory.findMany({ where: { active: true }, select: { id: true, name: true }, orderBy: { name: "asc" } }),
     db.provider.findMany({ where: { active: true, slug: { not: null } }, select: { id: true, name: true }, orderBy: { name: "asc" } }),
     getStudentProgression(profile.id),
   ]);
+
+  const levels = deduplicateByNormalizedKey(rawLevels, (l) => l.name);
+  const categories = deduplicateByNormalizedKey(rawCategories, (c) => c.name);
+  const providers = deduplicateByNormalizedKey(rawProviders, (p) => p.name);
   const levelUnlocked = new Map<string, boolean>(
     progression.levels.map((l) => [l.name, l.unlocked])
   );

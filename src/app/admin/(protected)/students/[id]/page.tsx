@@ -78,13 +78,8 @@ export default async function AdminStudent360Page({
 
   if (!profile) notFound();
 
-  const allDepartments = !cleanDepts.some((d) => d.id === profile.departmentId)
-    ? [profile.department, ...cleanDepts]
-    : cleanDepts;
-
-  const allSections = !cleanSecs.some((s) => s.id === profile.sectionId)
-    ? [{ ...profile.section, department: profile.department }, ...cleanSecs]
-    : cleanSecs;
+  const allDepartments = cleanDepts;
+  const allSections = cleanSecs;
 
   const [states, progression] = await Promise.all([
     Promise.all(
