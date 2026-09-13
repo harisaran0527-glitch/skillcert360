@@ -3,7 +3,7 @@
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 
-export function PasswordField({ name = "password", variant = "dark" }: { name?: string; variant?: "dark" | "light" }) {
+export function PasswordField({ name = "password", variant = "dark", placeholder = "••••••••••••" }: { name?: string; variant?: "dark" | "light"; placeholder?: string }) {
   const [showPassword, setShowPassword] = useState(false);
 
   const inputClassName =
@@ -22,7 +22,7 @@ export function PasswordField({ name = "password", variant = "dark" }: { name?: 
         name={name}
         type={showPassword ? "text" : "password"}
         required
-        placeholder="••••••••••••"
+        placeholder={placeholder}
         className={inputClassName}
       />
       <button

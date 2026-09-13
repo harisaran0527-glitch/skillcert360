@@ -358,7 +358,7 @@ export default function Home() {
             <span>© {new Date().getFullYear()} SkillCert 360 Platform. All rights reserved.</span>
           </div>
           <Link href="/student/login" className="hover:text-slate-300 transition">
-            Student Sign In
+            Sign In
           </Link>
         </div>
       </footer>
