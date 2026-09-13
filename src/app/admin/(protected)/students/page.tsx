@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { db } from "@/lib/db";
+import { getCleanDepartments, getCleanSections } from "@/lib/academic";
 import {
   Users,
   UserPlus,
@@ -42,8 +43,8 @@ export default async function StudentsPage({
       },
       orderBy: { fullName: "asc" },
     }),
-    db.department.findMany({ where: { active: true }, orderBy: { name: "asc" } }),
-    db.section.findMany({ orderBy: [{ departmentId: "asc" }, { name: "asc" }] }),
+    getCleanDepartments(),
+    getCleanSections(),
   ]);
 
   const query = (q ?? "").trim().toLowerCase();
@@ -200,7 +201,9 @@ export default async function StudentsPage({
                   className="w-full rounded-xl border border-slate-800 bg-slate-900/90 px-3 py-2.5 text-xs text-white focus:border-indigo-500 focus:outline-none"
                 >
                   {sections.map((item) => (
-                    <option key={item.id} value={item.id}>{item.name}</option>
+                    <option key={item.id} value={item.id}>
+                      {item.department.name} / {item.name}
+                    </option>
                   ))}
                 </select>
               </div>

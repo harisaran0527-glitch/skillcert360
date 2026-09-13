@@ -6,7 +6,6 @@ import { useState } from "react";
 import {
   LayoutDashboard,
   Users,
-  Building2,
   BookOpen,
   Building,
   GraduationCap,
@@ -34,7 +33,6 @@ export function AdminNavigation({ adminEmail = "Admin" }: AdminNavProps) {
   const navItems = [
     { label: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
     { label: "Students", href: "/admin/students", icon: Users },
-    { label: "Departments", href: "/admin/departments", icon: Building2 },
     { label: "Skills", href: "/admin/skills", icon: BookOpen },
     { label: "Providers", href: "/admin/providers", icon: Building },
     { label: "Courses", href: "/admin/courses", icon: GraduationCap },

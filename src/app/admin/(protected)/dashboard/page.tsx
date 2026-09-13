@@ -6,15 +6,11 @@ import {
   BookOpen,
   GraduationCap,
   Award,
-  CheckCircle2,
-  XCircle,
-  RotateCcw,
   FileCheck2,
-  Building2,
   ArrowRight,
   Command,
-  TrendingUp,
 } from "lucide-react";
+
 
 export default async function AdminDashboard() {
   const [
@@ -27,7 +23,6 @@ export default async function AdminDashboard() {
     failedAssessments,
     certificatesSubmitted,
     certificatesVerified,
-    totalDepartments,
   ] = await Promise.all([
     db.studentProfile.count(),
     db.user.count({ where: { role: "STUDENT", status: "ACTIVE" } }),
@@ -38,7 +33,6 @@ export default async function AdminDashboard() {
     db.assessmentAttempt.count({ where: { passed: false } }),
     db.certificate.count({ where: { submittedAt: { not: null } } }),
     db.certificate.count({ where: { status: "VERIFIED" } }),
-    db.department.count({ where: { active: true } }),
   ]);
 
   const passRate = totalAssessments > 0 ? Math.round((passedAssessments / totalAssessments) * 100) : 0;
@@ -82,7 +76,7 @@ export default async function AdminDashboard() {
       </div>
 
       {/* KPI Cards Grid */}
-      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {/* Total Students */}
         <div className="glass-panel glass-panel-hover rounded-2xl p-5 border-l-4 border-l-indigo-500">
           <div className="flex items-center justify-between">
@@ -117,15 +111,6 @@ export default async function AdminDashboard() {
             <GraduationCap className="h-4 w-4 text-blue-400" />
           </div>
           <p className="mt-3 text-3xl font-extrabold text-white font-mono">{totalCourses}</p>
-        </div>
-
-        {/* Departments */}
-        <div className="glass-panel glass-panel-hover rounded-2xl p-5 border-l-4 border-l-purple-500">
-          <div className="flex items-center justify-between">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Departments</span>
-            <Building2 className="h-4 w-4 text-purple-400" />
-          </div>
-          <p className="mt-3 text-3xl font-extrabold text-white font-mono">{totalDepartments}</p>
         </div>
       </section>
 

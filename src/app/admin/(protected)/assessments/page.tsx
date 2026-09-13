@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Prisma } from "@prisma/client";
 import { db } from "@/lib/db";
 import { expireStudentAttempts } from "@/lib/assessment";
+import { getCleanDepartments, getCleanSections } from "@/lib/academic";
 import {
   Award,
   Filter,
@@ -48,8 +49,8 @@ export default async function AssessmentAdminPage({
       },
       orderBy: { startedAt: "desc" },
     }),
-    db.department.findMany({ orderBy: { name: "asc" } }),
-    db.section.findMany({ include: { department: true }, orderBy: { name: "asc" } }),
+    getCleanDepartments(),
+    getCleanSections(),
     db.skill.findMany({ orderBy: { name: "asc" } }),
   ]);
 

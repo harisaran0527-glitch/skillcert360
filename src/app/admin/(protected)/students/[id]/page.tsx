@@ -4,6 +4,7 @@ import { getStudentProgression, UNLOCK_THRESHOLDS, GATING_LEVEL } from "@/lib/pr
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
+import { getCleanDepartments, getCleanSections } from "@/lib/academic";
 import { PasswordField } from "@/components/password-field";
 import {
   ShieldCheck,
@@ -37,9 +38,9 @@ export default async function AdminStudent360Page({
   const { error, updated, pwdReset, statusChanged } = await searchParams;
   await expireStudentAttempts(id);
 
-  const [allDepartments, allSections] = await Promise.all([
-    db.department.findMany({ where: { active: true }, orderBy: { name: "asc" } }),
-    db.section.findMany({ orderBy: [{ departmentId: "asc" }, { name: "asc" }] }),
+  const [cleanDepts, cleanSecs] = await Promise.all([
+    getCleanDepartments(),
+    getCleanSections(),
   ]);
 
   const profile = await db.studentProfile.findUnique({
@@ -76,6 +77,14 @@ export default async function AdminStudent360Page({
   });
 
   if (!profile) notFound();
+
+  const allDepartments = !cleanDepts.some((d) => d.id === profile.departmentId)
+    ? [profile.department, ...cleanDepts]
+    : cleanDepts;
+
+  const allSections = !cleanSecs.some((s) => s.id === profile.sectionId)
+    ? [{ ...profile.section, department: profile.department }, ...cleanSecs]
+    : cleanSecs;
 
   const [states, progression] = await Promise.all([
     Promise.all(
@@ -260,7 +269,9 @@ export default async function AdminStudent360Page({
                   className="w-full rounded-xl border border-slate-800 bg-slate-900/90 px-2 py-2.5 text-xs text-white focus:border-blue-500 focus:outline-none"
                 >
                   {allSections.map((s) => (
-                    <option key={s.id} value={s.id}>{s.name}</option>
+                    <option key={s.id} value={s.id}>
+                      {s.department.name} / {s.name}
+                    </option>
                   ))}
                 </select>
               </div>

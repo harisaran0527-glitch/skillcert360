@@ -35,9 +35,9 @@ export async function launchSecurityBrowser() {
   // Playwright's original session. Keep the default context native instead.
   const browser = await chromium.connectOverCDP(endpoint, { noDefaults: true });
   return { browser, close: async () => {
-   const cdp = await browser.newBrowserCDPSession();
-   await cdp.send("Browser.close").catch(() => undefined);
-   await browser.close();
+   const cdp = await browser.newBrowserCDPSession().catch(() => null);
+   if (cdp) await cdp.send("Browser.close").catch(() => undefined);
+   await browser.close().catch(() => undefined);
    await cleanup();
   } };
  } catch (error) { await cleanup(); throw error; }
