@@ -1,13 +1,15 @@
 import "dotenv/config";
-import { chromium, expect as baseExpect, type Page } from "@playwright/test";
+import { expect as baseExpect, type Page } from "@playwright/test";
 import { PrismaClient, Prisma } from "@prisma/client";
 import bcrypt from "bcryptjs";
 import { randomUUID } from "node:crypto";
 import { mkdir, writeFile } from "node:fs/promises";
+import { pathToFileURL } from "node:url";
 import { securityChecks } from "./e2e-security";
+import { launchSecurityBrowser } from "./e2e-browser";
 const expect = baseExpect.configure({ timeout: 20000 });
 
-async function main() {
+export async function runWorkflow(mode: "workflow" | "security" = "workflow") {
 const db = new PrismaClient();
 const base = process.env.E2E_BASE_URL || "http://localhost:3000";
 const tag = "E2E-" + Date.now();
@@ -19,6 +21,7 @@ const originalSettings = await db.adminSetting.findMany();
 const levels = await db.skillLevel.findMany();
 if (!levels.length) throw new Error("Configure at least one skill level before testing");
 await mkdir("test-results", { recursive: true });
+await writeFile(`test-results/${tag}-settings-backup.json`, JSON.stringify({ tag, originalSettings, levels }, null, 2));
 const admin = await db.user.create({ data: { email: tag.toLowerCase() + "-admin@example.test", passwordHash: await bcrypt.hash(password, 12), role: "ADMIN" } });
 const department = await db.department.create({ data: { name: tag } });
 const section = await db.section.create({ data: { name: "TEST", departmentId: department.id } });
@@ -27,11 +30,11 @@ const provider = await db.provider.create({ data: { name: tag, website: "https:/
 const skill = await db.skill.create({ data: { name: tag + " Skill", slug: tag.toLowerCase(), categoryId: category.id, levelId: levels[0].id } });
 const course = await db.course.create({ data: { name: tag + " Official Course", officialUrl: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide", skillId: skill.id, providerId: provider.id, levelId: levels[0].id, certificateAvailable: true } });
 await db.question.createMany({ data: Array.from({ length: 5 }, (_, i) => ({ skillId: skill.id, levelId: levels[0].id, type: "SINGLE_CHOICE" as const, difficulty: "EASY" as const, prompt: tag + " test question " + i, options: ["Correct", "Incorrect"], correctAnswer: "Correct" })) });
-const browser = await chromium.launch({ channel: "msedge", headless: true });
+const { browser, close: closeBrowser } = await launchSecurityBrowser();
 const adminContext = await browser.newContext({ baseURL: base });
-const studentContext = await browser.newContext({ baseURL: base });
+const studentContext = browser.contexts()[0];
 const adminPage = await adminContext.newPage();
-const studentPage = await studentContext.newPage();
+const studentPage = studentContext.pages()[0];
 const pageErrors: string[] = [];
 for (const page of [adminPage, studentPage]) page.on("pageerror", error => pageErrors.push(error.message));
 async function login(page: Page, role: string, identifier: string, secret: string) {
@@ -41,7 +44,7 @@ async function login(page: Page, role: string, identifier: string, secret: strin
  await page.getByRole("button", { name: "Sign in", exact: true }).click();
  await page.waitForURL(/dashboard|password/, { timeout: 30000 });
 }
-async function jsonPost(path: string, data: object) { return studentContext.request.post(path, { data, maxRedirects: 0 }); }
+async function jsonPost(path: string, data: object) { return studentContext.request.post(base + path, { data, maxRedirects: 0 }); }
 let studentId = "";
 let completed = false;
 try {
@@ -74,16 +77,24 @@ try {
  await studentPage.getByRole("button", { name: "Continue to dashboard" }).click();
  await studentPage.waitForURL(/student\/dashboard/);
  checks("Student login and forced password change; API bypass blocked");
+ if (mode === "security") {
+  await securityChecks(db, adminContext, studentContext, { skillId: skill.id, departmentId: department.id, sectionId: section.id, tag }, checks);
+  completed = true;
+  return;
+ }
  expect((await jsonPost("/api/student/assessment/start", { skillId: skill.id })).status()).toBe(409);
  expect((await jsonPost("/api/student/learning", { skillId: skill.id, action: "complete" })).status()).toBe(409);
  expect((await jsonPost("/api/student/certificates", { skillId: skill.id, credentialId: "UNAUTHORIZED", issuedAt: "2026-01-01" })).status()).toBe(409);
  checks("Learning and certificate prerequisites enforced through API");
  await studentPage.goto(base + "/student/skills/" + skill.slug);
- const popupPromise = studentPage.waitForEvent("popup");
- await studentPage.getByRole("button", { name: "Learn Officially" }).click();
- const official = await popupPromise;
+ const [official] = await Promise.all([
+  studentPage.waitForEvent("popup"),
+  studentPage.getByRole("button", { name: "Learn Officially" }).click(),
+ ]);
  expect(official.url()).toContain("developer.mozilla.org");
  await official.close();
+ expect((await jsonPost("/api/student/assessment/start", { skillId: skill.id })).status()).toBe(409);
+ expect((await jsonPost("/api/student/learning", { skillId: skill.id, action: "complete", completedAt: "2020-01-01" })).status()).toBe(400);
  await studentPage.goto(base + "/student/skills?q=" + encodeURIComponent(tag));
  await studentPage.getByRole("button", { name: "I Completed Learning" }).click();
  await studentPage.waitForURL(/student\/skills/);
@@ -97,12 +108,16 @@ try {
  await expect(studentPage.getByRole("button", { name: "Submit assessment" })).toBeVisible();
  const clientId = await studentPage.evaluate(id => sessionStorage.getItem("skillcert_tab_" + id)!, attemptId);
  const first = await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attemptId }, include: { answers: true } });
+ expect(first.questionCount).toBe(2); expect(first.answers).toHaveLength(2);
+ expect(first.expiresAt.getTime() - first.startedAt.getTime()).toBe(180000);
+ expect(first.passMark).toBe(1); expect(first.violationLimit).toBe(20); expect(first.cooldownHours).toBe(0.005);
  expect(await studentPage.evaluate(() => !!document.fullscreenElement)).toBe(true);
  const payload = await (await jsonPost("/api/student/assessment/" + attemptId + "/heartbeat", { clientId })).json();
  expect(JSON.stringify(payload)).not.toMatch(/correctAnswer|explanation|passwordHash|questionSnapshot/);
- expect((await studentContext.request.get("/student/results/" + attemptId, { maxRedirects: 0 })).status()).toBe(307);
+ expect((await studentContext.request.get(base + "/student/results/" + attemptId, { maxRedirects: 0 })).status()).toBe(307);
  const outsider = await db.question.findFirstOrThrow({ where: { skillId: skill.id, id: { notIn: first.answers.map(a => a.questionId) } } });
  expect((await jsonPost("/api/student/assessment/" + attemptId + "/save", { clientId, responses: { [outsider.id]: "Correct" } })).status()).toBe(400);
+ expect((await jsonPost("/api/student/assessment/" + attemptId + "/submit", { clientId, responses: { [outsider.id]: "Correct" } })).status()).toBe(400);
  expect((await jsonPost("/api/student/assessment/" + attemptId + "/submit", { clientId, score: 999, passed: true })).status()).toBe(400);
  expect((await jsonPost("/api/student/assessment/" + attemptId + "/claim", { clientId: randomUUID() })).status()).toBe(409);
  const concurrent = await Promise.all([jsonPost("/api/student/assessment/start", { skillId: skill.id }), jsonPost("/api/student/assessment/start", { skillId: skill.id })]);
@@ -122,15 +137,19 @@ try {
  checks("Server timer and saved answers survive refresh (" + timerBefore + ")");
  const devtools = await studentContext.newCDPSession(studentPage);
  await devtools.send("Emulation.setFocusEmulationEnabled", { enabled: false });
+ await studentPage.bringToFront();
+ await expect.poll(() => studentPage.evaluate(() => document.visibilityState)).toBe("visible");
  const duplicate = await studentContext.newPage();
+ await duplicate.bringToFront();
+ await expect.poll(() => studentPage.evaluate(() => document.visibilityState)).toBe("hidden");
  await duplicate.goto(base + "/student/assessment/" + attemptId);
  await expect(duplicate.getByRole("status")).toContainText("already open in another tab");
- await studentPage.bringToFront();
- await duplicate.close();
  await expect.poll(async () => {
   const violations = await db.assessmentViolation.findMany({ where: { attemptId } });
   return ["TAB_SWITCH", "PAGE_HIDDEN", "WINDOW_BLUR"].every(type => violations.some(v => v.type === type));
  }).toBe(true);
+ await studentPage.bringToFront();
+ await duplicate.close();
  checks("Actual browser tab switch, page hidden and blur logged; duplicate tab blocked");
  if (await studentPage.evaluate(() => !!document.fullscreenElement)) await studentPage.evaluate(() => document.exitFullscreen());
  await expect(studentPage.getByRole("button", { name: "Enter fullscreen and resume" })).toBeVisible();
@@ -139,11 +158,20 @@ try {
  await studentPage.getByRole("button", { name: "Submit assessment" }).click();
  await studentPage.waitForURL(/student\/results\//);
  const failed = await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attemptId } });
+ console.log("Cooldown evidence", JSON.stringify({ reason: failed.submissionReason, submittedAt: failed.submittedAt, reexamAvailableAt: failed.reexamAvailableAt, checkedAt: new Date() }));
  expect(failed.passed).toBe(false);
+ expect(failed.submissionReason).toBe("MANUAL");
+ expect(failed.reexamAvailableAt!.getTime() - failed.submittedAt!.getTime()).toBe(18000);
  expect((await jsonPost("/api/student/assessment/start", { skillId: skill.id })).status()).toBe(429);
+ const frozenAnswers = await db.assessmentAnswer.findMany({ where: { attemptId }, orderBy: { position: "asc" } });
+ const finalizationCount = await db.activityLog.count({ where: { studentId, action: "ASSESSMENT_FAILED" } });
  const retrySubmit = await jsonPost("/api/student/assessment/" + attemptId + "/submit", { clientId, responses: Object.fromEntries(first.answers.map(a => [a.questionId, "Correct"])) });
  expect(retrySubmit.ok()).toBe(true);
  expect((await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attemptId } })).score).toBe(failed.score);
+ await jsonPost("/api/student/assessment/" + attemptId + "/save", { clientId, responses: Object.fromEntries(first.answers.map(a => [a.questionId, "Correct"])) });
+ expect(await db.assessmentAnswer.findMany({ where: { attemptId }, orderBy: { position: "asc" } })).toEqual(frozenAnswers);
+ expect(await db.activityLog.count({ where: { studentId, action: "ASSESSMENT_FAILED" } })).toBe(finalizationCount);
+ expect(await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attemptId } })).toEqual(failed);
  checks("Timestamped fullscreen violation, failed result, cooldown and immutable duplicate submission");
  await new Promise(resolve => setTimeout(resolve, Math.max(0, failed.reexamAvailableAt!.getTime() - Date.now()) + 100));
  await studentPage.goto(base + "/student/skills?q=" + encodeURIComponent(tag));
@@ -200,10 +228,12 @@ try {
  await studentPage.screenshot({ path: "test-results/student-verified.png", fullPage: true });
  checks("Certificate submission, admin remarks/approval and immediate student Verified status");
  await studentPage.goto(base + "/student/dashboard");
- for (const label of ["Skills Started", "Learning", "Assessments Attempted", "Passed", "Failed", "Re-exams Pending", "Certificates Submitted", "Certificates Verified", "Certificates Pending"]) await expect(studentPage.getByText(label, { exact: true })).toBeVisible();
+ const dashboardCounts = { "Skills Started": 1, Learning: 0, "Assessments Attempted": 2, Passed: 1, Failed: 1, "Re-exams Pending": 0, "Certificates Submitted": 1, "Certificates Verified": 1, "Certificates Pending": 0 };
+ for (const [label, count] of Object.entries(dashboardCounts)) await expect(studentPage.getByText(label, { exact: true }).locator("..").locator("strong")).toHaveText(String(count));
  await adminPage.goto(base + "/admin/students/" + studentId);
  await expect(adminPage.getByText("Verification history", { exact: true })).toBeVisible();
  await expect(adminPage.getByText("Attempt #2", { exact: false })).toBeVisible();
+ for (const text of ["Attempt #1", "TAB_SWITCH", "PAGE_HIDDEN", "WINDOW_BLUR", "FULLSCREEN_EXIT", "OFFICIAL_COURSE_OPENED", "LEARNING_COMPLETED", "REJECTED", "NEEDS_RESUBMISSION", "VERIFIED"]) await expect(adminPage.getByText(text, { exact: false }).first()).toBeVisible();
  await adminPage.screenshot({ path: "test-results/student-360.png", fullPage: true });
  const timeline = await db.activityLog.findMany({ where: { studentId }, orderBy: { createdAt: "asc" } });
  const expected = ["LEARNING", "LEARNING_COMPLETED", "ASSESSMENT_AVAILABLE", "ASSESSMENT_FAILED", "REEXAM_REQUIRED", "ASSESSMENT_PASSED", "CERTIFICATE_UNLOCKED", "SUBMITTED", "PENDING_VERIFICATION", "VERIFIED"];
@@ -215,9 +245,14 @@ try {
  checks("Database dashboard counts, filtered admin assessments, complete Student 360 and ordered lifecycle history");
  await securityChecks(db, adminContext, studentContext, { skillId: skill.id, departmentId: department.id, sectionId: section.id, tag }, checks);
  completed = true;
+} catch (error) {
+ const attempts = studentId ? await db.assessmentAttempt.findMany({ where: { studentId }, select: { id: true, startedAt: true, expiresAt: true, submittedAt: true, submissionReason: true, cooldownHours: true, reexamAvailableAt: true, violations: { select: { type: true, occurredAt: true } } } }) : [];
+ await writeFile(`test-results/${mode}-failure.json`, JSON.stringify({ tag, message: String(error), attempts }, null, 2));
+ await studentPage.screenshot({ path: `test-results/${mode}-failure.png`, fullPage: true }).catch(() => undefined);
+ throw error;
 } finally {
- await writeFile("test-results/workflow-report.json", JSON.stringify({ tag, checks: report, pageErrors, completed }, null, 2));
- await browser.close();
+ await writeFile(`test-results/${mode}-report.json`, JSON.stringify({ tag, mode, checks: report, pageErrors, completed }, null, 2));
+ await closeBrowser();
  // Remove only this run's fixtures; restore settings exactly as they were.
  await db.$transaction(async tx => {
   const users = await tx.user.findMany({ where: { OR: [{ id: admin.id }, { email: tag.toLowerCase() + "@example.test" }] }, select: { id: true } });
@@ -237,4 +272,6 @@ try {
  await db.$disconnect();
 }
 }
-main().catch(error => { console.error(error); process.exitCode = 1; });
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+ runWorkflow().catch(error => { console.error(error); process.exitCode = 1; });
+}

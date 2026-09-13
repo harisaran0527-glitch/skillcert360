@@ -231,7 +231,7 @@ model AssessmentAttempt {
 	questionCount Int @default(50)
 	passMark Int @default(30)
 	violationLimit Int @default(3)
-	cooldownHours Int @default(6)
+	cooldownHours Float @default(6)
 	autoSubmitOnViolation Boolean @default(true)
 	certificateRequired Boolean @default(true)
 	autoSubmitted Boolean @default(false)
