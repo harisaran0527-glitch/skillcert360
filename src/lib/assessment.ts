@@ -4,6 +4,7 @@ import { z } from "zod";
 import { db } from "@/lib/db";
 import { getAssessmentSettings } from "@/lib/settings";
 import { studentTransaction, transition, WorkflowError, type Tx } from "@/lib/workflow";
+import { assertSkillLevelUnlocked } from "@/lib/progression";
 
 const include = { answers: { orderBy: { position: "asc" as const }, include: { question: true } }, violations: true };
 type Attempt = Prisma.AssessmentAttemptGetPayload<{ include: typeof include }>;
@@ -35,8 +36,13 @@ async function finalize(tx: Tx, attempt: Attempt, reason: "MANUAL" | "TIMEOUT" |
     reexamAvailableAt: passed ? null : new Date(submittedAt.getTime() + attempt.cooldownHours * 3600000), clientLeaseUntil: null,
   }, include });
   await transition(tx, attempt.studentId, attempt.skillId, passed ? ["ASSESSMENT_PASSED", "CERTIFICATE_UNLOCKED"] : ["ASSESSMENT_FAILED", "REEXAM_REQUIRED"], { attemptId: attempt.id, score, reason });
-  if (passed) await tx.certificate.upsert({ where: { studentId_skillId: { studentId: attempt.studentId, skillId: attempt.skillId } },
-    create: { studentId: attempt.studentId, skillId: attempt.skillId, status: "UNLOCKED" }, update: { status: "UNLOCKED" } });
+  if (passed) {
+    const enrollment = await tx.studentSkill.findUnique({ where: { studentId_skillId: { studentId: attempt.studentId, skillId: attempt.skillId } }, include: { selectedCourse: true } });
+    const course = enrollment?.selectedCourse;
+    const attribution = course ? { courseId: course.id, providerId: course.providerId, credentialType: course.credentialType, credentialName: course.title ?? course.name } : {};
+    await tx.certificate.upsert({ where: { studentId_skillId: { studentId: attempt.studentId, skillId: attempt.skillId } },
+      create: { studentId: attempt.studentId, skillId: attempt.skillId, status: "UNLOCKED", ...attribution }, update: { status: "UNLOCKED", ...attribution } });
+  }
   return updated;
 }
 export async function expireStudentAttempts(studentId?: string) {
@@ -54,6 +60,8 @@ export async function startAssessment(studentId: string, skillId: string) {
     if (!skill?.active || !skill.level.active) throw new WorkflowError("Skill unavailable", 404);
     const enrollment = await tx.studentSkill.findUnique({ where: { studentId_skillId: { studentId, skillId } } });
     if (!enrollment?.completedAt) throw new WorkflowError("Complete official learning before starting an assessment.");
+    // Level-lock check: verify the student's progression allows this skill's level.
+    await assertSkillLevelUnlocked(studentId, skillId);
     for (const prerequisite of skill.prerequisites) {
       const prior = await tx.studentSkill.findUnique({ where: { studentId_skillId: { studentId, skillId: prerequisite.prerequisiteId } } });
       if (!prior?.verifiedAt && (settings.certificateRequirement || !await tx.assessmentAttempt.findFirst({ where: { studentId, skillId: prerequisite.prerequisiteId, passed: true } }))) throw new WorkflowError("Complete the prerequisite skills first.");

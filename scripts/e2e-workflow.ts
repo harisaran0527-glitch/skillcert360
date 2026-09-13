@@ -7,9 +7,10 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 import { securityChecks } from "./e2e-security";
 import { launchSecurityBrowser } from "./e2e-browser";
+import { catalogueChecks } from "./e2e-catalog";
 const expect = baseExpect.configure({ timeout: 20000 });
 
-export async function runWorkflow(mode: "workflow" | "security" = "workflow") {
+export async function runWorkflow(mode: "workflow" | "security" | "catalogue" = "workflow") {
 const db = new PrismaClient();
 const base = process.env.E2E_BASE_URL || "http://localhost:3000";
 const tag = "E2E-" + Date.now();
@@ -41,7 +42,7 @@ async function login(page: Page, role: string, identifier: string, secret: strin
  await page.goto(base + "/" + role + "/login");
  await page.locator('[name="identifier"]').fill(identifier);
  await page.locator('[name="password"]').fill(secret);
- await page.getByRole("button", { name: "Sign in", exact: true }).click();
+ await page.locator(`form[action="/api/auth/${role}/login"] button[type="submit"]`).click();
  await page.waitForURL(/dashboard|password/, { timeout: 30000 });
 }
 async function jsonPost(path: string, data: object) { return studentContext.request.post(base + path, { data, maxRedirects: 0 }); }
@@ -56,7 +57,7 @@ try {
  await adminPage.locator('[name="assessmentCooldownHours"]').fill("0.005");
  for (const level of levels) await adminPage.locator('[name="passMarks.' + level.name + '"]').fill("1");
  await adminPage.locator('[name="autoSubmitOnViolation"]').check();
- await adminPage.getByRole("button", { name: "Save settings" }).click();
+ await adminPage.getByRole("button", { name: "Save System Settings" }).click();
  await adminPage.waitForURL(/saved=1/);
  expect((await db.adminSetting.findUniqueOrThrow({ where: { key: "assessmentQuestionCount" } })).value).toBe(2);
  checks("Admin settings persisted");
@@ -65,7 +66,7 @@ try {
  for (const [name, value] of Object.entries(details)) await adminPage.locator('[name="' + name + '"]').fill(value);
  await adminPage.locator('[name="departmentId"]').selectOption(department.id);
  await adminPage.locator('[name="sectionId"]').selectOption(section.id);
- await adminPage.getByRole("button", { name: "Create account" }).click();
+ await adminPage.getByRole("button", { name: "Create Student Account" }).click();
  await adminPage.waitForURL(/created=1/);
  const student = await db.studentProfile.findUniqueOrThrow({ where: { registerNumber: tag } });
  studentId = student.id;
@@ -74,9 +75,14 @@ try {
  expect(studentPage.url()).toContain("/student/password");
  expect((await jsonPost("/api/student/assessment/start", { skillId: skill.id })).status()).toBe(403);
  await studentPage.locator('[name="password"]').fill(newPassword);
- await studentPage.getByRole("button", { name: "Continue to dashboard" }).click();
+ await studentPage.getByRole("button", { name: "Continue to Student Dashboard" }).click();
  await studentPage.waitForURL(/student\/dashboard/);
  checks("Student login and forced password change; API bypass blocked");
+ if (mode === "catalogue") {
+  await catalogueChecks(db, adminPage, studentPage, { skillId: skill.id, courseId: course.id, providerId: provider.id, studentId, tag }, checks);
+  completed = true;
+  return;
+ }
  if (mode === "security") {
   await securityChecks(db, adminContext, studentContext, { skillId: skill.id, departmentId: department.id, sectionId: section.id, tag }, checks);
   completed = true;
@@ -92,6 +98,9 @@ try {
   studentPage.getByRole("button", { name: "Learn Officially" }).click(),
  ]);
  expect(official.url()).toContain("developer.mozilla.org");
+ const selected = await db.studentSkill.findUniqueOrThrow({ where: { studentId_skillId: { studentId, skillId: skill.id } }, include: { selectedCourse: true } });
+ expect(selected.selectedCourseId).toBe(course.id);
+ expect(selected.selectedCourse?.providerId).toBe(provider.id);
  await official.close();
  expect((await jsonPost("/api/student/assessment/start", { skillId: skill.id })).status()).toBe(409);
  expect((await jsonPost("/api/student/learning", { skillId: skill.id, action: "complete", completedAt: "2020-01-01" })).status()).toBe(400);
@@ -104,8 +113,8 @@ try {
  await start.click();
  await studentPage.waitForURL(/student\/assessment\//);
  const attemptId = studentPage.url().split("/").pop()!;
- await studentPage.getByRole("button", { name: "Enter fullscreen and resume" }).click();
- await expect(studentPage.getByRole("button", { name: "Submit assessment" })).toBeVisible();
+ await studentPage.getByRole("button", { name: "Enter Secure Assessment Environment" }).click();
+ await expect(studentPage.getByRole("button", { name: "Submit Assessment", exact: true })).toBeVisible();
  const clientId = await studentPage.evaluate(id => sessionStorage.getItem("skillcert_tab_" + id)!, attemptId);
  const first = await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attemptId }, include: { answers: true } });
  expect(first.questionCount).toBe(2); expect(first.answers).toHaveLength(2);
@@ -128,8 +137,8 @@ try {
  await expect(studentPage.getByRole("status")).toContainText("Answer saved");
  const timerBefore = await studentPage.getByRole("timer").textContent();
  await studentPage.reload();
- await studentPage.getByRole("button", { name: "Enter fullscreen and resume" }).click();
- await expect(studentPage.getByRole("button", { name: "Submit assessment" })).toBeVisible();
+ await studentPage.getByRole("button", { name: "Enter Secure Assessment Environment" }).click();
+ await expect(studentPage.getByRole("button", { name: "Submit Assessment", exact: true })).toBeVisible();
  const refreshed = await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attemptId } });
  expect(refreshed.expiresAt.getTime()).toBe(first.expiresAt.getTime());
  await expect(studentPage.getByLabel("Incorrect", { exact: true })).toBeChecked();
@@ -152,11 +161,11 @@ try {
  await duplicate.close();
  checks("Actual browser tab switch, page hidden and blur logged; duplicate tab blocked");
  if (await studentPage.evaluate(() => !!document.fullscreenElement)) await studentPage.evaluate(() => document.exitFullscreen());
- await expect(studentPage.getByRole("button", { name: "Enter fullscreen and resume" })).toBeVisible();
+ await expect(studentPage.getByRole("button", { name: "Enter Secure Assessment Environment" })).toBeVisible();
  await expect.poll(() => db.assessmentViolation.count({ where: { attemptId, type: "FULLSCREEN_EXIT" } })).toBeGreaterThan(0);
- await studentPage.getByRole("button", { name: "Enter fullscreen and resume" }).click();
- await studentPage.getByRole("button", { name: "Submit assessment" }).click();
- await studentPage.waitForURL(/student\/results\//);
+ await studentPage.getByRole("button", { name: "Enter Secure Assessment Environment" }).click();
+ await studentPage.getByRole("button", { name: "Submit Assessment", exact: true }).click();
+ await Promise.all([studentPage.waitForURL(/student\/results\//), studentPage.getByRole("button", { name: "Confirm Submit", exact: true }).click()]);
  const failed = await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attemptId } });
  console.log("Cooldown evidence", JSON.stringify({ reason: failed.submissionReason, submittedAt: failed.submittedAt, reexamAvailableAt: failed.reexamAvailableAt, checkedAt: new Date() }));
  expect(failed.passed).toBe(false);
@@ -181,12 +190,12 @@ try {
  const second = await db.assessmentAttempt.findUniqueOrThrow({ where: { id: secondId }, include: { answers: true } });
  expect(second.attemptNumber).toBe(2);
  expect(second.answers.some(a => !first.answers.some(b => a.questionId === b.questionId))).toBe(true);
- await studentPage.getByRole("button", { name: "Enter fullscreen and resume" }).click();
- await expect(studentPage.getByRole("button", { name: "Submit assessment" })).toBeVisible();
+ await studentPage.getByRole("button", { name: "Enter Secure Assessment Environment" }).click();
+ await expect(studentPage.getByRole("button", { name: "Submit Assessment", exact: true })).toBeVisible();
  await studentPage.getByLabel("Correct", { exact: true }).check();
  await expect(studentPage.getByRole("status")).toContainText("Answer saved");
- await studentPage.getByRole("button", { name: "Submit assessment" }).click();
- await studentPage.waitForURL(/student\/results\//);
+ await studentPage.getByRole("button", { name: "Submit Assessment", exact: true }).click();
+ await Promise.all([studentPage.waitForURL(/student\/results\//), studentPage.getByRole("button", { name: "Confirm Submit", exact: true }).click()]);
  expect((await db.assessmentAttempt.findUniqueOrThrow({ where: { id: secondId } })).passed).toBe(true);
  expect((await db.certificate.findUniqueOrThrow({ where: { studentId_skillId: { studentId, skillId: skill.id } } })).status).toBe("UNLOCKED");
  checks("Real cooldown elapses, new randomized re-exam, pass and certificate unlock");
@@ -195,12 +204,12 @@ try {
  await studentPage.locator('[name="officialUrl"]').fill("https://example.test/credentials/" + tag);
  await studentPage.locator('[name="credentialId"]').fill(tag + "-CREDENTIAL");
  await studentPage.locator('[name="issuedAt"]').fill("2026-01-01");
- await studentPage.getByRole("button", { name: "Submit certificate" }).click();
+ await Promise.all([studentPage.waitForResponse(response => response.url().endsWith("/api/student/certificates") && response.request().method() === "POST"), studentPage.getByRole("button", { name: "Submit Certificate for Verification" }).click()]);
  await studentPage.waitForURL(/success=1/);
  const certificate = await db.certificate.findUniqueOrThrow({ where: { studentId_skillId: { studentId, skillId: skill.id } } });
  expect(certificate.status).toBe("PENDING_VERIFICATION");
  await adminPage.goto(base + "/admin/certificates");
- const card = adminPage.locator("article").filter({ hasText: tag + " Student" });
+ const card = adminPage.locator('form[action="/api/admin/certificates"]').filter({ has: adminPage.locator(`[name="certificateId"][value="${certificate.id}"]`) });
  await card.locator('[name="remarks"]').fill("Please provide the issuer credential identifier.");
  await card.getByRole("button", { name: "Request Resubmission", exact: true }).click();
  await adminPage.waitForURL(/success=1/);
@@ -208,30 +217,40 @@ try {
  await studentPage.reload();
  await studentPage.locator('[name="credentialId"]').fill(tag + "-ID-ONLY");
  await studentPage.locator('[name="issuedAt"]').fill("2026-01-01");
- await studentPage.getByRole("button", { name: "Submit certificate" }).click();
+ await Promise.all([studentPage.waitForResponse(response => response.url().endsWith("/api/student/certificates") && response.request().method() === "POST"), studentPage.getByRole("button", { name: "Submit Certificate for Verification" }).click()]);
  await studentPage.waitForURL(/success=1/);
  await adminPage.reload();
  await card.locator('[name="remarks"]').fill("Issuer evidence needs correction.");
- await card.getByRole("button", { name: "Reject", exact: true }).click();
+ await card.getByRole("button", { name: "Reject Credential", exact: true }).click();
  await adminPage.waitForURL(/success=1/);
  expect((await db.certificate.findUniqueOrThrow({ where: { id: certificate.id } })).status).toBe("REJECTED");
  expect((await jsonPost("/api/student/certificates", { skillId: skill.id, officialUrl: "https://example.test/credentials/" + tag, issuedAt: "2026-01-01" })).status()).toBe(303);
  await adminPage.reload();
  checks("Request resubmission, rejection, ID-only and URL-only submission preserve review history");
  await card.locator('[name="remarks"]').fill("Credential checked against issuer record.");
- await card.getByRole("button", { name: "Approve", exact: true }).click();
+ await card.getByRole("button", { name: "Approve & Unlock", exact: true }).click();
  await adminPage.waitForURL(/success=1/);
  await studentPage.reload();
- await expect(studentPage.getByText("VERIFIED", { exact: true })).toBeVisible();
+ await expect(studentPage.getByText("VERIFIED", { exact: false })).toBeVisible();
  const verified = await db.studentSkill.findUniqueOrThrow({ where: { studentId_skillId: { studentId, skillId: skill.id } } });
  expect(verified.state).toBe("VERIFIED"); expect(verified.verifiedAt).not.toBeNull();
+ const attributedCertificate = await db.certificate.findUniqueOrThrow({ where: { studentId_skillId: { studentId, skillId: skill.id } } });
+ expect(attributedCertificate.courseId).toBe(course.id);
+ expect(attributedCertificate.providerId).toBe(provider.id);
  await studentPage.screenshot({ path: "test-results/student-verified.png", fullPage: true });
  checks("Certificate submission, admin remarks/approval and immediate student Verified status");
  await studentPage.goto(base + "/student/dashboard");
- const dashboardCounts = { "Skills Started": 1, Learning: 0, "Assessments Attempted": 2, Passed: 1, Failed: 1, "Re-exams Pending": 0, "Certificates Submitted": 1, "Certificates Verified": 1, "Certificates Pending": 0 };
- for (const [label, count] of Object.entries(dashboardCounts)) await expect(studentPage.getByText(label, { exact: true }).locator("..").locator("strong")).toHaveText(String(count));
+ const dashboardCounts = { "Skills Started": 1, "Assessments Passed": 1, "Re-exams Pending": 0, "Certificates Verified": 1 };
+ for (const [label, count] of Object.entries(dashboardCounts)) await expect(studentPage.getByText(label, { exact: true }).locator("..").locator("..").locator("p.text-3xl")).toHaveText(String(count));
+ // The redesigned dashboard displays four KPIs; retain all prior data assertions.
+ expect(await db.studentSkill.count({ where: { studentId, completedAt: null } })).toBe(0);
+ expect(await db.assessmentAttempt.count({ where: { studentId } })).toBe(2);
+ expect(await db.assessmentAttempt.count({ where: { studentId, passed: false } })).toBe(1);
+ expect(await db.certificate.count({ where: { studentId, submittedAt: { not: null } } })).toBe(1);
+ expect(await db.certificate.count({ where: { studentId, status: "PENDING_VERIFICATION" } })).toBe(0);
  await adminPage.goto(base + "/admin/students/" + studentId);
  await expect(adminPage.getByText("Verification history", { exact: true })).toBeVisible();
+ await adminPage.getByText("Verification history", { exact: true }).click();
  await expect(adminPage.getByText("Attempt #2", { exact: false })).toBeVisible();
  for (const text of ["Attempt #1", "TAB_SWITCH", "PAGE_HIDDEN", "WINDOW_BLUR", "FULLSCREEN_EXIT", "OFFICIAL_COURSE_OPENED", "LEARNING_COMPLETED", "REJECTED", "NEEDS_RESUBMISSION", "VERIFIED"]) await expect(adminPage.getByText(text, { exact: false }).first()).toBeVisible();
  await adminPage.screenshot({ path: "test-results/student-360.png", fullPage: true });
@@ -240,7 +259,7 @@ try {
  let offset = 0;
  for (const state of expected) { const i = timeline.findIndex((a, i) => i >= offset && a.action === state); expect(i).toBeGreaterThanOrEqual(offset); offset = i + 1; }
  await adminPage.goto(base + "/admin/assessments?department=" + department.id + "&year=2&section=" + section.id + "&skill=" + skill.id + "&result=pass");
- await expect(adminPage.getByText("1 attempts", { exact: true })).toBeVisible();
+ await expect(adminPage.getByText("1 Attempt Records", { exact: true })).toBeVisible();
  expect(pageErrors).toEqual([]);
  checks("Database dashboard counts, filtered admin assessments, complete Student 360 and ordered lifecycle history");
  await securityChecks(db, adminContext, studentContext, { skillId: skill.id, departmentId: department.id, sectionId: section.id, tag }, checks);

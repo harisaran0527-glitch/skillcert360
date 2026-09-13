@@ -8,20 +8,21 @@ export function PasswordField({ name = "password", variant = "dark" }: { name?: 
 
   const inputClassName =
     variant === "dark"
-      ? "mt-2 w-full rounded-lg border border-white/10 bg-[#0c2140] px-4 py-3 pr-12 text-white outline-none focus:border-[#35c3d9]"
-      : "mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 pr-12 outline-none focus:border-[#1e6fd9]";
+      ? "w-full rounded-xl border border-slate-700/80 bg-slate-950/80 px-4 py-3 pr-12 text-sm text-white placeholder-slate-500 focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500 transition"
+      : "w-full rounded-xl border border-slate-700/80 bg-slate-950/80 px-4 py-3 pr-12 text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition";
 
   const buttonClassName =
     variant === "dark"
-      ? "absolute inset-y-0 right-3 flex items-center text-blue-100/70 hover:text-white"
-      : "absolute inset-y-0 right-3 flex items-center text-slate-500 hover:text-slate-700";
+      ? "absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-cyan-400 transition"
+      : "absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-blue-400 transition";
 
   return (
-    <div className="relative">
+    <div className="relative mt-1.5">
       <input
         name={name}
         type={showPassword ? "text" : "password"}
         required
+        placeholder="••••••••••••"
         className={inputClassName}
       />
       <button
@@ -30,7 +31,7 @@ export function PasswordField({ name = "password", variant = "dark" }: { name?: 
         onClick={() => setShowPassword((value) => !value)}
         className={buttonClassName}
       >
-        {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+        {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
       </button>
     </div>
   );

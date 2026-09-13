@@ -14,6 +14,8 @@
     "db:push": "prisma db push",
     "db:seed": "tsx prisma/seed.ts",
     "db:seed:skills": "tsx scripts/seed-beginner-skills.ts",
+    "db:seed:catalog": "tsx scripts/catalog/seed-catalog.ts",
+    "db:validate:catalog": "tsx scripts/catalog/validate-catalog.ts",
     "db:restore-defaults": "tsx scripts/restore-defaults.ts"
   },
   "dependencies": {

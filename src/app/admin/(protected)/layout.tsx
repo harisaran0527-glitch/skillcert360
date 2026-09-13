@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/auth";
-import Link from "next/link";
+import { db } from "@/lib/db";
+import { AdminNavigation } from "@/components/admin-navigation";
 
 export default async function AdminProtectedLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const session = await getSession();
@@ -14,5 +15,16 @@ export default async function AdminProtectedLayout({ children }: Readonly<{ chil
     redirect("/student/dashboard");
   }
 
-  return <div className="min-h-screen bg-[#f5f8fc]"><nav aria-label="Admin navigation" className="flex flex-wrap gap-4 border-b bg-white p-5 text-sm font-semibold text-blue-700">{["dashboard", "students", "skills", "courses", "questions", "assessments", "certificates", "settings", "departments", "providers"].map(path => <Link key={path} href={`/admin/${path}`}>{path[0].toUpperCase() + path.slice(1)}</Link>)}<form action="/api/auth/logout" method="post"><button>Sign out</button></form></nav><div className="mx-auto max-w-7xl p-6">{children}</div></div>;
+  const user = await db.user.findUnique({ where: { id: session.userId } });
+
+  return (
+    <div className="min-h-screen bg-[#080c16] text-slate-100 font-sans antialiased">
+      <AdminNavigation adminEmail={user?.email || "admin@skillcert.com"} />
+      <div className="lg:pl-64 flex flex-col min-h-screen">
+        <main className="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl w-full mx-auto">
+          {children}
+        </main>
+      </div>
+    </div>
+  );
 }

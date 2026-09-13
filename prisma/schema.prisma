@@ -44,6 +44,31 @@ enum Difficulty {
 	HARD
 }
 
+enum CredentialType {
+	NONE
+	COMPLETION_CERTIFICATE
+	DIGITAL_BADGE
+	ACHIEVEMENT
+	APPLIED_SKILL
+	MICROCREDENTIAL
+	PROFESSIONAL_CERTIFICATION
+}
+
+enum UrlStatus {
+	VERIFIED
+	OFFICIAL_LINK_PENDING
+	RETIRED
+	UNAVAILABLE
+}
+
+enum PricingType {
+	FREE
+	PAID
+	FREE_LEARNING_PAID_EXAM
+	SUBSCRIPTION
+	UNKNOWN
+}
+
 model User {
 	id String @id @default(cuid())
 	email String @unique
@@ -121,6 +146,7 @@ model Skill {
 	name String
 	slug String @unique
 	description String?
+	icon String?
 	active Boolean @default(true)
 	categoryId String
 	levelId String
@@ -136,6 +162,8 @@ model Skill {
 	attempts AssessmentAttempt[]
 	createdAt DateTime @default(now())
 	updatedAt DateTime @updatedAt
+	@@index([active, levelId, name])
+	@@index([categoryId, active])
 }
 
 model SkillPrerequisite {
@@ -149,10 +177,14 @@ model SkillPrerequisite {
 model Provider {
 	id String @id @default(cuid())
 	name String @unique
+	slug String? @unique
+	officialWebsite String?
 	website String?
+	logo String?
 	description String?
 	active Boolean @default(true)
 	courses Course[]
+	certificates Certificate[]
 }
 
 model Course {
@@ -161,32 +193,49 @@ model Course {
 	providerId String
 	levelId String
 	name String
+	title String?
 	officialUrl String
+	officialUrlStatus UrlStatus @default(OFFICIAL_LINK_PENDING)
 	durationMinutes Int?
+	duration String?
 	isFree Boolean @default(true)
+	pricingType PricingType @default(FREE)
 	certificateAvailable Boolean @default(false)
+	credentialAvailable Boolean @default(false)
+	credentialType CredentialType @default(NONE)
+	credentialUrl String?
 	description String?
 	prerequisites String?
+	learningOutcomes Json?
 	active Boolean @default(true)
+	verifiedAt DateTime?
 	progress CourseProgress[]
+	selectedByStudentSkills StudentSkill[] @relation("SelectedCourse")
+	certificates Certificate[]
 	skill Skill @relation(fields: [skillId], references: [id])
 	provider Provider @relation(fields: [providerId], references: [id])
 	level SkillLevel @relation(fields: [levelId], references: [id])
 	createdAt DateTime @default(now())
+	@@index([skillId, active, providerId])
+	@@index([providerId, active])
+	@@index([active, name])
 }
 
 model StudentSkill {
 	id String @id @default(cuid())
 	studentId String
 	skillId String
+	selectedCourseId String?
 	startedAt DateTime @default(now())
 	completedAt DateTime?
 	verifiedAt DateTime?
 	state String @default("LEARNING")
 	courseProgress CourseProgress[]
+	selectedCourse Course? @relation("SelectedCourse", fields: [selectedCourseId], references: [id], onDelete: SetNull)
 	student StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
 	skill Skill @relation(fields: [skillId], references: [id])
 	@@unique([studentId, skillId])
+	@@index([selectedCourseId])
 }
 
 model Question {
@@ -275,7 +324,11 @@ model Certificate {
 	id String @id @default(cuid())
 	studentId String
 	skillId String
+	courseId String?
+	providerId String?
 	status CertificateStatus @default(LOCKED)
+	credentialType CredentialType @default(NONE)
+	credentialName String?
 	officialUrl String?
 	credentialId String?
 	filePath String?
@@ -287,6 +340,8 @@ model Certificate {
 	reviews CertificateReview[]
 	student StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
 	skill Skill @relation(fields: [skillId], references: [id])
+	course Course? @relation(fields: [courseId], references: [id], onDelete: SetNull)
+	provider Provider? @relation(fields: [providerId], references: [id], onDelete: SetNull)
 	verifiedBy User? @relation("VerifiedBy", fields: [verifiedById], references: [id])
 	@@unique([studentId, skillId])
 }

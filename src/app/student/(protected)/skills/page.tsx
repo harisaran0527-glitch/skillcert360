@@ -1,12 +1,33 @@
 import Link from "next/link";
+import type { Prisma } from "@prisma/client";
+import { availableCourseWhere, cataloguePage, skillLevelColor } from "@/lib/catalog";
+import type { StudentProgression } from "@/lib/progression";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import { getSession } from "@/lib/auth";
-import { getSkillProgressState } from "@/lib/progress";
-import { LearnOfficialButton } from "@/components/skill-actions";
 import { expireStudentAttempts } from "@/lib/assessment";
+import { getStudentProgression, UNLOCK_THRESHOLDS, GATING_LEVEL, type LevelName, LEVEL_NAMES } from "@/lib/progression";
+import {
+  Search,
+  Filter,
+  Lock,
+  Award,
+  CheckCircle2,
+  ExternalLink,
+  BookOpen,
+  Sparkles,
+  Users,
+  BadgeCheck,
+  ShieldCheck,
+  Globe,
+  Zap,
+} from "lucide-react";
 
-export default async function StudentSkillsPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+export default async function StudentSkillsPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
   const session = await getSession();
   if (!session || session.role !== "STUDENT") redirect("/student/login");
 
@@ -18,163 +39,480 @@ export default async function StudentSkillsPage({ searchParams }: { searchParams
 
   if (!profile) redirect("/student/login");
   await expireStudentAttempts(profile.id);
-  const activeAttempt = await db.assessmentAttempt.findFirst({ where: { studentId: profile.id, submittedAt: null } });
 
-  const levels = await db.skillLevel.findMany({ orderBy: { order: "asc" } });
-  const categories = await db.skillCategory.findMany({ orderBy: { name: "asc" } });
-  const providers = await db.provider.findMany({ where: { active: true }, orderBy: { name: "asc" } });
+  const [levels, categories, providers, progression] = await Promise.all([
+    db.skillLevel.findMany({ where: { active: true }, select: { id: true, name: true }, orderBy: { order: "asc" } }),
+    db.skillCategory.findMany({ where: { active: true }, select: { id: true, name: true }, orderBy: { name: "asc" } }),
+    db.provider.findMany({ where: { active: true, slug: { not: null } }, select: { id: true, name: true }, orderBy: { name: "asc" } }),
+    getStudentProgression(profile.id),
+  ]);
+  const levelUnlocked = new Map<string, boolean>(
+    progression.levels.map((l) => [l.name, l.unlocked])
+  );
 
   const query = (params.q ?? "").toString().trim().toLowerCase();
   const selectedLevel = (params.level ?? "").toString();
   const selectedCategory = (params.category ?? "").toString();
   const selectedProvider = (params.provider ?? "").toString();
   const selectedPrice = (params.price ?? "").toString();
-  const certificateFlag = (params.certificate ?? "").toString();
+  const credentialFilter = (params.credential ?? "").toString();
   const selectedState = (params.state ?? "").toString();
 
-  const skills = await db.skill.findMany({
-    where: { active: true },
-    include: {
-      category: true,
-      level: true,
-      courses: { include: { provider: true } },
-    },
-    orderBy: { name: "asc" },
-  });
+  // Server-side paginated query for skills
+  const requestedPage = cataloguePage((params.page ?? "1").toString());
+  const pageSize = 24;
 
-  const stateMap = new Map<string, string>();
-  for (const skill of skills) {
-    stateMap.set(skill.id, await getSkillProgressState(profile.id, skill.id));
+  const whereClause: Prisma.SkillWhereInput = { active: true, category: { active: true }, level: { active: true } };
+
+  if (selectedLevel) whereClause.levelId = selectedLevel;
+  if (selectedCategory) whereClause.categoryId = selectedCategory;
+  if (query) {
+    whereClause.OR = query.length === 1 ? [
+      { name: { equals: query, mode: "insensitive" } },
+      { name: { startsWith: query + " ", mode: "insensitive" } },
+      { name: { startsWith: query + "-", mode: "insensitive" } },
+    ] : [
+      { name: { contains: query, mode: "insensitive" } },
+      { description: { contains: query, mode: "insensitive" } },
+    ];
+  }
+  // Provider filter via courses relationship
+  const courseWhere: Prisma.CourseWhereInput = { ...availableCourseWhere };
+  if (selectedProvider) courseWhere.providerId = selectedProvider;
+  if (selectedPrice === "free") courseWhere.pricingType = "FREE";
+  if (selectedPrice === "free_exam") courseWhere.pricingType = "FREE_LEARNING_PAID_EXAM";
+  if (selectedPrice === "paid") courseWhere.pricingType = "PAID";
+  if (selectedPrice === "subscription") courseWhere.pricingType = "SUBSCRIPTION";
+  if (selectedPrice === "unknown") courseWhere.pricingType = "UNKNOWN";
+  if (selectedState === "locked" || selectedState === "unlocked") {
+    whereClause.level = { active: true, name: { in: progression.levels.filter(l => l.unlocked === (selectedState === "unlocked")).map(l => l.name) } };
+  }
+  if (credentialFilter === "yes") courseWhere.credentialAvailable = true;
+  if (credentialFilter === "no") courseWhere.credentialAvailable = false;
+
+  const hasCoursesFilter = selectedProvider || selectedPrice || credentialFilter;
+  if (hasCoursesFilter) {
+    whereClause.courses = { some: courseWhere };
   }
 
-  const filteredSkills = skills.filter((skill) => {
-    const course = skill.courses[0];
-    const provider = course?.provider?.name ?? "";
-    const progressState = stateMap.get(skill.id) ?? "NOT_STARTED";
-    const matchesQuery = !query || [skill.name, skill.description ?? "", provider].join(" ").toLowerCase().includes(query);
-    const matchesLevel = !selectedLevel || skill.levelId === selectedLevel;
-    const matchesCategory = !selectedCategory || skill.categoryId === selectedCategory;
-    const matchesProvider = !selectedProvider || course?.providerId === selectedProvider;
-    const matchesPrice = !selectedPrice || (selectedPrice === "free" ? Boolean(course?.isFree) : !course?.isFree);
-    const matchesCertificate = !certificateFlag || (certificateFlag === "yes" ? Boolean(course?.certificateAvailable) : !course?.certificateAvailable);
-    const matchesState = !selectedState || progressState === selectedState;
-    return matchesQuery && matchesLevel && matchesCategory && matchesProvider && matchesPrice && matchesCertificate && matchesState;
-  });
+  const totalCount = await db.skill.count({ where: whereClause });
+  const page = Math.min(requestedPage, Math.max(1, Math.ceil(totalCount / pageSize)));
+  const skills = await db.skill.findMany({
+      where: whereClause,
+      include: {
+        category: true,
+        level: true,
+        courses: {
+          where: availableCourseWhere,
+          select: { id: true, providerId: true, pricingType: true, credentialAvailable: true, credentialType: true, provider: { select: { name: true } } },
+          orderBy: { createdAt: "asc" },
+        },
+        studentSkills: {
+          where: { studentId: profile.id },
+        },
+      },
+      orderBy: [{ level: { order: "asc" } }, { name: "asc" }, { id: "asc" }],
+      skip: (page - 1) * pageSize,
+      take: pageSize,
+    });
+
+  const totalPages = Math.ceil(totalCount / pageSize);
+
+  // Credential type label
+  const credTypeLabel = (type: string) => {
+    switch (type) {
+      case "COMPLETION_CERTIFICATE": return "Certificate";
+      case "DIGITAL_BADGE": return "Digital Badge";
+      case "ACHIEVEMENT": return "Achievement";
+      case "APPLIED_SKILL": return "Applied Skill";
+      case "MICROCREDENTIAL": return "Microcredential";
+      case "PROFESSIONAL_CERTIFICATION": return "Professional Cert";
+      default: return null;
+    }
+  };
+
+  const pricingLabel = (type: string) => {
+    switch (type) {
+      case "FREE": return "Free";
+      case "FREE_LEARNING_PAID_EXAM": return "Free Learning / Paid Exam";
+      case "PAID": return "Paid";
+      case "SUBSCRIPTION": return "Subscription";
+      default: return "Unknown";
+    }
+  };
+
+  const pricingColor = (type: string) => {
+    switch (type) {
+      case "FREE": return "text-emerald-400 border-emerald-500/40 bg-emerald-500/10";
+      case "FREE_LEARNING_PAID_EXAM": return "text-yellow-300 border-yellow-500/40 bg-yellow-500/10";
+      case "PAID": return "text-rose-400 border-rose-500/40 bg-rose-500/10";
+      default: return "text-emerald-400 border-emerald-500/40 bg-emerald-500/10";
+    }
+  };
+
+  // Group skills by category for display
+  const groupedByCategory: Record<string, typeof skills> = {};
+  for (const skill of skills) {
+    const catName = skill.category.name;
+    if (!groupedByCategory[catName]) groupedByCategory[catName] = [];
+    groupedByCategory[catName].push(skill);
+  }
+
+  const isGrouped = !query && !selectedLevel && !selectedProvider && !selectedPrice && !credentialFilter;
 
   return (
-    <main className="min-h-screen bg-[#f5f8fc] px-4 py-8 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[.18em] text-[#1e6fd9]">Student Skills</p>
-            <h1 className="mt-2 font-display text-4xl font-bold text-[#10233f]">Skill Catalogue</h1>
+    <div className="space-y-8 pb-12">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-xs font-semibold text-cyan-300 mb-2">
+            <Sparkles className="h-3.5 w-3.5" />
+            <span>Official Skills & Multi-Provider Courses</span>
           </div>
-          <Link href="/student/dashboard" className="text-sm font-semibold text-[#1e6fd9]">← Dashboard</Link>
+          <h1 className="text-3xl font-extrabold text-white font-display">
+            Explore Skills Catalogue
+          </h1>
+          <p className="text-xs text-slate-400 mt-1">
+            {totalCount.toLocaleString()} skills available — choose a skill, pick an official provider, and earn verified credentials.
+          </p>
+        </div>
+        {/* Level progress mini badges */}
+        <div className="flex gap-2 flex-wrap">
+          {progression.levels.map((lvl) => (
+            <div
+              key={lvl.name}
+              className={`flex flex-col items-center glass-panel rounded-xl px-4 py-3 text-center`}
+            >
+              <span>{lvl.name}</span>
+              <span className={lvl.unlocked ? "text-emerald-400" : "text-slate-600"}>
+                {lvl.unlocked ? "✓ Unlocked" : `${lvl.verifiedCount}/${UNLOCK_THRESHOLDS[lvl.name as LevelName] ?? "—"}`}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Filter Bar */}
+      <form method="get" className="glass-panel rounded-2xl p-5 space-y-4">
+        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-400 pb-2 border-b border-slate-800">
+          <Filter className="h-4 w-4 text-cyan-400" />
+          <span>Filter & Search Catalogue</span>
         </div>
 
-        <form method="get" className="mb-8 grid gap-3 rounded-2xl border border-slate-200 bg-white p-4 md:grid-cols-6">
-          <input name="q" defaultValue={query} placeholder="Search skill or provider" className="rounded-lg border border-slate-200 px-3 py-2 md:col-span-2" />
-          <select name="level" defaultValue={selectedLevel} className="rounded-lg border border-slate-200 bg-white px-3 py-2">
-            <option value="">All levels</option>
-            {levels.map((level) => <option key={level.id} value={level.id}>{level.name}</option>)}
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="relative">
+            <Search className="absolute left-3.5 top-3 h-4 w-4 text-slate-500" />
+            <input
+              name="q"
+              defaultValue={query}
+              placeholder="Search skill, provider, technology..."
+              className="w-full rounded-xl border border-slate-800 bg-slate-900/90 pl-10 pr-3 py-2.5 text-xs text-white placeholder-slate-500 focus:border-cyan-500 focus:outline-none"
+            />
+          </div>
+
+          <select name="level" defaultValue={selectedLevel} className="rounded-xl border border-slate-800 bg-slate-900/90 px-3 py-2.5 text-xs text-slate-200 focus:border-cyan-500 focus:outline-none">
+            <option value="">All Progression Levels</option>
+            {levels.map((level) => (
+              <option key={level.id} value={level.id}>{level.name}</option>
+            ))}
           </select>
-          <select name="category" defaultValue={selectedCategory} className="rounded-lg border border-slate-200 bg-white px-3 py-2">
-            <option value="">All categories</option>
-            {categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}
+
+          <select name="category" defaultValue={selectedCategory} className="rounded-xl border border-slate-800 bg-slate-900/90 px-3 py-2.5 text-xs text-slate-200 focus:border-cyan-500 focus:outline-none">
+            <option value="">All Skill Categories</option>
+            {categories.map((cat) => (
+              <option key={cat.id} value={cat.id}>{cat.name}</option>
+            ))}
           </select>
-          <select name="provider" defaultValue={selectedProvider} className="rounded-lg border border-slate-200 bg-white px-3 py-2">
-            <option value="">All providers</option>
-            {providers.map((provider) => <option key={provider.id} value={provider.id}>{provider.name}</option>)}
+
+          <select name="provider" defaultValue={selectedProvider} className="rounded-xl border border-slate-800 bg-slate-900/90 px-3 py-2.5 text-xs text-slate-200 focus:border-cyan-500 focus:outline-none">
+            <option value="">All Providers</option>
+            {providers.map((prov) => (
+              <option key={prov.id} value={prov.id}>{prov.name}</option>
+            ))}
           </select>
-          <select name="price" defaultValue={selectedPrice} className="rounded-lg border border-slate-200 bg-white px-3 py-2">
-            <option value="">Price</option>
-            <option value="free">Free</option>
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 pt-2 border-t border-slate-800/60">
+          <select name="price" defaultValue={selectedPrice} className="rounded-xl border border-slate-800 bg-slate-900/90 px-3 py-2.5 text-xs text-slate-200 focus:border-cyan-500 focus:outline-none">
+            <option value="">Pricing: All</option>
+            <option value="free">Free Learning</option>
+            <option value="free_exam">Free Learning / Paid Exam</option>
             <option value="paid">Paid</option>
+            <option value="subscription">Subscription</option>
+            <option value="unknown">Unknown</option>
           </select>
-          <select name="certificate" defaultValue={certificateFlag} className="rounded-lg border border-slate-200 bg-white px-3 py-2 md:col-span-2">
-            <option value="">Certificate</option>
-            <option value="yes">Available</option>
-            <option value="no">Not available</option>
+
+          <select name="credential" defaultValue={credentialFilter} className="rounded-xl border border-slate-800 bg-slate-900/90 px-3 py-2.5 text-xs text-slate-200 focus:border-cyan-500 focus:outline-none">
+            <option value="">Credential: All</option>
+            <option value="yes">Credential Available</option>
+            <option value="no">No Credential</option>
           </select>
-          <select name="state" defaultValue={selectedState} className="rounded-lg border border-slate-200 bg-white px-3 py-2 md:col-span-2">
-            <option value="">All progress</option>
-            <option value="NOT_STARTED">Not started</option>
-            <option value="LEARNING">Learning</option>
-            <option value="LEARNING_COMPLETED">Learning completed</option>
-            <option value="ASSESSMENT_AVAILABLE">Assessment available</option>
-            <option value="ASSESSMENT_IN_PROGRESS">Assessment in progress</option>
-            <option value="REEXAM_REQUIRED">Re-exam required</option>
-            <option value="ASSESSMENT_PASSED">Assessment passed</option>
-            <option value="CERTIFICATE_UNLOCKED">Certificate unlocked</option>
+
+          <select aria-label="Access state" name="state" defaultValue={selectedState} className="rounded-xl border border-slate-800 bg-slate-900 px-3 py-2 text-xs text-slate-200">
+            <option value="">All access states</option><option value="unlocked">Unlocked</option><option value="locked">Locked</option>
           </select>
-          <button className="rounded-lg bg-[#1e6fd9] px-4 py-2 font-bold text-white md:col-span-2">Apply filters</button>
-        </form>
+          <button
+            type="submit"
+            className="rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2.5 text-xs font-bold text-white shadow-lg shadow-cyan-500/20 hover:from-cyan-400 hover:to-blue-500 transition-all"
+          >
+            Apply Filters
+          </button>
 
-        <div className="grid gap-5 xl:grid-cols-2">
-          {filteredSkills.map((skill) => {
-            const course = skill.courses[0];
-            const provider = course?.provider ?? null;
-            const state = stateMap.get(skill.id) ?? "NOT_STARTED";
-            const progressLabel = state.replace(/_/g, " ").toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
-
-            return (
-              <article key={skill.id} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[.18em] text-[#1e6fd9]">{skill.category.name}</p>
-                    <h2 className="mt-2 font-display text-2xl font-bold text-[#10233f]">{skill.name}</h2>
-                  </div>
-                  <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-[#1e6fd9]">{progressLabel}</span>
-                </div>
-
-                <div className="mt-5 grid gap-3 text-sm text-slate-600 sm:grid-cols-2">
-                  <p><span className="font-semibold text-slate-700">Course:</span> {course?.name ?? "Official course pending"}</p>
-                  <p><span className="font-semibold text-slate-700">Provider:</span> {provider?.name ?? "Pending"}</p>
-                  <p><span className="font-semibold text-slate-700">Level:</span> {skill.level.name}</p>
-                  <p><span className="font-semibold text-slate-700">Duration:</span> {course?.durationMinutes ?? 60} mins</p>
-                  <p><span className="font-semibold text-slate-700">Price:</span> {course?.isFree ? "Free" : "Paid"}</p>
-                  <p><span className="font-semibold text-slate-700">Certificate:</span> {course?.certificateAvailable ? "Available" : "Not available"}</p>
-                </div>
-
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {activeAttempt?.skillId === skill.id && <Link href={`/student/assessment/${activeAttempt.id}`} className="rounded-lg bg-blue-700 p-3 text-white">Resume assessment</Link>}
-                  <Link href={`/student/skills/${skill.slug}`} className="rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700">View Details</Link>
-                  {course?.officialUrl ? (
-                    <LearnOfficialButton skillId={skill.id} courseId={course.id} officialUrl={course.officialUrl} />
-                  ) : (
-                    <button type="button" disabled className="rounded-lg border border-slate-200 bg-slate-100 px-3 py-2 text-sm font-semibold text-slate-400" aria-disabled="true">Learn Officially</button>
-                  )}
-
-                  {state === "LEARNING" || state === "LEARNING_COMPLETED" || state === "ASSESSMENT_AVAILABLE" || state === "REEXAM_REQUIRED" || state === "ASSESSMENT_FAILED" ? (
-                    <form action="/api/student/learning" method="post">
-                      <input type="hidden" name="skillId" value={skill.id} />
-                      <input type="hidden" name="action" value="complete" />
-                      <button className="rounded-lg border border-[#1e6fd9] bg-[#eaf2ff] px-3 py-2 text-sm font-semibold text-[#1e6fd9]">I Completed Learning</button>
-                    </form>
-                  ) : null}
-
-                  {state === "LEARNING_COMPLETED" || state === "ASSESSMENT_AVAILABLE" || state === "REEXAM_REQUIRED" || state === "ASSESSMENT_FAILED" ? (
-                    <form action="/api/student/assessment/start" method="post">
-                      <input type="hidden" name="skillId" value={skill.id} />
-                      <button className="rounded-lg bg-[#1e6fd9] px-3 py-2 text-sm font-semibold text-white">Start Assessment</button>
-                    </form>
-                  ) : null}
-
-                  {(state === "ASSESSMENT_PASSED" || state === "CERTIFICATE_UNLOCKED" || state === "PENDING_VERIFICATION" || state === "VERIFIED" || state === "NEEDS_RESUBMISSION" || state === "REJECTED") ? (
-                    <Link href="/student/certificates" className="rounded-lg border border-emerald-600 bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-700">Certificate</Link>
-                  ) : null}
-                </div>
-              </article>
-            );
-          })}
+          <Link
+            href="/student/skills"
+            className="rounded-xl border border-slate-700 bg-slate-900/80 px-4 py-2.5 text-xs font-semibold text-slate-300 hover:text-white hover:border-slate-500 text-center transition-all"
+          >
+            Clear Filters
+          </Link>
         </div>
+      </form>
 
-        {filteredSkills.length === 0 && (
-          <div className="mt-8 rounded-2xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-500">
-            No skills match the current filters.
-          </div>
+      {/* Results count */}
+      <div className="flex items-center justify-between text-xs text-slate-500">
+        <span>
+          Showing {totalCount ? ((page - 1) * pageSize) + 1 : 0}–{Math.min(page * pageSize, totalCount)} of{" "}
+          <span className="text-cyan-400 font-semibold">{totalCount.toLocaleString()}</span> skills
+        </span>
+        {totalPages > 1 && (
+          <span className="text-slate-400">Page {page} of {totalPages}</span>
         )}
       </div>
-    </main>
+
+      {/* Skills Display */}
+      {isGrouped ? (
+        // Grouped by category view
+        Object.entries(groupedByCategory).map(([catName, catSkills]) => (
+          <div key={catName} className="space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="h-px flex-1 bg-slate-800" />
+              <h2 className="text-sm font-bold text-slate-300 uppercase tracking-widest whitespace-nowrap">
+                {catName}
+              </h2>
+              <div className="h-px flex-1 bg-slate-800" />
+            </div>
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {catSkills.map((skill) => (
+                <SkillCard
+                  key={skill.id}
+                  skill={skill}
+                  levelUnlocked={levelUnlocked}
+                  progression={progression}
+                  credTypeLabel={credTypeLabel}
+                  pricingLabel={pricingLabel}
+                  pricingColor={pricingColor}
+                />
+              ))}
+            </div>
+          </div>
+        ))
+      ) : (
+        // Flat grid (search/filter active)
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {skills.map((skill) => (
+            <SkillCard
+              key={skill.id}
+              skill={skill}
+              levelUnlocked={levelUnlocked}
+              progression={progression}
+              credTypeLabel={credTypeLabel}
+              pricingLabel={pricingLabel}
+              pricingColor={pricingColor}
+            />
+          ))}
+        </div>
+      )}
+
+      {skills.length === 0 && (
+        <div className="glass-panel rounded-2xl p-12 text-center space-y-3">
+          <BookOpen className="h-8 w-8 text-slate-500 mx-auto" />
+          <p className="text-base font-semibold text-white">No skills match your filters.</p>
+          <p className="text-xs text-slate-400">Try clearing your filters or searching for another term.</p>
+          <Link href="/student/skills" className="inline-block rounded-xl border border-slate-700 bg-slate-800 px-4 py-2 text-xs font-semibold text-slate-200">
+            Clear Filters
+          </Link>
+        </div>
+      )}
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-center gap-2 pt-4">
+          {page > 1 && (
+            <Link
+              href={`/student/skills?${new URLSearchParams({ ...Object.fromEntries(Object.entries(params).map(([k, v]) => [k, String(v ?? "")])), page: String(page - 1) }).toString()}`}
+              className="rounded-xl border border-slate-700 bg-slate-900/80 px-4 py-2 text-xs font-semibold text-slate-200 hover:border-cyan-500 transition-all"
+            >
+              ← Previous
+            </Link>
+          )}
+          <span className="text-xs text-slate-400 px-4">Page {page} / {totalPages}</span>
+          {page < totalPages && (
+            <Link
+              href={`/student/skills?${new URLSearchParams({ ...Object.fromEntries(Object.entries(params).map(([k, v]) => [k, String(v ?? "")])), page: String(page + 1) }).toString()}`}
+              className="rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-xs font-bold text-white hover:from-cyan-400 hover:to-blue-500 transition-all"
+            >
+              Next →
+            </Link>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// --- Skill Card Component ---
+function SkillCard({
+  skill,
+  levelUnlocked,
+  progression,
+  credTypeLabel,
+  pricingLabel,
+  pricingColor,
+}: {
+  skill: Prisma.SkillGetPayload<{ include: { category: true; level: true; courses: { select: { id: true; providerId: true; pricingType: true; credentialAvailable: true; credentialType: true; provider: { select: { name: true } } } }; studentSkills: true } }>;
+  levelUnlocked: Map<string, boolean>;
+  progression: StudentProgression;
+  credTypeLabel: (t: string) => string | null;
+  pricingLabel: (t: string) => string;
+  pricingColor: (t: string) => string;
+}) {
+  const skillLevelName = skill.level.name;
+  const isLocked = LEVEL_NAMES.includes(skillLevelName as LevelName)
+    ? !(levelUnlocked.get(skillLevelName) ?? true)
+    : false;
+
+  const gating = isLocked ? GATING_LEVEL[skillLevelName as LevelName] : null;
+  const threshold = isLocked ? UNLOCK_THRESHOLDS[skillLevelName as LevelName] : 0;
+  const gatingCount = gating
+    ? (progression.levels.find((l) => l.name === gating)?.verifiedCount ?? 0)
+    : 0;
+  const remainingCount = Math.max(0, threshold - gatingCount);
+
+  const courses = skill.courses ?? [];
+  const totalCourses = courses.length;
+  const providerSet = new Set<string>(courses.map((c) => c.providerId));
+  const totalProviders = providerSet.size;
+  const credentialCourses = courses.filter((c) => c.credentialAvailable);
+  const totalCredentials = credentialCourses.length;
+
+  // Get selected course if student already enrolled
+  const studentSkill = skill.studentSkills?.[0];
+
+  // Preview courses (up to 3 providers)
+  const previewCourses = courses.slice(0, 3);
+
+  const levelColor = skillLevelColor(skillLevelName);
+
+  return (
+    <div
+      className={`glass-panel rounded-2xl p-5 relative flex flex-col justify-between overflow-hidden transition-all duration-300 group ${
+        isLocked ? "border-amber-500/20 opacity-85" : "glass-panel-hover"
+      }`}
+    >
+      {/* Level badge */}
+      <div className="flex items-start justify-between gap-2 mb-3">
+        <div className="space-y-1 flex-1 min-w-0">
+          <span className="inline-block rounded-md border border-cyan-500/30 bg-cyan-500/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-cyan-300 truncate max-w-full">
+            {skill.category.name}
+          </span>
+          <h3 className="text-base font-bold text-white font-display leading-tight">
+            <Link
+              href={`/student/skills/${skill.slug}`}
+              className="hover:text-cyan-300 transition-colors"
+            >
+              {skill.name}
+              {isLocked && " 🔒"}
+            </Link>
+          </h3>
+        </div>
+        <span className={`shrink-0 inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-[10px] font-bold ${isLocked ? "border-amber-500/40 bg-amber-500/15 text-amber-300" : levelColor}`}>
+          {isLocked && <Lock className="h-2.5 w-2.5" />}
+          {skillLevelName}
+        </span>
+      </div>
+
+      {/* Description */}
+      {skill.description && (
+        <p className="text-[11px] text-slate-400 line-clamp-2 mb-3">{skill.description}</p>
+      )}
+
+      {/* Lock banner */}
+      {isLocked && gating && (
+        <div className="mb-3 rounded-xl border border-amber-500/30 bg-gradient-to-r from-amber-500/10 to-transparent p-3">
+          <div className="flex items-center gap-1.5 text-[11px] font-bold text-amber-300 mb-1">
+            <Lock className="h-3.5 w-3.5" />
+            <span>{skillLevelName} Level Locked</span>
+          </div>
+          <p className="text-[11px] text-slate-300">
+            Verify <strong className="text-amber-200">{remainingCount} more {gating} credentials</strong> to unlock.
+          </p>
+          <div className="text-[10px] text-amber-400/80 font-mono mt-1">{gatingCount} / {threshold} {gating} verified</div>
+        </div>
+      )}
+
+      {/* Stats row */}
+      <div className="grid grid-cols-3 gap-2 py-3 border-t border-slate-800/60 mb-3">
+        <div className="flex flex-col items-center text-center">
+          <Users className="h-3.5 w-3.5 text-cyan-400 mb-0.5" />
+          <span className="text-[11px] font-bold text-white">{totalProviders}</span>
+          <span className="text-[10px] text-slate-500">Provider{totalProviders !== 1 ? "s" : ""}</span>
+        </div>
+        <div className="flex flex-col items-center text-center">
+          <BookOpen className="h-3.5 w-3.5 text-blue-400 mb-0.5" />
+          <span className="text-[11px] font-bold text-white">{totalCourses}</span>
+          <span className="text-[10px] text-slate-500">Course{totalCourses !== 1 ? "s" : ""}</span>
+        </div>
+        <div className="flex flex-col items-center text-center">
+          <BadgeCheck className="h-3.5 w-3.5 text-emerald-400 mb-0.5" />
+          <span className="text-[11px] font-bold text-white">{totalCredentials}</span>
+          <span className="text-[10px] text-slate-500">Credential{totalCredentials !== 1 ? "s" : ""}</span>
+        </div>
+      </div>
+
+      {/* Preview providers */}
+      {!isLocked && previewCourses.length > 0 && (
+        <div className="space-y-1.5 mb-3">
+          {previewCourses.map((course) => (
+            <div key={course.id} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 text-[11px]">
+              <span className="font-semibold text-slate-200 truncate max-w-[55%]">
+                {course.provider?.name ?? "Official Provider"}
+              </span>
+              <div className="flex items-center gap-1.5">
+                <span className={`rounded-md border px-1.5 py-0.5 font-semibold ${pricingColor(course.pricingType ?? "FREE")}`}>
+                  {pricingLabel(course.pricingType ?? "FREE")}
+                </span>
+                {course.credentialAvailable && course.credentialType !== "NONE" && (
+                  <BadgeCheck className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
+                )}
+              </div>
+            </div>
+          ))}
+          {totalCourses > 3 && (
+            <div className="text-center text-[10px] text-slate-500">+{totalCourses - 3} more learning option{totalCourses - 3 !== 1 ? "s" : ""}</div>
+          )}
+        </div>
+      )}
+
+      {!isLocked && <span className="text-xs text-emerald-300 mb-2">Unlocked</span>}
+      {!isLocked && studentSkill && <div className="space-y-2 mb-3">
+        {!studentSkill.completedAt ? <form action="/api/student/learning" method="post"><input type="hidden" name="skillId" value={skill.id} /><input type="hidden" name="action" value="complete" /><button className="text-xs text-cyan-300">I Completed Learning</button></form> : <form action="/api/student/assessment/start" method="post"><input type="hidden" name="skillId" value={skill.id} /><button className="text-xs text-cyan-300">Start Assessment</button></form>}
+      </div>}
+      {/* Actions */}
+      <div className="pt-3 border-t border-slate-800/60">
+        {isLocked ? (
+          <div className="flex items-center gap-1.5 justify-center rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-2.5 text-xs font-semibold text-amber-400 cursor-not-allowed">
+            <Lock className="h-3.5 w-3.5" />
+            Level Restricted
+          </div>
+        ) : (
+          <Link
+            href={`/student/skills/${skill.slug}`}
+            className="flex items-center justify-center gap-1.5 w-full rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2.5 text-xs font-bold text-white shadow-md shadow-cyan-500/20 hover:from-cyan-400 hover:to-blue-500 transition-all"
+          >
+            <Zap className="h-3.5 w-3.5" />
+            Explore Skill
+          </Link>
+        )}
+      </div>
+    </div>
   );
 }

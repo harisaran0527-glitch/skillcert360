@@ -53,8 +53,8 @@ export async function securityChecks(db: PrismaClient, admin: BrowserContext, st
   const enterBrowser = async () => {
    await page.addInitScript(({ key, value }) => sessionStorage.setItem(key, value), { key: "skillcert_tab_" + attempt.id, value: attempt.clientId });
    await page.goto("/student/assessment/" + attempt.id);
-   await page.getByRole("button", { name: "Enter fullscreen and resume" }).click();
-   await expect(page.getByRole("button", { name: "Submit assessment" })).toBeVisible();
+   await page.getByRole("button", { name: "Enter Secure Assessment Environment" }).click();
+   await expect(page.getByRole("button", { name: "Submit Assessment", exact: true })).toBeVisible();
   };
   await settings(false, 4);
   expect((await db.adminSetting.findUniqueOrThrow({ where: { key: "autoSubmitOnViolation" } })).value).toBe(false);
@@ -96,10 +96,10 @@ export async function securityChecks(db: PrismaClient, admin: BrowserContext, st
   expect((await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attempt.id } })).submittedAt).toBeNull();
   expect(await db.assessmentViolation.count({ where: { attemptId: attempt.id } })).toBe(3);
   await enterBrowser();
-  await expect(page.getByText(/Attempt #.*Violations: 3\/4/)).toBeVisible();
+  await expect(page.getByText(/Violations: 3\s*\/\s*4/)).toBeVisible();
   await page.evaluate(() => document.exitFullscreen());
   await page.waitForURL(/student\/results\//);
-  await expect(page.getByRole("heading", { name: "Try again", exact: true })).toBeVisible();
+  await expect(page.getByText("FAILED", { exact: true })).toBeVisible();
   const terminated = await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attempt.id }, include: { violations: true } });
   expect(terminated.terminated).toBe(true); expect(terminated.passed).toBe(false); expect(terminated.score).toBe(2);
   expect(terminated.violations.length).toBe(4); expect(terminated.violations.every(v => v.occurredAt instanceof Date)).toBe(true);
@@ -110,10 +110,10 @@ export async function securityChecks(db: PrismaClient, admin: BrowserContext, st
   attempt = await begin();
   await post("/api/student/assessment/" + attempt.id + "/save", { clientId: attempt.clientId, responses: { [attempt.data.questions[0].id]: "Correct" } });
   await enterBrowser();
-  await expect(page.getByText(/Attempt #.*Violations: 0\/1/)).toBeVisible();
+  await expect(page.getByText(/Violations: 0\s*\/\s*1/)).toBeVisible();
   await page.evaluate(() => document.exitFullscreen());
   await page.waitForURL(/student\/results\//);
-  await expect(page.getByRole("heading", { name: "Pass", exact: true })).toBeVisible();
+  await expect(page.getByText("PASSED", { exact: true })).toBeVisible();
   const auto = await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attempt.id } });
   expect(auto.autoSubmitted).toBe(true); expect(auto.terminated).toBe(false); expect(auto.passed).toBe(true);
   expect(auto.submissionReason).toBe("VIOLATION_LIMIT"); expect(auto.score).toBe(1);

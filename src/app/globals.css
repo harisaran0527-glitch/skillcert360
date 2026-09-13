@@ -1,12 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f8fc;
-  --foreground: #10233f;
-  --navy: #0c2140;
-  --blue: #1e6fd9;
-  --cyan: #35c3d9;
-  --line: #dbe5f0;
+  --background: #070b14;
+  --foreground: #f8fafc;
+  --navy-dark: #070b14;
+  --navy-card: #0d1527;
+  --navy-card-hover: #131d35;
+  --navy-border: rgba(255, 255, 255, 0.08);
+  --navy-border-glow: rgba(6, 182, 212, 0.25);
+  --cyan: #06b6d4;
+  --cyan-bright: #22d3ee;
+  --blue: #2563eb;
+  --blue-light: #3b82f6;
+  --indigo: #6366f1;
 }
 
 @theme inline {
@@ -17,10 +23,78 @@
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-manrope), sans-serif;
+  font-family: var(--font-manrope), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
 }
 
-* { box-sizing: border-box; }
-::selection { background: #b7eaf1; color: var(--navy); }
+* {
+  box-sizing: border-box;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070b14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+::selection {
+  background: rgba(6, 182, 212, 0.3);
+  color: #ffffff;
+}
+
+/* Glass & Glow Utility Classes */
+.glass-panel {
+  background: rgba(13, 21, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 0 20px -5px rgba(6, 182, 212, 0.15);
+  transform: translateY(-1px);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.3);
+}
+
+.glow-blue {
+  box-shadow: 0 0 25px -5px rgba(37, 99, 235, 0.3);
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #ffffff 0%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #ffffff 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.08) 0%, rgba(7, 11, 20, 0) 70%);
+}
