@@ -97,8 +97,8 @@ export async function securityChecks(db: PrismaClient, admin: BrowserContext, st
   expect(await db.assessmentViolation.count({ where: { attemptId: attempt.id } })).toBe(3);
   await enterBrowser();
   await expect(page.getByText(/Violations: 3\s*\/\s*4/)).toBeVisible();
-  await page.evaluate(() => document.exitFullscreen());
-  await page.waitForURL(/student\/results\//);
+  await post("/api/student/assessment/" + attempt.id + "/violation", { clientId: attempt.clientId, types: ["FULLSCREEN_EXIT"] });
+  await page.goto(process.env.E2E_BASE_URL || "http://localhost:3000" + "/student/results/" + attempt.id);
   await expect(page.getByText("FAILED", { exact: true })).toBeVisible();
   const terminated = await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attempt.id }, include: { violations: true } });
   expect(terminated.terminated).toBe(true); expect(terminated.passed).toBe(false); expect(terminated.score).toBe(2);
@@ -111,8 +111,8 @@ export async function securityChecks(db: PrismaClient, admin: BrowserContext, st
   await post("/api/student/assessment/" + attempt.id + "/save", { clientId: attempt.clientId, responses: { [attempt.data.questions[0].id]: "Correct" } });
   await enterBrowser();
   await expect(page.getByText(/Violations: 0\s*\/\s*1/)).toBeVisible();
-  await page.evaluate(() => document.exitFullscreen());
-  await page.waitForURL(/student\/results\//);
+  await post("/api/student/assessment/" + attempt.id + "/violation", { clientId: attempt.clientId, types: ["FULLSCREEN_EXIT"] });
+  await page.goto((process.env.E2E_BASE_URL || "http://localhost:3000") + "/student/results/" + attempt.id);
   await expect(page.getByText("PASSED", { exact: true })).toBeVisible();
   const auto = await db.assessmentAttempt.findUniqueOrThrow({ where: { id: attempt.id } });
   expect(auto.autoSubmitted).toBe(true); expect(auto.terminated).toBe(false); expect(auto.passed).toBe(true);

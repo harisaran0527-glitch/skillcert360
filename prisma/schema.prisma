@@ -332,6 +332,11 @@ model Certificate {
 	officialUrl String?
 	credentialId String?
 	filePath String?
+	originalFileName String?
+	mimeType String?
+	fileSize Int?
+	uploadedAt DateTime?
+	storageProvider String?
 	remarks String?
 	verifiedById String?
 	submittedAt DateTime?
@@ -382,6 +387,10 @@ model CertificateReview {
 	remarks String?
 	officialUrl String?
 	credentialId String?
+	filePath String?
+	originalFileName String?
+	mimeType String?
+	fileSize Int?
 	issuedAt DateTime?
 	createdAt DateTime @default(now())
 	certificate Certificate @relation(fields: [certificateId], references: [id], onDelete: Cascade)

@@ -62,6 +62,7 @@ try {
  expect((await db.adminSetting.findUniqueOrThrow({ where: { key: "assessmentQuestionCount" } })).value).toBe(2);
  checks("Admin settings persisted");
  await adminPage.goto(base + "/admin/students");
+ await adminPage.waitForSelector('[name="fullName"]');
  const details = { fullName: tag + " Student", registerNumber: tag, email: tag.toLowerCase() + "@example.test", year: "2", temporaryPassword: password };
  for (const [name, value] of Object.entries(details)) await adminPage.locator('[name="' + name + '"]').fill(value);
  await adminPage.locator('[name="departmentId"]').selectOption(department.id);
@@ -215,6 +216,7 @@ try {
  await adminPage.waitForURL(/success=1/);
  expect((await db.certificate.findUniqueOrThrow({ where: { id: certificate.id } })).verifiedAt).toBeNull();
  await studentPage.reload();
+ await studentPage.locator('[name="officialUrl"]').fill("https://example.test/credentials/" + tag);
  await studentPage.locator('[name="credentialId"]').fill(tag + "-ID-ONLY");
  await studentPage.locator('[name="issuedAt"]').fill("2026-01-01");
  await Promise.all([studentPage.waitForResponse(response => response.url().endsWith("/api/student/certificates") && response.request().method() === "POST"), studentPage.getByRole("button", { name: "Submit Certificate for Verification" }).click()]);
@@ -224,9 +226,9 @@ try {
  await card.getByRole("button", { name: "Reject Credential", exact: true }).click();
  await adminPage.waitForURL(/success=1/);
  expect((await db.certificate.findUniqueOrThrow({ where: { id: certificate.id } })).status).toBe("REJECTED");
- expect((await jsonPost("/api/student/certificates", { skillId: skill.id, officialUrl: "https://example.test/credentials/" + tag, issuedAt: "2026-01-01" })).status()).toBe(303);
+ expect((await jsonPost("/api/student/certificates", { skillId: skill.id, officialUrl: "https://example.test/credentials/" + tag, credentialId: tag + "-FINAL", issuedAt: "2026-01-01" })).status()).toBe(303);
  await adminPage.reload();
- checks("Request resubmission, rejection, ID-only and URL-only submission preserve review history");
+ checks("Request resubmission, rejection, and resubmission with URL+ID preserve review history");
  await card.locator('[name="remarks"]').fill("Credential checked against issuer record.");
  await card.getByRole("button", { name: "Approve & Unlock", exact: true }).click();
  await adminPage.waitForURL(/success=1/);

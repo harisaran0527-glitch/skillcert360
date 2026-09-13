@@ -2,17 +2,19 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import { getSession } from "@/lib/auth";
+import { isStorageConfigured } from "@/lib/storage";
+import { CertificateSubmissionForm } from "@/components/certificate-submission-form";
 import {
   FileCheck2,
   ShieldCheck,
-  CheckCircle2,
   AlertCircle,
   ExternalLink,
   Clock,
-  Send,
   XCircle,
   Sparkles,
   Award,
+  FileText,
+  Paperclip,
 } from "lucide-react";
 
 export default async function StudentCertificatesPage() {
@@ -45,6 +47,15 @@ export default async function StudentCertificatesPage() {
     ["UNLOCKED", "REJECTED", "NEEDS_RESUBMISSION", "PENDING_SUBMISSION"].includes(c.status)
   );
 
+  const storageConfigured = isStorageConfigured();
+
+  function formatBytes(bytes: number | null): string {
+    if (!bytes) return "File";
+    if (bytes < 1024) return `${bytes} B`;
+    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+    return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
+  }
+
   return (
     <div className="space-y-8 pb-12">
       {/* Header */}
@@ -55,77 +66,16 @@ export default async function StudentCertificatesPage() {
         </div>
         <h1 className="text-3xl font-extrabold text-white font-display">Submit & Track Certificates</h1>
         <p className="text-xs text-slate-400 mt-1">
-          Submit authentic external certificate URLs to unlock higher progression tiers after passing assessments.
+          Submit authentic external certificate files or official URLs to unlock higher progression tiers after passing assessments.
         </p>
       </div>
 
       <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
-        {/* Left Column: Certificate Submission Form */}
-        <div className="glass-panel rounded-3xl p-6 sm:p-8 space-y-6">
-          <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
-              <Send className="h-5 w-5" />
-            </div>
-            <div>
-              <h2 className="text-lg font-bold text-white font-display">Submit Official Credential</h2>
-              <p className="text-xs text-slate-400">Provide official URL and credential ID for admin review.</p>
-            </div>
-          </div>
-
-          <form action="/api/student/certificates" method="post" className="space-y-4 text-xs">
-            <div className="space-y-1.5">
-              <label className="font-semibold text-slate-300 block">Select Passed Skill</label>
-              <select
-                name="skillId"
-                className="w-full rounded-xl border border-slate-800 bg-slate-900/90 px-3.5 py-3 text-xs text-white focus:border-cyan-500 focus:outline-none"
-              >
-                {eligible.map((cert) => (
-                  <option key={cert.id} value={cert.skillId}>
-                    {cert.skill.name} ({cert.skill.level.name})
-                  </option>
-                ))}
-                {!eligible.length && <option value="">No eligible skills available for submission</option>}
-              </select>
-            </div>
-
-            <div className="space-y-1.5">
-              <label className="font-semibold text-slate-300 block">Official Certificate URL (or provide a credential ID)</label>
-              <input
-                name="officialUrl"
-                type="url"
-                placeholder="https://coursera.org/verify/EXAMPLE123"
-                className="w-full rounded-xl border border-slate-800 bg-slate-900/90 px-3.5 py-3 text-xs text-white placeholder-slate-500 focus:border-cyan-500 focus:outline-none"
-              />
-            </div>
-
-            <div className="space-y-1.5">
-              <label className="font-semibold text-slate-300 block">Credential ID / Number</label>
-              <input
-                name="credentialId"
-                placeholder="e.g. CERT-2026-98765"
-                className="w-full rounded-xl border border-slate-800 bg-slate-900/90 px-3.5 py-3 text-xs text-white placeholder-slate-500 focus:border-cyan-500 focus:outline-none"
-              />
-            </div>
-
-            <div className="space-y-1.5">
-              <label className="font-semibold text-slate-300 block">Official Issue Date</label>
-              <input
-                name="issuedAt"
-                type="date"
-                required
-                className="w-full rounded-xl border border-slate-800 bg-slate-900/90 px-3.5 py-3 text-xs text-white focus:border-cyan-500 focus:outline-none"
-              />
-            </div>
-
-            <button
-              disabled={!eligible.length}
-              className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 py-3.5 text-xs font-bold text-white shadow-lg shadow-cyan-500/20 hover:from-cyan-400 hover:to-blue-500 transition-all disabled:opacity-40 cursor-pointer"
-            >
-              <FileCheck2 className="h-4 w-4" />
-              <span>Submit Certificate for Verification</span>
-            </button>
-          </form>
-        </div>
+        {/* Left Column: Certificate Submission Form Component */}
+        <CertificateSubmissionForm
+          eligible={eligible}
+          storageConfigured={storageConfigured}
+        />
 
         {/* Right Column: Submission History */}
         <div className="glass-panel rounded-3xl p-6 sm:p-8 space-y-6">
@@ -170,7 +120,11 @@ export default async function StudentCertificatesPage() {
                           {cert.skill.level.name}
                         </span>
                         <h3 className="mt-1.5 text-base font-bold text-white font-display">{cert.skill.name}</h3>
-                        {cert.course && <p className="mt-2 text-xs text-cyan-300">{cert.provider?.name} · {cert.course.title ?? cert.course.name} · {cert.credentialType}</p>}
+                        {cert.course && (
+                          <p className="mt-2 text-xs text-cyan-300">
+                            {cert.provider?.name} · {cert.course.title ?? cert.course.name} · {cert.credentialType}
+                          </p>
+                        )}
                       </div>
 
                       <div>
@@ -194,17 +148,34 @@ export default async function StudentCertificatesPage() {
                       </div>
                     </div>
 
-                    {cert.officialUrl && (
-                      <a
-                        href={cert.officialUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-1 text-xs font-semibold text-cyan-400 hover:underline"
-                      >
-                        <span>Verify Link: {cert.officialUrl}</span>
-                        <ExternalLink className="h-3 w-3" />
-                      </a>
-                    )}
+                    {/* Verified Evidence Links / Badges */}
+                    <div className="flex flex-wrap items-center gap-3 pt-1">
+                      {cert.officialUrl && (
+                        <a
+                          href={cert.officialUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1 text-xs font-semibold text-cyan-400 hover:underline"
+                        >
+                          <span>Verify Link: {cert.officialUrl}</span>
+                          <ExternalLink className="h-3 w-3" />
+                        </a>
+                      )}
+
+                      {cert.filePath && (
+                        <a
+                          href={`/api/certificates/${cert.id}/file`}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-2.5 py-1 text-xs font-semibold text-cyan-300 hover:bg-cyan-500/20 transition-colors"
+                        >
+                          <Paperclip className="h-3.5 w-3.5 text-cyan-400" />
+                          <span>
+                            View File ({cert.originalFileName || "Certificate"} • {formatBytes(cert.fileSize)})
+                          </span>
+                        </a>
+                      )}
+                    </div>
 
                     <div className="grid grid-cols-2 gap-2 pt-2 text-[11px] text-slate-400 border-t border-slate-800/60 font-mono">
                       <div>
@@ -227,7 +198,8 @@ export default async function StudentCertificatesPage() {
                     )}
                   </div>
                 );
-              }))}
+              })
+            )}
           </div>
         </div>
       </div>

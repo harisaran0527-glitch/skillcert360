@@ -38,17 +38,11 @@ export default async function StudentsPage({
   const query = (q ?? "").trim().toLowerCase();
   const selectedDept = (dept ?? "").trim();
 
-  const studentsWithProgression = await Promise.all(
-    rawStudents.map(async (st) => {
-      const prog = await getStudentProgression(st.id);
-      const highestLevel = prog.levels.filter((l) => l.unlocked).pop()?.name || "Beginner";
-      return {
-        ...st,
-        highestLevel,
-        verifiedCount: st.certificates.length,
-      };
-    })
-  );
+  const studentsWithProgression = rawStudents.map((st) => ({
+    ...st,
+    highestLevel: st.certificates.length > 0 ? "Verified" : "Beginner",
+    verifiedCount: st.certificates.length,
+  }));
 
   const filteredStudents = studentsWithProgression.filter((st) => {
     const matchesQ = !query || [st.fullName, st.registerNumber, st.user.email].join(" ").toLowerCase().includes(query);

@@ -1,5 +1,6 @@
 import { db } from "@/lib/db";
 import Link from "next/link";
+import { AdminCertificatePreviewModal } from "@/components/admin-certificate-preview-modal";
 import {
   FileCheck2,
   ShieldCheck,
@@ -8,7 +9,7 @@ import {
   XCircle,
   AlertCircle,
   Clock,
-  Send,
+  Paperclip,
 } from "lucide-react";
 
 export default async function AdminCertificatesPage() {
@@ -31,6 +32,13 @@ export default async function AdminCertificatesPage() {
   const verified = certificates.filter((c) => c.status === "VERIFIED");
   const other = certificates.filter((c) => ["REJECTED", "NEEDS_RESUBMISSION"].includes(c.status));
 
+  function formatBytes(bytes: number | null): string {
+    if (!bytes) return "File";
+    if (bytes < 1024) return `${bytes} B`;
+    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+    return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
+  }
+
   return (
     <div className="space-y-8 pb-12">
       {/* Header */}
@@ -42,7 +50,7 @@ export default async function AdminCertificatesPage() {
           </div>
           <h1 className="text-3xl font-extrabold text-white font-display">Certificate Verification Queue</h1>
           <p className="text-xs text-slate-400 mt-1">
-            Audit submitted official certificate URLs and approve progression unlocking.
+            Audit submitted official certificate files, URLs, and credential IDs to approve progression unlocking.
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -89,7 +97,8 @@ export default async function AdminCertificatesPage() {
                   </span>
                 </div>
 
-                <div className="grid gap-3 sm:grid-cols-3 text-xs text-slate-300">
+                {/* Submission Details Grid */}
+                <div className="grid gap-3 sm:grid-cols-4 text-xs text-slate-300">
                   <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-3">
                     <span className="text-slate-500 text-[10px] font-bold uppercase block">Credential ID</span>
                     <span className="font-mono font-bold text-white mt-0.5 block">{c.credentialId ?? "Not provided"}</span>
@@ -108,10 +117,18 @@ export default async function AdminCertificatesPage() {
                       {c.submittedAt ? new Date(c.submittedAt).toLocaleString() : "Not submitted"}
                     </span>
                   </div>
+
+                  <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-3">
+                    <span className="text-slate-500 text-[10px] font-bold uppercase block">Uploaded File</span>
+                    <span className="font-semibold text-cyan-300 mt-0.5 block truncate">
+                      {c.filePath ? `${c.originalFileName || "File"} (${formatBytes(c.fileSize)})` : "No file attached"}
+                    </span>
+                  </div>
                 </div>
 
-                {c.officialUrl && (
-                  <div className="pt-1">
+                {/* Evidence Attachments & Verification Links */}
+                <div className="flex flex-wrap items-center gap-3 pt-1">
+                  {c.officialUrl && (
                     <a
                       href={c.officialUrl}
                       target="_blank"
@@ -121,8 +138,17 @@ export default async function AdminCertificatesPage() {
                       <span>Verify Official URL: {c.officialUrl}</span>
                       <ExternalLink className="h-3.5 w-3.5" />
                     </a>
-                  </div>
-                )}
+                  )}
+
+                  {c.filePath && (
+                    <AdminCertificatePreviewModal
+                      certificateId={c.id}
+                      originalFileName={c.originalFileName}
+                      mimeType={c.mimeType}
+                      fileSize={c.fileSize}
+                    />
+                  )}
+                </div>
 
                 {/* Review Form */}
                 <form action="/api/admin/certificates" method="post" className="pt-3 border-t border-slate-800 space-y-4">
@@ -188,12 +214,22 @@ export default async function AdminCertificatesPage() {
                 </div>
                 <p className="text-xs text-cyan-300 font-semibold">{c.skill.name}</p>
                 {c.course && <p className="text-xs text-slate-300">{c.provider?.name} · {c.course.title ?? c.course.name} · {c.credentialType}</p>}
-                {c.officialUrl && (
-                  <a href={c.officialUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-[11px] text-indigo-400 hover:underline">
-                    <span>{c.officialUrl}</span>
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                )}
+                <div className="flex flex-wrap items-center gap-3 pt-1">
+                  {c.officialUrl && (
+                    <a href={c.officialUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-[11px] text-indigo-400 hover:underline">
+                      <span>{c.officialUrl}</span>
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  )}
+                  {c.filePath && (
+                    <AdminCertificatePreviewModal
+                      certificateId={c.id}
+                      originalFileName={c.originalFileName}
+                      mimeType={c.mimeType}
+                      fileSize={c.fileSize}
+                    />
+                  )}
+                </div>
               </div>
 
               <div className="text-right text-xs space-y-1">

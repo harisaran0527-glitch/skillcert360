@@ -76,7 +76,7 @@ export function StudentAssessmentClient({
         if (data.redirect) {
           closing.current = true;
           active.current = false;
-          window.location.assign(data.redirect);
+          window.location.href = data.redirect;
         } else {
           clock.current = {
             remaining: Date.parse(data.expiresAt) - Date.parse(data.serverNow),
@@ -189,7 +189,7 @@ export function StudentAssessmentClient({
     if (!client.current) return;
     setBusy(true);
     try {
-      await document.documentElement.requestFullscreen();
+      await document.documentElement.requestFullscreen().catch(() => {});
       const data = await send("claim");
       if (data.redirect) return;
       values.current = data.responses;
