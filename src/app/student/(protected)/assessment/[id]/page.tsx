@@ -1,3 +1,4 @@
+import { displaySection } from "@/lib/ui-options";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import { getSession } from "@/lib/auth";
@@ -38,7 +39,7 @@ export default async function StudentAssessmentPage({ params }: { params: Promis
       registerNumber={attempt.student.registerNumber}
       studentEmail={attempt.student.user?.email || ""}
       departmentName={attempt.student.department.name}
-      yearSection={`Year ${attempt.student.year} · Section ${attempt.student.section.name}`}
+      yearSection={`Year ${attempt.student.year} · Section ${displaySection(attempt.student.section.name)}`}
     />
   );
 }

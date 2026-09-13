@@ -1,7 +1,10 @@
+import { productionStudentWhere, productionSkillWhere, productionCourseWhere } from "@/lib/production-ui";
+import { getCanonicalCourseIds } from "@/lib/catalogue-visibility";
 import { db } from "@/lib/db";
 import { BarChart3, Users, BookOpen, GraduationCap, Award, FileCheck2, ShieldCheck, Zap } from "lucide-react";
 
 export default async function AdminAnalyticsPage() {
+  const courseIds = await getCanonicalCourseIds();
   const [
     students,
     activeStudents,
@@ -13,15 +16,15 @@ export default async function AdminAnalyticsPage() {
     certificatesVerified,
     certificatesPending,
   ] = await Promise.all([
-    db.studentProfile.count(),
-    db.user.count({ where: { role: "STUDENT", status: "ACTIVE" } }),
-    db.skill.count(),
-    db.course.count(),
-    db.assessmentAttempt.count(),
-    db.assessmentAttempt.count({ where: { passed: true } }),
-    db.assessmentAttempt.count({ where: { passed: false } }),
-    db.certificate.count({ where: { status: "VERIFIED" } }),
-    db.certificate.count({ where: { status: { in: ["PENDING_SUBMISSION", "SUBMITTED", "PENDING_VERIFICATION"] } } }),
+    db.studentProfile.count({ where: productionStudentWhere }),
+    db.user.count({ where: { role: "STUDENT", status: "ACTIVE", studentProfile: productionStudentWhere } }),
+    db.skill.count({ where: productionSkillWhere }),
+    db.course.count({ where: { ...productionCourseWhere, id: { in: courseIds } } }),
+    db.assessmentAttempt.count({ where: { student: productionStudentWhere, skill: productionSkillWhere } }),
+    db.assessmentAttempt.count({ where: { AND: [{ student: productionStudentWhere, skill: productionSkillWhere }], passed: true } }),
+    db.assessmentAttempt.count({ where: { AND: [{ student: productionStudentWhere, skill: productionSkillWhere }], passed: false } }),
+    db.certificate.count({ where: { student: productionStudentWhere, skill: productionSkillWhere, status: "VERIFIED" } }),
+    db.certificate.count({ where: { student: productionStudentWhere, skill: productionSkillWhere, status: { in: ["PENDING_SUBMISSION", "SUBMITTED", "PENDING_VERIFICATION"] } } }),
   ]);
 
   const passRate = assessments > 0 ? Math.round((passed / assessments) * 100) : 0;

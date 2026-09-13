@@ -1,3 +1,5 @@
+import { getCanonicalCourseIds } from "@/lib/catalogue-visibility";
+import { productionSkillWhere, productionNameWhere, productionCourseWhere } from "@/lib/production-ui";
 import Link from "next/link";
 import { CredentialType, PricingType, UrlStatus, type Prisma } from "@prisma/client";
 import { cataloguePage, param, type CatalogueParams } from "@/lib/catalog";
@@ -10,6 +12,7 @@ import { GraduationCap, Plus, ExternalLink, Building, BookOpen } from "lucide-re
 export default async function AdminCoursesPage({ searchParams }: { searchParams: Promise<CatalogueParams> }) {
   const params = await searchParams;
   const where: Prisma.CourseWhereInput = {
+    AND: [productionCourseWhere],
     ...(param(params, "q") ? { OR: [{ name: { contains: param(params, "q"), mode: "insensitive" as const } }, { skill: { name: { contains: param(params, "q"), mode: "insensitive" as const } } }, { provider: { name: { contains: param(params, "q"), mode: "insensitive" as const } } }] } : {}),
     ...(param(params, "skill") ? { skillId: param(params, "skill") } : {}),
     ...(param(params, "provider") ? { providerId: param(params, "provider") } : {}),
@@ -17,13 +20,14 @@ export default async function AdminCoursesPage({ searchParams }: { searchParams:
     ...(Object.values(UrlStatus).includes(param(params, "urlStatus") as UrlStatus) ? { officialUrlStatus: param(params, "urlStatus") as UrlStatus } : {}),
     ...(["true", "false"].includes(param(params, "active")) ? { active: param(params, "active") === "true" } : {}),
   };
+  where.id = { in: await getCanonicalCourseIds() };
   const total = await db.course.count({ where });
   const page = Math.min(cataloguePage(param(params, "page")), Math.max(1, Math.ceil(total / 24)));
   const editing = param(params, "edit") ? await db.course.findUnique({ where: { id: param(params, "edit") }, include: { skill: { include: { level: true } } } }) : null;
   const targetSkill = editing?.skill ?? (param(params, "skill") ? await db.skill.findUnique({ where: { id: param(params, "skill") }, include: { level: true } }) : null);
   const [rawCourses, rawProviders, rawLevels] = await Promise.all([
     db.course.findMany({ where, include: { skill: true, provider: true, level: true }, orderBy: [{ name: "asc" }, { id: "asc" }], skip: (page - 1) * 24, take: 24 }),
-    db.provider.findMany({ select: { id: true, name: true }, orderBy: { name: "asc" } }),
+    db.provider.findMany({ where: productionNameWhere, select: { id: true, name: true }, orderBy: { name: "asc" } }),
     db.skillLevel.findMany({ orderBy: { order: "asc" } }),
   ]);
 

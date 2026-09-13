@@ -1,3 +1,4 @@
+import { productionSkillWhere } from "@/lib/production-ui";
 import Link from "next/link";
 import { db } from "@/lib/db";
 import { deduplicateByNormalizedKey } from "@/lib/academic";
@@ -5,9 +6,9 @@ import { HelpCircle, Plus, BookOpen, Layers } from "lucide-react";
 
 export default async function AdminQuestionsPage() {
   const [rawSkills, rawLevels, questions] = await Promise.all([
-    db.skill.findMany({ orderBy: { name: "asc" } }),
+    db.skill.findMany({ where: productionSkillWhere, orderBy: { name: "asc" } }),
     db.skillLevel.findMany({ orderBy: { order: "asc" } }),
-    db.question.findMany({ include: { skill: true, level: true }, orderBy: { prompt: "asc" }, take: 200 }),
+    db.question.findMany({ where: { skill: productionSkillWhere }, include: { skill: true, level: true }, orderBy: { prompt: "asc" }, take: 200 }),
   ]);
 
   const skills = deduplicateByNormalizedKey(rawSkills, (s) => s.name);

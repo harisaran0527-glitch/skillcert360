@@ -1,3 +1,5 @@
+import { productionNameWhere, productionSkillWhere, productionCourseWhere } from "@/lib/production-ui";
+import { getCanonicalCourseIds } from "@/lib/catalogue-visibility";
 import Link from "next/link";
 import type { Prisma } from "@prisma/client";
 import { deduplicateByNormalizedKey } from "@/lib/academic";
@@ -43,8 +45,8 @@ export default async function StudentSkillsPage({
 
   const [rawLevels, rawCategories, rawProviders, progression] = await Promise.all([
     db.skillLevel.findMany({ where: { active: true }, select: { id: true, name: true }, orderBy: { order: "asc" } }),
-    db.skillCategory.findMany({ where: { active: true }, select: { id: true, name: true }, orderBy: { name: "asc" } }),
-    db.provider.findMany({ where: { active: true, slug: { not: null } }, select: { id: true, name: true }, orderBy: { name: "asc" } }),
+    db.skillCategory.findMany({ where: { active: true, ...productionNameWhere }, select: { id: true, name: true }, orderBy: { name: "asc" } }),
+    db.provider.findMany({ where: { active: true, ...productionNameWhere, slug: { not: null } }, select: { id: true, name: true }, orderBy: { name: "asc" } }),
     getStudentProgression(profile.id),
   ]);
 
@@ -67,7 +69,7 @@ export default async function StudentSkillsPage({
   const requestedPage = cataloguePage((params.page ?? "1").toString());
   const pageSize = 24;
 
-  const whereClause: Prisma.SkillWhereInput = { active: true, category: { active: true }, level: { active: true } };
+  const whereClause: Prisma.SkillWhereInput = { AND: [productionSkillWhere], active: true, category: { active: true }, level: { active: true } };
 
   if (selectedLevel) whereClause.levelId = selectedLevel;
   if (selectedCategory) whereClause.categoryId = selectedCategory;
@@ -82,7 +84,7 @@ export default async function StudentSkillsPage({
     ];
   }
   // Provider filter via courses relationship
-  const courseWhere: Prisma.CourseWhereInput = { ...availableCourseWhere };
+  const courseWhere: Prisma.CourseWhereInput = { ...availableCourseWhere, AND: [productionCourseWhere], id: { in: await getCanonicalCourseIds() } };
   if (selectedProvider) courseWhere.providerId = selectedProvider;
   if (selectedPrice === "free") courseWhere.pricingType = "FREE";
   if (selectedPrice === "free_exam") courseWhere.pricingType = "FREE_LEARNING_PAID_EXAM";
@@ -108,7 +110,7 @@ export default async function StudentSkillsPage({
         category: true,
         level: true,
         courses: {
-          where: availableCourseWhere,
+          where: { ...availableCourseWhere, AND: [productionCourseWhere], id: courseWhere.id },
           select: { id: true, providerId: true, pricingType: true, credentialAvailable: true, credentialType: true, provider: { select: { name: true } } },
           orderBy: { createdAt: "asc" },
         },

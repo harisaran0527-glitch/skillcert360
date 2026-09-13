@@ -1,4 +1,7 @@
 import "dotenv/config";
+// For local fixture visibility, start the dev server with E2E_INCLUDE_FIXTURES=1.
+// Production ignores this flag and always hides developer fixtures.
+import { VALID_SECTIONS } from "../src/lib/ui-options";
 import { expect as baseExpect, type Page } from "@playwright/test";
 import { PrismaClient, Prisma } from "@prisma/client";
 import bcrypt from "bcryptjs";
@@ -26,7 +29,7 @@ export async function runWorkflow(mode: "workflow" | "security" | "catalogue" = 
     await writeFile(`test-results/${tag}-settings-backup.json`, JSON.stringify({ tag, originalSettings, levels }, null, 2));
     const admin = await db.user.create({ data: { email: tag.toLowerCase() + "-admin@example.test", passwordHash: await bcrypt.hash(password, 12), role: "ADMIN" } });
     const department = await db.department.create({ data: { name: tag } });
-    const section = await db.section.create({ data: { name: "TEST", departmentId: department.id } });
+    const section = await db.section.create({ data: { name: VALID_SECTIONS[0], departmentId: department.id } });
     const category = await db.skillCategory.create({ data: { name: tag, slug: tag.toLowerCase() } });
     const provider = await db.provider.create({ data: { name: tag, website: "https://developer.mozilla.org" } });
     const skill = await db.skill.create({ data: { name: tag + " Skill", slug: tag.toLowerCase(), categoryId: category.id, levelId: beginnerLevel.id } });
@@ -67,7 +70,7 @@ export async function runWorkflow(mode: "workflow" | "security" | "catalogue" = 
         const details = { fullName: tag + " Student", registerNumber: tag, email: tag.toLowerCase() + "@example.test", year: "2", temporaryPassword: password, confirmPassword: password };
         for (const [name, value] of Object.entries(details)) await adminPage.locator('[name="' + name + '"]').fill(value);
         await adminPage.locator('[name="departmentId"]').selectOption(department.id);
-        await adminPage.locator('[name="sectionId"]').selectOption(section.id);
+        await adminPage.locator('[name="sectionName"]').selectOption(section.name);
         await adminPage.getByRole("button", { name: /Add Student|Create Student/i }).click();
         await adminPage.waitForURL(/created=1/);
         const student = await db.studentProfile.findUniqueOrThrow({ where: { registerNumber: tag } });

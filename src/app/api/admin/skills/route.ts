@@ -1,3 +1,4 @@
+import { productionSkillWhere } from "@/lib/production-ui";
 import { z } from "zod";
 import { db } from "@/lib/db";
 import { getSession } from "@/lib/auth";
@@ -7,7 +8,7 @@ export async function GET(request: Request) {
   const session = await getSession();
   if (!session || session.mustChangePassword || session.role !== "ADMIN") return Response.json({ error: "Forbidden" }, { status: 403 });
   const query = (new URL(request.url).searchParams.get("q") ?? "").trim().slice(0, 140);
-  const skills = await db.skill.findMany({ where: query ? { name: { contains: query, mode: "insensitive" } } : {}, select: { id: true, name: true, level: { select: { name: true } } }, orderBy: [{ name: "asc" }, { id: "asc" }], take: 30 });
+  const skills = await db.skill.findMany({ where: { AND: [productionSkillWhere], ...(query ? { name: { contains: query, mode: "insensitive" } } : {}) }, select: { id: true, name: true, level: { select: { name: true } } }, orderBy: [{ name: "asc" }, { id: "asc" }], take: 30 });
   return Response.json({ skills });
 }
 export async function POST(request: Request) {

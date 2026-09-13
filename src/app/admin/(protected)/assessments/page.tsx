@@ -1,8 +1,11 @@
+import { productionStudentWhere, productionSkillWhere } from "@/lib/production-ui";
+import { SectionSelect } from "@/components/section-select";
+import { isValidSection } from "@/lib/ui-options";
 import Link from "next/link";
 import { Prisma } from "@prisma/client";
 import { db } from "@/lib/db";
 import { expireStudentAttempts } from "@/lib/assessment";
-import { getCleanDepartments, getCleanSections, ACADEMIC_YEARS, deduplicateByNormalizedKey } from "@/lib/academic";
+import { getCleanDepartments, ACADEMIC_YEARS, deduplicateByNormalizedKey } from "@/lib/academic";
 import {
   Award,
   Filter,
@@ -28,18 +31,18 @@ export default async function AssessmentAdminPage({
     ? new Date(value("date") + "T00:00:00+05:30")
     : null;
 
-  const student: Prisma.StudentProfileWhereInput = {};
+  const student: Prisma.StudentProfileWhereInput = { ...productionStudentWhere };
   if (value("department")) student.departmentId = value("department");
   if (/^[1-4]$/.test(value("year"))) student.year = Number(value("year"));
-  if (value("section")) student.sectionId = value("section");
+  if (isValidSection(value("section"))) student.section = { name: value("section") };
 
-  const where: Prisma.AssessmentAttemptWhereInput = { student };
+  const where: Prisma.AssessmentAttemptWhereInput = { student, skill: productionSkillWhere };
   if (value("skill")) where.skillId = value("skill");
   if (["pass", "fail"].includes(value("result"))) where.passed = value("result") === "pass";
   if (date && Number.isFinite(date.getTime()))
     where.startedAt = { gte: date, lt: new Date(date.getTime() + 86400000) };
 
-  const [attempts, departments, sections, rawSkills] = await Promise.all([
+  const [attempts, departments, rawSkills] = await Promise.all([
     db.assessmentAttempt.findMany({
       where,
       include: {
@@ -50,8 +53,7 @@ export default async function AssessmentAdminPage({
       orderBy: { startedAt: "desc" },
     }),
     getCleanDepartments(),
-    getCleanSections(),
-    db.skill.findMany({ orderBy: { name: "asc" } }),
+    db.skill.findMany({ where: productionSkillWhere, orderBy: { name: "asc" } }),
   ]);
 
   const skills = deduplicateByNormalizedKey(rawSkills, (s) => s.name);
@@ -98,10 +100,7 @@ export default async function AssessmentAdminPage({
             {ACADEMIC_YEARS.map((y) => <option key={y} value={y}>Year {y}</option>)}
           </select>
 
-          <select name="section" defaultValue={value("section")} className="rounded-xl border border-slate-800 bg-slate-900/90 px-3 py-2.5 text-xs text-slate-200 focus:border-indigo-500 focus:outline-none">
-            <option value="">Section: All</option>
-            {sections.map((s) => <option key={s.id} value={s.id}>{s.department.name} / {s.name}</option>)}
-          </select>
+          <SectionSelect name="section" value={value("section")} filter className="rounded-xl border border-slate-800 bg-slate-900/90 px-3 py-2.5 text-xs text-slate-200" />
 
           <select name="skill" defaultValue={value("skill")} className="rounded-xl border border-slate-800 bg-slate-900/90 px-3 py-2.5 text-xs text-slate-200 focus:border-indigo-500 focus:outline-none">
             <option value="">Skill: All</option>

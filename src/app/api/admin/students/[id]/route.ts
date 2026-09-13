@@ -1,3 +1,4 @@
+import { resolveStudentSection } from "@/lib/academic";
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { db } from "@/lib/db";
@@ -26,11 +27,9 @@ export async function PATCH(request: Request, { params }: Params) {
     );
   }
 
-  const { fullName, registerNumber, email, departmentId, year, sectionId } = parsed.data;
+  const { fullName, registerNumber, email, departmentId, year } = parsed.data;
 
-  const section = await db.section.findFirst({
-    where: { id: sectionId, departmentId, department: { active: true } },
-  });
+  const section = await resolveStudentSection(departmentId, parsed.data);
   if (!section)
     return NextResponse.redirect(
       new URL(
@@ -44,7 +43,7 @@ export async function PATCH(request: Request, { params }: Params) {
     await db.$transaction([
       db.studentProfile.update({
         where: { id },
-        data: { fullName, registerNumber, departmentId, year, sectionId },
+        data: { fullName, registerNumber, departmentId, year, sectionId: section.id },
       }),
       db.user.update({
         where: { id: profile.userId },
@@ -103,11 +102,9 @@ export async function POST(request: Request, { params }: Params) {
       );
     }
 
-    const { fullName, registerNumber, email, departmentId, year, sectionId } = parsed.data;
+    const { fullName, registerNumber, email, departmentId, year } = parsed.data;
 
-    const section = await db.section.findFirst({
-      where: { id: sectionId, departmentId, department: { active: true } },
-    });
+    const section = await resolveStudentSection(departmentId, parsed.data);
     if (!section)
       return NextResponse.redirect(
         new URL(
@@ -121,7 +118,7 @@ export async function POST(request: Request, { params }: Params) {
       await db.$transaction([
         db.studentProfile.update({
           where: { id },
-          data: { fullName, registerNumber, departmentId, year, sectionId },
+          data: { fullName, registerNumber, departmentId, year, sectionId: section.id },
         }),
         db.user.update({
           where: { id: profile.userId },

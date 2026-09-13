@@ -1,3 +1,5 @@
+import { productionStudentWhere, productionSkillWhere, productionCourseWhere } from "@/lib/production-ui";
+import { getCanonicalCourseIds } from "@/lib/catalogue-visibility";
 import Link from "next/link";
 import { db } from "@/lib/db";
 import {
@@ -13,6 +15,7 @@ import {
 
 
 export default async function AdminDashboard() {
+  const courseIds = await getCanonicalCourseIds();
   const [
     totalStudents,
     activeStudents,
@@ -24,15 +27,15 @@ export default async function AdminDashboard() {
     certificatesSubmitted,
     certificatesVerified,
   ] = await Promise.all([
-    db.studentProfile.count(),
-    db.user.count({ where: { role: "STUDENT", status: "ACTIVE" } }),
-    db.skill.count(),
-    db.course.count(),
-    db.assessmentAttempt.count(),
-    db.assessmentAttempt.count({ where: { passed: true } }),
-    db.assessmentAttempt.count({ where: { passed: false } }),
-    db.certificate.count({ where: { submittedAt: { not: null } } }),
-    db.certificate.count({ where: { status: "VERIFIED" } }),
+    db.studentProfile.count({ where: productionStudentWhere }),
+    db.user.count({ where: { role: "STUDENT", status: "ACTIVE", studentProfile: productionStudentWhere } }),
+    db.skill.count({ where: productionSkillWhere }),
+    db.course.count({ where: { ...productionCourseWhere, id: { in: courseIds } } }),
+    db.assessmentAttempt.count({ where: { student: productionStudentWhere, skill: productionSkillWhere } }),
+    db.assessmentAttempt.count({ where: { AND: [{ student: productionStudentWhere, skill: productionSkillWhere }], passed: true } }),
+    db.assessmentAttempt.count({ where: { AND: [{ student: productionStudentWhere, skill: productionSkillWhere }], passed: false } }),
+    db.certificate.count({ where: { student: productionStudentWhere, skill: productionSkillWhere, submittedAt: { not: null } } }),
+    db.certificate.count({ where: { student: productionStudentWhere, skill: productionSkillWhere, status: "VERIFIED" } }),
   ]);
 
   const passRate = totalAssessments > 0 ? Math.round((passedAssessments / totalAssessments) * 100) : 0;

@@ -1,3 +1,4 @@
+import { displaySection } from "@/lib/ui-options";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/auth";
@@ -89,7 +90,7 @@ export default async function StudentDashboard() {
               </div>
               <div className="flex items-center gap-1.5 rounded-lg border border-slate-800 bg-slate-900/80 px-3 py-1.5 text-slate-300">
                 <span className="text-slate-500">Sec:</span>
-                <span className="font-semibold text-white">Section {profile.section.name}</span>
+                <span className="font-semibold text-white">Section {displaySection(profile.section.name)}</span>
               </div>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import { displaySection } from "@/lib/ui-options";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/auth";
@@ -93,7 +94,7 @@ export default async function StudentProfilePage() {
               <span className="text-slate-400 flex items-center gap-2">
                 <Layers className="h-4 w-4 text-slate-500" /> Section
               </span>
-              <span className="font-semibold text-white">Section {profile.section.name}</span>
+              <span className="font-semibold text-white">Section {displaySection(profile.section.name)}</span>
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import { productionSkillWhere, productionCourseWhere } from "@/lib/production-ui";
 import Link from "next/link";
 import { skillLevelColor } from "@/lib/catalog";
 import { notFound, redirect } from "next/navigation";
@@ -89,13 +90,13 @@ export default async function StudentSkillDetailPage({
 
   const { slug } = await params;
   const skill = await db.skill.findFirst({
-    where: { slug, active: true, category: { active: true }, level: { active: true } },
+    where: { AND: [productionSkillWhere], slug, active: true, category: { active: true }, level: { active: true } },
     include: {
       category: true,
       level: true,
       prerequisites: { include: { prerequisite: true } },
       courses: {
-        where: { active: true, provider: { active: true } },
+        where: { AND: [productionCourseWhere], active: true, provider: { active: true } },
         include: { provider: true, level: true },
         orderBy: { createdAt: "asc" },
       },
@@ -136,7 +137,7 @@ export default async function StudentSkillDetailPage({
 
   const levelColor = skillLevelColor(skillLevelName);
 
-  const courses = deduplicateByNormalizedKey(skill.courses, (c) => `${c.providerId}:${c.name}`);
+  const courses = deduplicateByNormalizedKey([...skill.courses].sort((a, b) => Number(b.id === studentSkill?.selectedCourseId) - Number(a.id === studentSkill?.selectedCourseId)), (c) => `${c.providerId}:${c.name}`);
   const totalProviders = new Set(courses.map((c) => c.providerId)).size;
   const credentialCourses = courses.filter((c) => c.credentialAvailable);
 

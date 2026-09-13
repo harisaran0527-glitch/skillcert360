@@ -1,3 +1,4 @@
+import { productionSkillWhere, productionNameWhere, productionCourseWhere } from "@/lib/production-ui";
 import Link from "next/link";
 import type { Prisma } from "@prisma/client";
 import { cataloguePage, param, type CatalogueParams } from "@/lib/catalog";
@@ -8,6 +9,7 @@ import { Building, Plus, ExternalLink } from "lucide-react";
 export default async function AdminProvidersPage({ searchParams }: { searchParams: Promise<CatalogueParams> }) {
   const params = await searchParams;
   const where: Prisma.ProviderWhereInput = {
+    AND: [productionNameWhere],
     ...(param(params, "q") ? { OR: [{ name: { contains: param(params, "q"), mode: "insensitive" as const } }, { slug: { contains: param(params, "q"), mode: "insensitive" as const } }] } : {}),
     ...(["true", "false"].includes(param(params, "active")) ? { active: param(params, "active") === "true" } : {}),
   };

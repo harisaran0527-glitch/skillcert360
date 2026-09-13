@@ -1,10 +1,12 @@
+import { displaySection } from "@/lib/ui-options";
+import { SectionSelect } from "@/components/section-select";
 import { expireStudentAttempts } from "@/lib/assessment";
 import { getSkillProgressState } from "@/lib/progress";
 import { getStudentProgression, UNLOCK_THRESHOLDS, GATING_LEVEL } from "@/lib/progression";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
-import { getCleanDepartments, getCleanSections } from "@/lib/academic";
+import { getCleanDepartments } from "@/lib/academic";
 import { PasswordField } from "@/components/password-field";
 import {
   ShieldCheck,
@@ -38,10 +40,7 @@ export default async function AdminStudent360Page({
   const { error, updated, pwdReset, statusChanged } = await searchParams;
   await expireStudentAttempts(id);
 
-  const [cleanDepts, cleanSecs] = await Promise.all([
-    getCleanDepartments(),
-    getCleanSections(),
-  ]);
+  const cleanDepts = await getCleanDepartments();
 
   const profile = await db.studentProfile.findUnique({
     where: { id },
@@ -79,7 +78,6 @@ export default async function AdminStudent360Page({
   if (!profile) notFound();
 
   const allDepartments = cleanDepts;
-  const allSections = cleanSecs;
 
   const [states, progression] = await Promise.all([
     Promise.all(
@@ -174,7 +172,7 @@ export default async function AdminStudent360Page({
           <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-3">
             <span className="text-slate-400 text-[10px] uppercase font-bold block">Class</span>
             <span className="font-semibold text-white mt-0.5 block">
-              Year {profile.year} · Sec {profile.section.name}
+              Year {profile.year} · Sec {displaySection(profile.section.name)}
             </span>
           </div>
           <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-3">
@@ -257,18 +255,7 @@ export default async function AdminStudent360Page({
               </div>
               <div className="space-y-1">
                 <label className="font-semibold text-slate-300 block">Section</label>
-                <select
-                  name="sectionId"
-                  defaultValue={profile.sectionId}
-                  required
-                  className="w-full rounded-xl border border-slate-800 bg-slate-900/90 px-2 py-2.5 text-xs text-white focus:border-blue-500 focus:outline-none"
-                >
-                  {allSections.map((s) => (
-                    <option key={s.id} value={s.id}>
-                      {s.department.name} / {s.name}
-                    </option>
-                  ))}
-                </select>
+                <SectionSelect value={displaySection(profile.section.name)} className="w-full rounded-xl border border-slate-800 bg-slate-900/90 px-3 py-2.5 text-xs text-white" />
               </div>
             </div>
             <div className="space-y-1">

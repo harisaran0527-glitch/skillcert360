@@ -1,6 +1,10 @@
+import { displaySection } from "@/lib/ui-options";
+import { productionStudentWhere } from "@/lib/production-ui";
+import { isValidSection } from "@/lib/ui-options";
+import { SectionSelect } from "@/components/section-select";
 import Link from "next/link";
 import { db } from "@/lib/db";
-import { getCleanDepartments, getCleanSections } from "@/lib/academic";
+import { getCleanDepartments } from "@/lib/academic";
 import {
   Users,
   UserPlus,
@@ -24,17 +28,19 @@ export default async function StudentsPage({
     created?: string;
     q?: string;
     dept?: string;
+    section?: string;
     cEmail?: string;
     cReg?: string;
     cName?: string;
     cPwd?: string;
   }>;
 }) {
-  const { error, created, q, dept, cEmail, cReg, cName, cPwd } =
+  const { error, created, q, dept, section, cEmail, cReg, cName, cPwd } =
     await searchParams;
 
-  const [rawStudents, departments, sections] = await Promise.all([
+  const [rawStudents, departments] = await Promise.all([
     db.studentProfile.findMany({
+      where: productionStudentWhere,
       include: {
         user: true,
         department: true,
@@ -44,7 +50,6 @@ export default async function StudentsPage({
       orderBy: { fullName: "asc" },
     }),
     getCleanDepartments(),
-    getCleanSections(),
   ]);
 
   const query = (q ?? "").trim().toLowerCase();
@@ -63,7 +68,7 @@ export default async function StudentsPage({
         .toLowerCase()
         .includes(query);
     const matchesDept = !selectedDept || st.departmentId === selectedDept;
-    return matchesQ && matchesDept;
+    return matchesQ && matchesDept && (!section || !isValidSection(section) || st.section.name === section);
   });
 
   return (
@@ -195,17 +200,7 @@ export default async function StudentsPage({
               </div>
               <div className="space-y-1">
                 <label className="font-semibold text-slate-300 block">Section</label>
-                <select
-                  name="sectionId"
-                  required
-                  className="w-full rounded-xl border border-slate-800 bg-slate-900/90 px-3 py-2.5 text-xs text-white focus:border-indigo-500 focus:outline-none"
-                >
-                  {sections.map((item) => (
-                    <option key={item.id} value={item.id}>
-                      {item.department.name} / {item.name}
-                    </option>
-                  ))}
-                </select>
+                <SectionSelect className="w-full rounded-xl border border-slate-800 bg-slate-900/90 px-3 py-2.5 text-xs text-white" />
               </div>
             </div>
 
@@ -282,6 +277,7 @@ export default async function StudentsPage({
                 <option key={d.id} value={d.id}>{d.name}</option>
               ))}
             </select>
+            <SectionSelect name="section" value={section} filter className="rounded-xl border border-slate-800 bg-slate-900 px-3 py-2 text-xs text-white" />
             <button
               type="submit"
               className="w-full sm:w-auto rounded-xl bg-indigo-600/30 border border-indigo-500/40 px-4 py-2 text-xs font-bold text-indigo-300 hover:bg-indigo-600/40 transition-all"
@@ -317,7 +313,7 @@ export default async function StudentsPage({
                       <td className="px-5 py-4 text-slate-300">
                         {student.department.name} ·{" "}
                         <span className="text-slate-400">
-                          Yr {student.year} Sec {student.section.name}
+                          Yr {student.year} Sec {displaySection(student.section.name)}
                         </span>
                       </td>
                       <td className="px-5 py-4 font-mono font-bold text-emerald-400">

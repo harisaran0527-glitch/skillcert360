@@ -1,3 +1,4 @@
+import { productionSkillWhere, productionNameWhere, productionCourseWhere } from "@/lib/production-ui";
 import Link from "next/link";
 import type { Prisma } from "@prisma/client";
 import { cataloguePage, param, type CatalogueParams } from "@/lib/catalog";
@@ -9,6 +10,7 @@ import { BookOpen, Plus, Sparkles, Layers, ShieldCheck } from "lucide-react";
 export default async function AdminSkillsPage({ searchParams }: { searchParams: Promise<CatalogueParams> }) {
   const params = await searchParams;
   const where: Prisma.SkillWhereInput = {
+    AND: [productionSkillWhere],
     ...(param(params, "q") ? { name: { contains: param(params, "q"), mode: "insensitive" } } : {}),
     ...(param(params, "category") ? { categoryId: param(params, "category") } : {}),
     ...(param(params, "level") ? { levelId: param(params, "level") } : {}),
@@ -18,7 +20,7 @@ export default async function AdminSkillsPage({ searchParams }: { searchParams: 
   const page = Math.min(cataloguePage(param(params, "page")), Math.max(1, Math.ceil(total / 24)));
   const editing = param(params, "edit") ? await db.skill.findUnique({ where: { id: param(params, "edit") } }) : null;
   const [rawCategories, rawLevels, skills] = await Promise.all([
-    db.skillCategory.findMany({ orderBy: { name: "asc" } }),
+    db.skillCategory.findMany({ where: productionNameWhere, orderBy: { name: "asc" } }),
     db.skillLevel.findMany({ orderBy: { order: "asc" } }),
     db.skill.findMany({ where, include: { category: true, level: true, _count: { select: { courses: true } } }, orderBy: [{ name: "asc" }, { id: "asc" }], skip: (page - 1) * 24, take: 24 }),
   ]);

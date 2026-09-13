@@ -1,3 +1,4 @@
+import { productionStudentWhere, productionSkillWhere } from "@/lib/production-ui";
 import { db } from "@/lib/db";
 import Link from "next/link";
 import { AdminCertificatePreviewModal } from "@/components/admin-certificate-preview-modal";
@@ -14,6 +15,7 @@ import {
 
 export default async function AdminCertificatesPage() {
   const certificates = await db.certificate.findMany({
+    where: { student: productionStudentWhere, skill: productionSkillWhere },
     include: {
       student: true,
       skill: true,

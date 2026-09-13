@@ -1,3 +1,4 @@
+import { resolveStudentSection } from "@/lib/academic";
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { db } from "@/lib/db";
@@ -26,15 +27,12 @@ export async function POST(request: Request) {
       email,
       departmentId,
       year,
-      sectionId,
       temporaryPassword,
       status,
     } = parsed.data;
 
     // Verify section belongs to the selected active department
-    const section = await db.section.findFirst({
-      where: { id: sectionId, departmentId, department: { active: true } },
-    });
+    const section = await resolveStudentSection(departmentId, parsed.data);
     if (!section)
       return NextResponse.redirect(
         new URL(
@@ -52,7 +50,7 @@ export async function POST(request: Request) {
         status: status as "ACTIVE" | "DISABLED",
         mustChangePassword: true,
         studentProfile: {
-          create: { fullName, registerNumber, departmentId, year, sectionId },
+          create: { fullName, registerNumber, departmentId, year, sectionId: section.id },
         },
       },
     });
