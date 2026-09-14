@@ -35,9 +35,31 @@ export default async function StudentDashboard() {
   await expireStudentAttempts(profile.id);
 
   const [skills, attempts, certificates, progression] = await Promise.all([
-    db.studentSkill.findMany({ where: { studentId: profile.id }, include: { skill: { include: { level: true } } } }),
-    db.assessmentAttempt.findMany({ where: { studentId: profile.id }, orderBy: { startedAt: "desc" } }),
-    db.certificate.findMany({ where: { studentId: profile.id } }),
+    db.studentSkill.findMany({
+      where: { studentId: profile.id },
+      select: {
+        id: true,
+        skillId: true,
+        completedAt: true,
+        skill: {
+          select: {
+            id: true,
+            name: true,
+            slug: true,
+            level: { select: { name: true } },
+          },
+        },
+      },
+    }),
+    db.assessmentAttempt.findMany({
+      where: { studentId: profile.id },
+      select: { id: true, skillId: true, passed: true, submittedAt: true, startedAt: true },
+      orderBy: { startedAt: "desc" },
+    }),
+    db.certificate.findMany({
+      where: { studentId: profile.id },
+      select: { id: true, skillId: true, status: true },
+    }),
     getStudentProgression(profile.id),
   ]);
 

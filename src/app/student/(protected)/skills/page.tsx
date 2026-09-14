@@ -105,23 +105,24 @@ export default async function StudentSkillsPage({
   const totalCount = await db.skill.count({ where: whereClause });
   const page = Math.min(requestedPage, Math.max(1, Math.ceil(totalCount / pageSize)));
   const skills = await db.skill.findMany({
-      where: whereClause,
-      include: {
-        category: true,
-        level: true,
-        courses: {
-          where: { ...availableCourseWhere, AND: [productionCourseWhere], id: courseWhere.id },
-          select: { id: true, providerId: true, pricingType: true, credentialAvailable: true, credentialType: true, provider: { select: { name: true } } },
-          orderBy: { createdAt: "asc" },
-        },
-        studentSkills: {
-          where: { studentId: profile.id },
-        },
+    where: whereClause,
+    select: {
+      id: true,
+      name: true,
+      slug: true,
+      description: true,
+      category: { select: { id: true, name: true } },
+      level: { select: { id: true, name: true } },
+      _count: { select: { courses: { where: availableCourseWhere } } },
+      studentSkills: {
+        where: { studentId: profile.id },
+        select: { id: true, completedAt: true },
       },
-      orderBy: [{ level: { order: "asc" } }, { name: "asc" }, { id: "asc" }],
-      skip: (page - 1) * pageSize,
-      take: pageSize,
-    });
+    },
+    orderBy: [{ level: { order: "asc" } }, { name: "asc" }, { id: "asc" }],
+    skip: (page - 1) * pageSize,
+    take: pageSize,
+  });
 
   const totalPages = Math.ceil(totalCount / pageSize);
 
@@ -375,7 +376,16 @@ function SkillCard({
   pricingLabel,
   pricingColor,
 }: {
-  skill: Prisma.SkillGetPayload<{ include: { category: true; level: true; courses: { select: { id: true; providerId: true; pricingType: true; credentialAvailable: true; credentialType: true; provider: { select: { name: true } } } }; studentSkills: true } }>;
+  skill: {
+    id: string;
+    name: string;
+    slug: string;
+    description: string | null;
+    category: { id: string; name: string };
+    level: { id: string; name: string };
+    _count?: { courses: number };
+    studentSkills?: { id: string; completedAt: Date | null }[];
+  };
   levelUnlocked: Map<string, boolean>;
   progression: StudentProgression;
   credTypeLabel: (t: string) => string | null;
@@ -394,19 +404,8 @@ function SkillCard({
     : 0;
   const remainingCount = Math.max(0, threshold - gatingCount);
 
-  const courses = skill.courses ?? [];
-  const totalCourses = courses.length;
-  const providerSet = new Set<string>(courses.map((c) => c.providerId));
-  const totalProviders = providerSet.size;
-  const credentialCourses = courses.filter((c) => c.credentialAvailable);
-  const totalCredentials = credentialCourses.length;
-
-  // Get selected course if student already enrolled
+  const totalCourses = skill._count?.courses ?? 0;
   const studentSkill = skill.studentSkills?.[0];
-
-  // Preview courses (up to 3 providers)
-  const previewCourses = courses.slice(0, 3);
-
   const levelColor = skillLevelColor(skillLevelName);
 
   return (
@@ -457,52 +456,31 @@ function SkillCard({
       )}
 
       {/* Stats row */}
-      <div className="grid grid-cols-3 gap-2 py-3 border-t border-slate-800/60 mb-3">
-        <div className="flex flex-col items-center text-center">
-          <Users className="h-3.5 w-3.5 text-cyan-400 mb-0.5" />
-          <span className="text-[11px] font-bold text-white">{totalProviders}</span>
-          <span className="text-[10px] text-slate-500">Provider{totalProviders !== 1 ? "s" : ""}</span>
+      <div className="flex items-center justify-between py-3 border-t border-slate-800/60 mb-3">
+        <div className="flex items-center gap-1.5 text-xs text-slate-400 font-medium">
+          <BookOpen className="h-4 w-4 text-cyan-400" />
+          <span>{totalCourses} Curated Course{totalCourses !== 1 ? "s" : ""} Available</span>
         </div>
-        <div className="flex flex-col items-center text-center">
-          <BookOpen className="h-3.5 w-3.5 text-blue-400 mb-0.5" />
-          <span className="text-[11px] font-bold text-white">{totalCourses}</span>
-          <span className="text-[10px] text-slate-500">Course{totalCourses !== 1 ? "s" : ""}</span>
-        </div>
-        <div className="flex flex-col items-center text-center">
-          <BadgeCheck className="h-3.5 w-3.5 text-emerald-400 mb-0.5" />
-          <span className="text-[11px] font-bold text-white">{totalCredentials}</span>
-          <span className="text-[10px] text-slate-500">Credential{totalCredentials !== 1 ? "s" : ""}</span>
-        </div>
+        {!isLocked && <span className="text-xs font-semibold text-emerald-400">✓ Unlocked</span>}
       </div>
 
-      {/* Preview providers */}
-      {!isLocked && previewCourses.length > 0 && (
-        <div className="space-y-1.5 mb-3">
-          {previewCourses.map((course) => (
-            <div key={course.id} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2 text-[11px]">
-              <span className="font-semibold text-slate-200 truncate max-w-[55%]">
-                {course.provider?.name ?? "Official Provider"}
-              </span>
-              <div className="flex items-center gap-1.5">
-                <span className={`rounded-md border px-1.5 py-0.5 font-semibold ${pricingColor(course.pricingType ?? "FREE")}`}>
-                  {pricingLabel(course.pricingType ?? "FREE")}
-                </span>
-                {course.credentialAvailable && course.credentialType !== "NONE" && (
-                  <BadgeCheck className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
-                )}
-              </div>
-            </div>
-          ))}
-          {totalCourses > 3 && (
-            <div className="text-center text-[10px] text-slate-500">+{totalCourses - 3} more learning option{totalCourses - 3 !== 1 ? "s" : ""}</div>
+      {!isLocked && studentSkill && (
+        <div className="space-y-2 mb-3">
+          {!studentSkill.completedAt ? (
+            <form action="/api/student/learning" method="post">
+              <input type="hidden" name="skillId" value={skill.id} />
+              <input type="hidden" name="action" value="complete" />
+              <button className="text-xs text-cyan-300 font-semibold hover:underline">I Completed Learning</button>
+            </form>
+          ) : (
+            <form action="/api/student/assessment/start" method="post">
+              <input type="hidden" name="skillId" value={skill.id} />
+              <button className="text-xs text-cyan-300 font-semibold hover:underline">Start Assessment</button>
+            </form>
           )}
         </div>
       )}
 
-      {!isLocked && <span className="text-xs text-emerald-300 mb-2">Unlocked</span>}
-      {!isLocked && studentSkill && <div className="space-y-2 mb-3">
-        {!studentSkill.completedAt ? <form action="/api/student/learning" method="post"><input type="hidden" name="skillId" value={skill.id} /><input type="hidden" name="action" value="complete" /><button className="text-xs text-cyan-300">I Completed Learning</button></form> : <form action="/api/student/assessment/start" method="post"><input type="hidden" name="skillId" value={skill.id} /><button className="text-xs text-cyan-300">Start Assessment</button></form>}
-      </div>}
       {/* Actions */}
       <div className="pt-3 border-t border-slate-800/60">
         {isLocked ? (
@@ -516,7 +494,7 @@ function SkillCard({
             className="flex items-center justify-center gap-1.5 w-full rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2.5 text-xs font-bold text-white shadow-md shadow-cyan-500/20 hover:from-cyan-400 hover:to-blue-500 transition-all"
           >
             <Zap className="h-3.5 w-3.5" />
-            Explore Skill
+            Explore Skill & Courses
           </Link>
         )}
       </div>

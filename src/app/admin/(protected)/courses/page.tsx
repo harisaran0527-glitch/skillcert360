@@ -20,16 +20,43 @@ export default async function AdminCoursesPage({ searchParams }: { searchParams:
     ...(Object.values(UrlStatus).includes(param(params, "urlStatus") as UrlStatus) ? { officialUrlStatus: param(params, "urlStatus") as UrlStatus } : {}),
     ...(["true", "false"].includes(param(params, "active")) ? { active: param(params, "active") === "true" } : {}),
   };
-  where.id = { in: await getCanonicalCourseIds() };
-  const total = await db.course.count({ where });
-  const page = Math.min(cataloguePage(param(params, "page")), Math.max(1, Math.ceil(total / 24)));
+  const courseIds = await getCanonicalCourseIds();
+  where.id = { in: courseIds };
+
   const editing = param(params, "edit") ? await db.course.findUnique({ where: { id: param(params, "edit") }, include: { skill: { include: { level: true } } } }) : null;
-  const targetSkill = editing?.skill ?? (param(params, "skill") ? await db.skill.findUnique({ where: { id: param(params, "skill") }, include: { level: true } }) : null);
-  const [rawCourses, rawProviders, rawLevels] = await Promise.all([
-    db.course.findMany({ where, include: { skill: true, provider: true, level: true }, orderBy: [{ name: "asc" }, { id: "asc" }], skip: (page - 1) * 24, take: 24 }),
+  const targetSkill = editing?.skill ?? (param(params, "skill") ? await db.skill.findUnique({ where: { id: param(params, "skill") }, select: { id: true, name: true, levelId: true, level: { select: { id: true, name: true } } } }) : null);
+
+  const [total, rawCourses, rawProviders, rawLevels] = await Promise.all([
+    db.course.count({ where }),
+    db.course.findMany({
+      where,
+      select: {
+        id: true,
+        name: true,
+        title: true,
+        officialUrl: true,
+        officialUrlStatus: true,
+        duration: true,
+        durationMinutes: true,
+        pricingType: true,
+        credentialAvailable: true,
+        credentialType: true,
+        active: true,
+        providerId: true,
+        skillId: true,
+        levelId: true,
+        skill: { select: { id: true, name: true } },
+        provider: { select: { id: true, name: true } },
+        level: { select: { id: true, name: true } },
+      },
+      orderBy: [{ name: "asc" }, { id: "asc" }],
+      take: 24,
+    }),
     db.provider.findMany({ where: productionNameWhere, select: { id: true, name: true }, orderBy: { name: "asc" } }),
-    db.skillLevel.findMany({ orderBy: { order: "asc" } }),
+    db.skillLevel.findMany({ select: { id: true, name: true, order: true }, orderBy: { order: "asc" } }),
   ]);
+
+  const page = Math.min(cataloguePage(param(params, "page")), Math.max(1, Math.ceil(total / 24)));
 
   const courses = deduplicateByNormalizedKey(rawCourses, (c) => `${c.providerId}:${c.skillId}:${c.name}`);
   const providers = deduplicateByNormalizedKey(rawProviders, (p) => p.name);

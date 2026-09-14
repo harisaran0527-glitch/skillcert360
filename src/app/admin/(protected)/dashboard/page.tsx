@@ -15,7 +15,6 @@ import {
 
 
 export default async function AdminDashboard() {
-  const courseIds = await getCanonicalCourseIds();
   const [
     totalStudents,
     activeStudents,
@@ -30,7 +29,7 @@ export default async function AdminDashboard() {
     db.studentProfile.count({ where: productionStudentWhere }),
     db.user.count({ where: { role: "STUDENT", status: "ACTIVE", studentProfile: productionStudentWhere } }),
     db.skill.count({ where: productionSkillWhere }),
-    db.course.count({ where: { ...productionCourseWhere, id: { in: courseIds } } }),
+    db.course.count({ where: productionCourseWhere }),
     db.assessmentAttempt.count({ where: { student: productionStudentWhere, skill: productionSkillWhere } }),
     db.assessmentAttempt.count({ where: { AND: [{ student: productionStudentWhere, skill: productionSkillWhere }], passed: true } }),
     db.assessmentAttempt.count({ where: { AND: [{ student: productionStudentWhere, skill: productionSkillWhere }], passed: false } }),
