@@ -1,3 +1,4 @@
+// SkillCert 360 Public Homepage
 import Link from "next/link";
 import {
   GraduationCap,
