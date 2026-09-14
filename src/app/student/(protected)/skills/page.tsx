@@ -26,6 +26,7 @@ import {
   Zap,
 } from "lucide-react";
 
+
 export default async function StudentSkillsPage({
   searchParams,
 }: {
@@ -37,11 +38,10 @@ export default async function StudentSkillsPage({
   const params = await searchParams;
   const profile = await db.studentProfile.findUnique({
     where: { userId: session.userId },
-    include: { department: true, section: true },
+    select: { id: true },
   });
 
   if (!profile) redirect("/student/login");
-  await expireStudentAttempts(profile.id);
 
   const query = (params.q ?? "").toString().trim().toLowerCase();
   const selectedLevel = (params.level ?? "").toString();
@@ -54,7 +54,6 @@ export default async function StudentSkillsPage({
   const requestedPage = cataloguePage((params.page ?? "1").toString());
   const pageSize = 24;
 
-  const courseIds = await getCanonicalCourseIds();
   const whereClause: Prisma.SkillWhereInput = { AND: [productionSkillWhere], active: true, category: { active: true }, level: { active: true } };
 
   if (selectedLevel) whereClause.levelId = selectedLevel;
@@ -100,7 +99,6 @@ export default async function StudentSkillsPage({
         description: true,
         category: { select: { id: true, name: true } },
         level: { select: { id: true, name: true } },
-        _count: { select: { courses: { where: availableCourseWhere } } },
         studentSkills: {
           where: { studentId: profile.id },
           select: { id: true, completedAt: true },
@@ -112,6 +110,22 @@ export default async function StudentSkillsPage({
     }),
   ]);
 
+  const skillIds = skills.map((s) => s.id);
+  const courseCountsGroup = skillIds.length > 0
+    ? await db.course.groupBy({
+        by: ["skillId"],
+        where: { ...availableCourseWhere, skillId: { in: skillIds } },
+        _count: { _all: true },
+      })
+    : [];
+
+  const courseCountMap = new Map(courseCountsGroup.map((c) => [c.skillId, c._count._all]));
+
+  const skillsWithCounts = skills.map((s) => ({
+    ...s,
+    _count: { courses: courseCountMap.get(s.id) ?? 0 },
+  }));
+
   const levels = deduplicateByNormalizedKey(rawLevels, (l) => l.name);
   const categories = deduplicateByNormalizedKey(rawCategories, (c) => c.name);
   const providers = deduplicateByNormalizedKey(rawProviders, (p) => p.name);
@@ -120,7 +134,6 @@ export default async function StudentSkillsPage({
   );
 
   const page = Math.min(requestedPage, Math.max(1, Math.ceil(totalCount / pageSize)));
-
   const totalPages = Math.ceil(totalCount / pageSize);
 
   // Credential type label
@@ -156,8 +169,8 @@ export default async function StudentSkillsPage({
   };
 
   // Group skills by category for display
-  const groupedByCategory: Record<string, typeof skills> = {};
-  for (const skill of skills) {
+  const groupedByCategory: Record<string, typeof skillsWithCounts> = {};
+  for (const skill of skillsWithCounts) {
     const catName = skill.category.name;
     if (!groupedByCategory[catName]) groupedByCategory[catName] = [];
     groupedByCategory[catName].push(skill);
@@ -313,7 +326,7 @@ export default async function StudentSkillsPage({
       ) : (
         // Flat grid (search/filter active)
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {skills.map((skill) => (
+          {skillsWithCounts.map((skill) => (
             <SkillCard
               key={skill.id}
               skill={skill}
