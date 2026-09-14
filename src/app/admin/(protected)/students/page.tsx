@@ -26,6 +26,7 @@ export default async function StudentsPage({
   searchParams: Promise<{
     error?: string;
     created?: string;
+    deleted?: string;
     q?: string;
     dept?: string;
     section?: string;
@@ -35,7 +36,7 @@ export default async function StudentsPage({
     cPwd?: string;
   }>;
 }) {
-  const { error, created, q, dept, section, cEmail, cReg, cName, cPwd } =
+  const { error, created, deleted, q, dept, section, cEmail, cReg, cName, cPwd } =
     await searchParams;
 
   const [rawStudents, departments] = await Promise.all([
@@ -132,6 +133,12 @@ export default async function StudentsPage({
       {error && (
         <div className="rounded-2xl border border-rose-500/40 bg-rose-500/15 p-4 flex items-center gap-2.5 text-xs font-semibold text-rose-300">
           <AlertCircle className="h-4 w-4 shrink-0" /> {error}
+        </div>
+      )}
+
+      {deleted && (
+        <div className="rounded-2xl border border-rose-500/40 bg-rose-500/10 p-4 text-xs font-semibold text-rose-300">
+          ✓ Student account permanently deleted and removed from all records.
         </div>
       )}
 

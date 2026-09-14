@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
 import { getCleanDepartments } from "@/lib/academic";
 import { PasswordField } from "@/components/password-field";
+import { DeleteStudentModal } from "@/components/delete-student-modal";
 import {
   ShieldCheck,
   Award,
@@ -27,6 +28,7 @@ import {
   AlertCircle,
   Save,
   RefreshCw,
+  Trash2,
 } from "lucide-react";
 
 export default async function AdminStudent360Page({
@@ -34,7 +36,7 @@ export default async function AdminStudent360Page({
   searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ error?: string; updated?: string; pwdReset?: string; statusChanged?: string }>;
+  searchParams: Promise<{ error?: string; updated?: string; pwdReset?: string; statusChanged?: string; deleted?: string }>;
 }) {
   const { id } = await params;
   const { error, updated, pwdReset, statusChanged } = await searchParams;
@@ -193,7 +195,7 @@ export default async function AdminStudent360Page({
       </div>
 
       {/* ── Admin Actions ─────────────────────────────────────── */}
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
         {/* Edit Student */}
         <div className="glass-panel rounded-3xl p-6 space-y-4">
           <div className="flex items-center gap-2.5 border-b border-slate-800 pb-4">
@@ -383,6 +385,27 @@ export default async function AdminStudent360Page({
               )}
             </button>
           </form>
+        </div>
+
+        {/* Delete Student */}
+        <div className="glass-panel rounded-3xl p-6 space-y-4 border border-rose-500/20">
+          <div className="flex items-center gap-2.5 border-b border-slate-800 pb-4">
+            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-rose-500/20 text-rose-400 border border-rose-500/30">
+              <Trash2 className="h-3.5 w-3.5" />
+            </div>
+            <div>
+              <h2 className="text-sm font-bold text-white font-display">Delete Student</h2>
+              <p className="text-[11px] text-rose-400 font-semibold">Permanent — cannot be undone.</p>
+            </div>
+          </div>
+          <div className="rounded-xl border border-rose-500/20 bg-rose-500/5 p-3.5 text-xs text-rose-200/80 leading-relaxed">
+            Permanently removes the student account, all skills, assessments, certificates, and activity logs. Certificate files are purged from storage.
+          </div>
+          <DeleteStudentModal
+            studentId={id}
+            studentName={profile.fullName}
+            registerNumber={profile.registerNumber}
+          />
         </div>
       </div>
 

@@ -11,6 +11,7 @@ import {
   AlertCircle,
   Clock,
   Paperclip,
+  Download,
 } from "lucide-react";
 
 export default async function AdminCertificatesPage() {
@@ -231,6 +232,15 @@ export default async function AdminCertificatesPage() {
                       fileSize={c.fileSize}
                     />
                   )}
+                  <a
+                    href={`/api/certificates/${c.id}/download`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-[11px] font-semibold text-emerald-300 hover:bg-emerald-500/20 transition-colors"
+                  >
+                    <Download className="h-3 w-3 text-emerald-400" />
+                    <span>View Certificate</span>
+                  </a>
                 </div>
               </div>
 
