@@ -86,10 +86,9 @@ export async function startAssessment(studentId: string, skillId: string) {
       const prior = await tx.studentSkill.findUnique({ where: { studentId_skillId: { studentId, skillId: prerequisite.prerequisiteId } } });
       if (!prior?.verifiedAt && (settings.certificateRequirement || !await tx.assessmentAttempt.findFirst({ where: { studentId, skillId: prerequisite.prerequisiteId, passed: true } }))) throw new WorkflowError("Complete the prerequisite skills first.");
     }
-    const active = await tx.assessmentAttempt.findFirst({ where: { studentId, submittedAt: null } });
+    const active = await tx.assessmentAttempt.findFirst({ where: { studentId, skillId, submittedAt: null } });
     if (active) {
-      if (active.skillId === skillId) return active;
-      throw new WorkflowError("Finish your active assessment before starting another.");
+      return active;
     }
     const history = await tx.assessmentAttempt.findMany({ where: { studentId, skillId }, orderBy: { startedAt: "desc" }, include: { answers: { select: { questionId: true } } } });
     if (history.some(a => a.passed && !a.terminated && a.submittedAt)) throw new WorkflowError("You already passed this assessment.");
