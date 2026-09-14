@@ -167,16 +167,18 @@ export default async function AdminCoursesPage({ searchParams }: { searchParams:
                   href={course.officialUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-indigo-400 hover:underline"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 font-bold text-xs hover:bg-indigo-500/25 transition-all"
                 >
-                  <span>Official URL</span>
-                  <ExternalLink className="h-3 w-3" />
+                  <span>Open Official Course</span>
+                  <ExternalLink className="h-3.5 w-3.5" />
                 </a>
               ) : (
-                <span className="text-xs text-slate-500">No URL configured</span>
+                <span className="text-xs text-slate-500 font-mono">No URL configured</span>
               )}
+              <Link href={`/admin/courses?edit=${course.id}`} className="text-xs font-semibold text-cyan-300 hover:underline">
+                Edit Course
+              </Link>
             </div>
-            <Link href={`/admin/courses?edit=${course.id}`} className="text-xs text-cyan-300">Edit course</Link>
           </div>
         ))}
       </div>

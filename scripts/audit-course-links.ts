@@ -1,81 +1,58 @@
-import { db } from "../src/lib/db";
+import "dotenv/config";
+import { PrismaClient } from "@prisma/client";
 
-async function auditCourseLinks() {
-  console.log("=== AUDITING ALL COURSE OFFICIAL URLS ===");
+const db = new PrismaClient();
 
+async function audit() {
   const courses = await db.course.findMany({
-    select: {
-      id: true,
-      officialUrl: true,
-      officialUrlStatus: true,
+    where: { active: true },
+    include: {
+      skill: { select: { name: true, slug: true, level: { select: { name: true } } } },
+      provider: { select: { name: true, slug: true } },
     },
+    orderBy: [{ skill: { name: "asc" } }, { name: "asc" }],
   });
 
-  console.log(`Total Courses in Database: ${courses.length}`);
+  console.log(`=== AUDITING ${courses.length} ACTIVE/VISIBLE COURSES ===\n`);
 
-  let verifiedCount = 0;
   let pendingCount = 0;
+  let verifiedCount = 0;
+  let invalidUrlCount = 0;
+  let mismatchCount = 0;
 
-  const toVerify: string[] = [];
-  const toPending: string[] = [];
+  for (const c of courses) {
+    const isPending = c.officialUrlStatus === "OFFICIAL_LINK_PENDING";
+    if (isPending) pendingCount++;
+    else if (c.officialUrlStatus === "VERIFIED") verifiedCount++;
 
-  for (const course of courses) {
-    const url = course.officialUrl;
-    const isPlaceholder =
-      !url ||
-      url.includes("official-provider.org") ||
-      url.includes("example.com") ||
-      url.endsWith("/dashboard") ||
-      url.endsWith("/home") ||
-      url === "https://learn.microsoft.com" ||
-      url === "https://aws.amazon.com" ||
-      url === "https://netacad.com" ||
-      url === "https://cloudskillsboost.google";
-
-    const isDeepLink =
-      /^https?:\/\//i.test(url) &&
-      !isPlaceholder &&
-      (url.includes("/courses/") ||
-        url.includes("/training/") ||
-        url.includes("/learn/") ||
-        url.includes("/paths/") ||
-        url.includes("/credentials/") ||
-        url.includes("/modules/") ||
-        url.includes("/certifications/") ||
-        url.split("/").length > 4);
-
-    if (isDeepLink) {
-      verifiedCount++;
-      toVerify.push(course.id);
-    } else {
-      pendingCount++;
-      toPending.push(course.id);
+    let urlValid = true;
+    try {
+      new URL(c.officialUrl);
+    } catch {
+      urlValid = false;
+      invalidUrlCount++;
     }
+
+    // Check for obvious mismatches: e.g. coursera homepage or mismatched names
+    const isHomepage = c.officialUrl.endsWith("coursera.org/") || c.officialUrl === "https://coursera.org" || c.officialUrl.endsWith("microsoft.com/") || c.officialUrl.endsWith("aws.amazon.com/");
+    
+    console.log(`[${c.officialUrlStatus}] ${c.skill.name} (${c.skill.level.name}) | Course: "${c.name}" | Provider: ${c.provider.name}`);
+    console.log(`  URL: ${c.officialUrl}`);
+    if (isHomepage) {
+      console.log(`  ⚠️ MISMATCH / GENERIC HOMEPAGE LINK!`);
+      mismatchCount++;
+    }
+    console.log("");
   }
 
-  // Batch update
-  if (toVerify.length > 0) {
-    await db.course.updateMany({
-      where: { id: { in: toVerify } },
-      data: { officialUrlStatus: "VERIFIED" },
-    });
-  }
-
-  if (toPending.length > 0) {
-    await db.course.updateMany({
-      where: { id: { in: toPending } },
-      data: { officialUrlStatus: "OFFICIAL_LINK_PENDING" },
-    });
-  }
-
-  console.log(`\nURL Audit Summary:`);
-  console.log(`  - VERIFIED Official Course Deep Links: ${verifiedCount}`);
-  console.log(`  - OFFICIAL_LINK_PENDING (Action button disabled/flagged): ${pendingCount}`);
-
-  process.exit(0);
+  console.log("=== AUDIT SUMMARY ===");
+  console.log(`Total Active Courses: ${courses.length}`);
+  console.log(`Verified Status: ${verifiedCount}`);
+  console.log(`Pending Status: ${pendingCount}`);
+  console.log(`Invalid URLs: ${invalidUrlCount}`);
+  console.log(`Generic/Mismatched URLs: ${mismatchCount}`);
 }
 
-auditCourseLinks().catch((err) => {
-  console.error("Course link audit failed:", err);
-  process.exit(1);
-});
+audit()
+  .catch((err) => console.error(err))
+  .finally(() => db.$disconnect());

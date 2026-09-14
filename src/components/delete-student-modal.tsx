@@ -8,12 +8,14 @@ interface DeleteStudentModalProps {
   studentId: string;
   studentName: string;
   registerNumber: string;
+  variant?: "full" | "icon";
 }
 
 export function DeleteStudentModal({
   studentId,
   studentName,
   registerNumber,
+  variant = "icon",
 }: DeleteStudentModalProps) {
   const [open, setOpen] = useState(false);
   const [confirmValue, setConfirmValue] = useState("");
@@ -70,14 +72,25 @@ export function DeleteStudentModal({
   return (
     <>
       {/* Trigger Button */}
-      <button
-        type="button"
-        onClick={handleOpen}
-        className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-rose-700 to-rose-600 py-2.5 text-xs font-bold text-white shadow-lg hover:from-rose-600 hover:to-rose-500 transition-all cursor-pointer"
-      >
-        <Trash2 className="h-3.5 w-3.5" />
-        Delete Student
-      </button>
+      {variant === "full" ? (
+        <button
+          type="button"
+          onClick={handleOpen}
+          className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-rose-700 to-rose-600 py-2.5 text-xs font-bold text-white shadow-lg hover:from-rose-600 hover:to-rose-500 transition-all cursor-pointer"
+        >
+          <Trash2 className="h-3.5 w-3.5" />
+          Delete Student
+        </button>
+      ) : (
+        <button
+          type="button"
+          onClick={handleOpen}
+          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-rose-500/15 border border-rose-500/30 text-rose-300 font-bold text-xs hover:bg-rose-500/25 transition-all cursor-pointer"
+        >
+          <Trash2 className="h-3 w-3" />
+          <span>Delete</span>
+        </button>
+      )}
 
       {/* Modal Overlay */}
       {open && (

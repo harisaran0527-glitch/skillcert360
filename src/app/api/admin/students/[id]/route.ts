@@ -96,23 +96,32 @@ export async function POST(request: Request, { params }: Params) {
     const parsed = editStudentSchema.safeParse(form);
     if (!parsed.success) {
       const msg = parsed.error.issues[0]?.message ?? "Invalid data";
+      if (request.headers.get("accept")?.includes("application/json")) {
+        return NextResponse.json({ error: msg }, { status: 400 });
+      }
+      const redirectUrl = String(form.redirectTo ?? `/admin/students/${id}`);
       return NextResponse.redirect(
-        new URL(`/admin/students/${id}?error=${encodeURIComponent(msg)}`, request.url),
+        new URL(`${redirectUrl}?error=${encodeURIComponent(msg)}`, request.url),
         303,
       );
     }
 
-    const { fullName, registerNumber, email, departmentId, year } = parsed.data;
+    const { fullName, registerNumber, email, departmentId, year, status } = parsed.data;
 
     const section = await resolveStudentSection(departmentId, parsed.data);
-    if (!section)
+    if (!section) {
+      if (request.headers.get("accept")?.includes("application/json")) {
+        return NextResponse.json({ error: "Section must belong to the selected active department" }, { status: 400 });
+      }
+      const redirectUrl = String(form.redirectTo ?? `/admin/students/${id}`);
       return NextResponse.redirect(
         new URL(
-          `/admin/students/${id}?error=Section+must+belong+to+the+selected+active+department`,
+          `${redirectUrl}?error=Section+must+belong+to+the+selected+active+department`,
           request.url,
         ),
         303,
       );
+    }
 
     try {
       await db.$transaction([
@@ -122,7 +131,10 @@ export async function POST(request: Request, { params }: Params) {
         }),
         db.user.update({
           where: { id: profile.userId },
-          data: { email: email.trim().toLowerCase() },
+          data: {
+            email: email.trim().toLowerCase(),
+            ...(status ? { status } : {}),
+          },
         }),
       ]);
 
@@ -131,18 +143,27 @@ export async function POST(request: Request, { params }: Params) {
           userId: session.userId,
           studentId: id,
           action: "STUDENT_EDITED",
-          metadata: { registerNumber, email },
+          metadata: { registerNumber, email, status },
         },
       });
 
+      if (request.headers.get("accept")?.includes("application/json")) {
+        return NextResponse.json({ success: true });
+      }
+
+      const redirectUrl = String(form.redirectTo ?? `/admin/students`);
       return NextResponse.redirect(
-        new URL(`/admin/students/${id}?updated=1`, request.url),
+        new URL(`${redirectUrl}?edited=1`, request.url),
         303,
       );
     } catch {
+      if (request.headers.get("accept")?.includes("application/json")) {
+        return NextResponse.json({ error: "Email or register number already in use" }, { status: 400 });
+      }
+      const redirectUrl = String(form.redirectTo ?? `/admin/students/${id}`);
       return NextResponse.redirect(
         new URL(
-          `/admin/students/${id}?error=Email+or+register+number+already+in+use`,
+          `${redirectUrl}?error=Email+or+register+number+already+in+use`,
           request.url,
         ),
         303,

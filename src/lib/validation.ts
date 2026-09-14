@@ -32,6 +32,7 @@ export const editStudentSchema = z.object({
   year: z.coerce.number().int().min(1).max(8),
   sectionId: z.string().cuid().optional(),
   sectionName: z.enum(VALID_SECTIONS).optional(),
+  status: z.enum(["ACTIVE", "DISABLED"]).optional(),
 }).refine(d => !!d.sectionName || !!d.sectionId, { message: "Choose section A, B or C", path: ["sectionName"] });
 
 export const resetPasswordSchema = z

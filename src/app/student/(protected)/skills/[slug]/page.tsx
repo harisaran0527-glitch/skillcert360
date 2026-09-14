@@ -360,7 +360,7 @@ export default async function StudentSkillDetailPage({
                     {/* Actions */}
                     {!isLocked && (
                       <div className="ml-auto flex items-center gap-2">
-                        {(course.officialUrlStatus === "VERIFIED" || course.officialUrlStatus === "OFFICIAL_LINK_PENDING") &&
+                        {course.officialUrlStatus === "VERIFIED" &&
                          /^https?:\/\//i.test(course.officialUrl) &&
                          !course.officialUrl.includes("official-provider.org") ? (
                           <LearnOfficialButton
