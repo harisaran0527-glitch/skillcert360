@@ -360,13 +360,15 @@ export default async function StudentSkillDetailPage({
                     {/* Actions */}
                     {!isLocked && (
                       <div className="ml-auto flex items-center gap-2">
-                        {course.officialUrlStatus === "VERIFIED" &&
-                         /^https?:\/\//i.test(course.officialUrl) &&
-                         !course.officialUrl.includes("official-provider.org") ? (
+                        {course.active === true &&
+                         course.officialUrlStatus === "VERIFIED" &&
+                         course.officialUrl &&
+                         /^https?:\/\//i.test(course.officialUrl) ? (
                           <LearnOfficialButton
                             skillId={skill.id}
                             courseId={course.id}
                             officialUrl={course.officialUrl}
+                            label="Open Official Course"
                           />
                         ) : (
                           <span className="inline-flex items-center gap-1.5 rounded-xl border border-slate-700 bg-slate-900 px-3.5 py-2 text-xs font-semibold text-slate-400 cursor-not-allowed">

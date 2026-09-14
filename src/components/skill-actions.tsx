@@ -1,5 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { ExternalLink } from "lucide-react";
 
 export function LearnOfficialButton({
   skillId,
@@ -40,9 +41,10 @@ export function LearnOfficialButton({
       type="button"
       onClick={handleClick}
       disabled={!officialUrl}
-      className="rounded-lg border border-[#1e6fd9] bg-[#1e6fd9] px-3 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:border-slate-200 disabled:bg-slate-200"
+      className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-xs font-bold text-white shadow-md shadow-cyan-500/20 hover:from-cyan-400 hover:to-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
     >
-      {label}
+      <span>{label}</span>
+      <ExternalLink className="h-3.5 w-3.5" />
     </button>
   );
 }
