@@ -212,6 +212,7 @@ model Course {
 	progress CourseProgress[]
 	selectedByStudentSkills StudentSkill[] @relation("SelectedCourse")
 	certificates Certificate[]
+	questions Question[]
 	skill Skill @relation(fields: [skillId], references: [id])
 	provider Provider @relation(fields: [providerId], references: [id])
 	level SkillLevel @relation(fields: [levelId], references: [id])
@@ -242,6 +243,7 @@ model StudentSkill {
 model Question {
 	id String @id @default(cuid())
 	skillId String
+	courseId String?
 	levelId String
 	type QuestionType
 	difficulty Difficulty
@@ -251,8 +253,11 @@ model Question {
 	explanation String?
 	active Boolean @default(true)
 	skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+	course Course? @relation(fields: [courseId], references: [id], onDelete: Cascade)
 	level SkillLevel @relation(fields: [levelId], references: [id])
 	answers AssessmentAnswer[]
+	@@index([courseId, active])
+	@@index([skillId, active])
 }
 
 model AssessmentConfig {

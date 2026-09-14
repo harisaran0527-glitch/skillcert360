@@ -96,7 +96,10 @@ export async function startAssessment(studentId: string, skillId: string) {
     const last = history[0];
     const available = last?.reexamAvailableAt ?? (last?.submittedAt ? new Date(last.submittedAt.getTime() + last.cooldownHours * 3600000) : null);
     if (available && available > new Date()) throw new WorkflowError(`Re-exam available at ${available.toISOString()}`, 429);
-    const bank = await tx.question.findMany({ where: { skillId, active: true, type: { in: ["SINGLE_CHOICE", "MULTIPLE_CHOICE", "TRUE_FALSE", "FILL_BLANK"] } } });
+    const courseId = enrollment.selectedCourseId;
+    const bank = courseId
+      ? await tx.question.findMany({ where: { courseId, active: true, type: { in: ["SINGLE_CHOICE", "MULTIPLE_CHOICE", "TRUE_FALSE", "FILL_BLANK"] } } })
+      : await tx.question.findMany({ where: { skillId, active: true, type: { in: ["SINGLE_CHOICE", "MULTIPLE_CHOICE", "TRUE_FALSE", "FILL_BLANK"] } } });
     if (bank.length < settings.questionCount) throw new WorkflowError(`Assessment needs ${settings.questionCount} active, automatically gradable questions; ${bank.length} available.`);
     const previous = new Set(last?.answers.map(a => a.questionId) ?? []);
     const selected = shuffle([...shuffle(bank.filter(q => !previous.has(q.id))), ...shuffle(bank.filter(q => previous.has(q.id)))].slice(0, settings.questionCount));
@@ -107,8 +110,12 @@ export async function startAssessment(studentId: string, skillId: string) {
       token: randomUUID(), studentId, skillId, startedAt, expiresAt: new Date(startedAt.getTime() + settings.durationMinutes * 60000),
       attemptNumber: history.length + 1, questionCount: selected.length, passMark, violationLimit: settings.violationLimit,
       cooldownHours: settings.cooldownHours, autoSubmitOnViolation: settings.autoSubmitOnViolation, certificateRequired: settings.certificateRequirement,
-      answers: { create: selected.map((q, position) => ({ questionId: q.id, position, answer: "", correctAnswerSnapshot: q.correctAnswer as Prisma.InputJsonValue,
-        questionSnapshot: { id: q.id, prompt: q.prompt, type: q.type, options: q.type === "TRUE_FALSE" ? ["True", "False"] : q.options ?? [] } })) },
+      answers: { create: selected.map((q, position) => {
+        const rawOpts = Array.isArray(q.options) ? (q.options as string[]) : [];
+        const opts = q.type === "TRUE_FALSE" ? ["True", "False"] : shuffle(rawOpts);
+        return { questionId: q.id, position, answer: "", correctAnswerSnapshot: q.correctAnswer as Prisma.InputJsonValue,
+          questionSnapshot: { id: q.id, prompt: q.prompt, type: q.type, options: opts } };
+      }) },
     } });
     await transition(tx, studentId, skillId, ["ASSESSMENT_IN_PROGRESS"], { attemptId: attempt.id, attemptNumber: attempt.attemptNumber });
     return attempt;
