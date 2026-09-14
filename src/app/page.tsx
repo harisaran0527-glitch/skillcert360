@@ -26,63 +26,56 @@ export default function Home() {
       icon: LogIn,
       title: "Sign In",
       color: "cyan",
-      desc: "Students receive their login credentials from the Admin. Students cannot self-register — accounts are created and issued by an authorised administrator.",
+      desc: "Students receive their login credentials from the Admin. Accounts are created and issued by an authorised administrator.",
     },
     {
       num: "02",
       icon: BookOpen,
       title: "Choose a Skill",
       color: "blue",
-      desc: "Browse industry-relevant skills including C, C++, Python, Java, JavaScript, Web Development, AI, Generative AI, Machine Learning, Data Science, Cloud, Cybersecurity, DevOps, SQL, Power BI, and more.",
+      desc: "Browse industry-relevant skills including C, C++, Python, Java, JavaScript, Web Development, AI, Machine Learning, Cloud, SQL, and more.",
     },
     {
       num: "03",
       icon: UserCheck,
-      title: "Choose an Official Learning Provider",
+      title: "Choose an Official Provider",
       color: "indigo",
-      desc: "Each skill may list multiple verified learning providers. For example Python may include Cisco, IBM, or Microsoft. The student selects one official learning pathway.",
+      desc: "Each skill lists verified learning providers (e.g. Cisco, IBM, Microsoft, Oracle). Select your official learning pathway.",
     },
     {
       num: "04",
       icon: MonitorCheck,
       title: "Learn Officially",
       color: "purple",
-      desc: "Open the genuine provider course and complete the learning on the provider's own platform. SkillCert 360 does not generate certificates — it tracks and verifies credentials you earn directly from official providers.",
+      desc: "Open the official provider course and complete the learning directly on the provider's platform.",
     },
     {
       num: "05",
       icon: CheckCircle2,
       title: "Mark Learning Complete",
       color: "teal",
-      desc: "After finishing the official course, return to SkillCert 360 and mark the learning pathway as complete to unlock the internal assessment.",
+      desc: "After finishing the course, return to SkillCert 360 and mark the learning pathway as complete to unlock certificate requesting.",
     },
     {
       num: "06",
-      icon: ShieldCheck,
-      title: "Secure Internal Assessment",
-      color: "amber",
-      desc: "Take the SkillCert 360 internal assessment. Security may include fullscreen mode, timer, tab-switch detection, window-focus monitoring, page-hidden detection, duplicate attempt prevention, server-side scoring, and violation tracking.",
+      icon: FileCheck2,
+      title: "Submit Certificate Request",
+      color: "sky",
+      desc: "Confirm your student details, course title, and provider information in the Certificate Request Form and submit your request.",
     },
     {
       num: "07",
-      icon: Trophy,
-      title: "Pass the Assessment",
-      color: "emerald",
-      desc: "If you pass, Official Credential Submission becomes available. If you fail, follow the configured re-exam cooldown and take another randomised attempt with fresh questions.",
+      icon: ShieldCheck,
+      title: "Take Internal Assessment",
+      color: "amber",
+      desc: "Complete the proctored assessment with 50 randomized questions, anti-cheat tab-switch detection, timer, and server-side scoring.",
     },
     {
       num: "08",
-      icon: FileCheck2,
-      title: "Submit Official Credential",
-      color: "sky",
-      desc: "Submit your genuine credential evidence — Credential ID, Official Credential URL, or a certificate file where configured. Submit only authentic credentials earned by you.",
-    },
-    {
-      num: "09",
-      icon: ClipboardList,
-      title: "Admin Verification",
-      color: "rose",
-      desc: "Admin reviews the submitted credential. Possible states: Pending Verification, Verified, Rejected, or Needs Resubmission. Only VERIFIED credentials count toward level progression.",
+      icon: Trophy,
+      title: "Pass Assessment & Issue Certificate",
+      color: "emerald",
+      desc: "Achieve a passing score of 50% or higher. Upon passing, your certificate instantly unlocks from LOCKED to AVAILABLE / ISSUED with a unique verification code.",
     },
   ];
 
@@ -92,9 +85,9 @@ export default function Home() {
     indigo:  { badge: "border-indigo-500/30 bg-indigo-500/10 text-indigo-400",  num: "text-indigo-400",  icon: "bg-indigo-500/10 border-indigo-500/20 text-indigo-400",  border: "border-l-indigo-500" },
     purple:  { badge: "border-purple-500/30 bg-purple-500/10 text-purple-400",  num: "text-purple-400",  icon: "bg-purple-500/10 border-purple-500/20 text-purple-400",  border: "border-l-purple-500" },
     teal:    { badge: "border-teal-500/30 bg-teal-500/10 text-teal-400",    num: "text-teal-400",    icon: "bg-teal-500/10 border-teal-500/20 text-teal-400",    border: "border-l-teal-500" },
+    sky:     { badge: "border-sky-500/30 bg-sky-500/10 text-sky-400",      num: "text-sky-400",     icon: "bg-sky-500/10 border-sky-500/20 text-sky-400",      border: "border-l-sky-500" },
     amber:   { badge: "border-amber-500/30 bg-amber-500/10 text-amber-400",   num: "text-amber-400",   icon: "bg-amber-500/10 border-amber-500/20 text-amber-400",   border: "border-l-amber-500" },
     emerald: { badge: "border-emerald-500/30 bg-emerald-500/10 text-emerald-400", num: "text-emerald-400", icon: "bg-emerald-500/10 border-emerald-500/20 text-emerald-400", border: "border-l-emerald-500" },
-    sky:     { badge: "border-sky-500/30 bg-sky-500/10 text-sky-400",      num: "text-sky-400",     icon: "bg-sky-500/10 border-sky-500/20 text-sky-400",      border: "border-l-sky-500" },
     rose:    { badge: "border-rose-500/30 bg-rose-500/10 text-rose-400",    num: "text-rose-400",    icon: "bg-rose-500/10 border-rose-500/20 text-rose-400",    border: "border-l-rose-500" },
   };
 
@@ -144,7 +137,7 @@ export default function Home() {
           </h1>
 
           <p className="text-base text-slate-400 sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            SkillCert 360 helps students discover industry-relevant skills, learn using official provider courses, complete a secure internal assessment, submit their genuine official credential, and track their verified skill journey.
+            SkillCert 360 helps students discover industry-relevant skills, learn using official provider courses, mark learning complete, submit certificate requests, pass secure assessments, and earn verified skill certificates.
           </p>
 
           <div className="pt-4">
@@ -220,10 +213,10 @@ export default function Home() {
               <BookOpen className="w-3.5 h-3.5" /> Student Guide
             </div>
             <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">How SkillCert 360 Works</h2>
-            <p className="text-sm text-slate-400 max-w-xl mx-auto">A clear step-by-step journey from sign-in to verified credentials.</p>
+            <p className="text-sm text-slate-400 max-w-xl mx-auto">A clear step-by-step journey from sign-in to verified certificates.</p>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step) => {
               const c = colorMap[step.color];
               const Icon = step.icon;
@@ -268,9 +261,9 @@ export default function Home() {
               <Award className="w-6 h-6" />
             </div>
             <div>
-              <h3 className="font-bold text-white text-base">Admin Credential Audit</h3>
+              <h3 className="font-bold text-white text-base">Admin Certificate Audit</h3>
               <p className="mt-1 text-xs text-slate-400 leading-relaxed">
-                Manual admin verification ensures every submitted certificate is genuine before counting toward progression.
+                Admin tracks student progress, reviews certificate requests, and audits issued credentials.
               </p>
             </div>
           </div>
@@ -317,7 +310,7 @@ export default function Home() {
               <ul className="space-y-2 text-xs text-slate-400">
                 <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />Use the official provider course linked in SkillCert 360.</li>
                 <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />Do not mark learning complete without genuinely finishing the course.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />Course and certificate availability depend on the official provider.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />Course and certificate availability depend on official provider content.</li>
               </ul>
             </div>
 
@@ -325,9 +318,9 @@ export default function Home() {
             <div className="glass-panel p-6 space-y-3">
               <h3 className="font-bold text-white text-sm border-b border-slate-800 pb-2">Assessment</h3>
               <ul className="space-y-2 text-xs text-slate-400">
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Enter the assessment only when fully ready.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Fullscreen may be required. Do not exit fullscreen during the assessment.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Do not switch tabs or windows during the assessment.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Submit Certificate Request before starting the assessment.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Fullscreen may be required. Do not exit fullscreen during assessment.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Do not switch tabs or windows during assessment.</li>
                 <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Do not copy or paste assessment content.</li>
                 <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Violations may result in automatic termination.</li>
                 <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Refreshing the page will not reset the server timer.</li>
@@ -337,13 +330,13 @@ export default function Home() {
 
             {/* Credential Rules */}
             <div className="glass-panel p-6 space-y-3">
-              <h3 className="font-bold text-white text-sm border-b border-slate-800 pb-2">Credentials</h3>
+              <h3 className="font-bold text-white text-sm border-b border-slate-800 pb-2">Certificates</h3>
               <ul className="space-y-2 text-xs text-slate-400">
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Submit only genuine credentials earned by you.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Do not submit another student's certificate.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Do not reuse the same credential to increase progression.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Admin verification is mandatory before credentials count.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Only VERIFIED credentials count toward level progression.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Submit accurate details in the Certificate Request Form.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Complete the assessment legitimately to earn your certificate.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Passing score of ≥ 50% automatically unlocks the certificate.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Certificates feature unique verification codes and QR links.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Earned certificates count directly toward level progression.</li>
               </ul>
             </div>
           </div>
