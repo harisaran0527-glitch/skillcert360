@@ -62,32 +62,37 @@ export interface StudentProgression {
  * or stored as a derived boolean.
  */
 export async function getStudentProgression(studentId: string): Promise<StudentProgression> {
-  // Load all skill levels ordered by their sequence.
-  const skillLevels = await db.skillLevel.findMany({
-    where: { active: true },
-    orderBy: { order: "asc" },
+  // Aggregate verified certificates in a single query by skill level name
+  const certCounts = await db.certificate.groupBy({
+    by: ["skillId"],
+    where: {
+      studentId,
+      status: "VERIFIED",
+    },
+    _count: true,
   });
 
-  // Count VERIFIED certificates per level name for this student.
-  const verifiedCounts: Record<string, number> = {};
-  await Promise.all(skillLevels.map(async level => {
-    verifiedCounts[level.name] = await db.certificate.count({
-      where: {
-        studentId,
-        status: "VERIFIED",
-        skill: { levelId: level.id },
-      },
-    });
-  }));
+  // Fetch verified certificate levels in one batch
+  const verifiedCerts = await db.certificate.findMany({
+    where: { studentId, status: "VERIFIED" },
+    select: { skill: { select: { level: { select: { name: true } } } } },
+  });
 
-  // Build progression for each of the 4 canonical levels.
-  const levels: LevelProgression[] = [];
   const verifiedByLevel: Record<LevelName, number> = {
-    Beginner: verifiedCounts["Beginner"] ?? 0,
-    Advanced: verifiedCounts["Advanced"] ?? 0,
-    Pro: verifiedCounts["Pro"] ?? 0,
-    Expert: verifiedCounts["Expert"] ?? 0,
+    Beginner: 0,
+    Advanced: 0,
+    Pro: 0,
+    Expert: 0,
   };
+
+  for (const c of verifiedCerts) {
+    const lvlName = c.skill.level.name as LevelName;
+    if (lvlName in verifiedByLevel) {
+      verifiedByLevel[lvlName]++;
+    }
+  }
+
+  const levels: LevelProgression[] = [];
 
   for (let i = 0; i < LEVEL_NAMES.length; i++) {
     const name = LEVEL_NAMES[i];

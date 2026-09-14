@@ -29,8 +29,7 @@ export function StudentNavigation({ studentName = "Student", registerNumber = ""
 
   const navItems = [
     { label: "Dashboard", href: "/student/dashboard", icon: LayoutDashboard },
-    { label: "Explore Skills", href: "/student/skills", icon: Compass },
-    { label: "My Learning", href: "/student/my-learning", icon: BookOpen },
+    { label: "Courses / Learning", href: "/student/skills", icon: Compass },
     { label: "Assessments", href: "/student/assessment", icon: Award },
     { label: "Certificates", href: "/student/certificates", icon: FileCheck },
     { label: "Profile", href: "/student/profile", icon: User },
