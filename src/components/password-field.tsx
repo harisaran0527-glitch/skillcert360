@@ -3,13 +3,13 @@
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 
-export function PasswordField({ name = "password", variant = "dark", placeholder = "••••••••••••" }: { name?: string; variant?: "dark" | "light"; placeholder?: string }) {
+export function PasswordField({ name = "password", variant = "dark", placeholder = "••••••••••••", disabled = false }: { name?: string; variant?: "dark" | "light"; placeholder?: string; disabled?: boolean }) {
   const [showPassword, setShowPassword] = useState(false);
 
   const inputClassName =
     variant === "dark"
-      ? "w-full rounded-xl border border-slate-700/80 bg-slate-950/80 px-4 py-3 pr-12 text-sm text-white placeholder-slate-500 focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500 transition"
-      : "w-full rounded-xl border border-slate-700/80 bg-slate-950/80 px-4 py-3 pr-12 text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition";
+      ? "w-full rounded-xl border border-slate-700/80 bg-slate-950/80 px-4 py-3 pr-12 text-sm text-white placeholder-slate-500 focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500 transition disabled:opacity-60"
+      : "w-full rounded-xl border border-slate-700/80 bg-slate-950/80 px-4 py-3 pr-12 text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 transition disabled:opacity-60";
 
   const buttonClassName =
     variant === "dark"
@@ -22,6 +22,7 @@ export function PasswordField({ name = "password", variant = "dark", placeholder
         name={name}
         type={showPassword ? "text" : "password"}
         required
+        disabled={disabled}
         placeholder={placeholder}
         className={inputClassName}
       />

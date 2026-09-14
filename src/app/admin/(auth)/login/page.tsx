@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { PasswordField } from "@/components/password-field";
 import { getRoleDashboardPath, getRolePasswordPath, getSession } from "@/lib/auth";
-import { SubmitButton } from "@/components/submit-button";
-import { ShieldCheck, AlertCircle } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
+import { AdminLoginForm } from "@/components/admin-login-form";
 
 export default async function AdminLogin({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
   const session = await getSession();
@@ -40,44 +39,8 @@ export default async function AdminLogin({ searchParams }: { searchParams: Promi
         </div>
 
         {/* Card */}
-        <div className="glass-panel p-8 border border-slate-800 shadow-2xl space-y-5">
-          {error && (
-            <div className="flex items-center gap-2.5 rounded-xl border border-rose-500/30 bg-rose-500/10 p-3.5 text-xs font-medium text-rose-300">
-              <AlertCircle className="w-4 h-4 shrink-0 text-rose-400" />
-              <span>{error}</span>
-            </div>
-          )}
-
-          <form action="/api/auth/admin/login" method="post" className="space-y-5">
-            <div className="space-y-1.5">
-              <label className="block text-xs font-semibold text-slate-300" htmlFor="admin-email">
-                Email
-              </label>
-              <input
-                id="admin-email"
-                name="identifier"
-                type="email"
-                required
-                autoComplete="email"
-                placeholder="admin@example.com"
-                className="w-full rounded-xl border border-slate-700/80 bg-slate-950/80 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500 transition"
-              />
-            </div>
-
-            <div className="space-y-1.5">
-              <label className="block text-xs font-semibold text-slate-300">
-                Password
-              </label>
-              <PasswordField variant="dark" />
-            </div>
-
-            <SubmitButton
-              pendingText="Signing in..."
-              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 py-3.5 text-sm font-bold text-white shadow-lg shadow-cyan-500/20 hover:from-blue-500 hover:to-cyan-500 transition-all cursor-pointer"
-            >
-              Sign In
-            </SubmitButton>
-          </form>
+        <div className="glass-panel p-8 border border-slate-800 shadow-2xl">
+          <AdminLoginForm initialError={error} />
         </div>
       </div>
     </main>
