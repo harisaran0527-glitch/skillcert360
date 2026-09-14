@@ -349,6 +349,8 @@ model Certificate {
 	provider Provider? @relation(fields: [providerId], references: [id], onDelete: SetNull)
 	verifiedBy User? @relation("VerifiedBy", fields: [verifiedById], references: [id])
 	@@unique([studentId, skillId])
+	@@index([studentId, status])
+	@@index([status])
 }
 
 model ActivityLog {

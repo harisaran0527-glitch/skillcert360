@@ -62,17 +62,7 @@ export interface StudentProgression {
  * or stored as a derived boolean.
  */
 export async function getStudentProgression(studentId: string): Promise<StudentProgression> {
-  // Aggregate verified certificates in a single query by skill level name
-  const certCounts = await db.certificate.groupBy({
-    by: ["skillId"],
-    where: {
-      studentId,
-      status: "VERIFIED",
-    },
-    _count: true,
-  });
-
-  // Fetch verified certificate levels in one batch
+  // Fetch verified certificate levels in a single targeted query
   const verifiedCerts = await db.certificate.findMany({
     where: { studentId, status: "VERIFIED" },
     select: { skill: { select: { level: { select: { name: true } } } } },

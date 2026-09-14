@@ -42,11 +42,18 @@ export default async function StudentsPage({
   const [rawStudents, departments] = await Promise.all([
     db.studentProfile.findMany({
       where: productionStudentWhere,
-      include: {
-        user: true,
-        department: true,
-        section: true,
-        certificates: { where: { status: "VERIFIED" } },
+      select: {
+        id: true,
+        fullName: true,
+        registerNumber: true,
+        year: true,
+        departmentId: true,
+        user: { select: { email: true, status: true } },
+        department: { select: { id: true, name: true } },
+        section: { select: { id: true, name: true } },
+        _count: {
+          select: { certificates: { where: { status: "VERIFIED" } } },
+        },
       },
       orderBy: { fullName: "asc" },
     }),
@@ -58,7 +65,7 @@ export default async function StudentsPage({
 
   const students = rawStudents.map((st) => ({
     ...st,
-    verifiedCount: st.certificates.length,
+    verifiedCount: st._count.certificates,
   }));
 
   const filteredStudents = students.filter((st) => {

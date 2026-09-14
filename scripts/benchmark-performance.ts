@@ -1,111 +1,56 @@
-import { db } from "../src/lib/db";
-import { getStudentProgression } from "../src/lib/progression";
+import "dotenv/config";
 
-async function benchmark() {
-  console.log("=== API & BACKEND PERFORMANCE BENCHMARK ===");
+const BASE_URL = process.env.BENCHMARK_BASE_URL || "https://skillcert360.vercel.app";
 
-  // Find sample student ID
-  const student = await db.studentProfile.findFirst({
-    select: { id: true, userId: true },
-  });
-
-  if (!student) {
-    console.log("No student profile found for benchmark.");
-    process.exit(0);
-  }
-
-  // 1. Benchmark Student Dashboard queries
-  console.time("Student Dashboard Queries (Sequential)");
-  const p1 = await db.studentProfile.findUnique({
-    where: { id: student.id },
-    select: { id: true, fullName: true, registerNumber: true, department: { select: { name: true } }, section: { select: { name: true } } },
-  });
-  const prog1 = await getStudentProgression(student.id);
-  const skills1 = await db.studentSkill.findMany({
-    where: { studentId: student.id },
-    take: 10,
-    select: { id: true, skillId: true, state: true, skill: { select: { name: true } } },
-  });
-  console.timeEnd("Student Dashboard Queries (Sequential)");
-
-  console.time("Student Dashboard Queries (Parallel Promise.all)");
-  const [p2, prog2, skills2] = await Promise.all([
-    db.studentProfile.findUnique({
-      where: { id: student.id },
-      select: { id: true, fullName: true, registerNumber: true, department: { select: { name: true } }, section: { select: { name: true } } },
-    }),
-    getStudentProgression(student.id),
-    db.studentSkill.findMany({
-      where: { studentId: student.id },
-      take: 10,
-      select: { id: true, skillId: true, state: true, skill: { select: { name: true } } },
-    }),
-  ]);
-  console.timeEnd("Student Dashboard Queries (Parallel Promise.all)");
-
-  // 2. Benchmark Catalogue / Courses page queries
-  console.time("Catalogue Skills List (Lightweight Select)");
-  const catSkills = await db.skill.findMany({
-    where: { active: true },
-    select: {
-      id: true,
-      name: true,
-      slug: true,
-      category: { select: { id: true, name: true } },
-      level: { select: { id: true, name: true, order: true } },
-      _count: { select: { courses: true } },
-    },
-    take: 24,
-  });
-  console.timeEnd("Catalogue Skills List (Lightweight Select)");
-
-  // 3. Benchmark Admin Students Directory
-  console.time("Admin Students Directory (Paginated with Select)");
-  const adminStudents = await db.studentProfile.findMany({
-    take: 20,
-    select: {
-      id: true,
-      fullName: true,
-      registerNumber: true,
-      year: true,
-      user: { select: { email: true, status: true, lastLoginAt: true } },
-      department: { select: { name: true } },
-      section: { select: { name: true } },
-      _count: { select: { certificates: true, attempts: true } },
-    },
-    orderBy: { createdAt: "desc" },
-  });
-  console.timeEnd("Admin Students Directory (Paginated with Select)");
-
-  // 4. Benchmark Admin Certificate Requests
-  console.time("Admin Certificate Requests Query");
-  const certRequests = await db.certificate.findMany({
-    select: {
-      id: true,
-      status: true,
-      submittedAt: true,
-      student: {
-        select: {
-          fullName: true,
-          registerNumber: true,
-          department: { select: { name: true } },
-          section: { select: { name: true } },
-          user: { select: { email: true } },
-        },
+async function measureRoute(path: string, options: RequestInit = {}): Promise<number> {
+  const start = performance.now();
+  try {
+    const res = await fetch(`${BASE_URL}${path}`, {
+      ...options,
+      headers: {
+        "User-Agent": "SkillCert360-Benchmarker",
+        ...(options.headers || {}),
       },
-      skill: { select: { name: true } },
-      course: { select: { name: true, title: true } },
-      provider: { select: { name: true } },
-    },
-    orderBy: { submittedAt: "desc" },
-    take: 50,
-  });
-  console.timeEnd("Admin Certificate Requests Query");
-
-  process.exit(0);
+    });
+    await res.text();
+    const duration = performance.now() - start;
+    return Math.round(duration);
+  } catch (err) {
+    console.error(`Error fetching ${path}:`, err);
+    return -1;
+  }
 }
 
-benchmark().catch((err) => {
-  console.error("Benchmark failed:", err);
-  process.exit(1);
-});
+async function benchmark() {
+  console.log(`=== BENCHMARKING RESPONSE TIMES (${BASE_URL}) ===\n`);
+
+  const publicRoutes = [
+    "/",
+    "/student/login",
+    "/admin/login",
+    "/skills",
+  ];
+
+  console.log("--- PUBLIC ROUTES ---");
+  for (const route of publicRoutes) {
+    const ms = await measureRoute(route);
+    console.log(`${route.padEnd(35)} : ${ms} ms`);
+  }
+
+  // Admin authenticated endpoints
+  console.log("\n--- ADMIN ENDPOINTS (Unauthenticated 401/303 check) ---");
+  const adminRoutes = [
+    "/admin/dashboard",
+    "/admin/students",
+    "/admin/certificates/requests",
+    "/admin/certificates",
+    "/api/admin/students",
+    "/api/admin/certificates",
+  ];
+  for (const route of adminRoutes) {
+    const ms = await measureRoute(route);
+    console.log(`${route.padEnd(35)} : ${ms} ms`);
+  }
+}
+
+benchmark();

@@ -3,10 +3,10 @@ import bcrypt from "bcryptjs";
 
 const db = new PrismaClient();
 const departments = ["AI & DS", "CSE", "IT", "ECE", "EEE", "Mechanical", "Civil"];
-const levels = [["Beginner", 1, 30], ["Foundation", 2, 30], ["Intermediate", 3, 32], ["Advanced", 4, 35], ["Professional", 5, 35]] as const;
+const levels = [["Beginner", 1, 50], ["Advanced", 2, 50], ["Pro", 3, 50], ["Expert", 4, 50]] as const;
 
 async function main() {
-  const email = (process.env.SEED_ADMIN_EMAIL || "admin@skillcert360.local").trim().toLowerCase();
+  const email = (process.env.SEED_ADMIN_EMAIL || "skillcertificate@gmail.com").trim().toLowerCase();
   const password = process.env.SEED_ADMIN_PASSWORD || "ChangeMe123!";
   const passwordHash = await bcrypt.hash(password, 12);
 

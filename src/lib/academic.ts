@@ -1,12 +1,17 @@
 import { db } from "./db";
 import { deduplicateByNormalizedKey, isValidSection, VALID_SECTIONS } from "./ui-options";
 import { productionDepartmentWhere } from "./production-ui";
+import { unstable_cache } from "next/cache";
 export * from "./ui-options";
 
-export async function getCleanDepartments() {
-  const departments = await db.department.findMany({ where: productionDepartmentWhere, orderBy: [{ name: "asc" }, { id: "asc" }] });
-  return deduplicateByNormalizedKey(departments, department => department.name);
-}
+export const getCleanDepartments = unstable_cache(
+  async () => {
+    const departments = await db.department.findMany({ where: productionDepartmentWhere, orderBy: [{ name: "asc" }, { id: "asc" }] });
+    return deduplicateByNormalizedKey(departments, department => department.name);
+  },
+  ["clean-departments"],
+  { revalidate: 600, tags: ["academic"] }
+);
 
 export async function resolveStudentSection(departmentId: string, selection: { sectionName?: string; sectionId?: string }) {
   const department = await db.department.findFirst({ where: { id: departmentId, ...productionDepartmentWhere } });
