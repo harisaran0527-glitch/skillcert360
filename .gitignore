@@ -32,3 +32,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Temporary benchmark/auth scripts
+scripts/benchmark-5-runs*.ts
+scripts/profile-skills.ts
+scripts/set-test-password.ts
+scripts/test-cached-metadata.ts
+scripts/test-live-authenticated-5runs.ts
+scripts/test-single-batch.ts
+scripts/test-student-skills-live-5runs.ts
