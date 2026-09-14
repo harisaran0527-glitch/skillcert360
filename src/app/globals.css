@@ -65,14 +65,61 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.glass-panel-hover {
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+/* Premium Desktop Hover & Active Click Feedback System */
+button,
+a,
+[role="button"],
+.glass-panel-hover,
+.interactive-card {
+  transition: transform 200ms ease-out,
+              box-shadow 200ms ease-out,
+              border-color 200ms ease-out,
+              opacity 200ms ease-out;
+  will-change: transform;
 }
 
-.glass-panel-hover:hover {
-  border-color: rgba(6, 182, 212, 0.3);
-  box-shadow: 0 0 20px -5px rgba(6, 182, 212, 0.15);
-  transform: translateY(-1px);
+/* Desktop Hover Effects (Mouse Only) */
+@media (hover: hover) and (pointer: fine) {
+  .glass-panel-hover:hover,
+  .interactive-card:hover {
+    transform: translateY(-3px) scale(1.015);
+    border-color: rgba(6, 182, 212, 0.35);
+    box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.4), 0 0 20px -4px rgba(6, 182, 212, 0.2);
+  }
+
+  button:not(:disabled):hover,
+  a[href]:hover,
+  [role="button"]:not(:disabled):hover {
+    transform: translateY(-2px) scale(1.01);
+  }
+}
+
+/* Click Active State Feedback */
+button:not(:disabled):active,
+a[href]:active,
+[role="button"]:not(:disabled):active,
+.glass-panel-hover:active,
+.interactive-card:active {
+  transform: scale(0.98) translateY(0px) !important;
+  transition-duration: 75ms;
+}
+
+/* Keyboard Focus Visible Accessibility */
+:focus-visible {
+  outline: 2px solid rgba(6, 182, 212, 0.8) !important;
+  outline-offset: 2px !important;
+}
+
+/* Prefers Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .glow-cyan {

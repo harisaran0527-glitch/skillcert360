@@ -16,6 +16,7 @@ import {
 import { PasswordField } from "@/components/password-field";
 import { EditStudentModal } from "@/components/edit-student-modal";
 import { DeleteStudentModal } from "@/components/delete-student-modal";
+import { SubmitButton } from "@/components/submit-button";
 
 import type { Prisma } from "@prisma/client";
 
@@ -263,14 +264,14 @@ export default async function StudentsPage({
               <PasswordField name="confirmPassword" variant="dark" placeholder="Repeat password" />
             </div>
             <div>
-              <button
+              <SubmitButton
                 id="btn-add-student"
-                type="submit"
+                pendingText="Adding Student..."
+                icon={<UserPlus className="h-4 w-4 ml-1" />}
                 className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 py-3 text-xs font-bold text-white shadow-lg shadow-indigo-500/20 hover:from-indigo-400 hover:to-purple-500 transition-all cursor-pointer"
               >
-                <UserPlus className="h-4 w-4" />
-                <span>Add Student</span>
-              </button>
+                Add Student
+              </SubmitButton>
             </div>
           </div>
         </form>

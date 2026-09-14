@@ -2,6 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { PasswordField } from "@/components/password-field";
 import { getRoleDashboardPath, getRolePasswordPath, getSession } from "@/lib/auth";
+import { SubmitButton } from "@/components/submit-button";
 import { ShieldCheck, AlertCircle } from "lucide-react";
 
 export default async function AdminLogin({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
@@ -70,12 +71,12 @@ export default async function AdminLogin({ searchParams }: { searchParams: Promi
               <PasswordField variant="dark" />
             </div>
 
-            <button
-              type="submit"
-              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 py-3.5 text-sm font-bold text-white shadow-lg shadow-cyan-500/20 hover:from-blue-500 hover:to-cyan-500 transition-all active:scale-[0.98] cursor-pointer"
+            <SubmitButton
+              pendingText="Signing in..."
+              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 py-3.5 text-sm font-bold text-white shadow-lg shadow-cyan-500/20 hover:from-blue-500 hover:to-cyan-500 transition-all cursor-pointer"
             >
               Sign In
-            </button>
+            </SubmitButton>
           </form>
         </div>
       </div>

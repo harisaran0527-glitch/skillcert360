@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   LayoutDashboard,
   Users,
@@ -18,6 +18,7 @@ import {
   Menu,
   X,
   Command,
+  Loader2,
 } from "lucide-react";
 
 interface AdminNavProps {
@@ -29,6 +30,11 @@ export function AdminNavigation({ adminEmail = "Admin" }: AdminNavProps) {
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loggingOut, setLoggingOut] = useState(false);
+  const [pendingHref, setPendingHref] = useState<string | null>(null);
+
+  useEffect(() => {
+    setPendingHref(null);
+  }, [pathname]);
 
   const navItems = [
     { label: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
@@ -113,31 +119,43 @@ export function AdminNavigation({ adminEmail = "Admin" }: AdminNavProps) {
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.href || (item.href !== "/admin/dashboard" && pathname.startsWith(item.href));
+            const isPending = pendingHref === item.href;
 
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  if (pathname !== item.href) {
+                    setPendingHref(item.href);
+                  }
+                }}
                 className={`group flex items-center justify-between rounded-xl px-3.5 py-2.5 text-xs font-semibold transition-all duration-200 ${
                   isActive
                     ? "bg-gradient-to-r from-indigo-500/20 to-purple-600/10 text-indigo-300 border border-indigo-500/30 shadow-md shadow-indigo-500/5 font-bold"
+                    : isPending
+                    ? "bg-indigo-500/10 text-indigo-300 border border-indigo-500/20"
                     : "text-slate-400 hover:bg-slate-900/80 hover:text-slate-200 border border-transparent"
                 }`}
               >
                 <div className="flex items-center gap-3">
                   <div
                     className={`flex h-7 w-7 items-center justify-center rounded-lg transition-colors ${
-                      isActive
+                      isActive || isPending
                         ? "bg-indigo-500/25 text-indigo-300"
                         : "bg-slate-900 text-slate-500 group-hover:text-slate-200"
                     }`}
                   >
-                    <Icon className="h-3.5 w-3.5" />
+                    {isPending ? <Loader2 className="h-3.5 w-3.5 animate-spin text-indigo-400" /> : <Icon className="h-3.5 w-3.5" />}
                   </div>
                   <span>{item.label}</span>
                 </div>
-                {isActive && <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />}
+                {isPending ? (
+                  <span className="text-[10px] text-indigo-400 font-mono font-bold animate-pulse">Loading...</span>
+                ) : isActive ? (
+                  <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
+                ) : null}
               </Link>
             );
           })}

@@ -8,6 +8,7 @@ import { getSkillProgressState } from "@/lib/progress";
 import { getStudentProgression, UNLOCK_THRESHOLDS, GATING_LEVEL, LEVEL_NAMES, type LevelName } from "@/lib/progression";
 import { deduplicateByNormalizedKey } from "@/lib/academic";
 import { LearnOfficialButton } from "@/components/skill-actions";
+import { SubmitButton } from "@/components/submit-button";
 import {
   ArrowLeft,
   BookOpen,
@@ -384,17 +385,23 @@ export default async function StudentSkillDetailPage({
                               <form action="/api/student/learning" method="post">
                                 <input type="hidden" name="skillId" value={skill.id} />
                                 <input type="hidden" name="action" value="complete" />
-                                <button className="rounded-xl border border-cyan-500/40 bg-cyan-500/10 px-3.5 py-2 text-xs font-semibold text-cyan-300 hover:bg-cyan-500/20 transition-all">
+                                <SubmitButton
+                                  pendingText="Saving..."
+                                  className="rounded-xl border border-cyan-500/40 bg-cyan-500/10 px-3.5 py-2 text-xs font-semibold text-cyan-300 hover:bg-cyan-500/20 transition-all cursor-pointer"
+                                >
                                   Mark Learning Complete
-                                </button>
+                                </SubmitButton>
                               </form>
                             )}
                             {(state === "ASSESSMENT_AVAILABLE" || state === "REEXAM_REQUIRED") && (
                               <form action="/api/student/assessment/start" method="post">
                                 <input type="hidden" name="skillId" value={skill.id} />
-                                <button className="rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-xs font-bold text-white shadow-md shadow-cyan-500/20 hover:from-cyan-400 hover:to-blue-500 transition-all">
+                                <SubmitButton
+                                  pendingText="Starting..."
+                                  className="rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-xs font-bold text-white shadow-md shadow-cyan-500/20 hover:from-cyan-400 hover:to-blue-500 transition-all cursor-pointer"
+                                >
                                   Start Assessment
-                                </button>
+                                </SubmitButton>
                               </form>
                             )}
                             {state === "ASSESSMENT_IN_PROGRESS" && <Link href="/student/assessment" className="text-xs text-cyan-300">Resume Assessment</Link>}

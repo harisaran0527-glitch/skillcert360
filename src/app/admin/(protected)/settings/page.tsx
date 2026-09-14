@@ -2,6 +2,7 @@ import Link from "next/link";
 import { db } from "@/lib/db";
 import { getAssessmentSettings } from "@/lib/settings";
 import { Sliders, ShieldAlert, Clock, Award, CheckCircle2, Save, HelpCircle } from "lucide-react";
+import { SubmitButton } from "@/components/submit-button";
 
 export default async function AdminSettingsPage() {
   const settings = await getAssessmentSettings();
@@ -216,12 +217,12 @@ export default async function AdminSettingsPage() {
 
         {/* Action button */}
         <div className="flex justify-end pt-2">
-          <button
-            type="submit"
-            className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-cyan-500/20 hover:from-blue-500 hover:to-cyan-500 transition-all active:scale-[0.98]"
+          <SubmitButton
+            pendingText="Saving..."
+            className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-cyan-500/20 hover:from-blue-500 hover:to-cyan-500 transition-all cursor-pointer"
           >
             <Save className="w-4 h-4" /> Save System Settings
-          </button>
+          </SubmitButton>
         </div>
       </form>
     </div>
