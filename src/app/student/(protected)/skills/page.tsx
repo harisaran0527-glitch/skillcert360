@@ -43,20 +43,6 @@ export default async function StudentSkillsPage({
   if (!profile) redirect("/student/login");
   await expireStudentAttempts(profile.id);
 
-  const [rawLevels, rawCategories, rawProviders, progression] = await Promise.all([
-    db.skillLevel.findMany({ where: { active: true }, select: { id: true, name: true }, orderBy: { order: "asc" } }),
-    db.skillCategory.findMany({ where: { active: true, ...productionNameWhere }, select: { id: true, name: true }, orderBy: { name: "asc" } }),
-    db.provider.findMany({ where: { active: true, ...productionNameWhere, slug: { not: null } }, select: { id: true, name: true }, orderBy: { name: "asc" } }),
-    getStudentProgression(profile.id),
-  ]);
-
-  const levels = deduplicateByNormalizedKey(rawLevels, (l) => l.name);
-  const categories = deduplicateByNormalizedKey(rawCategories, (c) => c.name);
-  const providers = deduplicateByNormalizedKey(rawProviders, (p) => p.name);
-  const levelUnlocked = new Map<string, boolean>(
-    progression.levels.map((l) => [l.name, l.unlocked])
-  );
-
   const query = (params.q ?? "").toString().trim().toLowerCase();
   const selectedLevel = (params.level ?? "").toString();
   const selectedCategory = (params.category ?? "").toString();
@@ -65,10 +51,10 @@ export default async function StudentSkillsPage({
   const credentialFilter = (params.credential ?? "").toString();
   const selectedState = (params.state ?? "").toString();
 
-  // Server-side paginated query for skills
   const requestedPage = cataloguePage((params.page ?? "1").toString());
   const pageSize = 24;
 
+  const courseIds = await getCanonicalCourseIds();
   const whereClause: Prisma.SkillWhereInput = { AND: [productionSkillWhere], active: true, category: { active: true }, level: { active: true } };
 
   if (selectedLevel) whereClause.levelId = selectedLevel;
@@ -83,17 +69,14 @@ export default async function StudentSkillsPage({
       { description: { contains: query, mode: "insensitive" } },
     ];
   }
-  // Provider filter via courses relationship
-  const courseWhere: Prisma.CourseWhereInput = { ...availableCourseWhere, AND: [productionCourseWhere], id: { in: await getCanonicalCourseIds() } };
+  
+  const courseWhere: Prisma.CourseWhereInput = { ...availableCourseWhere, AND: [productionCourseWhere], id: { in: courseIds } };
   if (selectedProvider) courseWhere.providerId = selectedProvider;
   if (selectedPrice === "free") courseWhere.pricingType = "FREE";
   if (selectedPrice === "free_exam") courseWhere.pricingType = "FREE_LEARNING_PAID_EXAM";
   if (selectedPrice === "paid") courseWhere.pricingType = "PAID";
   if (selectedPrice === "subscription") courseWhere.pricingType = "SUBSCRIPTION";
   if (selectedPrice === "unknown") courseWhere.pricingType = "UNKNOWN";
-  if (selectedState === "locked" || selectedState === "unlocked") {
-    whereClause.level = { active: true, name: { in: progression.levels.filter(l => l.unlocked === (selectedState === "unlocked")).map(l => l.name) } };
-  }
   if (credentialFilter === "yes") courseWhere.credentialAvailable = true;
   if (credentialFilter === "no") courseWhere.credentialAvailable = false;
 
@@ -102,27 +85,41 @@ export default async function StudentSkillsPage({
     whereClause.courses = { some: courseWhere };
   }
 
-  const totalCount = await db.skill.count({ where: whereClause });
-  const page = Math.min(requestedPage, Math.max(1, Math.ceil(totalCount / pageSize)));
-  const skills = await db.skill.findMany({
-    where: whereClause,
-    select: {
-      id: true,
-      name: true,
-      slug: true,
-      description: true,
-      category: { select: { id: true, name: true } },
-      level: { select: { id: true, name: true } },
-      _count: { select: { courses: { where: availableCourseWhere } } },
-      studentSkills: {
-        where: { studentId: profile.id },
-        select: { id: true, completedAt: true },
+  const [rawLevels, rawCategories, rawProviders, progression, totalCount, skills] = await Promise.all([
+    db.skillLevel.findMany({ where: { active: true }, select: { id: true, name: true }, orderBy: { order: "asc" } }),
+    db.skillCategory.findMany({ where: { active: true, ...productionNameWhere }, select: { id: true, name: true }, orderBy: { name: "asc" } }),
+    db.provider.findMany({ where: { active: true, ...productionNameWhere, slug: { not: null } }, select: { id: true, name: true }, orderBy: { name: "asc" } }),
+    getStudentProgression(profile.id),
+    db.skill.count({ where: whereClause }),
+    db.skill.findMany({
+      where: whereClause,
+      select: {
+        id: true,
+        name: true,
+        slug: true,
+        description: true,
+        category: { select: { id: true, name: true } },
+        level: { select: { id: true, name: true } },
+        _count: { select: { courses: { where: availableCourseWhere } } },
+        studentSkills: {
+          where: { studentId: profile.id },
+          select: { id: true, completedAt: true },
+        },
       },
-    },
-    orderBy: [{ level: { order: "asc" } }, { name: "asc" }, { id: "asc" }],
-    skip: (page - 1) * pageSize,
-    take: pageSize,
-  });
+      orderBy: [{ level: { order: "asc" } }, { name: "asc" }, { id: "asc" }],
+      skip: (Math.max(1, requestedPage) - 1) * pageSize,
+      take: pageSize,
+    }),
+  ]);
+
+  const levels = deduplicateByNormalizedKey(rawLevels, (l) => l.name);
+  const categories = deduplicateByNormalizedKey(rawCategories, (c) => c.name);
+  const providers = deduplicateByNormalizedKey(rawProviders, (p) => p.name);
+  const levelUnlocked = new Map<string, boolean>(
+    progression.levels.map((l) => [l.name, l.unlocked])
+  );
+
+  const page = Math.min(requestedPage, Math.max(1, Math.ceil(totalCount / pageSize)));
 
   const totalPages = Math.ceil(totalCount / pageSize);
 
