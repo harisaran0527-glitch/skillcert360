@@ -5,15 +5,24 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Award, Lock, Send } from "lucide-react";
 
+function getTodayLocalDate() {
+  const d = new Date();
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
 export function CertificateRequestModalForm({ studentName, registerNumber, skillId, courseId, courseTitle, providerName, isSubmitted, assessmentPassed, assessmentFailed, certificateAvailable }: {
   studentName: string; registerNumber: string; skillId: string; courseId: string;
   courseTitle: string; providerName: string; isSubmitted: boolean;
   assessmentPassed: boolean; assessmentFailed: boolean; certificateAvailable: boolean;
 }) {
   const router = useRouter();
+  const todayStr = getTodayLocalDate();
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(isSubmitted);
-  const [completionDate, setCompletionDate] = useState("");
+  const [completionDate, setCompletionDate] = useState(todayStr);
   const [declaration, setDeclaration] = useState(false);
   const [error, setError] = useState("");
 
@@ -62,7 +71,7 @@ export function CertificateRequestModalForm({ studentName, registerNumber, skill
         </div>
         {!submitted && <>
           <label className="block space-y-1 text-slate-300">Completion Date
-            <input type="date" required max={new Date().toISOString().split("T")[0]} value={completionDate} onChange={event => setCompletionDate(event.target.value)} className="block w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2.5 text-white" />
+            <input type="date" required max={todayStr} value={completionDate} onChange={event => setCompletionDate(event.target.value)} className="block w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2.5 text-white" />
           </label>
           <label className="flex items-center gap-2 text-slate-200">
             <input type="checkbox" required checked={declaration} onChange={event => setDeclaration(event.target.checked)} />
