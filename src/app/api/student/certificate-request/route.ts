@@ -1,14 +1,17 @@
 import { z } from "zod";
-import { NextResponse } from "next/server";
+import { startAssessment } from "@/lib/assessment";
 import { db } from "@/lib/db";
 import { getSession } from "@/lib/auth";
-import { readBody, studentTransaction, WorkflowError, workflowResponse } from "@/lib/workflow";
+import { readBody, studentTransaction, transition, WorkflowError, workflowResponse } from "@/lib/workflow";
 
 const schema = z
   .object({
     skillId: z.string().cuid(),
     courseId: z.string().cuid(),
-    remarks: z.string().max(500).optional(),
+    completionDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(value =>
+      Number.isFinite(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value && new Date(value) <= new Date(),
+      "Use a valid completion date, no later than today."),
+    declaration: z.literal(true),
   })
   .strict();
 
@@ -20,7 +23,7 @@ export async function POST(request: Request) {
 
   const parsed = schema.safeParse(await readBody(request).catch(() => null));
   if (!parsed.success) {
-    return Response.json({ error: "Invalid request data" }, { status: 400 });
+    return Response.json({ error: "A valid completion date and completion declaration are required." }, { status: 400 });
   }
 
   try {
@@ -29,7 +32,7 @@ export async function POST(request: Request) {
       include: { user: true, department: true, section: true },
     });
 
-    const { skillId, courseId, remarks } = parsed.data;
+    const { skillId, courseId, completionDate, declaration } = parsed.data;
 
     await studentTransaction(profile.id, async (tx) => {
       const enrollment = await tx.studentSkill.findUnique({
@@ -41,18 +44,15 @@ export async function POST(request: Request) {
         throw new WorkflowError("Complete official course learning before requesting a certificate.", 400);
       }
 
-      const course = await tx.course.findUnique({
-        where: { id: courseId },
-        include: { provider: true },
-      });
-
-      if (!course) {
-        throw new WorkflowError("Course not found.", 404);
+      const course = enrollment.selectedCourse;
+      if (!course || course.id !== courseId || course.skillId !== skillId) {
+        throw new WorkflowError("Request must match your selected course and its mapped skill.", 400);
       }
-
-      // Upsert Certificate record in SUBMITTED / PENDING_SUBMISSION status
-      // NOTE: Certificate status remains LOCKED until student passes the assessment!
-      await tx.certificate.upsert({
+      const existing = await tx.certificate.findUnique({ where: { studentId_skillId: { studentId: profile.id, skillId } } });
+      if (existing?.submittedAt || (existing && existing.status !== "LOCKED")) {
+        throw new WorkflowError("A certificate request already exists. Continue to your assessment.");
+      }
+      const certificate = await tx.certificate.upsert({
         where: {
           studentId_skillId: { studentId: profile.id, skillId },
         },
@@ -61,38 +61,37 @@ export async function POST(request: Request) {
           skillId,
           courseId: course.id,
           providerId: course.providerId,
-          status: "SUBMITTED",
+          status: "LOCKED",
           submittedAt: new Date(),
-          remarks: remarks || `Certificate Request submitted for ${course.name}`,
+          credentialName: course.title ?? course.name,
+          credentialType: course.credentialType,
         },
         update: {
           courseId: course.id,
           providerId: course.providerId,
-          status: "SUBMITTED",
+          status: "LOCKED",
           submittedAt: new Date(),
-          remarks: remarks || `Certificate Request submitted for ${course.name}`,
+          credentialName: course.title ?? course.name,
+          credentialType: course.credentialType,
         },
       });
 
-      await tx.activityLog.create({
-        data: {
-          studentId: profile.id,
-          action: "CERTIFICATE_REQUEST_SUBMITTED",
-          metadata: {
-            skillId,
-            courseId: course.id,
-            providerId: course.providerId,
-            timestamp: new Date().toISOString(),
-          },
-        },
+      // Store the declaration in the existing durable audit record; no schema change.
+      await transition(tx, profile.id, skillId, ["CERTIFICATE_REQUEST_SUBMITTED"], {
+        certificateId: certificate.id, courseId: course.id, providerId: course.providerId,
+        completionDate, declaration, studentName: profile.fullName, registerNumber: profile.registerNumber,
+        courseName: course.title ?? course.name, providerName: course.provider.name,
       });
     });
 
-    const referer = request.headers.get("referer");
-    if (referer && URL.canParse(referer)) {
-      return NextResponse.redirect(referer, 303);
+    // Keep the request saved if the configured question bank or cooldown blocks starting.
+    try {
+      const attempt = await startAssessment(profile.id, skillId);
+      return Response.json({ ok: true, redirect: `/student/assessment/${attempt.id}` });
+    } catch (error) {
+      return Response.json({ ok: true, requestSubmitted: true, assessmentError: error instanceof WorkflowError
+        ? error.message : "Request saved. Unable to start the assessment; please retry." });
     }
-    return Response.json({ ok: true });
   } catch (error) {
     return workflowResponse(error);
   }

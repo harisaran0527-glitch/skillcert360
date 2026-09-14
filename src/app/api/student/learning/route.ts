@@ -36,7 +36,7 @@ export async function POST(request: Request) {
     if (!enrollment.selectedCourseId || !await tx.courseProgress.count({ where: { studentSkillId: enrollment.id, courseId: enrollment.selectedCourseId } })) throw new WorkflowError("Choose and open an official course before marking learning complete.");
     await tx.courseProgress.updateMany({ where: { studentSkillId: enrollment.id, courseId: enrollment.selectedCourseId }, data: { completedAt: new Date() } });
     await tx.studentSkill.update({ where: { id: enrollment.id }, data: { completedAt: new Date() } });
-    await transition(tx, profile.id, skillId, ["LEARNING_COMPLETED", "ASSESSMENT_AVAILABLE"]);
+    await transition(tx, profile.id, skillId, ["LEARNING_COMPLETED"]);
    }
   });
   const destination = new URL("/student/skills", request.url);
@@ -48,6 +48,10 @@ export async function POST(request: Request) {
     destination.search = previous.search;
    }
   }
-  return request.headers.get("content-type")?.includes("application/json") ? Response.json({ ok: true }) : NextResponse.redirect(destination, 303);
+  if (action === "complete") {
+   destination.pathname = `/student/certificate-request/${skillId}`;
+   destination.search = "";
+  }
+  return request.headers.get("content-type")?.includes("application/json") ? Response.json({ ok: true, redirect: action === "complete" ? destination.pathname : undefined }) : NextResponse.redirect(destination, 303);
  } catch (error) { return workflowResponse(error); }
 }

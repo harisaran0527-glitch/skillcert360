@@ -39,6 +39,7 @@ export default async function StudentDashboard() {
         id: true,
         skillId: true,
         completedAt: true,
+        selectedCourseId: true,
         skill: {
           select: {
             id: true,
@@ -56,7 +57,7 @@ export default async function StudentDashboard() {
     }),
     db.certificate.findMany({
       where: { studentId: profile.id },
-      select: { id: true, skillId: true, status: true },
+      select: { id: true, skillId: true, status: true, submittedAt: true, courseId: true },
     }),
     getStudentProgression(profile.id),
     expireStudentAttempts(profile.id),
@@ -345,7 +346,7 @@ export default async function StudentDashboard() {
               } else if (latestAttempt && !latestAttempt.submittedAt) {
                 statusText = "ASSESSMENT_IN_PROGRESS";
               } else if (entry.completedAt) {
-                statusText = "ASSESSMENT_AVAILABLE";
+                statusText = cert?.submittedAt && cert.courseId === entry.selectedCourseId ? "REQUEST_SUBMITTED · ASSESSMENT_READY · CERTIFICATE_LOCKED" : "LEARNING_COMPLETED · REQUEST_NOT_SUBMITTED · CERTIFICATE_LOCKED";
               }
 
               return (

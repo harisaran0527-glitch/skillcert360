@@ -1,5 +1,6 @@
 import { getSession } from "@/lib/auth";
 import { db } from "@/lib/db";
+import { hasPassedCertificateAssessment } from "@/lib/certificate-eligibility";
 import { getCertificateFileContent } from "@/lib/storage";
 
 export async function GET(
@@ -34,6 +35,9 @@ export async function GET(
     return Response.json({ error: "Forbidden: You do not have permission to view this certificate file." }, { status: 403 });
   }
 
+  if (isOwner && (certificate.status === "LOCKED" || !await hasPassedCertificateAssessment(certificate))) {
+    return Response.json({ error: "Certificate locked until the assessment is passed." }, { status: 403 });
+  }
   const storageKey = certificate.filePath;
   if (!storageKey) {
     return Response.json({ error: "No file associated with this certificate record." }, { status: 404 });
@@ -52,7 +56,7 @@ export async function GET(
     headers: {
       "Content-Type": mimeType,
       "Content-Disposition": `inline; filename="${encodeURIComponent(fileName)}"`,
-      "Cache-Control": "private, max-age=3600",
+      "Cache-Control": "private, no-store",
       "X-Content-Type-Options": "nosniff",
     },
   });

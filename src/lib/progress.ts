@@ -13,7 +13,7 @@ export async function getSkillProgressState(studentId: string, skillId: string) 
   if (attempt?.passed) return "ASSESSMENT_PASSED";
   if (attempt?.passed === false) return "REEXAM_REQUIRED";
   if (attempt && !attempt.submittedAt) return "ASSESSMENT_IN_PROGRESS";
-  if (entry?.completedAt) return "ASSESSMENT_AVAILABLE";
+  if (entry?.completedAt) return certificate?.submittedAt && certificate.courseId === entry.selectedCourseId ? "ASSESSMENT_AVAILABLE" : "LEARNING_COMPLETED";
   return entry ? "LEARNING" : "NOT_STARTED";
 }
 
@@ -56,7 +56,7 @@ export async function getSkillProgressSummary(studentId: string) {
     } else if (attempt && !attempt.submittedAt) {
       state = "ASSESSMENT_IN_PROGRESS";
     } else if (entry?.completedAt) {
-      state = "ASSESSMENT_AVAILABLE";
+      state = certificate?.submittedAt && certificate.courseId === entry.selectedCourseId ? "ASSESSMENT_AVAILABLE" : "LEARNING_COMPLETED";
     } else if (entry) {
       state = "LEARNING";
     }

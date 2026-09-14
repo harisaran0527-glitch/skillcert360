@@ -169,6 +169,9 @@ export default async function StudentResultsPage({ params }: { params: Promise<{
           </div>
         </div>
 
+        <p className={pass ? "text-sm text-emerald-300" : "text-sm text-amber-300"}>
+          {pass ? "Assessment Passed. Visit the certificate portal to check availability and download." : "Assessment Failed → Certificate Locked. Retry after the cooldown shown above."}
+        </p>
         {/* CTAs */}
         <div className="pt-2 flex flex-wrap items-center justify-between gap-4">
           <Link

@@ -1,5 +1,6 @@
 import { getSession } from "@/lib/auth";
 import { db } from "@/lib/db";
+import { canDownloadCertificate } from "@/lib/certificate-eligibility";
 
 export async function GET(
   request: Request,
@@ -43,10 +44,27 @@ export async function GET(
   }
 
   // Must be UNLOCKED or VERIFIED to generate a certificate view
-  if (!["UNLOCKED", "VERIFIED"].includes(certificate.status)) {
+  if (!await canDownloadCertificate(certificate)) {
     return new Response("Certificate not yet available for download.", {
       status: 403,
     });
+  }
+
+  // ── Belt-and-suspenders: re-verify assessment PASS directly ───────────────
+  // This guard is independent of certificate.status so that even if the status
+  // field were ever stale or tampered, the download is still denied unless the
+  // actual assessment record records a non-terminated PASS for this student+skill.
+  const validPassAttempt = await db.assessmentAttempt.findFirst({
+    where: {
+      studentId: certificate.studentId,
+      skillId: certificate.skillId,
+      passed: true,
+      terminated: false,
+      NOT: { submittedAt: null },
+    },
+  });
+  if (!validPassAttempt) {
+    return new Response("Forbidden: Assessment not passed.", { status: 403 });
   }
 
   const { searchParams } = new URL(request.url);
@@ -80,7 +98,7 @@ export async function GET(
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Certificate — ${skillName} — SkillCert 360</title>
+  <title>Certificate — ${escapeHtml(skillName)} — SkillCert 360</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -407,7 +425,7 @@ export async function GET(
     headers: {
       "Content-Type": "text/html; charset=utf-8",
       "Content-Disposition": disposition,
-      "Cache-Control": "private, max-age=3600",
+      "Cache-Control": "private, no-store",
       "X-Content-Type-Options": "nosniff",
     },
   });

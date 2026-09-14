@@ -12,6 +12,7 @@ export async function POST(request: Request) {
   try {
     const profile = await db.studentProfile.findUniqueOrThrow({ where: { userId: session.userId } });
     const attempt = await startAssessment(profile.id, parsed.data.skillId);
+    if (request.headers.get("content-type")?.includes("application/json")) return Response.json({ ok: true, redirect: `/student/assessment/${attempt.id}` });
     return NextResponse.redirect(new URL(`/student/assessment/${attempt.id}`, request.url), 303);
   } catch (error) { return workflowResponse(error); }
 }

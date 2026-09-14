@@ -35,13 +35,29 @@ async function finalize(tx: Tx, attempt: Attempt, reason: "MANUAL" | "TIMEOUT" |
     score, passed, submittedAt, terminated, autoSubmitted: reason !== "MANUAL", submissionReason: reason,
     reexamAvailableAt: passed ? null : new Date(submittedAt.getTime() + attempt.cooldownHours * 3600000), clientLeaseUntil: null,
   }, include });
-  await transition(tx, attempt.studentId, attempt.skillId, passed ? ["ASSESSMENT_PASSED", "CERTIFICATE_UNLOCKED"] : ["ASSESSMENT_FAILED", "REEXAM_REQUIRED"], { attemptId: attempt.id, score, reason });
+  await transition(tx, attempt.studentId, attempt.skillId, passed ? ["ASSESSMENT_PASSED"] : ["ASSESSMENT_FAILED", "REEXAM_REQUIRED"], { attemptId: attempt.id, score, reason });
   if (passed) {
     const enrollment = await tx.studentSkill.findUnique({ where: { studentId_skillId: { studentId: attempt.studentId, skillId: attempt.skillId } }, include: { selectedCourse: true } });
     const course = enrollment?.selectedCourse;
+    const request = await tx.certificate.findUnique({ where: { studentId_skillId: { studentId: attempt.studentId, skillId: attempt.skillId } } });
+    if (!enrollment?.completedAt || !course || course.skillId !== attempt.skillId || request?.courseId !== course.id || !request.submittedAt) return updated;
     const attribution = course ? { courseId: course.id, providerId: course.providerId, credentialType: course.credentialType, credentialName: course.title ?? course.name } : {};
     await tx.certificate.upsert({ where: { studentId_skillId: { studentId: attempt.studentId, skillId: attempt.skillId } },
-      create: { studentId: attempt.studentId, skillId: attempt.skillId, status: "UNLOCKED", ...attribution }, update: { status: "UNLOCKED", ...attribution } });
+      create: { studentId: attempt.studentId, skillId: attempt.skillId, status: "UNLOCKED", issuedAt: submittedAt, ...attribution }, update: { status: "UNLOCKED", issuedAt: submittedAt, ...attribution } });
+    await transition(tx, attempt.studentId, attempt.skillId, ["CERTIFICATE_UNLOCKED"], { attemptId: attempt.id });
+  } else {
+    const existingPass = await tx.assessmentAttempt.findFirst({
+      where: {
+        studentId: attempt.studentId,
+        skillId: attempt.skillId,
+        passed: true,
+        terminated: false,
+        NOT: { submittedAt: null },
+      },
+    });
+    if (!existingPass) {
+      await tx.certificate.updateMany({ where: { studentId: attempt.studentId, skillId: attempt.skillId }, data: { status: "LOCKED" } });
+    }
   }
   return updated;
 }
@@ -58,8 +74,12 @@ export async function startAssessment(studentId: string, skillId: string) {
   return studentTransaction(studentId, async tx => {
     const skill = await tx.skill.findUnique({ where: { id: skillId }, include: { level: true, prerequisites: true } });
     if (!skill?.active || !skill.level.active) throw new WorkflowError("Skill unavailable", 404);
-    const enrollment = await tx.studentSkill.findUnique({ where: { studentId_skillId: { studentId, skillId } } });
+    const enrollment = await tx.studentSkill.findUnique({ where: { studentId_skillId: { studentId, skillId } }, include: { selectedCourse: true } });
     if (!enrollment?.completedAt) throw new WorkflowError("Complete official learning before starting an assessment.");
+    const request = await tx.certificate.findUnique({ where: { studentId_skillId: { studentId, skillId } } });
+    if (!enrollment.selectedCourse || enrollment.selectedCourse.skillId !== skillId || !request?.submittedAt || request.courseId !== enrollment.selectedCourseId) {
+      throw new WorkflowError("Submit the certificate request for your selected course before starting an assessment.");
+    }
     // Level-lock check: verify the student's progression allows this skill's level.
     await assertSkillLevelUnlocked(studentId, skillId);
     for (const prerequisite of skill.prerequisites) {
@@ -72,7 +92,7 @@ export async function startAssessment(studentId: string, skillId: string) {
       throw new WorkflowError("Finish your active assessment before starting another.");
     }
     const history = await tx.assessmentAttempt.findMany({ where: { studentId, skillId }, orderBy: { startedAt: "desc" }, include: { answers: { select: { questionId: true } } } });
-    if (history.some(a => a.passed)) throw new WorkflowError("You already passed this assessment.");
+    if (history.some(a => a.passed && !a.terminated && a.submittedAt)) throw new WorkflowError("You already passed this assessment.");
     const last = history[0];
     const available = last?.reexamAvailableAt ?? (last?.submittedAt ? new Date(last.submittedAt.getTime() + last.cooldownHours * 3600000) : null);
     if (available && available > new Date()) throw new WorkflowError(`Re-exam available at ${available.toISOString()}`, 429);

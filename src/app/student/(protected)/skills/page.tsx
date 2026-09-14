@@ -480,13 +480,10 @@ function SkillCard({
             <form action="/api/student/learning" method="post">
               <input type="hidden" name="skillId" value={skill.id} />
               <input type="hidden" name="action" value="complete" />
-              <button className="text-xs text-cyan-300 font-semibold hover:underline">I Completed Learning</button>
+              <button className="text-xs text-cyan-300 font-semibold hover:underline">Mark Learning Complete</button>
             </form>
           ) : (
-            <form action="/api/student/assessment/start" method="post">
-              <input type="hidden" name="skillId" value={skill.id} />
-              <button className="text-xs text-cyan-300 font-semibold hover:underline">Start Assessment</button>
-            </form>
+            <Link href={`/student/certificate-request/${skill.id}`} className="text-xs text-cyan-300 font-semibold hover:underline">Certificate Request / Assessment</Link>
           )}
         </div>
       )}

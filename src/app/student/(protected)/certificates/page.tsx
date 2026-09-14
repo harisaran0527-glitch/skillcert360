@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
+import { hasPassedCertificateAssessment } from "@/lib/certificate-eligibility";
 import { getSession } from "@/lib/auth";
 import { isStorageConfigured } from "@/lib/storage";
 import { CertificateSubmissionForm } from "@/components/certificate-submission-form";
@@ -48,8 +49,10 @@ export default async function StudentCertificatesPage() {
 
   if (!profile) redirect("/student/login");
 
+  const passedIds = new Set((await Promise.all(certificates.map(async certificate =>
+    await hasPassedCertificateAssessment(certificate) ? certificate.id : null))).filter(Boolean));
   const eligible = certificates.filter((c) =>
-    ["UNLOCKED", "REJECTED", "NEEDS_RESUBMISSION", "PENDING_SUBMISSION"].includes(c.status)
+    passedIds.has(c.id) && ["UNLOCKED", "REJECTED", "NEEDS_RESUBMISSION", "PENDING_SUBMISSION"].includes(c.status)
   );
 
   const storageConfigured = isStorageConfigured();
@@ -69,9 +72,9 @@ export default async function StudentCertificatesPage() {
           <Sparkles className="h-3.5 w-3.5" />
           <span>Official Credential Verification Engine</span>
         </div>
-        <h1 className="text-3xl font-extrabold text-white font-display">Submit & Track Certificates</h1>
+        <h1 className="text-3xl font-extrabold text-white font-display">Certificates & Requests</h1>
         <p className="text-xs text-slate-400 mt-1">
-          Submit authentic external certificate files or official URLs to unlock higher progression tiers after passing assessments.
+          Pass your assessment to unlock and download your SkillCert 360 certificate. External credential verification is available separately for progression.
         </p>
       </div>
 
@@ -97,12 +100,14 @@ export default async function StudentCertificatesPage() {
               <div className="p-8 text-center text-xs text-slate-400 space-y-2">
                 <FileCheck2 className="h-8 w-8 text-slate-500 mx-auto" />
                 <p className="font-semibold text-white">No certificate records submitted yet.</p>
-                <p>Pass a skill assessment to qualify for official certificate submission.</p>
+                <p>Complete learning, submit the request form, then pass the assessment to unlock your certificate.</p>
               </div>
             ) : (
               certificates.map((cert) => {
-                const isVerified = cert.status === "VERIFIED";
-                const isPending = ["SUBMITTED", "PENDING_VERIFICATION"].includes(cert.status);
+                const hasPassed = passedIds.has(cert.id);
+                const isAvailable = hasPassed && ["UNLOCKED", "VERIFIED"].includes(cert.status);
+                const isVerified = hasPassed && cert.status === "VERIFIED";
+                const isPending = hasPassed && ["SUBMITTED", "PENDING_VERIFICATION"].includes(cert.status);
                 const isRejected = cert.status === "REJECTED";
                 const isResubmit = cert.status === "NEEDS_RESUBMISSION";
 
@@ -133,7 +138,11 @@ export default async function StudentCertificatesPage() {
                       </div>
 
                       <div>
-                        {isVerified ? (
+                        {!hasPassed || cert.status === "LOCKED" ? (
+                          <span className="text-xs font-bold text-amber-300">CERTIFICATE LOCKED{cert.submittedAt ? " · Request Submitted" : ""}</span>
+                        ) : cert.status === "UNLOCKED" ? (
+                          <span className="text-xs font-bold text-emerald-300">PASSED · CERTIFICATE AVAILABLE / ISSUED</span>
+                        ) : isVerified ? (
                           <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/40 bg-emerald-500/20 px-2.5 py-0.5 text-[10px] font-bold text-emerald-300">
                             <ShieldCheck className="h-3 w-3" /> VERIFIED ✓
                           </span>
@@ -155,7 +164,7 @@ export default async function StudentCertificatesPage() {
 
                     {/* Verified Evidence Links / Badges */}
                     <div className="flex flex-wrap items-center gap-3 pt-1">
-                      {cert.officialUrl && (
+                      {hasPassed && cert.officialUrl && (
                         <a
                           href={cert.officialUrl}
                           target="_blank"
@@ -167,7 +176,7 @@ export default async function StudentCertificatesPage() {
                         </a>
                       )}
 
-                      {cert.filePath && (
+                      {hasPassed && cert.status !== "LOCKED" && cert.filePath && (
                         <a
                           href={`/api/certificates/${cert.id}/file`}
                           target="_blank"
@@ -181,7 +190,7 @@ export default async function StudentCertificatesPage() {
                         </a>
                       )}
 
-                      {(cert.status === "UNLOCKED" || cert.status === "VERIFIED") && (
+                      {isAvailable && (
                         <a
                           href={`/api/certificates/${cert.id}/download`}
                           target="_blank"

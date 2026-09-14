@@ -83,7 +83,7 @@ export default async function StudentMyLearningPage() {
   );
 
   // Group real skills into requested sections:
-  const currentlyLearning = enrichedSkills.filter((s) => s.state === "LEARNING");
+  const currentlyLearning = enrichedSkills.filter((s) => s.state === "LEARNING" || s.state === "LEARNING_COMPLETED");
   const assessmentReady = enrichedSkills.filter(
     (s) => s.state === "ASSESSMENT_AVAILABLE" || s.state === "ASSESSMENT_IN_PROGRESS"
   );
@@ -157,13 +157,13 @@ export default async function StudentMyLearningPage() {
                 </div>
 
                 <div className="pt-3 border-t border-slate-800 flex items-center justify-between">
-                  <form action="/api/student/learning" method="post">
+                  {item.completedAt ? <Link href={`/student/certificate-request/${item.skillId}`} className="text-xs font-semibold text-cyan-300">Learning Completed · Open Request Form</Link> : <form action="/api/student/learning" method="post">
                     <input type="hidden" name="skillId" value={item.skill.id} />
                     <input type="hidden" name="action" value="complete" />
                     <button className="rounded-xl border border-cyan-500/40 bg-cyan-500/10 px-3 py-1.5 text-xs font-semibold text-cyan-300 hover:bg-cyan-500/20 transition-all">
-                      Mark Completed
+                      Mark Learning Complete
                     </button>
-                  </form>
+                  </form>}
                   <Link href={`/student/skills/${item.skill.slug}`} className="text-xs font-semibold text-cyan-400 hover:underline">
                     View Details
                   </Link>
@@ -207,12 +207,7 @@ export default async function StudentMyLearningPage() {
                       Resume Exam
                     </Link>
                   ) : (
-                    <form action="/api/student/assessment/start" method="post">
-                      <input type="hidden" name="skillId" value={item.skill.id} />
-                      <button className="rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-3.5 py-1.5 text-xs font-bold text-white shadow-md shadow-cyan-500/20 hover:from-cyan-400 hover:to-blue-500 transition-all">
-                        Start Assessment
-                      </button>
-                    </form>
+                    <Link href={`/student/certificate-request/${item.skillId}`} className="rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-3.5 py-1.5 text-xs font-bold text-white">Continue to Assessment</Link>
                   )}
                   <Link href={`/student/skills/${item.skill.slug}`} className="text-xs font-semibold text-slate-400 hover:text-white">
                     Details
@@ -243,18 +238,13 @@ export default async function StudentMyLearningPage() {
                     <span className="rounded-md border border-amber-500/30 bg-amber-500/10 px-2.5 py-0.5 text-[10px] font-bold text-amber-300">
                       {item.skill.level.name}
                     </span>
-                    <span className="text-[11px] font-semibold text-amber-400">Cooldown</span>
+                    <span className="text-[11px] font-semibold text-amber-400">Assessment Failed · Certificate Locked</span>
                   </div>
                   <h3 className="mt-3 text-base font-bold text-white font-display">{item.skill.name}</h3>
                 </div>
 
                 <div className="pt-3 border-t border-slate-800 flex items-center justify-between">
-                  <form action="/api/student/assessment/start" method="post">
-                    <input type="hidden" name="skillId" value={item.skill.id} />
-                    <button className="rounded-xl bg-amber-500/20 border border-amber-500/40 px-3.5 py-1.5 text-xs font-bold text-amber-300 hover:bg-amber-500/30">
-                      Re-attempt Assessment
-                    </button>
-                  </form>
+                  <Link href={`/student/certificate-request/${item.skillId}`} className="rounded-xl bg-amber-500/20 border border-amber-500/40 px-3.5 py-1.5 text-xs font-bold text-amber-300">Re-attempt Assessment</Link>
                   <Link href={`/student/skills/${item.skill.slug}`} className="text-xs font-semibold text-slate-400 hover:text-white">
                     Details
                   </Link>

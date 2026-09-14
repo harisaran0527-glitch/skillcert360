@@ -235,10 +235,13 @@ export default async function StudentSkillDetailPage({
               <span>
                 Your Progress:{" "}
                 <span className="font-extrabold text-white">
-                  {state === "LEARNING" ? "Learning in Progress" :
-                   state === "ASSESSMENT_AVAILABLE" ? "Assessment Ready" :
+                  {state === "LEARNING" ? "Learning in Progress · Certificate Locked" :
+                   state === "LEARNING_COMPLETED" ? "Learning Completed · Request Not Submitted · Certificate Locked" :
+                   state === "ASSESSMENT_AVAILABLE" ? "Request Submitted · Assessment Ready · Certificate Locked" :
+                   state === "ASSESSMENT_IN_PROGRESS" ? "Assessment In Progress · Certificate Locked" :
+                   state === "REEXAM_REQUIRED" ? "Assessment Failed · Certificate Locked" :
                    state === "ASSESSMENT_PASSED" ? "Assessment Passed" :
-                   state === "CERTIFICATE_UNLOCKED" ? "Certificate Unlocked" :
+                   state === "CERTIFICATE_UNLOCKED" ? "Passed · Certificate Available" :
                    state === "VERIFIED" ? "Verified ✓" : state}
                 </span>
               </span>
@@ -393,16 +396,10 @@ export default async function StudentSkillDetailPage({
                                 </SubmitButton>
                               </form>
                             )}
-                            {(state === "ASSESSMENT_AVAILABLE" || state === "REEXAM_REQUIRED") && (
-                              <form action="/api/student/assessment/start" method="post">
-                                <input type="hidden" name="skillId" value={skill.id} />
-                                <SubmitButton
-                                  pendingText="Starting..."
-                                  className="rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-xs font-bold text-white shadow-md shadow-cyan-500/20 hover:from-cyan-400 hover:to-blue-500 transition-all cursor-pointer"
-                                >
-                                  Start Assessment
-                                </SubmitButton>
-                              </form>
+                            {["LEARNING_COMPLETED", "ASSESSMENT_AVAILABLE", "REEXAM_REQUIRED"].includes(state) && (
+                              <Link href={`/student/certificate-request/${skill.id}`} className="rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-xs font-bold text-white">
+                                {state === "LEARNING_COMPLETED" ? "Certificate Request Form" : "Continue to Assessment"}
+                              </Link>
                             )}
                             {state === "ASSESSMENT_IN_PROGRESS" && <Link href="/student/assessment" className="text-xs text-cyan-300">Resume Assessment</Link>}
                             {(state === "ASSESSMENT_PASSED" || state === "CERTIFICATE_UNLOCKED" || state === "PENDING_VERIFICATION" || state === "VERIFIED" || state === "REJECTED" || state === "NEEDS_RESUBMISSION" || state === "PENDING_SUBMISSION") && (
@@ -433,8 +430,8 @@ export default async function StudentSkillDetailPage({
                 <li>Click <strong className="text-white">Learn Officially</strong> to open the provider's official course page.</li>
                 <li>Complete the course on the provider's platform at your own pace.</li>
                 <li>Return here and click <strong className="text-white">Mark Learning Complete</strong>.</li>
-                <li>Take the <strong className="text-white">SkillCert 360 internal assessment</strong> to validate your knowledge.</li>
-                <li>On passing, submit your official credential (if available) for admin verification.</li>
+                <li>Fill and submit the <strong className="text-white">Certificate Request Form</strong> to open the assessment.</li>
+                <li>Pass the assessment to unlock and download your SkillCert 360 certificate. Failed assessments keep it locked.</li>
                 <li>Once verified, the credential counts toward your progression level.</li>
               </ol>
             </div>
