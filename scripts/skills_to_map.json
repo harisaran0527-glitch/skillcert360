@@ -1,0 +1,4214 @@
+[
+  {
+    "skillId": "cmtz8ks9d003gwubkhw2176ys",
+    "skillName": "AI Agents & Autonomous Workflows",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "courseId": "cmtz8kt2a006swubk40aeal8k",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Community Courseware"
+  },
+  {
+    "skillId": "cmtz8ks9d0037wubkwrnxzr44",
+    "skillName": "AI Concepts & Applications",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "courseId": "cmtz8kt2a006jwubkkfahdyjx",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Education"
+  },
+  {
+    "skillId": "cmtz8ks9d003bwubkatdk1pwv",
+    "skillName": "AI Ethics & Responsible AI",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "courseId": "cmtz8kt2a006nwubksnuos7fn",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Ethics Guidelines"
+  },
+  {
+    "skillId": "cmtz8ks9d003awubk9o82ysuq",
+    "skillName": "AI Tools for Productivity",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "courseId": "cmtz8kt2a006mwubkc8kymhem",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Community Courseware"
+  },
+  {
+    "skillId": "cmtz8ks9d003dwubkzira86v4",
+    "skillName": "Computer Vision Fundamentals",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "courseId": "cmtz8kt2a006pwubk3o2d90t3",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: OpenCV Docs"
+  },
+  {
+    "skillId": "cmtz8ks9d003ewubkme46o1pv",
+    "skillName": "Copilot & AI Code Assistants",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "courseId": "cmtz8kt2a006qwubkrcz38sk3",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Developer Docs"
+  },
+  {
+    "skillId": "cmtz8ks9d003fwubk5cl3xvka",
+    "skillName": "Large Language Models Overview",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "courseId": "cmtz8kt2a006rwubko0xou61f",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open AI Curriculum"
+  },
+  {
+    "skillId": "cmtz8ks9d003cwubk5hu1s0tq",
+    "skillName": "Natural Language Processing Intro",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "courseId": "cmtz8kt2a006owubkj9r0ykwe",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open ML Docs"
+  },
+  {
+    "skillId": "cmtz8ks9d0039wubk8fqv0smq",
+    "skillName": "Prompt Engineering Basics",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "courseId": "cmtz8kt2a006lwubky606c2si",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open AI Curriculum"
+  },
+  {
+    "skillId": "cmtz8ks9e0058wubk8tv9rps3",
+    "skillName": "API Integration & Webhooks",
+    "level": "Beginner",
+    "category": "Automation",
+    "courseId": "cmtz8kt2b008kwubk4w3854m1",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open API Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e0059wubk2cu8jsmb",
+    "skillName": "Automated Email & Reporting",
+    "level": "Beginner",
+    "category": "Automation",
+    "courseId": "cmtz8kt2b008lwubkh1n8hzqb",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Tech Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e005awubkhjimu9vd",
+    "skillName": "Browser Automation with Playwright",
+    "level": "Beginner",
+    "category": "Automation",
+    "courseId": "cmtz8kt2b008mwubkmw5fvmtw",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Playwright Open Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e0055wubk0lrj1scj",
+    "skillName": "No-Code Workflow Automation",
+    "level": "Beginner",
+    "category": "Automation",
+    "courseId": "cmtz8kt2b008hwubkosv8sizd",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Automation Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e0054wubk7gvt21dh",
+    "skillName": "Robotic Process Automation Intro",
+    "level": "Beginner",
+    "category": "Automation",
+    "courseId": "cmtz8kt2b008gwubkn5gva70b",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Automation Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e0056wubkoq4mdb8a",
+    "skillName": "Task Scheduling & Cron Jobs",
+    "level": "Beginner",
+    "category": "Automation",
+    "courseId": "cmtz8kt2b008iwubka60onm3j",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Linux Guide"
+  },
+  {
+    "skillId": "cmtz8ks9e0057wubkt67m26dn",
+    "skillName": "Web Scraping & Data Extraction",
+    "level": "Beginner",
+    "category": "Automation",
+    "courseId": "cmtz8kt2b008jwubkh53cjhh6",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Python Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e005cwubkmm9ofdxa",
+    "skillName": "Agile & Scrum Methodology",
+    "level": "Beginner",
+    "category": "Career & Soft Skills",
+    "courseId": "cmtz8kt2b008owubk44r2uqml",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Agile Guide"
+  },
+  {
+    "skillId": "cmtz8ks9e005dwubk2b19qir4",
+    "skillName": "Effective Team Communication",
+    "level": "Beginner",
+    "category": "Career & Soft Skills",
+    "courseId": "cmtz8kt2b008pwubkt0hzh852",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Career Skills"
+  },
+  {
+    "skillId": "cmtz8ks9f005gwubkwyj9oi54",
+    "skillName": "Git PR & Code Review Practices",
+    "level": "Beginner",
+    "category": "Career & Soft Skills",
+    "courseId": "cmtz8kt2b008swubksnz3b0wq",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: GitHub Open Docs"
+  },
+  {
+    "skillId": "cmtz8ks9f005kwubktuf73gli",
+    "skillName": "Open Source Contribution Basics",
+    "level": "Beginner",
+    "category": "Career & Soft Skills",
+    "courseId": "cmtz8kt2b008wwubkzjygpk1a",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Source Guide"
+  },
+  {
+    "skillId": "cmtz8ks9e005ewubkgcilzfat",
+    "skillName": "Problem-Solving for Engineers",
+    "level": "Beginner",
+    "category": "Career & Soft Skills",
+    "courseId": "cmtz8kt2b008qwubkw2aw85qn",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Career Skills"
+  },
+  {
+    "skillId": "cmtz8ks9f005iwubk4t52rb32",
+    "skillName": "Productivity & Time Management",
+    "level": "Beginner",
+    "category": "Career & Soft Skills",
+    "courseId": "cmtz8kt2b008uwubktgp2hfkd",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Career Skills"
+  },
+  {
+    "skillId": "cmtz8ks9f005jwubkfs781l6e",
+    "skillName": "Project Management Essentials",
+    "level": "Beginner",
+    "category": "Career & Soft Skills",
+    "courseId": "cmtz8kt2b008vwubk40sulv02",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Management Guide"
+  },
+  {
+    "skillId": "cmtz8ks9f005hwubkfvicu80d",
+    "skillName": "Remote Work & Async Communication",
+    "level": "Beginner",
+    "category": "Career & Soft Skills",
+    "courseId": "cmtz8kt2b008twubk818otz3d",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Career Skills"
+  },
+  {
+    "skillId": "cmtz8ks9f005fwubkmotcem39",
+    "skillName": "Technical Interview Preparation",
+    "level": "Beginner",
+    "category": "Career & Soft Skills",
+    "courseId": "cmtz8kt2b008rwubk10jdm293",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Career Skills"
+  },
+  {
+    "skillId": "cmtz8ks9e005bwubkw6rzh9v8",
+    "skillName": "Technical Writing Fundamentals",
+    "level": "Beginner",
+    "category": "Career & Soft Skills",
+    "courseId": "cmtz8kt2b008nwubk6dcqjmlw",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Docs Community"
+  },
+  {
+    "skillId": "cmtznf5hf000rwu8c6zv459yw",
+    "skillName": "AWS Fundamentals",
+    "level": "Beginner",
+    "category": "Cloud Computing",
+    "courseId": "cmtznf79d001lwu8chl1l8k42",
+    "currentTitle": "AWS Skill Builder: AWS Foundations",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtz8ks9e0043wubkhcv6j71f",
+    "skillName": "Azure Fundamentals Concepts",
+    "level": "Beginner",
+    "category": "Cloud Computing",
+    "courseId": "cmtz8kt2b007fwubklarhwqzr",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Microsoft Learn"
+  },
+  {
+    "skillId": "cmtz8ks9e0046wubk50mgcxw9",
+    "skillName": "Microservices Architecture Basics",
+    "level": "Beginner",
+    "category": "Cloud Computing",
+    "courseId": "cmtz8kt2b007iwubk5rpny488",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Architecture"
+  },
+  {
+    "skillId": "cmtz8ks9e0045wubkg2qz5ttf",
+    "skillName": "Serverless Computing Overview",
+    "level": "Beginner",
+    "category": "Cloud Computing",
+    "courseId": "cmtz8kt2b007hwubkxkrsra6f",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Cloud Curriculum"
+  },
+  {
+    "skillId": "cmtz8ks9e0047wubkau1zt0qf",
+    "skillName": "Virtualization & Containers Intro",
+    "level": "Beginner",
+    "category": "Cloud Computing",
+    "courseId": "cmtz8kt2b007jwubkxlhilupp",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Tech Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e004owubk8yahwwb3",
+    "skillName": "Cryptography & Hashing Basics",
+    "level": "Beginner",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtz8kt2b0080wubkfik8dguw",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Security Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e004twubke1n2u55v",
+    "skillName": "Endpoint Protection Essentials",
+    "level": "Beginner",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtz8kt2b0085wubki7eg2b7m",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Security Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e004rwubkut3chrox",
+    "skillName": "Ethical Hacking Intro",
+    "level": "Beginner",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtz8kt2b0083wubkn1vz6q0l",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Security Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e004qwubk5x87u5np",
+    "skillName": "Firewall & Network Defense",
+    "level": "Beginner",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtz8kt2b0082wubkod0ymp4k",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Security Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e004pwubkrqhncgjd",
+    "skillName": "Information Security Policies",
+    "level": "Beginner",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtz8kt2b0081wubk2hgpx9be",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Security Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e004mwubkbkradcw7",
+    "skillName": "Network Protocol Essentials",
+    "level": "Beginner",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtz8kt2b007ywubkshzm0v42",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Networking Guide"
+  },
+  {
+    "skillId": "cmtz8ks9e004nwubky2j7x2ca",
+    "skillName": "Web Application Security (OWASP)",
+    "level": "Beginner",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtz8kt2b007zwubko5s3cwnx",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: OWASP Open Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e004swubk0er6gage",
+    "skillName": "Wireless Network Security",
+    "level": "Beginner",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtz8kt2b0084wubkm8f058d0",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Security Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e0040wubkaarsweqe",
+    "skillName": "Business Intelligence Overview",
+    "level": "Beginner",
+    "category": "Data Analytics",
+    "courseId": "cmtz8kt2b007cwubk1cqyq4dg",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Analytics"
+  },
+  {
+    "skillId": "cmtz8ks9e003zwubkivul0cn3",
+    "skillName": "Data Wrangling & Cleaning",
+    "level": "Beginner",
+    "category": "Data Analytics",
+    "courseId": "cmtz8kt2b007bwubkaradnmos",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Analytics"
+  },
+  {
+    "skillId": "cmtz8ks9e003vwubk7soceyql",
+    "skillName": "Microsoft Excel Data Analysis",
+    "level": "Beginner",
+    "category": "Data Analytics",
+    "courseId": "cmtz8kt2a0077wubko9jew8x7",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Microsoft Learn"
+  },
+  {
+    "skillId": "cmtz8ks9d003swubk014oacdy",
+    "skillName": "Relational Database Concepts",
+    "level": "Beginner",
+    "category": "Data Analytics",
+    "courseId": "cmtz8kt2a0074wubkf3yiuikf",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Database Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e003ywubkqgskqolo",
+    "skillName": "Tableau Data Visualization",
+    "level": "Beginner",
+    "category": "Data Analytics",
+    "courseId": "cmtz8kt2b007awubksu6ej2ai",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Tableau Training"
+  },
+  {
+    "skillId": "cmtznf3ia000nwu8c1r8j3i17",
+    "skillName": "Git Version Control",
+    "level": "Beginner",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznf6wv001hwu8cnnxaddyy",
+    "currentTitle": "GitHub Foundations: Introduction to Git",
+    "currentProvider": "GitHub"
+  },
+  {
+    "skillId": "cmtznf34y000gwu8cs4eg3sn8",
+    "skillName": "GitHub Platform Basics",
+    "level": "Beginner",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznf6i60015wu8cmmo1u3kc",
+    "currentTitle": "GitHub Skills: Introduction to GitHub",
+    "currentProvider": "GitHub"
+  },
+  {
+    "skillId": "cmtz8ks9e004cwubk59864bzs",
+    "skillName": "Bash Shell Scripting",
+    "level": "Beginner",
+    "category": "DevOps & Linux",
+    "courseId": "cmtz8kt2b007owubkf8ogfrbq",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Linux Guide"
+  },
+  {
+    "skillId": "cmtz8ks9e004gwubkz05plnsz",
+    "skillName": "CI/CD Pipeline Fundamentals",
+    "level": "Beginner",
+    "category": "DevOps & Linux",
+    "courseId": "cmtz8kt2b007swubkf6ig8w28",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open DevOps Curriculum"
+  },
+  {
+    "skillId": "cmtz8ks9e004fwubk5sfqg2iu",
+    "skillName": "Docker Containerization Essentials",
+    "level": "Beginner",
+    "category": "DevOps & Linux",
+    "courseId": "cmtz8kt2b007rwubkul3yaf8s",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Docker Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e004dwubk1bgj4akk",
+    "skillName": "Git Version Control Basics",
+    "level": "Beginner",
+    "category": "DevOps & Linux",
+    "courseId": "cmtz8kt2b007pwubk5npqd7m6",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Git Open Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e004ewubku2y4hiix",
+    "skillName": "GitHub Workflow & Collaboration",
+    "level": "Beginner",
+    "category": "DevOps & Linux",
+    "courseId": "cmtz8kt2b007qwubkzkxqbuhs",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: GitHub Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e004jwubks0xbm3py",
+    "skillName": "Infrastructure as Code Intro",
+    "level": "Beginner",
+    "category": "DevOps & Linux",
+    "courseId": "cmtz8kt2b007vwubkynsvop5h",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Infrastructure Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e004hwubkxighhczg",
+    "skillName": "Kubernetes Core Concepts",
+    "level": "Beginner",
+    "category": "DevOps & Linux",
+    "courseId": "cmtz8kt2b007twubkpxb69tfr",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Kubernetes Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e004kwubkmib1tkzg",
+    "skillName": "System Monitoring & Logging",
+    "level": "Beginner",
+    "category": "DevOps & Linux",
+    "courseId": "cmtz8kt2b007wwubke24b1yqb",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open DevOps Docs"
+  },
+  {
+    "skillId": "cmtz8ks9e004iwubkjh89yzdt",
+    "skillName": "YAML & Configuration Syntax",
+    "level": "Beginner",
+    "category": "DevOps & Linux",
+    "courseId": "cmtz8kt2b007uwubklmjr06nd",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open DevOps Docs"
+  },
+  {
+    "skillId": "cmtz8ks9f005uwubk8qqhcnlf",
+    "skillName": "Build Tools (Vite / Webpack Intro)",
+    "level": "Beginner",
+    "category": "Developer Tools",
+    "courseId": "cmtz8kt2c0096wubkbg0fazor",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Vite Docs"
+  },
+  {
+    "skillId": "cmtz8ks9f005pwubk4bv8z8vl",
+    "skillName": "Chrome DevTools Essentials",
+    "level": "Beginner",
+    "category": "Developer Tools",
+    "courseId": "cmtz8kt2c0091wubk9fply9ct",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Chrome Dev Docs"
+  },
+  {
+    "skillId": "cmtz8ks9f005mwubkvc0b1apw",
+    "skillName": "Command Line Productivity",
+    "level": "Beginner",
+    "category": "Developer Tools",
+    "courseId": "cmtz8kt2b008ywubkrjsbjieh",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open CLI Guide"
+  },
+  {
+    "skillId": "cmtz8ks9f005rwubkppcthp6l",
+    "skillName": "Environment Variables & Configuration",
+    "level": "Beginner",
+    "category": "Developer Tools",
+    "courseId": "cmtz8kt2c0093wubkdc7a59yt",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Tech Docs"
+  },
+  {
+    "skillId": "cmtz8ks9f005twubk8q19u5g2",
+    "skillName": "Linters & Code Formatter (ESLint / Prettier)",
+    "level": "Beginner",
+    "category": "Developer Tools",
+    "courseId": "cmtz8kt2c0095wubktnrjemcu",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Tooling Docs"
+  },
+  {
+    "skillId": "cmtz8ks9f005nwubkpeb12fqz",
+    "skillName": "Markdown & Technical Documentation",
+    "level": "Beginner",
+    "category": "Developer Tools",
+    "courseId": "cmtz8kt2b008zwubk2r47wljp",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Docs Guide"
+  },
+  {
+    "skillId": "cmtz8ks9f005swubkh9rqtchr",
+    "skillName": "Package Managers (NPM / Yarn / PNPM)",
+    "level": "Beginner",
+    "category": "Developer Tools",
+    "courseId": "cmtz8kt2c0094wubkcpt0mmgw",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: NPM Docs"
+  },
+  {
+    "skillId": "cmtz8ks9f005owubkl2i2qmtx",
+    "skillName": "Postman API Testing Basics",
+    "level": "Beginner",
+    "category": "Developer Tools",
+    "courseId": "cmtz8kt2c0090wubkfeg8grwq",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Postman Docs"
+  },
+  {
+    "skillId": "cmtz8ks9f005qwubkq8gl3dci",
+    "skillName": "RegEx (Regular Expressions) Basics",
+    "level": "Beginner",
+    "category": "Developer Tools",
+    "courseId": "cmtz8kt2c0092wubkcrnodzsy",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open RegEx Guide"
+  },
+  {
+    "skillId": "cmtz8ks9f005lwubkjdwz8zzw",
+    "skillName": "VS Code Power User Guide",
+    "level": "Beginner",
+    "category": "Developer Tools",
+    "courseId": "cmtz8kt2b008xwubkljsg5p6e",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: VS Code Docs"
+  },
+  {
+    "skillId": "cmtz8ks9d003kwubkqayu6czd",
+    "skillName": "Data Visualization with Matplotlib",
+    "level": "Beginner",
+    "category": "Machine Learning",
+    "courseId": "cmtz8kt2a006wwubkv9rqk88r",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Matplotlib Docs"
+  },
+  {
+    "skillId": "cmtz8ks9d003mwubknn9svl3i",
+    "skillName": "Feature Engineering Principles",
+    "level": "Beginner",
+    "category": "Machine Learning",
+    "courseId": "cmtz8kt2a006ywubkubop23eg",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Data Science"
+  },
+  {
+    "skillId": "cmtz8ks9d003pwubks4aori6u",
+    "skillName": "Jupyter Notebooks Guide",
+    "level": "Beginner",
+    "category": "Machine Learning",
+    "courseId": "cmtz8kt2a0071wubkpnbaax9g",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Jupyter Org"
+  },
+  {
+    "skillId": "cmtz8ks9d003jwubkderlrgio",
+    "skillName": "NumPy & Pandas Essentials",
+    "level": "Beginner",
+    "category": "Machine Learning",
+    "courseId": "cmtz8kt2a006vwubkfc1u545o",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: PyData Docs"
+  },
+  {
+    "skillId": "cmtz8ks9d003lwubk1ddas496",
+    "skillName": "Scikit-Learn Basics",
+    "level": "Beginner",
+    "category": "Machine Learning",
+    "courseId": "cmtz8kt2a006xwubkc6sg6i1a",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Scikit-Learn Docs"
+  },
+  {
+    "skillId": "cmtz8ks9d003nwubk81kpbn26",
+    "skillName": "Supervised Learning Concepts",
+    "level": "Beginner",
+    "category": "Machine Learning",
+    "courseId": "cmtz8kt2a006zwubkzyugyatc",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open ML Docs"
+  },
+  {
+    "skillId": "cmtz8ks9d003owubknsor3uei",
+    "skillName": "Unsupervised Learning Concepts",
+    "level": "Beginner",
+    "category": "Machine Learning",
+    "courseId": "cmtz8kt2a0070wubk2h35kvmu",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open ML Docs"
+  },
+  {
+    "skillId": "cmtznffqv0051wu8carzfzg9s",
+    "skillName": "Algorithmic Thinking",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfgml005rwu8c5157b3e4",
+    "currentTitle": "Official Learning Pathway for Algorithmic Thinking",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfk0c007twu8cxwy9nuhz",
+    "skillName": "Basic Sorting Algorithms",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfkv1008lwu8c2cjlz53j",
+    "currentTitle": "Official Learning Pathway for Basic Sorting Algorithms",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfg0b005awu8c853x7810",
+    "skillName": "Bootstrap Basics",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfh5v0063wu8cmlzlldsc",
+    "currentTitle": "Official Learning Pathway for Bootstrap Basics",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtz8ci7r0013wutojybhms5i",
+    "skillName": "C# Essentials",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtz8kt2a0061wubk7kybxm4t",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Microsoft Learn"
+  },
+  {
+    "skillId": "cmtz8ci7r0013wutojybhms5i",
+    "skillName": "C# Essentials",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtz8cj5t0015wuto7jgpcmwg",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Microsoft Learn"
+  },
+  {
+    "skillId": "cmtznfqhf00crwu8c7rec98a0",
+    "skillName": "CI/CD Pipeline Concepts",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfrjw00dbwu8cugbsnzbe",
+    "currentTitle": "Official Learning Pathway for CI/CD Pipeline Concepts",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznfkj5008iwu8c2ef5fbt6",
+    "skillName": "Computer Architecture Basics",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznflgr009dwu8cct4keza1",
+    "currentTitle": "Official Learning Pathway for Computer Architecture Basics",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznffqv0050wu8cbcq8jjo9",
+    "skillName": "Computer Fundamentals",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfglq005pwu8cjku3y2ts",
+    "currentTitle": "Official Learning Pathway for Computer Fundamentals",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfk0o007vwu8csc1irtf3",
+    "skillName": "Data Structures Introduction",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfl1x008qwu8cckyqqg8q",
+    "currentTitle": "Official Learning Pathway for Data Structures Introduction",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznffpq004twu8c7m8whyr1",
+    "skillName": "Database Systems Overview",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfgk2005lwu8c41emn0ix",
+    "currentTitle": "Official Learning Pathway for Database Systems Overview",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtz8ks9e003wwubkkrsk69hu",
+    "skillName": "Excel Formulas & Functions",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfpti00cdwu8c49a2t4i7",
+    "currentTitle": "Official Learning Pathway for Excel Formulas & Functions",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtz8ks9e003wwubkkrsk69hu",
+    "skillName": "Excel Formulas & Functions",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtz8kt2a0078wubkcn60bk4e",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Microsoft Learn"
+  },
+  {
+    "skillId": "cmtznfi2t006iwu8co99uz8ul",
+    "skillName": "Express.js Fundamentals",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfiyb0075wu8c2k54stw5",
+    "currentTitle": "Official Learning Pathway for Express.js Fundamentals",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfm9o009wwu8c4qs198wp",
+    "skillName": "Firewalls & NAT Fundamentals",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfnb100arwu8c3i3y2ctb",
+    "currentTitle": "Official Learning Pathway for Firewalls & NAT Fundamentals",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtz8cd8h000rwuto1c9n9abd",
+    "skillName": "Go Programming Basics",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtz8ce3t000twutou1rfgkzn",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Go Dev"
+  },
+  {
+    "skillId": "cmtz8cd8h000rwuto1c9n9abd",
+    "skillName": "Go Programming Basics",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtz8kt2a005zwubk0q9fscib",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Go Dev"
+  },
+  {
+    "skillId": "cmtznfm9n009twu8ckgt2nyjk",
+    "skillName": "IP Subnetting & CIDR",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfn4g00anwu8cr2w4ogz0",
+    "currentTitle": "Official Learning Pathway for IP Subnetting & CIDR",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznffsj0055wu8cnv1ltrnh",
+    "skillName": "JSON & Data Formats",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfgpb005vwu8cz26n4v7j",
+    "currentTitle": "Official Learning Pathway for JSON & Data Formats",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfqhg00cywu8cj48w7oks",
+    "skillName": "Jenkins Basics",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfrjv00d5wu8cig92cnwf",
+    "currentTitle": "Official Learning Pathway for Jenkins Basics",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfopq00blwu8cvhqj34oj",
+    "skillName": "Kafka Introduction",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfpkh00c9wu8c8fdf2f97",
+    "currentTitle": "Official Learning Pathway for Kafka Introduction",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtz8cv0u001xwutoph0r0v49",
+    "skillName": "Kotlin Fundamentals",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtz8cvt5001zwutomhsqcehq",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Kotlin Lang"
+  },
+  {
+    "skillId": "cmtz8cv0u001xwutoph0r0v49",
+    "skillName": "Kotlin Fundamentals",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfjax007gwu8c4kl0lyvq",
+    "currentTitle": "Official Learning Pathway for Kotlin Fundamentals",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtz8cv0u001xwutoph0r0v49",
+    "skillName": "Kotlin Fundamentals",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtz8kt2a0066wubksx82uzqh",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Kotlin Lang"
+  },
+  {
+    "skillId": "cmtznfkas0087wu8c4awb2fej",
+    "skillName": "Linux Process Management",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfl41008xwu8c47ct6bxg",
+    "currentTitle": "Official Learning Pathway for Linux Process Management",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznflzw009fwu8c4xlkbjf7",
+    "skillName": "Logic Gates & Digital Circuits",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfn1a00abwu8c2emr4qh2",
+    "currentTitle": "Official Learning Pathway for Logic Gates & Digital Circuits",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznfoxc00btwu8c2k7jverj",
+    "skillName": "Microservices Introduction",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfpvd00cjwu8cl3uho3t4",
+    "currentTitle": "Official Learning Pathway for Microservices Introduction",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfk9f0082wu8ccz21a2la",
+    "skillName": "Object-Oriented Design Principles",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfl3u008vwu8crqn3o8e5",
+    "currentTitle": "Official Learning Pathway for Object-Oriented Design Principles",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfm9r009zwu8csgav1v81",
+    "skillName": "Password Security & Auth",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfnbb00avwu8cp5lcgwbw",
+    "currentTitle": "Official Learning Pathway for Password Security & Auth",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfi12006fwu8ctarosx2j",
+    "skillName": "Postman API Client Basics",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfivt0073wu8ct4lf27ic",
+    "currentTitle": "Official Learning Pathway for Postman API Client Basics",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznfi2z006rwu8cfhv1ildd",
+    "skillName": "PowerShell Fundamentals",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfj9a007dwu8coibxtn6q",
+    "currentTitle": "Official Learning Pathway for PowerShell Fundamentals",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznfg0b005bwu8cf2v8agc1",
+    "skillName": "REST API Concepts",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfh5v0065wu8c1wq6dozr",
+    "currentTitle": "Official Learning Pathway for REST API Concepts",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfk8t007zwu8c5m1j9gty",
+    "skillName": "Regular Expressions (Regex)",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfldb0095wu8c9l6ji2py",
+    "currentTitle": "Official Learning Pathway for Regular Expressions (Regex)",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtz8cpka001lwuto2ye1owiz",
+    "skillName": "Ruby Foundations",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtz8cqif001nwutotggoc1xa",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Ruby Lang"
+  },
+  {
+    "skillId": "cmtz8cpka001lwuto2ye1owiz",
+    "skillName": "Ruby Foundations",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtz8kt2a0064wubk9qe6dh4t",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Ruby Lang"
+  },
+  {
+    "skillId": "cmtznfi2t006jwu8c131sy9tn",
+    "skillName": "Ruby Programming Basics",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfj9a007cwu8csm5bolr8",
+    "currentTitle": "Official Learning Pathway for Ruby Programming Basics",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtz8cfrj000xwuto89540v9s",
+    "skillName": "Rust Fundamentals",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtz8kt2a0060wubkqgj1rfhj",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Rust Book"
+  },
+  {
+    "skillId": "cmtz8cfrj000xwuto89540v9s",
+    "skillName": "Rust Fundamentals",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtz8cgk0000zwutoylyp8t7b",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Rust Book"
+  },
+  {
+    "skillId": "cmtz8cfrj000xwuto89540v9s",
+    "skillName": "Rust Fundamentals",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfjci007lwu8cmzmbbfhy",
+    "currentTitle": "Official Learning Pathway for Rust Fundamentals",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfmj200a5wu8cgtwyoted",
+    "skillName": "Serverless Concepts",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfnda00b1wu8cud3sujf4",
+    "currentTitle": "Official Learning Pathway for Serverless Concepts",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznfoms00bfwu8cloua601n",
+    "skillName": "Tableau Fundamentals",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfpkh00cbwu8c0845o32b",
+    "currentTitle": "Official Learning Pathway for Tableau Fundamentals",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfqhg00cvwu8c7f52ykfk",
+    "skillName": "Terraform Introduction",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfrlt00dfwu8cmke91q8r",
+    "currentTitle": "Official Learning Pathway for Terraform Introduction",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtz8ckqq0019wuto7u1v2dmk",
+    "skillName": "TypeScript Essentials",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtz8kt2a0062wubkn3qegs98",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: TypeScript Docs"
+  },
+  {
+    "skillId": "cmtz8ckqq0019wuto7u1v2dmk",
+    "skillName": "TypeScript Essentials",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtz8cljr001bwutobinffiru",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: TypeScript Docs"
+  },
+  {
+    "skillId": "cmtznfhtq006dwu8cwet2jri6",
+    "skillName": "TypeScript Introduction",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfiqj006zwu8cv2jliqvg",
+    "currentTitle": "Official Learning Pathway for TypeScript Introduction",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfk8t007ywu8c1jl2xlcv",
+    "skillName": "Unit Testing Basics",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfldb0094wu8cpi78sipo",
+    "currentTitle": "Official Learning Pathway for Unit Testing Basics",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfoxc00brwu8cp6v50g6v",
+    "skillName": "Vector Graphics & SVG",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfpxg00clwu8cf2vt1no4",
+    "currentTitle": "Official Learning Pathway for Vector Graphics & SVG",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznfkas008bwu8c2lfowt6e",
+    "skillName": "Virtualization Basics",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfle30098wu8cehgfd91f",
+    "currentTitle": "Official Learning Pathway for Virtualization Basics",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtz8ks9d0032wubk03edtrty",
+    "skillName": "Web Accessibility (a11y)",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtz8kt2a006ewubkx1rog3vo",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: W3C WAI"
+  },
+  {
+    "skillId": "cmtz8ks9d0032wubk03edtrty",
+    "skillName": "Web Accessibility (a11y)",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfgk2005kwu8ck9r73toe",
+    "currentTitle": "Official Learning Pathway for Web Accessibility (a11y)",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfmj100a3wu8c9h317kl2",
+    "skillName": "Wireless Network Fundamentals",
+    "level": "Beginner",
+    "category": "Programming Languages",
+    "courseId": "cmtznfnda00aywu8cong62ezp",
+    "currentTitle": "Official Learning Pathway for Wireless Network Fundamentals",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtz8ks9e004bwubk64t9hcnw",
+    "skillName": "Linux Command Line Fundamentals",
+    "level": "Beginner",
+    "category": "Systems & Hardware",
+    "courseId": "cmtz8kt2b007nwubkc8m7twuu",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Linux Foundation Open"
+  },
+  {
+    "skillId": "cmtz8ks9e0052wubksh7ac61r",
+    "skillName": "Design Handoff & Developer Specs",
+    "level": "Beginner",
+    "category": "UI/UX Design",
+    "courseId": "cmtz8kt2b008ewubkgkr1bijy",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Design Curriculum"
+  },
+  {
+    "skillId": "cmtz8ks9e004zwubkfyni49jo",
+    "skillName": "Design Systems Concepts",
+    "level": "Beginner",
+    "category": "UI/UX Design",
+    "courseId": "cmtz8kt2b008bwubkkyjapasq",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Design Curriculum"
+  },
+  {
+    "skillId": "cmtz8ks9e004wwubk4cewhg3s",
+    "skillName": "Figma Interface Design Basics",
+    "level": "Beginner",
+    "category": "UI/UX Design",
+    "courseId": "cmtz8kt2b0088wubkak3ymt0k",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Design Curriculum"
+  },
+  {
+    "skillId": "cmtz8ks9e0051wubkqucscy7h",
+    "skillName": "Information Architecture",
+    "level": "Beginner",
+    "category": "UI/UX Design",
+    "courseId": "cmtz8kt2b008dwubk93bayp4l",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Design Curriculum"
+  },
+  {
+    "skillId": "cmtz8ks9e0050wubk8td835uc",
+    "skillName": "Mobile Interface Design",
+    "level": "Beginner",
+    "category": "UI/UX Design",
+    "courseId": "cmtz8kt2b008cwubk9v1yeau7",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Design Curriculum"
+  },
+  {
+    "skillId": "cmtz8ks9e004xwubkt66co6kf",
+    "skillName": "User Research & Personas",
+    "level": "Beginner",
+    "category": "UI/UX Design",
+    "courseId": "cmtz8kt2b0089wubk4l3fgyt4",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Design Curriculum"
+  },
+  {
+    "skillId": "cmtz8ks9e004ywubkczk3jys9",
+    "skillName": "Wireframing & Prototyping",
+    "level": "Beginner",
+    "category": "UI/UX Design",
+    "courseId": "cmtz8kt2b008awubkocvcrv7j",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Design Curriculum"
+  },
+  {
+    "skillId": "cmtznfqhg00czwu8cqdhgywh8",
+    "skillName": "Ansible Introduction",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfrls00ddwu8cjcie82eo",
+    "currentTitle": "Official Learning Pathway for Ansible Introduction",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznfkas0089wu8c00yy8fzk",
+    "skillName": "Array & String Manipulation",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfl430091wu8ccpbg8g4l",
+    "currentTitle": "Official Learning Pathway for Array & String Manipulation",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfib6006vwu8cqjdggymo",
+    "skillName": "Batch Scripting",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfjea007pwu8cf9vc33nh",
+    "currentTitle": "Official Learning Pathway for Batch Scripting",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfm9t00a1wu8c0s7mamq6",
+    "skillName": "Big Data Concepts",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfn2600afwu8cze3fd59q",
+    "currentTitle": "Official Learning Pathway for Big Data Concepts",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfm03009jwu8cj9k9cva5",
+    "skillName": "Binary & Hexadecimal Math",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfn1a00adwu8cv0yxlpmg",
+    "currentTitle": "Official Learning Pathway for Binary & Hexadecimal Math",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfm03009iwu8cgmq3k09n",
+    "skillName": "Cyber Hygiene Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfmtf00a9wu8crtjwni4w",
+    "currentTitle": "Official Learning Pathway for Cyber Hygiene Basics",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfm9k009owu8cz7m2o1sr",
+    "skillName": "DNS & Domain Systems",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfn4g00apwu8cbklwhrxh",
+    "currentTitle": "Official Learning Pathway for DNS & Domain Systems",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfo7400b3wu8c2qygvv2m",
+    "skillName": "Data Visualization Concepts",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfpgq00c1wu8c7mfxgu1i",
+    "currentTitle": "Official Learning Pathway for Data Visualization Concepts",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfk9g0085wu8c54aylqi3",
+    "skillName": "Debugging Techniques",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfl1z008twu8cj6lzvvdl",
+    "currentTitle": "Official Learning Pathway for Debugging Techniques",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfowg00bpwu8clc97qm3v",
+    "skillName": "Event-Driven Architecture Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfpz800cnwu8cg0skg75l",
+    "currentTitle": "Official Learning Pathway for Event-Driven Architecture Basics",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznfopr00bnwu8cq4qg4lai",
+    "skillName": "Excel Pivot Tables",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfpv900cgwu8czv6iuhky",
+    "currentTitle": "Official Learning Pathway for Excel Pivot Tables",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfopq00bjwu8chh4hlr1p",
+    "skillName": "Figma Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfpv900chwu8cqx7hr81q",
+    "currentTitle": "Official Learning Pathway for Figma Basics",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfk9g0083wu8c8hsscpg0",
+    "skillName": "Functional Programming Concepts",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfl1x008rwu8cwkxgtfrp",
+    "currentTitle": "Official Learning Pathway for Functional Programming Concepts",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfqhf00ctwu8cucbkdlqh",
+    "skillName": "GitHub Actions Fundamentals",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfrjv00d9wu8cqg4jtk6w",
+    "currentTitle": "Official Learning Pathway for GitHub Actions Fundamentals",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfi2u006nwu8c91gxfbsm",
+    "skillName": "Go Programming Introduction",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfj7e0079wu8cwe5v2zci",
+    "currentTitle": "Official Learning Pathway for Go Programming Introduction",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfopi00bhwu8c7keypqyc",
+    "skillName": "Google Analytics Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfpkh00cawu8cc10k773p",
+    "currentTitle": "Official Learning Pathway for Google Analytics Basics",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznfqgn00cpwu8cbpjvkc3s",
+    "skillName": "GraphQL Concepts",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfrht00d3wu8ce7x9o4lh",
+    "currentTitle": "Official Learning Pathway for GraphQL Concepts",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtz8ks9d0034wubkavgt7dps",
+    "skillName": "GraphQL Fundamentals",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8kt2a006gwubkqt81ffmk",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: GraphQL Org"
+  },
+  {
+    "skillId": "cmtznfhtp006bwu8cdoqp3yxl",
+    "skillName": "HTTP & Web Protocols",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfiqi006xwu8ckmnfg1k8",
+    "currentTitle": "Official Learning Pathway for HTTP & Web Protocols",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfqhn00d1wu8cls6e1o1x",
+    "skillName": "Kubernetes Concepts",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfrjv00d7wu8cb4w3ga6a",
+    "currentTitle": "Official Learning Pathway for Kubernetes Concepts",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfkj5008fwu8ctrh9hijd",
+    "skillName": "Linux File Management",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfle4009bwu8clne34urf",
+    "currentTitle": "Official Learning Pathway for Linux File Management",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfkau008dwu8c766nzh4o",
+    "skillName": "Linux Networking Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfl41008zwu8c6ef9m0mu",
+    "currentTitle": "Official Learning Pathway for Linux Networking Basics",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznfoms00bdwu8c2epdtdm0",
+    "skillName": "MongoDB Fundamentals",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfpgq00bzwu8caudm2y3e",
+    "currentTitle": "Official Learning Pathway for MongoDB Fundamentals",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznfhtn0069wu8c82xaq4xm",
+    "skillName": "NPM & Package Management",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfivs0071wu8cwvz6f902",
+    "currentTitle": "Official Learning Pathway for NPM & Package Management",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtz8d6se002rwutop5yfc6cj",
+    "skillName": "Next.js Fundamentals",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8kt2a006bwubkoq0r04gi",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Next.js Docs"
+  },
+  {
+    "skillId": "cmtz8d6se002rwutop5yfc6cj",
+    "skillName": "Next.js Fundamentals",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8d7kt002twutopk8v1e5e",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Next.js Docs"
+  },
+  {
+    "skillId": "cmtz8ks9d0035wubk1hmp5irt",
+    "skillName": "Node.js Core Principles",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8kt2a006hwubkagg7kmh6",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Node.js Docs"
+  },
+  {
+    "skillId": "cmtznfi2u006pwu8cve3iwe7i",
+    "skillName": "Node.js Introduction",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfj5f0077wu8c66gy2022",
+    "currentTitle": "Official Learning Pathway for Node.js Introduction",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznffqw0053wu8ch26panec",
+    "skillName": "Operating System Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfh1d005ywu8cxxqzzamc",
+    "currentTitle": "Official Learning Pathway for Operating System Basics",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfi2u006mwu8cioqn8rw7",
+    "skillName": "PHP Fundamentals",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfjax007hwu8crym26la0",
+    "currentTitle": "Official Learning Pathway for PHP Fundamentals",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfm9k009lwu8cqwewzx2j",
+    "skillName": "Phishing Awareness & Defense",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfn4g00aowu8c6s8a6k4n",
+    "currentTitle": "Official Learning Pathway for Phishing Awareness & Defense",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznffgk004pwu8c5vpk16j0",
+    "skillName": "Problem Solving with Logic",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfgd0005fwu8c3yqerkva",
+    "currentTitle": "Official Learning Pathway for Problem Solving with Logic",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtz8ks9d0033wubk2mhpigiu",
+    "skillName": "RESTful API Design Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8kt2a006fwubkwijstv5i",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open API Docs"
+  },
+  {
+    "skillId": "cmtz8d4i0002lwuto9x5mq3yy",
+    "skillName": "React Fundamentals",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8d5ad002nwutobpc9kjce",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: React Dev Docs"
+  },
+  {
+    "skillId": "cmtz8d4i0002lwuto9x5mq3yy",
+    "skillName": "React Fundamentals",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8kt2a006awubk5mqbwve9",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: React Dev Docs"
+  },
+  {
+    "skillId": "cmtz8d1yx002fwuto3nh7xx7s",
+    "skillName": "Responsive Web Design",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8d2x3002hwutouru23hdk",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: W3C Open Docs"
+  },
+  {
+    "skillId": "cmtz8d1yx002fwuto3nh7xx7s",
+    "skillName": "Responsive Web Design",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfh1d005zwu8crxots2mg",
+    "currentTitle": "Official Learning Pathway for Responsive Web Design",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtz8d1yx002fwuto3nh7xx7s",
+    "skillName": "Responsive Web Design",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8kt2a0069wubk84wb4411",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: W3C Open Docs"
+  },
+  {
+    "skillId": "cmtznfkj5008jwu8cvnrnjs7t",
+    "skillName": "Search Algorithms",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfle30099wu8c59xx488q",
+    "currentTitle": "Official Learning Pathway for Search Algorithms",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznfiac006twu8cbp5jn0cr",
+    "skillName": "Shell Scripting Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfjay007jwu8c1ufpwjwi",
+    "currentTitle": "Official Learning Pathway for Shell Scripting Basics",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznffpt004vwu8ckgipjm5g",
+    "skillName": "Software Engineering Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfgk3005nwu8cov8gkk2v",
+    "currentTitle": "Official Learning Pathway for Software Engineering Basics",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfjzo007rwu8cvwzbw0hh",
+    "skillName": "Software Testing Concepts",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfkv2008nwu8cqokbxluv",
+    "currentTitle": "Official Learning Pathway for Software Testing Concepts",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtz8cs3f001rwuto5zlojo8z",
+    "skillName": "Swift Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8kt2a0065wubkyjo0nmbj",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Apple Developer Docs"
+  },
+  {
+    "skillId": "cmtz8cs3f001rwuto5zlojo8z",
+    "skillName": "Swift Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8ct74001twuton7ild73l",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Apple Developer Docs"
+  },
+  {
+    "skillId": "cmtz8cs3f001rwuto5zlojo8z",
+    "skillName": "Swift Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfjck007nwu8cz8skpkpn",
+    "currentTitle": "Official Learning Pathway for Swift Basics",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtz8ks9d0031wubkewh3ctel",
+    "skillName": "Tailwind CSS Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8kt2a006dwubkyjzrug2o",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Tailwind Docs"
+  },
+  {
+    "skillId": "cmtznfg0b005dwu8c5zst4ztb",
+    "skillName": "Tailwind CSS Introduction",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfh7u0067wu8cw1wksi50",
+    "currentTitle": "Official Learning Pathway for Tailwind CSS Introduction",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtz8ks9e004vwubkqwitfoa6",
+    "skillName": "UI/UX Design Fundamentals",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8kt2b0087wubkoltjvcy5",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Open Design Curriculum"
+  },
+  {
+    "skillId": "cmtznfm9k009pwu8cs50b1ahr",
+    "skillName": "VPN Technology Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfn3300ahwu8c931gfpcp",
+    "currentTitle": "Official Learning Pathway for VPN Technology Basics",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtz8d94s002xwutoo7gtu9kv",
+    "skillName": "Vue.js Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8kt2a006cwubk9wff3y9o",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Vue Docs"
+  },
+  {
+    "skillId": "cmtz8d94s002xwutoo7gtu9kv",
+    "skillName": "Vue.js Basics",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8da05002zwutoiktauilz",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Vue Docs"
+  },
+  {
+    "skillId": "cmtz8ks9d0036wubky4anwm41",
+    "skillName": "Web Performance Optimization",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtz8kt2a006iwubkbwrjmzqe",
+    "currentTitle": null,
+    "currentProvider": "Learning Provider: Web.dev"
+  },
+  {
+    "skillId": "cmtznffsr0057wu8cg80cppcf",
+    "skillName": "XML Fundamentals",
+    "level": "Beginner",
+    "category": "Web Development",
+    "courseId": "cmtznfh5v0061wu8czuyd597s",
+    "currentTitle": "Official Learning Pathway for XML Fundamentals",
+    "currentProvider": "Cisco"
+  },
+  {
+    "skillId": "cmtznfyz700ixwu8cz1ncapgo",
+    "skillName": "ASP.NET Core Web APIs",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfzth00jnwu8cnwqqzegm",
+    "currentTitle": "Official Learning Module for ASP.NET Core Web APIs",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng16v00l1wu8c5mhudal6",
+    "skillName": "AWS SysOps Administration",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng25z00ltwu8cy2kekofo",
+    "currentTitle": "Official Learning Module for AWS SysOps Administration",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfxfo00hrwu8cg9hyz4r5",
+    "skillName": "Angular Web Development",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfydv00ihwu8ck9p2sxnf",
+    "currentTitle": "Official Learning Module for Angular Web Development",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfzb600jdwu8c9o3025d1",
+    "skillName": "CI/CD Pipeline Automation",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng08600k5wu8cmxn1cerd",
+    "currentTitle": "Official Learning Module for CI/CD Pipeline Automation",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfxmh00hvwu8c9wlbv5d1",
+    "skillName": "Canvas & WebGL Graphics",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfyg100irwu8cebw4xlgi",
+    "currentTitle": "Official Learning Module for Canvas & WebGL Graphics",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng52w00o4wu8cx553dtqy",
+    "skillName": "Cypress E2E Testing",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng5vp00ovwu8c9vzoc6qv",
+    "currentTitle": "Official Learning Module for Cypress E2E Testing",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng36i00mowu8ccibtlnk7",
+    "skillName": "Databricks Spark Analytics",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng48d00nlwu8cowu2ao7b",
+    "currentTitle": "Official Learning Module for Databricks Spark Analytics",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfzi500jjwu8c4uaxvkhp",
+    "skillName": "Docker Compose Orchestration",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng0bj00kbwu8cigryooty",
+    "currentTitle": "Official Learning Module for Docker Compose Orchestration",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng15k00kzwu8cdccx7jzg",
+    "skillName": "ELK Stack Log Analytics",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng29n00lvwu8c9oulf1vu",
+    "currentTitle": "Official Learning Module for ELK Stack Log Analytics",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng15j00kuwu8ca9gaptav",
+    "skillName": "Ethical Hacking Operations",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng1ye00ljwu8ct3tn1srs",
+    "currentTitle": "Official Learning Module for Ethical Hacking Operations",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfz6q00izwu8cr9bpw6ob",
+    "skillName": "FastAPI Python Microservices",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng00r00jtwu8cqcee1m8r",
+    "currentTitle": "Official Learning Module for FastAPI Python Microservices",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfv7e00fjwu8c21j0fba5",
+    "skillName": "Functional Reactive Programming",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfw8000gfwu8cw2dourhn",
+    "currentTitle": "Official Learning Module for Functional Reactive Programming",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfz9b00j9wu8ckhld7r7i",
+    "skillName": "Go Microservices Architecture",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng04800k2wu8cbs7jdemf",
+    "currentTitle": "Official Learning Module for Go Microservices Architecture",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng2vh00m6wu8cc0nlaslj",
+    "skillName": "Google Cloud Associate Engineer",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng3sd00n1wu8c8th83fjb",
+    "currentTitle": "Official Learning Module for Google Cloud Associate Engineer",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfsnq00e5wu8ccp9kxn8r",
+    "skillName": "Graph Algorithms & Trees",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznftg600ezwu8cl1iaras6",
+    "currentTitle": "Official Learning Module for Graph Algorithms & Trees",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfv5j00fhwu8ck0qfvq0i",
+    "skillName": "GraphQL API Development",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfw7w00gbwu8ckw1i4hhv",
+    "currentTitle": "Official Learning Module for GraphQL API Development",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng15j00ktwu8cnhlvchr2",
+    "skillName": "Helm Package Management",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng2a900m3wu8c5cdw8858",
+    "currentTitle": "Official Learning Module for Helm Package Management",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng16v00l3wu8c1ky92ft7",
+    "skillName": "Incident Response Playbooks",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng22500lpwu8cvic1n4fe",
+    "currentTitle": "Official Learning Module for Incident Response Playbooks",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfvhl00g3wu8c53prp036",
+    "skillName": "JWT & Session Security",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfwj700gxwu8cgbc9jff2",
+    "currentTitle": "Official Learning Module for JWT & Session Security",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfz9600j5wu8c27h32tnp",
+    "skillName": "Jenkins Pipeline Architecture",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng00r00jwwu8cdthfoloa",
+    "currentTitle": "Official Learning Module for Jenkins Pipeline Architecture",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng52w00o9wu8cxqny6y3a",
+    "skillName": "Jest & Vitest Unit Testing",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng5vb00otwu8clbmtgufc",
+    "currentTitle": "Official Learning Module for Jest & Vitest Unit Testing",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfvf300ftwu8co71mgf4v",
+    "skillName": "Kafka Message Streaming",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfwax00grwu8cy6m9w5wo",
+    "currentTitle": "Official Learning Module for Kafka Message Streaming",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng1db00l5wu8c9lvaj2a7",
+    "skillName": "Linux Networking & Routing",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng2a900m2wu8cjp32quzi",
+    "currentTitle": "Official Learning Module for Linux Networking & Routing",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfvgy00fzwu8czwo4n84e",
+    "skillName": "Microservices Communication",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfwax00gqwu8cww3303d8",
+    "currentTitle": "Official Learning Module for Microservices Communication",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng34s00mjwu8c6wrjo850",
+    "skillName": "NLTK & spaCy NLP Basics",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng40u00n9wu8c3yfk0jk3",
+    "currentTitle": "Official Learning Module for NLTK & spaCy NLP Basics",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfxdk00hcwu8ck2gkdktt",
+    "skillName": "Next.js App Router",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfy5200i5wu8chg4ki4i6",
+    "currentTitle": "Official Learning Module for Next.js App Router",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng3ep00mxwu8c3hm0ul23",
+    "skillName": "NumPy Scientific Computing",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng48f00nnwu8c7jmhj6e9",
+    "currentTitle": "Official Learning Module for NumPy Scientific Computing",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfxmh00hwwu8cbkg7ipjr",
+    "skillName": "PWA & Service Workers",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfydw00imwu8c6vwp1p7q",
+    "currentTitle": "Official Learning Module for PWA & Service Workers",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng15500knwu8cx0enlxwb",
+    "skillName": "Penetration Testing Methodology",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng1yb00lhwu8cdopt59ts",
+    "currentTitle": "Official Learning Module for Penetration Testing Methodology",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng52w00o5wu8c7b5bnp59",
+    "skillName": "Pinecone Vector Indexing",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng5vq00oxwu8cp6eclsi1",
+    "currentTitle": "Official Learning Module for Pinecone Vector Indexing",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfvf300fswu8cyp6x8oe1",
+    "skillName": "PostgreSQL Administration",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfw8x00gjwu8cvcpumgrj",
+    "currentTitle": "Official Learning Module for PostgreSQL Administration",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng3ep00mwwu8cztureunc",
+    "skillName": "Power BI Data Modeling (DAX)",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng4a300nqwu8ct4dxgihq",
+    "currentTitle": "Official Learning Module for Power BI Data Modeling (DAX)",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng53000obwu8c2745gwrk",
+    "skillName": "Prompt Flow & Evaluation",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng61d00p6wu8c33nzwhge",
+    "currentTitle": "Official Learning Module for Prompt Flow & Evaluation",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng3ep00mtwu8cu2aggirh",
+    "skillName": "PyTorch Deep Learning Intro",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng4a300nrwu8crtmxewf1",
+    "currentTitle": "Official Learning Module for PyTorch Deep Learning Intro",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng36i00mpwu8co6477f9s",
+    "skillName": "R Programming for Statistics",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng43100newu8cd3cv33id",
+    "currentTitle": "Official Learning Module for R Programming for Statistics",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfx4s00h9wu8c6znpnttx",
+    "skillName": "React Native Mobile Development",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfy5200i4wu8czgv4kvcw",
+    "currentTitle": "Official Learning Module for React Native Mobile Development",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfvf300fvwu8cf9uu0m9b",
+    "skillName": "Redis Caching Architecture",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfwj000gtwu8c4ql28n3y",
+    "currentTitle": "Official Learning Module for Redis Caching Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng53h00odwu8cs1cbpxc6",
+    "skillName": "SAP ABAP Programming",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng5zh00p3wu8cf1b194m2",
+    "currentTitle": "Official Learning Module for SAP ABAP Programming",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng52w00o7wu8cleiw1472",
+    "skillName": "Salesforce Admin Development",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng5xl00p1wu8cissn66d3",
+    "currentTitle": "Official Learning Module for Salesforce Admin Development",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng34s00miwu8cteln7psx",
+    "skillName": "Scikit-Learn Model Pipeline",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng3yt00n4wu8ciaoz988e",
+    "currentTitle": "Official Learning Module for Scikit-Learn Model Pipeline",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfz9600j4wu8c9ayk9ln7",
+    "skillName": "Shell Scripting Automation",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng04800k3wu8causxtkq9",
+    "currentTitle": "Official Learning Module for Shell Scripting Automation",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfxmh00hxwu8ca7v67tbg",
+    "skillName": "Spring Boot Microservices",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfydw00ipwu8c2mcovlnl",
+    "currentTitle": "Official Learning Module for Spring Boot Microservices",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfzb700jfwu8cgzcw93es",
+    "skillName": "Terraform Infrastructure as Code",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng0bd00k9wu8c36z5aa2q",
+    "currentTitle": "Official Learning Module for Terraform Infrastructure as Code",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng52w00o3wu8cp5eb5ln6",
+    "skillName": "Vector Database Vector Search",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtzng5xl00p0wu8c7uh29jzo",
+    "currentTitle": "Official Learning Module for Vector Database Vector Search",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfvf300fpwu8c29v0fjcc",
+    "skillName": "Web Security & OWASP Top 10",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfw8300ghwu8c9ijxm7g4",
+    "currentTitle": "Official Learning Module for Web Security & OWASP Top 10",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfxdl00hlwu8c9t90iwh5",
+    "skillName": "iOS Swift Development",
+    "level": "Advanced",
+    "category": "Data & Analytics",
+    "courseId": "cmtznfy5300i7wu8cdtrs0dyp",
+    "currentTitle": "Official Learning Module for iOS Swift Development",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfslb00e3wu8ck1lj0zxe",
+    "skillName": "Advanced Data Structures",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznftfz00evwu8cad9wq231",
+    "currentTitle": "Official Learning Module for Advanced Data Structures",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfxfn00hpwu8cgcay03q4",
+    "skillName": "Android Kotlin Development",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfy8p00idwu8c6k6d906o",
+    "currentTitle": "Official Learning Module for Android Kotlin Development",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfzge00jhwu8cd0294p7i",
+    "skillName": "Ansible Configuration Management",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng0c600kewu8c19hvgiua",
+    "currentTitle": "Official Learning Module for Ansible Configuration Management",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng1fb00l8wu8cq6zroigl",
+    "skillName": "Azure Security Technologies",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng2a900m0wu8crfjg4h2z",
+    "currentTitle": "Official Learning Module for Azure Security Technologies",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng2vh00m7wu8cy7t9xyir",
+    "skillName": "BigQuery Data Warehousing",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng3yt00n5wu8c1c1coq4i",
+    "currentTitle": "Official Learning Module for BigQuery Data Warehousing",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfvh200g1wu8cjy4l5tmf",
+    "skillName": "Database Indexing Strategies",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfwj700gwwu8cvbyt3pji",
+    "currentTitle": "Official Learning Module for Database Indexing Strategies",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfsnu00e7wu8c2keapq0m",
+    "skillName": "Design Patterns in OOP",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznftgc00f1wu8c4luazndl",
+    "currentTitle": "Official Learning Module for Design Patterns in OOP",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng1fb00l9wu8ce40ai14i",
+    "skillName": "Digital Forensics Fundamentals",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng2a900m1wu8cs5lt8t6w",
+    "currentTitle": "Official Learning Module for Digital Forensics Fundamentals",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfxfn00howu8cjgeorc9j",
+    "skillName": "Django Web Framework",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfydv00ijwu8c2rpx0q66",
+    "currentTitle": "Official Learning Module for Django Web Framework",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfvf300fqwu8cz3miraic",
+    "skillName": "Elasticsearch & Logstash",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfw9n00glwu8cqu54ksd3",
+    "currentTitle": "Official Learning Module for Elasticsearch & Logstash",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfxdl00hjwu8cjmga270p",
+    "skillName": "Electron Desktop App Development",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfy8p00ibwu8cnfrf9cvr",
+    "currentTitle": "Official Learning Module for Electron Desktop App Development",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfz9500j1wu8cu6mtlxzj",
+    "skillName": "Flask Web Services",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng00s00jxwu8c521320bo",
+    "currentTitle": "Official Learning Module for Flask Web Services",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfxdk00hdwu8cjgifttss",
+    "skillName": "Flutter Cross-Platform Apps",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfydw00inwu8c1xoqacgh",
+    "currentTitle": "Official Learning Module for Flutter Cross-Platform Apps",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfxdl00hgwu8cuo22bkxa",
+    "skillName": "Frontend Performance Optimization",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfy6z00i9wu8cbg87ya5g",
+    "currentTitle": "Official Learning Module for Frontend Performance Optimization",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfz9600j7wu8cvss8lwdr",
+    "skillName": "GitHub Actions Workflow Engineering",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng03v00jzwu8cxjca6aj5",
+    "currentTitle": "Official Learning Module for GitHub Actions Workflow Engineering",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng0wd00kiwu8cwejr04tz",
+    "skillName": "Kubernetes Pod & Deployment Management",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng1w300lbwu8cu2xgs4x6",
+    "currentTitle": "Official Learning Module for Kubernetes Pod & Deployment Management",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng4vo00nywu8cs20rvwji",
+    "skillName": "LangChain LLM Orchestration",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng5qb00opwu8c6lxu0yv2",
+    "currentTitle": "Official Learning Module for LangChain LLM Orchestration",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng34s00mewu8chpj2r0w9",
+    "skillName": "Matplotlib & Seaborn Visualization",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng40q00n7wu8c2t77rryq",
+    "currentTitle": "Official Learning Module for Matplotlib & Seaborn Visualization",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng0wx00klwu8cr67jd3w5",
+    "skillName": "Metasploit Framework",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng1ya00lewu8c25vmh5rp",
+    "currentTitle": "Official Learning Module for Metasploit Framework",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfvoj00g5wu8crqn3wjwy",
+    "skillName": "MySQL Query Tuning",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfwj700gzwu8cmz8o2tm6",
+    "currentTitle": "Official Learning Module for MySQL Query Tuning",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfvgy00fywu8c8bfadsnr",
+    "skillName": "OAuth 2.0 & OpenID Connect",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfw9q00gnwu8cmezguie9",
+    "currentTitle": "Official Learning Module for OAuth 2.0 & OpenID Connect",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng4tz00nvwu8curm3c6l3",
+    "skillName": "OpenAI API Integration",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng5o400onwu8cwnfjivqn",
+    "currentTitle": "Official Learning Module for OpenAI API Integration",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng36i00mnwu8cehtxhhmu",
+    "skillName": "OpenCV Computer Vision Basics",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng48d00nkwu8cr88fx9kq",
+    "currentTitle": "Official Learning Module for OpenCV Computer Vision Basics",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng15j00kswu8cy7uom7np",
+    "skillName": "OpenTelemetry Tracing",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng20300lnwu8cfpf9k2tu",
+    "currentTitle": "Official Learning Module for OpenTelemetry Tracing",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfyz700iwwu8cfo3w84hb",
+    "skillName": "Packer Machine Image Building",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng00r00jswu8czqtaj9n3",
+    "currentTitle": "Official Learning Module for Packer Machine Image Building",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng34s00mfwu8c1g0jbuqp",
+    "skillName": "Pandas Data Wrangling",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng40y00nbwu8cwa1tim49",
+    "currentTitle": "Official Learning Module for Pandas Data Wrangling",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng5ci00ojwu8cpg9hdqit",
+    "skillName": "Playwright Test Automation",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng65s00pbwu8csw5xs1h6",
+    "currentTitle": "Official Learning Module for Playwright Test Automation",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfyz700iuwu8c4rwds0tu",
+    "skillName": "PowerShell Scripting Administration",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfzyt00jpwu8cfulsxhb5",
+    "currentTitle": "Official Learning Module for PowerShell Scripting Administration",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng0wd00kjwu8cizll5krj",
+    "skillName": "Prometheus & Grafana Monitoring",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng1ya00lfwu8cf0qcvxec",
+    "currentTitle": "Official Learning Module for Prometheus & Grafana Monitoring",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng4ty00ntwu8cjdfn57pm",
+    "skillName": "RAG System Architecture",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng5m500olwu8cgkebdmgb",
+    "currentTitle": "Official Learning Module for RAG System Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfvoj00g7wu8cd4od0xs8",
+    "skillName": "RESTful API Engineering",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfwlb00h2wu8csz7gcc4h",
+    "currentTitle": "Official Learning Module for RESTful API Engineering",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfv7f00flwu8cehesoo4l",
+    "skillName": "RabbitMQ Message Queuing",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfw8000gewu8c362wa9vl",
+    "currentTitle": "Official Learning Module for RabbitMQ Message Queuing",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfzi600jlwu8cq3xrx0i8",
+    "skillName": "Ruby on Rails Applications",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng0c600kfwu8ci8ei9ovq",
+    "currentTitle": "Official Learning Module for Ruby on Rails Applications",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfzb600jcwu8cwmki80mj",
+    "skillName": "Rust Systems Programming",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng09l00k7wu8c5gmn4t4a",
+    "currentTitle": "Official Learning Module for Rust Systems Programming",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng15k00kywu8c1jpctgr0",
+    "skillName": "SOC Analyst Procedures",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng22800lrwu8c77dybxfu",
+    "currentTitle": "Official Learning Module for SOC Analyst Procedures",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng4vo00nzwu8cdoxbl1pd",
+    "skillName": "Selenium Web Automation",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng5tu00orwu8cz5xcwso5",
+    "currentTitle": "Official Learning Module for Selenium Web Automation",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng55f00ofwu8cdi0hvb1p",
+    "skillName": "ServiceNow System Administration",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng63a00p9wu8c3t2br780",
+    "currentTitle": "Official Learning Module for ServiceNow System Administration",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng2vi00m9wu8c56j1rray",
+    "skillName": "Snowflake Data Engineering",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng3qu00mzwu8ccogaw4bx",
+    "currentTitle": "Official Learning Module for Snowflake Data Engineering",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng34s00mdwu8cclk7nko0",
+    "skillName": "Tableau Dashboard Design",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng43100nfwu8czfidkv2i",
+    "currentTitle": "Official Learning Module for Tableau Dashboard Design",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfx4s00h6wu8c7kehe2l8",
+    "skillName": "Tailwind CSS Component Architecture",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfxyy00i1wu8c9szugn8l",
+    "currentTitle": "Official Learning Module for Tailwind CSS Component Architecture",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtzng36t00mrwu8croparlcx",
+    "skillName": "TensorFlow Basics",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng46l00nhwu8cu8ii247x",
+    "currentTitle": "Official Learning Module for TensorFlow Basics",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng5bf00ohwu8cn25lulfo",
+    "skillName": "UiPath Studio RPA Development",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng61d00p7wu8cpsedrikd",
+    "currentTitle": "Official Learning Module for UiPath Studio RPA Development",
+    "currentProvider": "IBM"
+  },
+  {
+    "skillId": "cmtznfxdl00hkwu8cdu3b4ogz",
+    "skillName": "Vue.js Framework",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfyah00ifwu8c7y08u67m",
+    "currentTitle": "Official Learning Module for Vue.js Framework",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznfx4s00h7wu8co2ag5hg4",
+    "skillName": "WebAssembly (Wasm)",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfxyy00hzwu8c8kciey46",
+    "currentTitle": "Official Learning Module for WebAssembly (Wasm)",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng15j00kvwu8c1itrn68t",
+    "skillName": "Wireshark Packet Analysis",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng1zs00llwu8cclkcikfi",
+    "currentTitle": "Official Learning Module for Wireshark Packet Analysis",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfvok00g9wu8c2lkkyj1n",
+    "skillName": "gRPC & Protocol Buffers",
+    "level": "Advanced",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznfwlb00h3wu8c58ezk26j",
+    "currentTitle": "Official Learning Module for gRPC & Protocol Buffers",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznfs9r00dlwu8cd4pkuj3b",
+    "skillName": "React Frontend Development",
+    "level": "Advanced",
+    "category": "Web Development",
+    "courseId": "cmtznft5s00eewu8cym45i3be",
+    "currentTitle": "Meta React Basics & Advanced Hooks",
+    "currentProvider": "Meta"
+  },
+  {
+    "skillId": "cmtzng79000q0wu8cuh8n6apf",
+    "skillName": "AI Engineering & Fine-Tuning",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzng83m00qxwu8ck4vl1fkq",
+    "currentTitle": "Official Specialist Track for AI Engineering & Fine-Tuning",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzng9fv00rmwu8casivet88",
+    "skillName": "AWS Certified Data Analytics Specialty",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngagg00snwu8cbpglbzd9",
+    "currentTitle": "Official Specialist Track for AWS Certified Data Analytics Specialty",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng71n00puwu8cqjb2ddle",
+    "skillName": "Advanced Database Administration",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzng81d00qnwu8cqvwl4wbs",
+    "currentTitle": "Official Specialist Track for Advanced Database Administration",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngbdd00tlwu8czo60bk22",
+    "skillName": "Android Native Mobile Engineering",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngce000ufwu8c8icmowep",
+    "currentTitle": "Official Specialist Track for Android Native Mobile Engineering",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngdre00vbwu8cssfz324b",
+    "skillName": "Automated Software Testing Engineering",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngfzj00w6wu8c66bt1gp0",
+    "currentTitle": "Official Specialist Track for Automated Software Testing Engineering",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznghlt00wvwu8c40ulzzx2",
+    "skillName": "Autonomous Systems Software",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngiky00xlwu8clc2tm0kn",
+    "currentTitle": "Official Specialist Track for Autonomous Systems Software",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzng9g300rrwu8ccbqwzvnu",
+    "skillName": "Azure Data Engineer Associate (DP-203)",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngaid00srwu8ch6zhea7o",
+    "currentTitle": "Official Specialist Track for Azure Data Engineer Associate (DP-203)",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngjmv00y7wu8cao9illcg",
+    "skillName": "Blockchain Smart Contract Engineering",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngkj200z3wu8c6zjrppg7",
+    "currentTitle": "Official Specialist Track for Blockchain Smart Contract Engineering",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznglej00zrwu8crt5dekqt",
+    "skillName": "Cloud Cost Optimization & FinOps",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtznglyh010bwu8cn9m4mqr9",
+    "currentTitle": "Official Specialist Track for Cloud Cost Optimization & FinOps",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng79000q1wu8c85fvabmv",
+    "skillName": "Cloud-Native Security Engineering",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzng82d00qrwu8cjpmna82o",
+    "currentTitle": "Official Specialist Track for Cloud-Native Security Engineering",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznghlk00whwu8c1izr634i",
+    "skillName": "Computer Vision Object Detection & Segmentation",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngigd00xewu8cqiv2mpfb",
+    "currentTitle": "Official Specialist Track for Computer Vision Object Detection & Segmentation",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznglek00ztwu8ctsnjybdn",
+    "skillName": "DDoS Mitigation & Rate Limiting Systems",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngm98010hwu8c1ejhubda",
+    "currentTitle": "Official Specialist Track for DDoS Mitigation & Rate Limiting Systems",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngju200yjwu8cuu6m35a2",
+    "skillName": "Database Engine Internals & Storage",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngkvf00zjwu8cfgijoxdf",
+    "currentTitle": "Official Specialist Track for Database Engine Internals & Storage",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngjw100yrwu8c4mnvam9h",
+    "skillName": "Distributed Search Engine Engineering",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngkst00zfwu8cvctictja",
+    "currentTitle": "Official Specialist Track for Distributed Search Engine Engineering",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngd9y00uzwu8cwgh59o2p",
+    "skillName": "Django Enterprise Systems Architecture",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngfd400vvwu8clchquk3s",
+    "currentTitle": "Official Specialist Track for Django Enterprise Systems Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngbb300tdwu8ctla4mwij",
+    "skillName": "Elasticsearch Cluster Operations",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngce000ugwu8c3jg2mwso",
+    "currentTitle": "Official Specialist Track for Elasticsearch Cluster Operations",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzng71n00pswu8cq1xftuw6",
+    "skillName": "Enterprise Cloud Engineering",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzng82d00qqwu8c4kp5bogf",
+    "currentTitle": "Official Specialist Track for Enterprise Cloud Engineering",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng9fv00rnwu8c37tsgi29",
+    "skillName": "Enterprise Data Platforms",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtznga8y00sfwu8c1vfqc04n",
+    "currentTitle": "Official Specialist Track for Enterprise Data Platforms",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngbdc00tjwu8c24olitzy",
+    "skillName": "Enterprise Identity Governance (Okta/Entra ID)",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngc9y00u9wu8cpt1ncldv",
+    "currentTitle": "Official Specialist Track for Enterprise Identity Governance (Okta/Entra ID)",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzng9fv00rlwu8c7f6h7vjk",
+    "skillName": "Full Stack Backend Architecture",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngaau00siwu8cfd7h6xq7",
+    "currentTitle": "Official Specialist Track for Full Stack Backend Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznghlk00wowu8cfuij91es",
+    "skillName": "Generative Adversarial Networks (GANs)",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngijm00xjwu8c9p9f8ijt",
+    "currentTitle": "Official Specialist Track for Generative Adversarial Networks (GANs)",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngjif00y1wu8cu2rq3ugs",
+    "skillName": "Geospatial Data Science & GIS",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngkgz00yxwu8cixj1u68e",
+    "currentTitle": "Official Specialist Track for Geospatial Data Science & GIS",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngd0m00upwu8c4zij3fh1",
+    "skillName": "Go Enterprise Backend Engineering",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngf4b00vlwu8cj4pq8sm4",
+    "currentTitle": "Official Specialist Track for Go Enterprise Backend Engineering",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznglek00zvwu8clywzbizw",
+    "skillName": "GraphQL Federation & Mesh Architecture",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngm9d010lwu8c53oeq9q3",
+    "currentTitle": "Official Specialist Track for GraphQL Federation & Mesh Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng9fz00rpwu8codyufsgy",
+    "skillName": "HashiCorp Terraform Automation (Vault & Consul)",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtznga8y00sdwu8cb8tdi06x",
+    "currentTitle": "Official Specialist Track for HashiCorp Terraform Automation (Vault & Consul)",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngjw000ypwu8c3gx17uib",
+    "skillName": "High-Frequency Network Packet Processing",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngksi00zdwu8chjva9y5a",
+    "currentTitle": "Official Specialist Track for High-Frequency Network Packet Processing",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngd8100utwu8cdg7ylcu5",
+    "skillName": "High-Performance C++ Systems",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngf8o00vnwu8c46rk417b",
+    "currentTitle": "Official Specialist Track for High-Performance C++ Systems",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznglny0107wu8c8mb8f8oc",
+    "skillName": "Infrastructure as Code Policy Enforcement",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngmdk010twu8cx2kur6w9",
+    "currentTitle": "Official Specialist Track for Infrastructure as Code Policy Enforcement",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngd9y00uxwu8c8uzxhtdq",
+    "skillName": "IoT Enterprise Network Security",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngfv500w2wu8cqj6x47t0",
+    "currentTitle": "Official Specialist Track for IoT Enterprise Network Security",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngbay00t8wu8c95ovietu",
+    "skillName": "Kafka Event Streaming Engineering",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngc4000tzwu8c59p4t12f",
+    "currentTitle": "Official Specialist Track for Kafka Event Streaming Engineering",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngjot00yfwu8ceic2goqq",
+    "skillName": "Linux Kernel Module Development",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngkot00z5wu8cc68qg5yb",
+    "currentTitle": "Official Specialist Track for Linux Kernel Module Development",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngbay00t9wu8c4hmohk76",
+    "skillName": "Malware Analysis & Reverse Engineering",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngc4000tywu8chml1jehz",
+    "currentTitle": "Official Specialist Track for Malware Analysis & Reverse Engineering",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngd0m00uqwu8czwr8fjez",
+    "skillName": "Microcontroller Firmware Development",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngemp00viwu8cl3o0tjcv",
+    "currentTitle": "Official Specialist Track for Microcontroller Firmware Development",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngb3o00t3wu8c864qx3qv",
+    "skillName": "MongoDB Enterprise Cluster Administration",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngc4v00u1wu8cspitkp97",
+    "currentTitle": "Official Specialist Track for MongoDB Enterprise Cluster Administration",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng9hx00rvwu8c0dql0eli",
+    "skillName": "NVIDIA GPU Acceleration & CUDA",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngaic00spwu8ck1du8gdm",
+    "currentTitle": "Official Specialist Track for NVIDIA GPU Acceleration & CUDA",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznghls00wtwu8cmblubxsp",
+    "skillName": "Power BI Enterprise Analytics & Admin",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngijh00xhwu8cl3diw4qt",
+    "currentTitle": "Official Specialist Track for Power BI Enterprise Analytics & Admin",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznghvx00x3wu8c42aqpxo6",
+    "skillName": "Quantitative Financial Analytics",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngiuo00xvwu8c6f8uu9e9",
+    "currentTitle": "Official Specialist Track for Quantitative Financial Analytics",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngd0m00urwu8ckj3cd625",
+    "skillName": "React Native Enterprise Systems",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngemp00vjwu8ceewvs80g",
+    "currentTitle": "Official Specialist Track for React Native Enterprise Systems",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngbl400towu8cyo0f22rf",
+    "skillName": "SOC Tier 2 Incident Response & Threat Hunting",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngce000uewu8cwiwmrf67",
+    "currentTitle": "Official Specialist Track for SOC Tier 2 Incident Response & Threat Hunting",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznghlk00wlwu8csxat8flq",
+    "skillName": "Salesforce Enterprise Integration",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngis900xqwu8cgzkyoast",
+    "currentTitle": "Official Specialist Track for Salesforce Enterprise Integration",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng97n00rcwu8cmqzuqadj",
+    "skillName": "ServiceNow Certified System Administrator",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtznga2600s7wu8ctears1uj",
+    "currentTitle": "Official Specialist Track for ServiceNow Certified System Administrator",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng98f00rfwu8c5js7jiwk",
+    "skillName": "Snowflake Core Data Engineering",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtznga1e00s5wu8c2vajs6px",
+    "currentTitle": "Official Specialist Track for Snowflake Core Data Engineering",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngh7p00wfwu8cd4ec8qhh",
+    "skillName": "Statistical Modeling & Hypothesis Testing",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngifx00x9wu8c4rfcmnxo",
+    "currentTitle": "Official Specialist Track for Statistical Modeling & Hypothesis Testing",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznge2t00vfwu8ch6h3z79e",
+    "skillName": "UiPath Enterprise Automation Architecture",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngg4h00w9wu8cjrfh3fbf",
+    "currentTitle": "Official Specialist Track for UiPath Enterprise Automation Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngjmw00y9wu8cwtogblsy",
+    "skillName": "Web3 Infrastructure Engineering",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngkpq00z7wu8c7c0jqp4q",
+    "currentTitle": "Official Specialist Track for Web3 Infrastructure Engineering",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznglnw0103wu8ch3f5b8i2",
+    "skillName": "WebSocket Scale Engineering",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngm9k010nwu8c68fy1dzz",
+    "currentTitle": "Official Specialist Track for WebSocket Scale Engineering",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngjn500ybwu8c739k1muj",
+    "skillName": "Zero-Knowledge Proof Cryptography",
+    "level": "Pro",
+    "category": "Artificial Intelligence & ML",
+    "courseId": "cmtzngkis00z1wu8c1b5onuvx",
+    "currentTitle": "Official Specialist Track for Zero-Knowledge Proof Cryptography",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng97n00rdwu8cy2kanyhl",
+    "skillName": "Advanced API Engineering",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznga6y00s9wu8ch5ndzu36",
+    "currentTitle": "Official Specialist Track for Advanced API Engineering",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng9ov00rzwu8c8q0vo3fc",
+    "skillName": "Advanced Kubernetes Security (CKS)",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngaja00sxwu8c8txujlen",
+    "currentTitle": "Official Specialist Track for Advanced Kubernetes Security (CKS)",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngbcp00tfwu8cjom19xxo",
+    "skillName": "Advanced Penetration Testing & Exploit Dev",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngce000uhwu8clcdw2nes",
+    "currentTitle": "Official Specialist Track for Advanced Penetration Testing & Exploit Dev",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznghv800wzwu8cpiielzff",
+    "skillName": "Algorithmic Trading System Design",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngis900xrwu8c92yuah6y",
+    "currentTitle": "Official Specialist Track for Algorithmic Trading System Design",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngh7p00wewu8c2liu0y4n",
+    "skillName": "Bioinformatics Data Analytics",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngi9a00x7wu8co3mbx56e",
+    "currentTitle": "Official Specialist Track for Bioinformatics Data Analytics",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznglei00znwu8ctxxe4ao0",
+    "skillName": "CDN & Edge Computing Security",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngm9a010jwu8ctx20kbko",
+    "currentTitle": "Official Specialist Track for CDN & Edge Computing Security",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngbay00t7wu8cndt1e15y",
+    "skillName": "Cassandra Distributed Database Administration",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngc6700u3wu8c47wuv51k",
+    "currentTitle": "Official Specialist Track for Cassandra Distributed Database Administration",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngb3o00t2wu8clqiz3tpp",
+    "skillName": "Cloud Forensics & Incident Analysis",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngbyf00ttwu8ce9yppft8",
+    "currentTitle": "Official Specialist Track for Cloud Forensics & Incident Analysis",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznglel00zzwu8c3ujohsk8",
+    "skillName": "Continuous Compliance & Audit Automation",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngm94010fwu8cwjcxo78q",
+    "currentTitle": "Official Specialist Track for Continuous Compliance & Audit Automation",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng6zh00pkwu8czqnlq7j0",
+    "skillName": "Data Engineering & ETL Pipelines",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng7tz00qjwu8caxbpdd6z",
+    "currentTitle": "Official Specialist Track for Data Engineering & ETL Pipelines",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng9p000s1wu8c3x9so2sx",
+    "skillName": "Databricks Spark Data Platform",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngaj800stwu8cqsho5xoh",
+    "currentTitle": "Official Specialist Track for Databricks Spark Data Platform",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngjmv00y6wu8cm6hz74ej",
+    "skillName": "Decentralized Finance (DeFi) Protocols",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngkh800yzwu8cfmhpczhz",
+    "currentTitle": "Official Specialist Track for Decentralized Finance (DeFi) Protocols",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngjw000yowu8cd3m1xs73",
+    "skillName": "Distributed Cache Architecture (Memcached/Redis)",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngkvf00zlwu8c87mpqe5y",
+    "currentTitle": "Official Specialist Track for Distributed Cache Architecture (Memcached/Redis)",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngju200ylwu8c2xhlz1u1",
+    "skillName": "Distributed System Consensus (Raft/Paxos)",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngksu00zhwu8cidnkqrtz",
+    "currentTitle": "Official Specialist Track for Distributed System Consensus (Raft/Paxos)",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngd9y00v2wu8cjpkbbuzu",
+    "skillName": "Edge Computing Architecture",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngfd400vswu8cvwloxuy4",
+    "currentTitle": "Official Specialist Track for Edge Computing Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngdyr00vdwu8cj9b23km8",
+    "skillName": "Embedded Systems Engineering",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngfzj00w7wu8chpp6tabq",
+    "currentTitle": "Official Specialist Track for Embedded Systems Engineering",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznglnw0102wu8c1wvy5pq1",
+    "skillName": "Enterprise API Gateway Management (Kong)",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngmdj010rwu8conwi9q7l",
+    "currentTitle": "Official Specialist Track for Enterprise API Gateway Management (Kong)",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzng71n00pvwu8crqxw8vkq",
+    "skillName": "Enterprise Network Engineering (CCNP)",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng7tz00qhwu8ciydcluqh",
+    "currentTitle": "Official Specialist Track for Enterprise Network Engineering (CCNP)",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng7ak00q5wu8ca2bx5wmd",
+    "skillName": "Enterprise RPA Engineering",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng84c00qzwu8c9vr2ppy1",
+    "currentTitle": "Official Specialist Track for Enterprise RPA Engineering",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngdbu00v6wu8cymjqsg8f",
+    "skillName": "FastAPI Production Async Microservices",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngfd400vxwu8czfhsimj2",
+    "currentTitle": "Official Specialist Track for FastAPI Production Async Microservices",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngbl400tpwu8ce58pccxj",
+    "skillName": "Flutter Mobile Architecture",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngcg100ulwu8cd4njkt6m",
+    "currentTitle": "Official Specialist Track for Flutter Mobile Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzng9fv00rkwu8c2nk0468h",
+    "skillName": "Google Cloud Professional Data Engineer",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznga8t00sbwu8cbpa4ur13",
+    "currentTitle": "Official Specialist Track for Google Cloud Professional Data Engineer",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngjfr00xzwu8cbk12pq22",
+    "skillName": "Healthcare Data Compliance & Security",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngkfh00ytwu8ckskip26x",
+    "currentTitle": "Official Specialist Track for Healthcare Data Compliance & Security",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng6qc00pfwu8cusjwpiob",
+    "skillName": "LLMOps & Generative AI Production",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng7l600q9wu8crlv5qd9l",
+    "currentTitle": "Official Specialist Track for LLMOps & Generative AI Production",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznglnw0105wu8c4r7emamn",
+    "skillName": "Multi-Cloud Cloud-Native Governance",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngm9k010pwu8crfutawi5",
+    "currentTitle": "Official Specialist Track for Multi-Cloud Cloud-Native Governance",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznghln00wrwu8cdx40f496",
+    "skillName": "Natural Language Processing & Speech AI",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngigd00xfwu8c95c4ftz8",
+    "currentTitle": "Official Specialist Track for Natural Language Processing & Speech AI",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngdcb00v9wu8cgvm2emfp",
+    "skillName": "Playwright Enterprise E2E Test Suite",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngfv500w3wu8c88uog2yb",
+    "currentTitle": "Official Specialist Track for Playwright Enterprise E2E Test Suite",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngb3o00szwu8cd1yrs4u6",
+    "skillName": "PostgreSQL High Availability & Replication",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngbyn00tvwu8cou0my77a",
+    "currentTitle": "Official Specialist Track for PostgreSQL High Availability & Replication",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngjqv00yhwu8crnbe9bbx",
+    "skillName": "Quantum Computing Fundamentals (Qiskit)",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngkrk00zbwu8cp0lypu84",
+    "currentTitle": "Official Specialist Track for Quantum Computing Fundamentals (Qiskit)",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngbaz00tbwu8cgkwnlozc",
+    "skillName": "RabbitMQ Enterprise Cluster Management",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngc9y00u8wu8c05s9dnd8",
+    "currentTitle": "Official Specialist Track for RabbitMQ Enterprise Cluster Management",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzng9p100s3wu8cnt791l4s",
+    "skillName": "Red Hat Enterprise Architect (RHCE)",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngaj800svwu8cqb62c781",
+    "currentTitle": "Official Specialist Track for Red Hat Enterprise Architect (RHCE)",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznghlz00wxwu8c3vy85x9z",
+    "skillName": "Reinforcement Learning & Q-Learning",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngipe00xnwu8ci1t799vb",
+    "currentTitle": "Official Specialist Track for Reinforcement Learning & Q-Learning",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngdbu00v7wu8c2ijldijq",
+    "skillName": "Robotics Software Engineering (ROS)",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngfqt00vzwu8cr6nbe6zz",
+    "currentTitle": "Official Specialist Track for Robotics Software Engineering (ROS)",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngd9y00v3wu8c5o5ze3xs",
+    "skillName": "Rust Production Systems Development",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngfd400vuwu8c3mt2zbfp",
+    "currentTitle": "Official Specialist Track for Rust Production Systems Development",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzng9hy00rxwu8cvl3360ho",
+    "skillName": "SAP Certified Application Associate",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngaau00sjwu8cchi63uz8",
+    "currentTitle": "Official Specialist Track for SAP Certified Application Associate",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngh7p00wdwu8c0ue0dw30",
+    "skillName": "SAP S/4HANA Analytics",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngi9a00x6wu8cbhqgo7k9",
+    "currentTitle": "Official Specialist Track for SAP S/4HANA Analytics",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzng9hw00rtwu8cq3kcm3rl",
+    "skillName": "Salesforce Certified Developer",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngaav00slwu8c3qdnfwj8",
+    "currentTitle": "Official Specialist Track for Salesforce Certified Developer",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznglek00zxwu8c24honopu",
+    "skillName": "Serverless Microservices Architecture",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtznglyg0109wu8cmxc17ajt",
+    "currentTitle": "Official Specialist Track for Serverless Microservices Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznghlk00wpwu8ccu1gt8mk",
+    "skillName": "ServiceNow Application Development",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngiuo00xxwu8cfe71ib28",
+    "currentTitle": "Official Specialist Track for ServiceNow Application Development",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzng6qe00phwu8ckkn2han1",
+    "skillName": "Site Reliability Engineering (SRE)",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzng7s500qbwu8c7g1xplex",
+    "currentTitle": "Official Specialist Track for Site Reliability Engineering (SRE)",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngjif00y3wu8cp56z3r18",
+    "skillName": "Solidity Ethereum Development",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngkfp00yvwu8c84g7hxdi",
+    "currentTitle": "Official Specialist Track for Solidity Ethereum Development",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngd9y00uywu8cdjrvlo56",
+    "skillName": "Spring Cloud Microservices",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngfd400vtwu8cenh4jqqc",
+    "currentTitle": "Official Specialist Track for Spring Cloud Microservices",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngjon00ydwu8cu9shgiw3",
+    "skillName": "System Call Optimization & eBPF",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngkqg00z9wu8c25mtp0c3",
+    "currentTitle": "Official Specialist Track for System Call Optimization & eBPF",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznghlk00wnwu8c5ha4ctgp",
+    "skillName": "Tableau Server Administration",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngifx00xbwu8cicrz221y",
+    "currentTitle": "Official Specialist Track for Tableau Server Administration",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznghvx00x1wu8cky8180kx",
+    "skillName": "Time Series Forecasting & Analysis",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngiuo00xwwu8cc0x34xa8",
+    "currentTitle": "Official Specialist Track for Time Series Forecasting & Analysis",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznglei00zpwu8cjzrdvdwt",
+    "skillName": "WebRTC Real-Time Media Streaming",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngm3j010dwu8c0ocxgzvs",
+    "currentTitle": "Official Specialist Track for WebRTC Real-Time Media Streaming",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngbl500trwu8c9gqhv5fi",
+    "skillName": "Zero Trust Architecture Implementation",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngce100ujwu8c1cc3phlq",
+    "currentTitle": "Official Specialist Track for Zero Trust Architecture Implementation",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngbdc00thwu8cupw4c6r2",
+    "skillName": "iOS Native Mobile Engineering",
+    "level": "Pro",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngc9x00u5wu8c04885n3n",
+    "currentTitle": "Official Specialist Track for iOS Native Mobile Engineering",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngvry016hwu8c7p161c6k",
+    "skillName": "Advanced Cryptographic Protocol Design",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngx6o017cwu8ck79ckejs",
+    "currentTitle": "Official Executive Architect Track for Advanced Cryptographic Protocol Design",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngn8f011bwu8cgrgoh87p",
+    "skillName": "Advanced Data Platform Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngoai0121wu8c2654ghco",
+    "currentTitle": "Official Executive Architect Track for Advanced Data Platform Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngtmb014twu8cxbsiilik",
+    "skillName": "Advanced Machine Perception Systems",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngunm015nwu8csubyu8lt",
+    "currentTitle": "Official Executive Architect Track for Advanced Machine Perception Systems",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznh1fl019twu8cgshbpbha",
+    "skillName": "Advanced Radar Signal Analytics Systems",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznh2er01alwu8c2x7gi0b8",
+    "currentTitle": "Official Executive Architect Track for Advanced Radar Signal Analytics Systems",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngy450183wu8c60lhvynp",
+    "skillName": "Aerospace Flight Software Control Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngz9d0190wu8c9ikiuhxn",
+    "currentTitle": "Official Executive Architect Track for Aerospace Flight Software Control Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngvry016dwu8cltf86ojz",
+    "skillName": "Algorithmic Risk Management Engine Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngx330179wu8cok24fwev",
+    "currentTitle": "Official Executive Architect Track for Algorithmic Risk Management Engine Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngxue017nwu8cm7dyn8bg",
+    "skillName": "Automotive Software Architecture (AUTOSAR)",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngyyo018lwu8cm5g4exn3",
+    "currentTitle": "Official Executive Architect Track for Automotive Software Architecture (AUTOSAR)",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngy780187wu8c200f0tcr",
+    "skillName": "Bare-Metal Cloud Infrastructure Automation",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngz9d0191wu8cu2n1ml9b",
+    "currentTitle": "Official Executive Architect Track for Bare-Metal Cloud Infrastructure Automation",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngtua0151wu8clgrpung6",
+    "skillName": "Biomedical AI Platform Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznguxc015vwu8clbxyv2hr",
+    "currentTitle": "Official Executive Architect Track for Biomedical AI Platform Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngzxl019bwu8c3vp1fkqf",
+    "skillName": "Brain-Computer Interface Signal Processing Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznh2a601a9wu8c8a6bgi4f",
+    "currentTitle": "Official Executive Architect Track for Brain-Computer Interface Signal Processing Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngqip0136wu8clgcinn2i",
+    "skillName": "Cloud Disaster Recovery & Business Continuity",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngsp20147wu8cz66lmnkl",
+    "currentTitle": "Official Executive Architect Track for Cloud Disaster Recovery & Business Continuity",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngnci011hwu8cb7o17n97",
+    "skillName": "Cloud Financial Operations (FinOps) Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngofw012bwu8cnrwaknap",
+    "currentTitle": "Official Executive Architect Track for Cloud Financial Operations (FinOps) Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngq6c012owu8cvsqzuyof",
+    "skillName": "Compiler Engineering & LLVM Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngrye013jwu8c96l3g11z",
+    "currentTitle": "Official Executive Architect Track for Compiler Engineering & LLVM Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznh1et019lwu8cnmi5o9w9",
+    "skillName": "Custom Database Query Optimizer Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznh2m901arwu8cj8jjnban",
+    "currentTitle": "Official Executive Architect Track for Custom Database Query Optimizer Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngxug017qwu8ctfzdej0d",
+    "skillName": "Custom OS Kernel Development for Edge",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngyuu018jwu8c2kyhiaqj",
+    "currentTitle": "Official Executive Architect Track for Custom OS Kernel Development for Edge",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznh1fh019nwu8cnnqjovxd",
+    "skillName": "Distributed GPU Tensor Parallelism Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznh2cd01agwu8cumpvhzf6",
+    "currentTitle": "Official Executive Architect Track for Distributed GPU Tensor Parallelism Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngyep018fwu8ch39des5q",
+    "skillName": "Distributed Memory Storage Fabric (NVMe-oF)",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngzc00197wu8c92mau2iq",
+    "currentTitle": "Official Executive Architect Track for Distributed Memory Storage Fabric (NVMe-oF)",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngmzp010xwu8cl3848czf",
+    "skillName": "Enterprise DevOps Strategy & Governance",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngo32011pwu8cwetqhi17",
+    "currentTitle": "Official Executive Architect Track for Enterprise DevOps Strategy & Governance",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngqt2013bwu8cjj6orz9m",
+    "skillName": "Enterprise Graph Data Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngslf0141wu8c8k7tu8s0",
+    "currentTitle": "Official Executive Architect Track for Enterprise Graph Data Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznh39b01b7wu8cqahbbkc1",
+    "skillName": "Enterprise Knowledge Graph Reasoning Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznh43z01bvwu8c5gkq9wlo",
+    "currentTitle": "Official Executive Architect Track for Enterprise Knowledge Graph Reasoning Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngmzp010zwu8cqvupx7bo",
+    "skillName": "Enterprise Network Architecture (CCIE Level)",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngo4y011twu8cbnr9hzag",
+    "currentTitle": "Official Executive Architect Track for Enterprise Network Architecture (CCIE Level)",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngtkk014kwu8czro6mvdd",
+    "skillName": "Enterprise SAP Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngupi015rwu8cotz1glys",
+    "currentTitle": "Official Executive Architect Track for Enterprise SAP Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngtay014fwu8cklof2yzi",
+    "skillName": "Enterprise Salesforce System Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngue60159wu8c7siujiy6",
+    "currentTitle": "Official Executive Architect Track for Enterprise Salesforce System Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngn720111wu8chpetfodn",
+    "skillName": "Enterprise Solution Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngo59011xwu8co8q7p2oe",
+    "currentTitle": "Official Executive Architect Track for Enterprise Solution Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngvrx0165wu8cknn593dr",
+    "skillName": "Fault-Tolerant State Machine Replication",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngwnt0171wu8coy13rfnr",
+    "currentTitle": "Official Executive Architect Track for Fault-Tolerant State Machine Replication",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngyep018ewu8c8d19ng0t",
+    "skillName": "Global Climate Modeling Data Platform",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngzc00198wu8cgpnt98zk",
+    "currentTitle": "Official Executive Architect Track for Global Climate Modeling Data Platform",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngnhv011mwu8cidtdn3p8",
+    "skillName": "Global Database Architecture & Sharding",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngogf012hwu8c3da1fecu",
+    "currentTitle": "Official Executive Architect Track for Global Database Architecture & Sharding",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznh38o01azwu8cd9qzgnzj",
+    "skillName": "Global Fraud Detection ML System Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznh3xt01bpwu8cl6s5soqj",
+    "currentTitle": "Official Executive Architect Track for Global Fraud Detection ML System Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznh3ir01bfwu8c94rj13ut",
+    "skillName": "Global Privacy & Sovereignty Compliance Systems",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznh46a01bzwu8cky9w541r",
+    "currentTitle": "Official Executive Architect Track for Global Privacy & Sovereignty Compliance Systems",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznh3b801bdwu8ca1mw6kq4",
+    "skillName": "Global Supply Chain Resilience Simulation Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznh3vg01bjwu8ci9peoylc",
+    "currentTitle": "Official Executive Architect Track for Global Supply Chain Resilience Simulation Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngtmc014vwu8cmv2vhxzp",
+    "skillName": "Global Telecom 5G Core Network Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznguqe015twu8clp5voq7k",
+    "currentTitle": "Official Executive Architect Track for Global Telecom 5G Core Network Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngqhz012zwu8cd0t22yi7",
+    "skillName": "High-Frequency Trading System Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngs72013nwu8cn8gmubw3",
+    "currentTitle": "Official Executive Architect Track for High-Frequency Trading System Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngq8m012rwu8ce912z4q3",
+    "skillName": "High-Performance Supercomputing (HPC)",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngs6w013lwu8czpkuc70m",
+    "currentTitle": "Official Executive Architect Track for High-Performance Supercomputing (HPC)",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznh3b801bbwu8c3nn9urs9",
+    "skillName": "Hyperscale Cloud Data Center Automation Design",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznh44x01bxwu8cqerf4zui",
+    "currentTitle": "Official Executive Architect Track for Hyperscale Cloud Data Center Automation Design",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngqir0139wu8cfqerbb21",
+    "skillName": "Large-Scale Vector Database Engine Design",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngsdi013vwu8cjomxkxiy",
+    "currentTitle": "Official Executive Architect Track for Large-Scale Vector Database Engine Design",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngvi50163wu8ckuleaa4c",
+    "skillName": "Low-Latency Gaming Engine Networking Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngwie016vwu8crxnov9v4",
+    "currentTitle": "Official Executive Architect Track for Low-Latency Gaming Engine Networking Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngzxm019fwu8cf2w8u88u",
+    "skillName": "Molecular Dynamics Simulation Infrastructure",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznh22u01a5wu8cp2djp404",
+    "currentTitle": "Official Executive Architect Track for Molecular Dynamics Simulation Infrastructure",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngvry016bwu8csqnexza5",
+    "skillName": "Next-Gen Video Encoding & Broadcast Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngx170177wu8cx0j3irjd",
+    "currentTitle": "Official Executive Architect Track for Next-Gen Video Encoding & Broadcast Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznh1fl019swu8c0lxfg5io",
+    "skillName": "Nuclear Reactor Safety Control Software Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznh2e901ajwu8cyo8606mg",
+    "currentTitle": "Official Executive Architect Track for Nuclear Reactor Safety Control Software Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngxug017rwu8cfbs4smnh",
+    "skillName": "Post-Quantum Encryption Implementation",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngyr9018hwu8cw3hey7ga",
+    "currentTitle": "Official Executive Architect Track for Post-Quantum Encryption Implementation",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngy3u017twu8cr4vechaj",
+    "skillName": "Quantum Key Distribution (QKD) Networks",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngz0l018qwu8c2mwpk1n1",
+    "currentTitle": "Official Executive Architect Track for Quantum Key Distribution (QKD) Networks",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngtkm014rwu8cz0764on5",
+    "skillName": "Robotic Systems Fleet Orchestration",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngue7015bwu8cnek8k1ij",
+    "currentTitle": "Official Executive Architect Track for Robotic Systems Fleet Orchestration",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngqip0133wu8cyaugnxxj",
+    "skillName": "SaaS Multi-Tenant Platform Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngshv013xwu8chlo8iixb",
+    "currentTitle": "Official Executive Architect Track for SaaS Multi-Tenant Platform Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngvi40160wu8cowib20bp",
+    "skillName": "Smart City Edge Systems Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngwg9016twu8c7oewau52",
+    "currentTitle": "Official Executive Architect Track for Smart City Edge Systems Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngtkk014lwu8c6tzd5h14",
+    "skillName": "Spaceborne & Aerospace Edge Computing Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznguh9015dwu8cb8tmvz4y",
+    "currentTitle": "Official Executive Architect Track for Spaceborne & Aerospace Edge Computing Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngzxm019ewu8c7fgvzixo",
+    "skillName": "Time-Series Database Storage Engine Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtznh24b01a7wu8cc4csarzv",
+    "currentTitle": "Official Executive Architect Track for Time-Series Database Storage Engine Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngvry0168wu8cm5ez1hb7",
+    "skillName": "Ultra-Scalable Event Store Engineering",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngx150175wu8cw0q4d2l6",
+    "currentTitle": "Official Executive Architect Track for Ultra-Scalable Event Store Engineering",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngtay014dwu8cv7riz5gg",
+    "skillName": "Web3 Enterprise Infrastructure Architecture",
+    "level": "Expert",
+    "category": "Cloud Computing",
+    "courseId": "cmtzngudf0157wu8ctbr7fdu7",
+    "currentTitle": "Official Executive Architect Track for Web3 Enterprise Infrastructure Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngn7r0115wu8c9dp52qa5",
+    "skillName": "Advanced MLOps & AI Governance",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngocb0123wu8cppmyczye",
+    "currentTitle": "Official Executive Architect Track for Advanced MLOps & AI Governance",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngvu2016lwu8co4rxbnd4",
+    "skillName": "Automated Formal Code Verification",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngx6o017fwu8cmfdmbcge",
+    "currentTitle": "Official Executive Architect Track for Automated Formal Code Verification",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngqip0132wu8cp9sgo0pu",
+    "skillName": "Autonomous AI Agent Swarm Systems",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngsn20143wu8czzqbvlwm",
+    "currentTitle": "Official Executive Architect Track for Autonomous AI Agent Swarm Systems",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznh39b01b5wu8cjbu42bps",
+    "skillName": "Autonomous Cyber Defense Threat Engine Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznh3xt01bnwu8cfcj0cguj",
+    "currentTitle": "Official Executive Architect Track for Autonomous Cyber Defense Threat Engine Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngtkm014pwu8cz56se2kd",
+    "skillName": "Autonomous Vehicle Fleet Compute Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznguh9015fwu8cnn4e4jfh",
+    "currentTitle": "Official Executive Architect Track for Autonomous Vehicle Fleet Compute Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngquo013dwu8ciz8bo7i5",
+    "skillName": "Custom Silicon & ASIC Software Acceleration",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngsp80149wu8cgnoan45m",
+    "currentTitle": "Official Executive Architect Track for Custom Silicon & ASIC Software Acceleration",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngy450181wu8cwiw1rw6t",
+    "skillName": "Deep Space Communication Network Protocol Design",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngz0g018nwu8cbff5uecf",
+    "currentTitle": "Official Executive Architect Track for Deep Space Communication Network Protocol Design",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngtub0153wu8c9nniuepz",
+    "skillName": "Digital Identity & Sovereignty Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznguxc015xwu8ci9wk4cby",
+    "currentTitle": "Official Executive Architect Track for Digital Identity & Sovereignty Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznh39501b1wu8c8j3cozbj",
+    "skillName": "Digital Twin Enterprise Simulation Infrastructure",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznh3xu01brwu8cb7tqnu7g",
+    "currentTitle": "Official Executive Architect Track for Digital Twin Enterprise Simulation Infrastructure",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznh39c01b9wu8cbtpzg3ca",
+    "skillName": "Distributed Autonomous Agent Negotiation Systems",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznh3vg01blwu8cakdwk5zd",
+    "currentTitle": "Official Executive Architect Track for Distributed Autonomous Agent Negotiation Systems",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznh1de019jwu8c52qgd9dj",
+    "skillName": "Distributed Graph Query Processing Engine",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznh2cd01ahwu8cr210ecs9",
+    "currentTitle": "Official Executive Architect Track for Distributed Graph Query Processing Engine",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngvry016fwu8c3cetj6w2",
+    "skillName": "Distributed Transaction Engine Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngwpa0173wu8cy6lqunzm",
+    "currentTitle": "Official Executive Architect Track for Distributed Transaction Engine Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngw28016qwu8cl2k8tr1k",
+    "skillName": "Energy Grid Microgrid Automation Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngx85017jwu8cnpo0pnq6",
+    "currentTitle": "Official Executive Architect Track for Energy Grid Microgrid Automation Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngqip0137wu8ch9u4h9u4",
+    "skillName": "Enterprise API Mesh Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngsbx013twu8chu21f84h",
+    "currentTitle": "Official Executive Architect Track for Enterprise API Mesh Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznh1fl019uwu8caimcrjnp",
+    "skillName": "Enterprise Identity Federation at Billion Scale",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznh2cd01adwu8cc2nr0m9s",
+    "currentTitle": "Official Executive Architect Track for Enterprise Identity Federation at Billion Scale",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngtkm014qwu8c7qq89z0w",
+    "skillName": "Enterprise Intelligent Automation Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngujd015lwu8c1k4noio8",
+    "currentTitle": "Official Executive Architect Track for Enterprise Intelligent Automation Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngw28016owu8cyvgg6f5u",
+    "skillName": "Enterprise Micro-Frontend Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngx6x017hwu8codywfqg2",
+    "currentTitle": "Official Executive Architect Track for Enterprise Micro-Frontend Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngn9y011dwu8cnrbeh081",
+    "skillName": "Enterprise Security Operations & CISO Frameworks",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngock0125wu8cukeqpgcn",
+    "currentTitle": "Official Executive Architect Track for Enterprise Security Operations & CISO Frameworks",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngtmd014xwu8colhe6n68",
+    "skillName": "Enterprise ServiceNow Platform Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznguh9015hwu8cmsv7kf2e",
+    "currentTitle": "Official Executive Architect Track for Enterprise ServiceNow Platform Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngy45017ywu8c59t0d7sq",
+    "skillName": "Exascale Data Storage Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngz57018uwu8c429vcutk",
+    "currentTitle": "Official Executive Architect Track for Exascale Data Storage Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngvry016ewu8cm2sou9go",
+    "skillName": "Global Banking Ledger Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngwn9016zwu8cthcse6v1",
+    "currentTitle": "Official Executive Architect Track for Global Banking Ledger Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngqhy012xwu8cso5v7lxo",
+    "skillName": "Global Content Delivery & Edge Compute Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngsld013zwu8czwz47sf3",
+    "currentTitle": "Official Executive Architect Track for Global Content Delivery & Edge Compute Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngw28016rwu8ce6jzww8y",
+    "skillName": "Global Freight Logistics Platform Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngx8q017lwu8cmawxmqpz",
+    "currentTitle": "Official Executive Architect Track for Global Freight Logistics Platform Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngy45017vwu8c6m88lvc9",
+    "skillName": "Hardware Security Module (HSM) Infrastructure",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngz58018vwu8c7t0yt6e4",
+    "currentTitle": "Official Executive Architect Track for Hardware Security Module (HSM) Infrastructure",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznh1t301a3wu8cd4451p66",
+    "skillName": "High-Energy Physics Particle Tracker Analytics",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznh2o001axwu8cl8vozlaj",
+    "currentTitle": "Official Executive Architect Track for High-Energy Physics Particle Tracker Analytics",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngy45017zwu8cwuwajcrx",
+    "skillName": "High-Throughput Genomic Sequencing Pipeline Design",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngz0l018rwu8cjvpbea8w",
+    "currentTitle": "Official Executive Architect Track for High-Throughput Genomic Sequencing Pipeline Design",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngtkk014jwu8cxwwzdxjx",
+    "skillName": "Industrial IoT & SCADA Security Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngujd015kwu8ccalhdgtj",
+    "currentTitle": "Official Executive Architect Track for Industrial IoT & SCADA Security Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngn9z011fwu8ccb4whsr0",
+    "skillName": "Kubernetes Ecosystem Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngoed0127wu8cm48pbv7f",
+    "currentTitle": "Official Executive Architect Track for Kubernetes Ecosystem Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtznh1p5019zwu8cyiad2xr1",
+    "skillName": "Large Language Model Pre-Training Infrastructure",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznh2m301apwu8c9tja5fjq",
+    "currentTitle": "Official Executive Architect Track for Large Language Model Pre-Training Infrastructure",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngydp018bwu8cjac8fcof",
+    "skillName": "Medical Device Firmware Architecture (FDA Compliant)",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngzbi0193wu8cypzklz2q",
+    "currentTitle": "Official Executive Architect Track for Medical Device Firmware Architecture (FDA Compliant)",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngq6c012pwu8caqde37ei",
+    "skillName": "Multi-Cloud Hybrid Mesh Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngr71013hwu8c80neq3uj",
+    "currentTitle": "Official Executive Architect Track for Multi-Cloud Hybrid Mesh Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngttz014zwu8c4304b3gc",
+    "skillName": "National Infrastructure Cybersecurity Strategy",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngunm015pwu8c2lusr8d5",
+    "currentTitle": "Official Executive Architect Track for National Infrastructure Cybersecurity Strategy",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznh1r601a1wu8c3i8qaidq",
+    "skillName": "Neuromorphic Computing Hardware Acceleration",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznh2o001avwu8crvdruq2q",
+    "currentTitle": "Official Executive Architect Track for Neuromorphic Computing Hardware Acceleration",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznh1cp019hwu8cfd6sx35e",
+    "skillName": "Open-Source Firmware Architecture (OpenBMC/Coreboot)",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznh2af01abwu8c2bd8khtb",
+    "currentTitle": "Official Executive Architect Track for Open-Source Firmware Architecture (OpenBMC/Coreboot)",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngqvf013fwu8cxpcda6mc",
+    "skillName": "Operating System Kernel Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngsn30145wu8ca2mtrz07",
+    "currentTitle": "Official Executive Architect Track for Operating System Kernel Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngqhy012vwu8cxnv3dsu0",
+    "skillName": "Quantum Cryptography & Post-Quantum Security",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngs73013pwu8c9v7ca9dz",
+    "currentTitle": "Official Executive Architect Track for Quantum Cryptography & Post-Quantum Security",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngtax014bwu8cs7pk8fza",
+    "skillName": "Quantum Software Algorithm Engineering",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngu710155wu8cv6fbxdtl",
+    "currentTitle": "Official Executive Architect Track for Quantum Software Algorithm Engineering",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngvi40161wu8ctx7lu2aq",
+    "skillName": "Real-Time Audio DSP Engine Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngwls016xwu8c1b3hhhbx",
+    "currentTitle": "Official Executive Architect Track for Real-Time Audio DSP Engine Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznh39501b3wu8cnva4fdcg",
+    "skillName": "Real-Time Credit Decisioning Engine Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznh3xu01btwu8cxedueoob",
+    "currentTitle": "Official Executive Architect Track for Real-Time Credit Decisioning Engine Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngydj0189wu8czegfr6gp",
+    "skillName": "Real-Time Embedded Safety-Critical Systems (MISRA C)",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngzc00199wu8cr94ehie1",
+    "currentTitle": "Official Executive Architect Track for Real-Time Embedded Safety-Critical Systems (MISRA C)",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngnhv011nwu8cwip1slbc",
+    "skillName": "Real-Time Streaming Systems Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngog2012ewu8cklck8bf8",
+    "currentTitle": "Official Executive Architect Track for Real-Time Streaming Systems Architecture",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtznh1fl019vwu8clk89ypbp",
+    "skillName": "Satellite Constellation Network Routing Design",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznh2jx01anwu8c4x7nnacq",
+    "currentTitle": "Official Executive Architect Track for Satellite Constellation Network Routing Design",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtzngmzo010vwu8cru8rsdew",
+    "skillName": "Scalable Backend Infrastructure Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngo4g011rwu8cnk4h5lbo",
+    "currentTitle": "Official Executive Architect Track for Scalable Backend Infrastructure Architecture",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznh3l001bhwu8chq369g57",
+    "skillName": "Subsea Cable Network Infrastructure Systems",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznh46a01c1wu8coxdd1pty",
+    "currentTitle": "Official Executive Architect Track for Subsea Cable Network Infrastructure Systems",
+    "currentProvider": "Google Cloud"
+  },
+  {
+    "skillId": "cmtznh1oi019xwu8c72qlo234",
+    "skillName": "Synthetic Biology Data Analytics Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtznh2nt01atwu8cltfz3jgm",
+    "currentTitle": "Official Executive Architect Track for Synthetic Biology Data Analytics Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngy780186wu8cm7dignbw",
+    "skillName": "Ultra-Low Latency Kernel Bypass Networking (RDMA/DPDK)",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngz5j018xwu8ccn685r0l",
+    "currentTitle": "Official Executive Architect Track for Ultra-Low Latency Kernel Bypass Networking (RDMA/DPDK)",
+    "currentProvider": "Amazon Web Services (AWS)"
+  },
+  {
+    "skillId": "cmtzngqhy012wwu8ckgxays6e",
+    "skillName": "Zero Trust IAM Infrastructure Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngsbs013rwu8caymt2h2k",
+    "currentTitle": "Official Executive Architect Track for Zero Trust IAM Infrastructure Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngvrz016jwu8cjougqjgl",
+    "skillName": "Zero-Knowledge Proof Infrastructure Architecture",
+    "level": "Expert",
+    "category": "Cybersecurity & Networking",
+    "courseId": "cmtzngx6o017dwu8c9kqg3tz4",
+    "currentTitle": "Official Executive Architect Track for Zero-Knowledge Proof Infrastructure Architecture",
+    "currentProvider": "Microsoft"
+  },
+  {
+    "skillId": "cmtzngnhv011lwu8c4r4f5s03",
+    "skillName": "Distributed Systems & Microservices Architecture",
+    "level": "Expert",
+    "category": "DevOps & Infrastructure",
+    "courseId": "cmtzngog2012fwu8cacbjfd4g",
+    "currentTitle": "Linux Foundation: Enterprise Distributed Systems Architecture",
+    "currentProvider": "Linux Foundation"
+  }
+]

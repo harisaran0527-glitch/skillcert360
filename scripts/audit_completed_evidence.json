@@ -1,0 +1,3075 @@
+[
+  {
+    "courseId": "cmtz8kt2b007qwubkzkxqbuhs",
+    "source": "Phase 1 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 1 applied fix in fix-bad-records-phase1.ts for cmtz8kt2b007qwubkzkxqbuhs",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b007pwubk5npqd7m6",
+    "source": "Phase 1 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 1 applied fix in fix-bad-records-phase1.ts for cmtz8kt2b007pwubk5npqd7m6",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b008swubksnz3b0wq",
+    "source": "Phase 1 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 1 applied fix in fix-bad-records-phase1.ts for cmtz8kt2b008swubksnz3b0wq",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznf6i60015wu8cmmo1u3kc",
+    "source": "Phase 1 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 1 applied fix in fix-bad-records-phase1.ts for cmtznf6i60015wu8cmmo1u3kc",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznf6wv001hwu8cnnxaddyy",
+    "source": "Phase 1 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 1 applied fix in fix-bad-records-phase1.ts for cmtznf6wv001hwu8cnnxaddyy",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfn1a00abwu8c2emr4qh2",
+    "source": "Phase 1 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 1 applied fix in fix-bad-records-phase1.ts for cmtznfn1a00abwu8c2emr4qh2",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfrjv00d9wu8cqg4jtk6w",
+    "source": "Phase 1 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 1 applied fix in fix-bad-records-phase1.ts for cmtznfrjv00d9wu8cqg4jtk6w",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfw8x00gjwu8cvcpumgrj",
+    "source": "Phase 1 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 1 applied fix in fix-bad-records-phase1.ts for cmtznfw8x00gjwu8cvcpumgrj",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtzng03v00jzwu8cxjca6aj5",
+    "source": "Phase 1 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 1 applied fix in fix-bad-records-phase1.ts for cmtzng03v00jzwu8cxjca6aj5",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtzng2a900m1wu8cs5lt8t6w",
+    "source": "Phase 1 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 1 applied fix in fix-bad-records-phase1.ts for cmtzng2a900m1wu8cs5lt8t6w",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtzngbyn00tvwu8cou0my77a",
+    "source": "Phase 1 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 1 applied fix in fix-bad-records-phase1.ts for cmtzngbyn00tvwu8cou0my77a",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznguxc015xwu8ci9wk4cby",
+    "source": "Phase 1 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 1 applied fix in fix-bad-records-phase1.ts for cmtznguxc015xwu8ci9wk4cby",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznh3xu01brwu8cb7tqnu7g",
+    "source": "Phase 1 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 1 applied fix in fix-bad-records-phase1.ts for cmtznh3xu01brwu8cb7tqnu7g",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a005zwubk0q9fscib",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a005zwubk0q9fscib",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a0060wubkqgj1rfhj",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a0060wubkqgj1rfhj",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a0061wubk7kybxm4t",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a0061wubk7kybxm4t",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a0066wubksx82uzqh",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a0066wubksx82uzqh",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a006ewubkx1rog3vo",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a006ewubkx1rog3vo",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a0078wubkcn60bk4e",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a0078wubkcn60bk4e",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfgk2005kwu8ck9r73toe",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfgk2005kwu8ck9r73toe",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfglq005pwu8cjku3y2ts",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfglq005pwu8cjku3y2ts",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfgml005rwu8c5157b3e4",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfgml005rwu8c5157b3e4",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfh5v0063wu8cmlzlldsc",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfh5v0063wu8cmlzlldsc",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfjax007gwu8c4kl0lyvq",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfjax007gwu8c4kl0lyvq",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfjax007hwu8crym26la0",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfjax007hwu8crym26la0",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfj9a007cwu8csm5bolr8",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfj9a007cwu8csm5bolr8",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfjci007lwu8cmzmbbfhy",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfjci007lwu8cmzmbbfhy",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfjck007nwu8cz8skpkpn",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfjck007nwu8cz8skpkpn",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfjea007pwu8cf9vc33nh",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfjea007pwu8cf9vc33nh",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfkv1008lwu8c2cjlz53j",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfkv1008lwu8c2cjlz53j",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfl3u008vwu8crqn3o8e5",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfl3u008vwu8crqn3o8e5",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfldb0094wu8cpi78sipo",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfldb0094wu8cpi78sipo",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfldb0095wu8c9l6ji2py",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfldb0095wu8c9l6ji2py",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfle30098wu8cehgfd91f",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfle30098wu8cehgfd91f",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznflgr009dwu8cct4keza1",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznflgr009dwu8cct4keza1",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfn4g00anwu8cr2w4ogz0",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfn4g00anwu8cr2w4ogz0",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfnb100arwu8c3i3y2ctb",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfnb100arwu8c3i3y2ctb",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfnda00b1wu8cud3sujf4",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfnda00b1wu8cud3sujf4",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfpkh00c9wu8c8fdf2f97",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfpkh00c9wu8c8fdf2f97",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfpvd00cjwu8cl3uho3t4",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfpvd00cjwu8cl3uho3t4",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfpxg00clwu8cf2vt1no4",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfpxg00clwu8cf2vt1no4",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfrjv00d5wu8cig92cnwf",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfrjv00d5wu8cig92cnwf",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfrjw00dbwu8cugbsnzbe",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfrjw00dbwu8cugbsnzbe",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a006fwubkwijstv5i",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a006fwubkwijstv5i",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a006iwubkbwrjmzqe",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a006iwubkbwrjmzqe",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a006dwubkyjzrug2o",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a006dwubkyjzrug2o",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a0069wubk84wb4411",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a0069wubk84wb4411",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a006bwubkoq0r04gi",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a006bwubkoq0r04gi",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b007iwubk5rpny488",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b007iwubk5rpny488",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b0087wubkoltjvcy5",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b0087wubkoltjvcy5",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfgd0005fwu8c3yqerkva",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfgd0005fwu8c3yqerkva",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfgk3005nwu8cov8gkk2v",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfgk3005nwu8cov8gkk2v",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfh1d005ywu8cxxqzzamc",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfh1d005ywu8cxxqzzamc",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfh1d005zwu8crxots2mg",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfh1d005zwu8crxots2mg",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfh5v0061wu8czuyd597s",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfh5v0061wu8czuyd597s",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfh7u0067wu8cw1wksi50",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfh7u0067wu8cw1wksi50",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfiqi006xwu8ckmnfg1k8",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfiqi006xwu8ckmnfg1k8",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfivs0071wu8cwvz6f902",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfivs0071wu8cwvz6f902",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfiyb0075wu8c2k54stw5",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfiyb0075wu8c2k54stw5",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfj7e0079wu8cwe5v2zci",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfj7e0079wu8cwe5v2zci",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfkv2008nwu8cqokbxluv",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfkv2008nwu8cqokbxluv",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfl1x008rwu8cwkxgtfrp",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfl1x008rwu8cwkxgtfrp",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfl1z008twu8cj6lzvvdl",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfl1z008twu8cj6lzvvdl",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfl430091wu8ccpbg8g4l",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfl430091wu8ccpbg8g4l",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfle30099wu8c59xx488q",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfle30099wu8c59xx488q",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfn1a00adwu8cv0yxlpmg",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfn1a00adwu8cv0yxlpmg",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfn3300ahwu8c931gfpcp",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfn3300ahwu8c931gfpcp",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfn4g00aowu8c6s8a6k4n",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfn4g00aowu8c6s8a6k4n",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfn4g00apwu8cbklwhrxh",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfn4g00apwu8cbklwhrxh",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfpv900cgwu8czv6iuhky",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfpv900cgwu8czv6iuhky",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfpv900chwu8cqx7hr81q",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfpv900chwu8cqx7hr81q",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfpz800cnwu8cg0skg75l",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfpz800cnwu8cg0skg75l",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtznfrls00ddwu8cjcie82eo",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtznfrls00ddwu8cjcie82eo",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b007swubkf6ig8w28",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b007swubkf6ig8w28",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b007uwubklmjr06nd",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b007uwubklmjr06nd",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b007vwubkynsvop5h",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b007vwubkynsvop5h",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2c0093wubkdc7a59yt",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2c0093wubkdc7a59yt",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2c0096wubkbg0fazor",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2c0096wubkbg0fazor",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2c0091wubk9fply9ct",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2c0091wubk9fply9ct",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2c0095wubktnrjemcu",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2c0095wubktnrjemcu",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b008ywubkrjsbjieh",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b008ywubkrjsbjieh",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b008zwubk2r47wljp",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b008zwubk2r47wljp",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b008xwubkljsg5p6e",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b008xwubkljsg5p6e",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2c0092wubkcrnodzsy",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2c0092wubkcrnodzsy",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2c0094wubkcpt0mmgw",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2c0094wubkcpt0mmgw",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a006ywubkubop23eg",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a006ywubkubop23eg",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a006zwubkzyugyatc",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a006zwubkzyugyatc",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a0070wubk2h35kvmu",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a0070wubk2h35kvmu",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a0071wubkpnbaax9g",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a0071wubkpnbaax9g",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a006vwubkfc1u545o",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a006vwubkfc1u545o",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b008lwubkh1n8hzqb",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b008lwubkh1n8hzqb",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b008kwubk4w3854m1",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b008kwubk4w3854m1",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b0089wubk4l3fgyt4",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b0089wubk4l3fgyt4",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b008dwubk93bayp4l",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b008dwubk93bayp4l",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b008awubkocvcrv7j",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b008awubkocvcrv7j",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b0088wubkak3ymt0k",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b0088wubkak3ymt0k",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b008wwubkzjygpk1a",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b008wwubkzjygpk1a",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b008rwubk10jdm293",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b008rwubk10jdm293",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b008qwubkw2aw85qn",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b008qwubkw2aw85qn",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b008uwubktgp2hfkd",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2b008uwubktgp2hfkd",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a006rwubko0xou61f",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a006rwubko0xou61f",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a006owubkj9r0ykwe",
+    "source": "Phase 2 Audit Batch",
+    "verdict": "CORRECTED",
+    "evidenceText": "Phase 2 applied fix in fix-ms-browse-records-phase2.ts for cmtz8kt2a006owubkj9r0ykwe",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8cqif001nwutotggoc1xa",
+    "source": "Phase 2 Unresolved Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "Original MS Browse record cmtz8cqif001nwutotggoc1xa logged as UNRESOLVED in Phase 2 audit",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8ct74001twuton7ild73l",
+    "source": "Phase 2 Unresolved Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "Original MS Browse record cmtz8ct74001twuton7ild73l logged as UNRESOLVED in Phase 2 audit",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0064wubk9qe6dh4t",
+    "source": "Phase 2 Unresolved Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "Original MS Browse record cmtz8kt2a0064wubk9qe6dh4t logged as UNRESOLVED in Phase 2 audit",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0065wubkyjo0nmbj",
+    "source": "Phase 2 Unresolved Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "Original MS Browse record cmtz8kt2a0065wubkyjo0nmbj logged as UNRESOLVED in Phase 2 audit",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007hwubkxkrsra6f",
+    "source": "Phase 2 Unresolved Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "Original MS Browse record cmtz8kt2b007hwubkxkrsra6f logged as UNRESOLVED in Phase 2 audit",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007wwubke24b1yqb",
+    "source": "Phase 2 Unresolved Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "Original MS Browse record cmtz8kt2b007wwubke24b1yqb logged as UNRESOLVED in Phase 2 audit",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0085wubki7eg2b7m",
+    "source": "Phase 2 Unresolved Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "Original MS Browse record cmtz8kt2b0085wubki7eg2b7m logged as UNRESOLVED in Phase 2 audit",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008bwubkkyjapasq",
+    "source": "Phase 2 Unresolved Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "Original MS Browse record cmtz8kt2b008bwubkkyjapasq logged as UNRESOLVED in Phase 2 audit",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008cwubk9v1yeau7",
+    "source": "Phase 2 Unresolved Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "Original MS Browse record cmtz8kt2b008cwubk9v1yeau7 logged as UNRESOLVED in Phase 2 audit",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008ewubkgkr1bijy",
+    "source": "Phase 2 Unresolved Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "Original MS Browse record cmtz8kt2b008ewubkgkr1bijy logged as UNRESOLVED in Phase 2 audit",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008iwubka60onm3j",
+    "source": "Phase 2 Unresolved Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "Original MS Browse record cmtz8kt2b008iwubka60onm3j logged as UNRESOLVED in Phase 2 audit",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008nwubk6dcqjmlw",
+    "source": "Phase 2 Unresolved Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "Original MS Browse record cmtz8kt2b008nwubk6dcqjmlw logged as UNRESOLVED in Phase 2 audit",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpti00cdwu8c49a2t4i7",
+    "source": "Phase 2 Unresolved Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "Original MS Browse record cmtznfpti00cdwu8c49a2t4i7 logged as UNRESOLVED in Phase 2 audit",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a005zwubk0q9fscib",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtz8kt2a005zwubk0q9fscib classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfj7e0079wu8cwe5v2zci",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtznfj7e0079wu8cwe5v2zci classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007swubkf6ig8w28",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtz8kt2b007swubkf6ig8w28 classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfrjw00dbwu8cugbsnzbe",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtznfrjw00dbwu8cugbsnzbe classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0092wubkcrnodzsy",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtz8kt2c0092wubkcrnodzsy classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfldb0095wu8c9l6ji2py",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtznfldb0095wu8c9l6ji2py classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0094wubkcpt0mmgw",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtz8kt2c0094wubkcpt0mmgw classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfivs0071wu8cwvz6f902",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtznfivs0071wu8cwvz6f902 classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfgd0005fwu8c3yqerkva",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtznfgd0005fwu8c3yqerkva classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008qwubkw2aw85qn",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtz8kt2b008qwubkw2aw85qn classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007iwubk5rpny488",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtz8kt2b007iwubk5rpny488 classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpvd00cjwu8cl3uho3t4",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtznfpvd00cjwu8cl3uho3t4 classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006dwubkyjzrug2o",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtz8kt2a006dwubkyjzrug2o classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfh7u0067wu8cw1wksi50",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtznfh7u0067wu8cw1wksi50 classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfn3300ahwu8c931gfpcp",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtznfn3300ahwu8c931gfpcp classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfnb100arwu8c3i3y2ctb",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtznfnb100arwu8c3i3y2ctb classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpv900chwu8cqx7hr81q",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtznfpv900chwu8cqx7hr81q classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0088wubkak3ymt0k",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtz8kt2b0088wubkak3ymt0k classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008awubkocvcrv7j",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtz8kt2b008awubkocvcrv7j classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008lwubkh1n8hzqb",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtz8kt2b008lwubkh1n8hzqb classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008kwubk4w3854m1",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtz8kt2b008kwubk4w3854m1 classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfjck007nwu8cz8skpkpn",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtznfjck007nwu8cz8skpkpn classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0071wubkpnbaax9g",
+    "source": "23-Record Precision Audit Batch",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "23 Precision Batch record cmtz8kt2a0071wubkpnbaax9g classified as UNRESOLVED",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8ce3t000twutou1rfgkzn",
+    "source": "Batch 1 Corrections (Applied)",
+    "verdict": "CORRECTED",
+    "evidenceText": "Batch 1 applied correction in apply-50-batch-corrections.ts for cmtz8ce3t000twutou1rfgkzn",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8cgk0000zwutoylyp8t7b",
+    "source": "Batch 1 Corrections (Applied)",
+    "verdict": "CORRECTED",
+    "evidenceText": "Batch 1 applied correction in apply-50-batch-corrections.ts for cmtz8cgk0000zwutoylyp8t7b",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8cj5t0015wuto7jgpcmwg",
+    "source": "Batch 1 Corrections (Applied)",
+    "verdict": "CORRECTED",
+    "evidenceText": "Batch 1 applied correction in apply-50-batch-corrections.ts for cmtz8cj5t0015wuto7jgpcmwg",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8co29001hwutolduc598z",
+    "source": "Batch 1 Corrections (Applied)",
+    "verdict": "CORRECTED",
+    "evidenceText": "Batch 1 applied correction in apply-50-batch-corrections.ts for cmtz8co29001hwutolduc598z",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8cvt5001zwutomhsqcehq",
+    "source": "Batch 1 Corrections (Applied)",
+    "verdict": "CORRECTED",
+    "evidenceText": "Batch 1 applied correction in apply-50-batch-corrections.ts for cmtz8cvt5001zwutomhsqcehq",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8cy3g0025wutohvhv3bkm",
+    "source": "Batch 1 Corrections (Applied)",
+    "verdict": "CORRECTED",
+    "evidenceText": "Batch 1 applied correction in apply-50-batch-corrections.ts for cmtz8cy3g0025wutohvhv3bkm",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8d0dz002bwutox2dh04k7",
+    "source": "Batch 1 Corrections (Applied)",
+    "verdict": "CORRECTED",
+    "evidenceText": "Batch 1 applied correction in apply-50-batch-corrections.ts for cmtz8d0dz002bwutox2dh04k7",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8d2x3002hwutouru23hdk",
+    "source": "Batch 1 Corrections (Applied)",
+    "verdict": "CORRECTED",
+    "evidenceText": "Batch 1 applied correction in apply-50-batch-corrections.ts for cmtz8d2x3002hwutouru23hdk",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8d5ad002nwutobpc9kjce",
+    "source": "Batch 1 Corrections (Applied)",
+    "verdict": "CORRECTED",
+    "evidenceText": "Batch 1 applied correction in apply-50-batch-corrections.ts for cmtz8d5ad002nwutobpc9kjce",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8d7kt002twutopk8v1e5e",
+    "source": "Batch 1 Corrections (Applied)",
+    "verdict": "CORRECTED",
+    "evidenceText": "Batch 1 applied correction in apply-50-batch-corrections.ts for cmtz8d7kt002twutopk8v1e5e",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8da05002zwutoiktauilz",
+    "source": "Batch 1 Corrections (Applied)",
+    "verdict": "CORRECTED",
+    "evidenceText": "Batch 1 applied correction in apply-50-batch-corrections.ts for cmtz8da05002zwutoiktauilz",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b0082wubkod0ymp4k",
+    "source": "Batch 1 Corrections (Applied)",
+    "verdict": "CORRECTED",
+    "evidenceText": "Batch 1 applied correction in apply-50-batch-corrections.ts for cmtz8kt2b0082wubkod0ymp4k",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a0077wubko9jew8x7",
+    "source": "Batch 1 Corrections (Applied)",
+    "verdict": "CORRECTED",
+    "evidenceText": "Batch 1 applied correction in apply-50-batch-corrections.ts for cmtz8kt2a0077wubko9jew8x7",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2a006cwubk9wff3y9o",
+    "source": "Batch 1 Corrections (Applied)",
+    "verdict": "CORRECTED",
+    "evidenceText": "Batch 1 applied correction in apply-50-batch-corrections.ts for cmtz8kt2a006cwubk9wff3y9o",
+    "evidenceType": "applied-correction"
+  },
+  {
+    "courseId": "cmtz8kt2b007qwubkzkxqbuhs",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1823,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T06:36:40Z\",\"content\":\"I have enough verified da",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007pwubk5npqd7m6",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1823,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T06:36:40Z\",\"content\":\"I have enough verified da",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008swubksnz3b0wq",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1823,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T06:36:40Z\",\"content\":\"I have enough verified da",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznf6i60015wu8cmmo1u3kc",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1823,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T06:36:40Z\",\"content\":\"I have enough verified da",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznf6wv001hwu8cnnxaddyy",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1823,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T06:36:40Z\",\"content\":\"I have enough verified da",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfn1a00abwu8c2emr4qh2",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1823,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T06:36:40Z\",\"content\":\"I have enough verified da",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfrjv00d9wu8cqg4jtk6w",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1823,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T06:36:40Z\",\"content\":\"I have enough verified da",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfw8x00gjwu8cvcpumgrj",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1823,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T06:36:40Z\",\"content\":\"I have enough verified da",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtzng03v00jzwu8cxjca6aj5",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1823,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T06:36:40Z\",\"content\":\"I have enough verified da",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtzng2a900m1wu8cs5lt8t6w",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1823,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T06:36:40Z\",\"content\":\"I have enough verified da",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtzngbyn00tvwu8cou0my77a",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1823,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T06:36:40Z\",\"content\":\"I have enough verified da",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznguxc015xwu8ci9wk4cby",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1823,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T06:36:40Z\",\"content\":\"I have enough verified da",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznh3xu01brwu8cb7tqnu7g",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1823,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T06:36:40Z\",\"content\":\"I have enough verified da",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a005zwubk0q9fscib",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0060wubkqgj1rfhj",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0061wubk7kybxm4t",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0066wubksx82uzqh",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006ewubkx1rog3vo",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0078wubkcn60bk4e",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfgk2005kwu8ck9r73toe",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfglq005pwu8cjku3y2ts",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfgml005rwu8c5157b3e4",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfh5v0063wu8cmlzlldsc",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfjax007gwu8c4kl0lyvq",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfjax007hwu8crym26la0",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfj9a007cwu8csm5bolr8",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfjci007lwu8cmzmbbfhy",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfjck007nwu8cz8skpkpn",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfjea007pwu8cf9vc33nh",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfkv1008lwu8c2cjlz53j",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfl3u008vwu8crqn3o8e5",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfldb0094wu8cpi78sipo",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfldb0095wu8c9l6ji2py",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfle30098wu8cehgfd91f",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznflgr009dwu8cct4keza1",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfn4g00anwu8cr2w4ogz0",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfnb100arwu8c3i3y2ctb",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfnda00b1wu8cud3sujf4",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpkh00c9wu8c8fdf2f97",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpvd00cjwu8cl3uho3t4",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpxg00clwu8cf2vt1no4",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfrjv00d5wu8cig92cnwf",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfrjw00dbwu8cugbsnzbe",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006fwubkwijstv5i",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006iwubkbwrjmzqe",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006dwubkyjzrug2o",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0069wubk84wb4411",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006bwubkoq0r04gi",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007iwubk5rpny488",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0087wubkoltjvcy5",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfgd0005fwu8c3yqerkva",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfgk3005nwu8cov8gkk2v",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfh1d005ywu8cxxqzzamc",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfh1d005zwu8crxots2mg",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfh5v0061wu8czuyd597s",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfh7u0067wu8cw1wksi50",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfiqi006xwu8ckmnfg1k8",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfivs0071wu8cwvz6f902",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfiyb0075wu8c2k54stw5",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfj7e0079wu8cwe5v2zci",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfkv2008nwu8cqokbxluv",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfl1x008rwu8cwkxgtfrp",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfl1z008twu8cj6lzvvdl",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfl430091wu8ccpbg8g4l",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfle30099wu8c59xx488q",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfn1a00adwu8cv0yxlpmg",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfn3300ahwu8c931gfpcp",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfn4g00aowu8c6s8a6k4n",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfn4g00apwu8cbklwhrxh",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpv900cgwu8czv6iuhky",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpv900chwu8cqx7hr81q",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpz800cnwu8cg0skg75l",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfrls00ddwu8cjcie82eo",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007swubkf6ig8w28",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007uwubklmjr06nd",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007vwubkynsvop5h",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0093wubkdc7a59yt",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0096wubkbg0fazor",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0091wubk9fply9ct",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0095wubktnrjemcu",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008ywubkrjsbjieh",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008zwubk2r47wljp",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008xwubkljsg5p6e",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0092wubkcrnodzsy",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0094wubkcpt0mmgw",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006ywubkubop23eg",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006zwubkzyugyatc",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0070wubk2h35kvmu",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0071wubkpnbaax9g",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006vwubkfc1u545o",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008lwubkh1n8hzqb",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008kwubk4w3854m1",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0089wubk4l3fgyt4",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008dwubk93bayp4l",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008awubkocvcrv7j",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0088wubkak3ymt0k",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008wwubkzjygpk1a",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008rwubk10jdm293",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008qwubkw2aw85qn",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008uwubktgp2hfkd",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006rwubko0xou61f",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006owubkj9r0ykwe",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1871,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T07:52:14Z\",\"content\":\"I have all the URL verifi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpv900cgwu8czv6iuhky",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpv900chwu8cqx7hr81q",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpz800cnwu8cg0skg75l",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfrls00ddwu8cjcie82eo",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007swubkf6ig8w28",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007uwubklmjr06nd",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007vwubkynsvop5h",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0093wubkdc7a59yt",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0096wubkbg0fazor",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0091wubk9fply9ct",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0095wubktnrjemcu",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008ywubkrjsbjieh",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008zwubk2r47wljp",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008xwubkljsg5p6e",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0092wubkcrnodzsy",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0094wubkcpt0mmgw",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006ywubkubop23eg",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006zwubkzyugyatc",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0070wubk2h35kvmu",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0071wubkpnbaax9g",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006vwubkfc1u545o",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008lwubkh1n8hzqb",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008kwubk4w3854m1",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0089wubk4l3fgyt4",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008dwubk93bayp4l",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008awubkocvcrv7j",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0088wubkak3ymt0k",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008wwubkzjygpk1a",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008rwubk10jdm293",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008qwubkw2aw85qn",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008uwubktgp2hfkd",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006rwubko0xou61f",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006owubkj9r0ykwe",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":1912,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:04:57Z\",\"content\":\"Created At: 2026-09-14T08:04:57Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfjck007nwu8cz8skpkpn",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008awubkocvcrv7j",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0071wubkpnbaax9g",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008nwubk6dcqjmlw",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0064wubk9qe6dh4t",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007wwubke24b1yqb",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0065wubkyjo0nmbj",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007hwubkxkrsra6f",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8d7kt002twutopk8v1e5e",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8cvt5001zwutomhsqcehq",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8cj5t0015wuto7jgpcmwg",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8ce3t000twutou1rfgkzn",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8cqif001nwutotggoc1xa",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8cgk0000zwutoylyp8t7b",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8d2x3002hwutouru23hdk",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8ct74001twuton7ild73l",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008iwubka60onm3j",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0085wubki7eg2b7m",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008ewubkgkr1bijy",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008cwubk9v1yeau7",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008bwubkkyjapasq",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpti00cdwu8c49a2t4i7",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1926,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:08:13Z\",\"content\":\"### **Post-Apply Strict A",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a005zwubk0q9fscib",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfj7e0079wu8cwe5v2zci",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007swubkf6ig8w28",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfrjw00dbwu8cugbsnzbe",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0092wubkcrnodzsy",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfldb0095wu8c9l6ji2py",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0094wubkcpt0mmgw",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfivs0071wu8cwvz6f902",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfgd0005fwu8c3yqerkva",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008qwubkw2aw85qn",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007iwubk5rpny488",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpvd00cjwu8cl3uho3t4",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006dwubkyjzrug2o",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfh7u0067wu8cw1wksi50",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfn3300ahwu8c931gfpcp",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfnb100arwu8c3i3y2ctb",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfpv900chwu8cqx7hr81q",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0088wubkak3ymt0k",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008awubkocvcrv7j",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008lwubkh1n8hzqb",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008kwubk4w3854m1",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznfjck007nwu8cz8skpkpn",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0071wubkpnbaax9g",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":1956,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:15:32Z\",\"thinking\":\"**Discovering Figma Reso",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0081wubk2hgpx9be",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007cwubk1cqyq4dg",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007twubkpxb69tfr",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008iwubka60onm3j",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006mwubkc8kymhem",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007xwubkc5mk6cu2",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006qwubkrcz38sk3",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0077wubko9jew8x7",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006cwubk9wff3y9o",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007lwubk7hypmkwp",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007kwubkch4wq3bh",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007ewubk4yafo7g9",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006nwubksnuos7fn",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0090wubkfeg8grwq",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007dwubkth27wc2h",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006lwubky606c2si",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007rwubkul3yaf8s",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2003,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:36Z\",\"content\":\"Created At: 2026-09-14T08:22:3",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8ce3t000twutou1rfgkzn",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2005,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:41Z\",\"thinking\":\"**Reviewing Initial Audi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8cgk0000zwutoylyp8t7b",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2005,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:41Z\",\"thinking\":\"**Reviewing Initial Audi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8cj5t0015wuto7jgpcmwg",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2005,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:41Z\",\"thinking\":\"**Reviewing Initial Audi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8co29001hwutolduc598z",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2005,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:41Z\",\"thinking\":\"**Reviewing Initial Audi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8cvt5001zwutomhsqcehq",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2005,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:41Z\",\"thinking\":\"**Reviewing Initial Audi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8cy3g0025wutohvhv3bkm",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2005,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:41Z\",\"thinking\":\"**Reviewing Initial Audi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8d0dz002bwutox2dh04k7",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2005,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:41Z\",\"thinking\":\"**Reviewing Initial Audi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8d2x3002hwutouru23hdk",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2005,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:41Z\",\"thinking\":\"**Reviewing Initial Audi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8d5ad002nwutobpc9kjce",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2005,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:41Z\",\"thinking\":\"**Reviewing Initial Audi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8d7kt002twutopk8v1e5e",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2005,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:41Z\",\"thinking\":\"**Reviewing Initial Audi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8da05002zwutoiktauilz",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2005,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:41Z\",\"thinking\":\"**Reviewing Initial Audi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0082wubkod0ymp4k",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2005,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:41Z\",\"thinking\":\"**Reviewing Initial Audi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0077wubko9jew8x7",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2005,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:41Z\",\"thinking\":\"**Reviewing Initial Audi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006cwubk9wff3y9o",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2005,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:22:41Z\",\"thinking\":\"**Reviewing Initial Audi",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008iwubka60onm3j",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006mwubkc8kymhem",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007xwubkc5mk6cu2",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006qwubkrcz38sk3",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007lwubk7hypmkwp",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007kwubkch4wq3bh",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007ewubk4yafo7g9",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0077wubko9jew8x7",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006cwubk9wff3y9o",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006nwubksnuos7fn",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2c0090wubkfeg8grwq",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007dwubkth27wc2h",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006lwubky606c2si",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007rwubkul3yaf8s",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008gwubkn5gva70b",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2034,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:29:14Z\",\"content\":\"Created At: 2026-09-14T08:29:1",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0082wubkod0ymp4k",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2106,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:34:52Z\",\"content\":\"Created At: 2026-09-14T08:34:52Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0077wubko9jew8x7",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2106,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:34:52Z\",\"content\":\"Created At: 2026-09-14T08:34:52Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006cwubk9wff3y9o",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "CORRECTED",
+    "evidenceText": "{\"step_index\":2106,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:34:52Z\",\"content\":\"Created At: 2026-09-14T08:34:52Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007rwubkul3yaf8s",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2168,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:03Z\",\"thinking\":\"**Identifying Past Overs",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007twubkpxb69tfr",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2168,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:03Z\",\"thinking\":\"**Identifying Past Overs",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007xwubkc5mk6cu2",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2168,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:03Z\",\"thinking\":\"**Identifying Past Overs",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0081wubk2hgpx9be",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2168,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:03Z\",\"thinking\":\"**Identifying Past Overs",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0084wubkm8f058d0",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2168,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:03Z\",\"thinking\":\"**Identifying Past Overs",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008mwubkmw5fvmtw",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2168,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:03Z\",\"thinking\":\"**Identifying Past Overs",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008pwubkt0hzh852",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2168,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:03Z\",\"thinking\":\"**Identifying Past Overs",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0082wubkod0ymp4k",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2168,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:03Z\",\"thinking\":\"**Identifying Past Overs",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007rwubkul3yaf8s",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007twubkpxb69tfr",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007xwubkc5mk6cu2",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0081wubk2hgpx9be",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0084wubkm8f058d0",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008mwubkmw5fvmtw",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008pwubkt0hzh852",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0082wubkod0ymp4k",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a005vwubkctvssygi",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a005wwubkiibwfo5t",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a005xwubk7g4rpauq",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0063wubk2is06d2e",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0067wubkzufqgps2",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0068wubkq0tsnj4r",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006awubk5mqbwve9",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006gwubkqt81ffmk",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006hwubkagg7kmh6",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006jwubkkfahdyjx",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006twubk0fl511nr",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a006uwubk39pbwmn4",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0073wubkmfg1ylgk",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0075wubkoubv9e5j",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2a0076wubkfh4t6c03",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007fwubklarhwqzr",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007jwubkxlhilupp",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznf65p000twu8ccthfcguy",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznf6ad000vwu8cyzpevsf4",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtznf6ae000zwu8c3dares8x",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "VERIFIED",
+    "evidenceText": "{\"step_index\":2180,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:39:41Z\",\"content\":\"### **Authoritative Histo",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007rwubkul3yaf8s",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2195,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:41:28Z\",\"thinking\":\"**Analyzing Index Struct",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007twubkpxb69tfr",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2195,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:41:28Z\",\"thinking\":\"**Analyzing Index Struct",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007xwubkc5mk6cu2",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2195,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:41:28Z\",\"thinking\":\"**Analyzing Index Struct",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0081wubk2hgpx9be",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2195,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:41:28Z\",\"thinking\":\"**Analyzing Index Struct",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0084wubkm8f058d0",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2195,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:41:28Z\",\"thinking\":\"**Analyzing Index Struct",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008mwubkmw5fvmtw",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2195,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:41:28Z\",\"thinking\":\"**Analyzing Index Struct",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008pwubkt0hzh852",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2195,\"source\":\"MODEL\",\"type\":\"PLANNER_RESPONSE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:41:28Z\",\"thinking\":\"**Analyzing Index Struct",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007rwubkul3yaf8s",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2199,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:41:43Z\",\"content\":\"Created At: 2026-09-14T08:41:4",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007twubkpxb69tfr",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2199,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:41:43Z\",\"content\":\"Created At: 2026-09-14T08:41:4",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007xwubkc5mk6cu2",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2199,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:41:43Z\",\"content\":\"Created At: 2026-09-14T08:41:4",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0081wubk2hgpx9be",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2199,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:41:43Z\",\"content\":\"Created At: 2026-09-14T08:41:4",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0084wubkm8f058d0",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2199,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:41:43Z\",\"content\":\"Created At: 2026-09-14T08:41:4",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008mwubkmw5fvmtw",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2199,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:41:43Z\",\"content\":\"Created At: 2026-09-14T08:41:4",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008pwubkt0hzh852",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2199,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:41:43Z\",\"content\":\"Created At: 2026-09-14T08:41:4",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007rwubkul3yaf8s",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2211,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:17Z\",\"content\":\"Created At: 2026-09-14T08:42:17Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007twubkpxb69tfr",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2211,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:17Z\",\"content\":\"Created At: 2026-09-14T08:42:17Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b007xwubkc5mk6cu2",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2211,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:17Z\",\"content\":\"Created At: 2026-09-14T08:42:17Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0081wubk2hgpx9be",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2211,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:17Z\",\"content\":\"Created At: 2026-09-14T08:42:17Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0084wubkm8f058d0",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2211,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:17Z\",\"content\":\"Created At: 2026-09-14T08:42:17Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008mwubkmw5fvmtw",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2211,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:17Z\",\"content\":\"Created At: 2026-09-14T08:42:17Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b008pwubkt0hzh852",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2211,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:17Z\",\"content\":\"Created At: 2026-09-14T08:42:17Z",
+    "evidenceType": "completed-report"
+  },
+  {
+    "courseId": "cmtz8kt2b0082wubkod0ymp4k",
+    "source": "Transcript Completed Audit Report",
+    "verdict": "UNRESOLVED",
+    "evidenceText": "{\"step_index\":2211,\"source\":\"MODEL\",\"type\":\"VIEW_FILE\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:17Z\",\"content\":\"Created At: 2026-09-14T08:42:17Z",
+    "evidenceType": "completed-report"
+  }
+]

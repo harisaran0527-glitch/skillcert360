@@ -1,0 +1,1844 @@
+[
+  {
+    "courseId": "cmtz8c3r60005wutobaup4si1",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2049,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:30:52Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8c6ae000bwuto8t9d5ppd",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2049,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:30:52Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8c8qf000hwutodhy5j2ii",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2049,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:30:52Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8cb5i000nwuto9w6g6fq7",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2049,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:30:52Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8cljr001bwutobinffiru",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2049,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:30:52Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b008twubk818otz3d",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a0072wubkf9lsg017",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b0079wubkfn6u4kc4",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b008hwubkosv8sizd",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b007gwubkg94hmyh2",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b007mwubkfl84e1ue",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b008owubk44r2uqml",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b0080wubkfik8dguw",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b008fwubki6u7f1vd",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b0086wubkvoraszhh",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a006wwubkv9rqk88r",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a006xwubkc6sg6i1a",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b007bwubkaradnmos",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a0074wubkf3yiuikf",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b007awubksu6ej2ai",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a006pwubk3o2d90t3",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a006swubk40aeal8k",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a006kwubkpr981dkj",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a005ywubkgf9t0wt3",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2091,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:33:35Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b007nwubkc8m7twuu",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2163,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:37:53Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b007owubkf8ogfrbq",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2163,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:37:53Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b007ywubkshzm0v42",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2163,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:37:53Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b007zwubko5s3cwnx",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2163,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:37:53Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b0080wubkfik8dguw",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2163,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:37:53Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b0083wubkn1vz6q0l",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2163,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:37:53Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b0086wubkvoraszhh",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2163,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:37:53Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b008fwubki6u7f1vd",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2163,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:37:53Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b008hwubkosv8sizd",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2163,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:37:53Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b008jwubkh53cjhh6",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2163,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:37:53Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b008owubk44r2uqml",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2163,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:37:53Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b008twubk818otz3d",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2163,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:37:53Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8c3r60005wutobaup4si1",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8c6ae000bwuto8t9d5ppd",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8c8qf000hwutodhy5j2ii",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8cb5i000nwuto9w6g6fq7",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8cljr001bwutobinffiru",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a005ywubkgf9t0wt3",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a0062wubkn3qegs98",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a006kwubkpr981dkj",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a006pwubk3o2d90t3",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a006swubk40aeal8k",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a006wwubkv9rqk88r",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a006xwubkc6sg6i1a",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a0072wubkf9lsg017",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2a0074wubkf3yiuikf",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b0079wubkfn6u4kc4",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b007awubksu6ej2ai",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b007bwubkaradnmos",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b007gwubkg94hmyh2",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b007mwubkfl84e1ue",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtz8kt2b007nwubkc8m7twuu",
+    "source": "Transcript Candidate Preview",
+    "evidenceText": "{\"step_index\":2208,\"source\":\"MODEL\",\"type\":\"RUN_COMMAND\",\"status\":\"DONE\",\"created_at\":\"2026-09-14T08:42:08Z\",\"content\":\"",
+    "reason": "Appeared in candidate preview or selection output before audit"
+  },
+  {
+    "courseId": "cmtztkxvy0000wuas8bstob0m",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztkxvy0000wuas8bstob0m appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzz95lh00f5wuogh16ac9fi",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzz95lh00f5wuogh16ac9fi appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztlps300jxwu3wfrc244bn",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztlps300jxwu3wfrc244bn appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzuz92d0000wubkri6ih5aj",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzuz92d0000wubkri6ih5aj appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzv8caj0000wus49ab599v0",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzv8caj0000wus49ab599v0 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzt8bei0000wu5svu4997km",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzt8bei0000wu5svu4997km appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg2s1t000rwud86zaiux4h",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg2s1t000rwud86zaiux4h appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg2zvx000uwud8y6omhuff",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg2zvx000uwud8y6omhuff appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg366y000xwud83a059718",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg366y000xwud83a059718 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg3j2n001swud8ryv2ol2u",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg3j2n001swud8ryv2ol2u appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg3os0001xwud8iujxnof6",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg3os0001xwud8iujxnof6 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg3s8k0020wud8zz4jmmci",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg3s8k0020wud8zz4jmmci appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg3z450023wud8xamjahu7",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg3z450023wud8xamjahu7 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg4d0q0026wud8lsuyl429",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg4d0q0026wud8lsuyl429 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg4o0t002dwud8uie6kkrq",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg4o0t002dwud8uie6kkrq appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg5rkb000cwu2g9nytnwkf",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg5rkb000cwu2g9nytnwkf appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg5x1c000fwu2gsihqonrk",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg5x1c000fwu2gsihqonrk appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg64pp000iwu2gux1ka22j",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg64pp000iwu2gux1ka22j appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg6av8000lwu2g79haeasb",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg6av8000lwu2g79haeasb appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzfxnpu000cwu685sz5ogog",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzfxnpu000cwu685sz5ogog appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzfxw7s000fwu68o8yh4cja",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzfxw7s000fwu68o8yh4cja appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzfyiot000cwu5kwxb34a67",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzfyiot000cwu5kwxb34a67 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzfz9oq000cwu8cdejnmync",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzfz9oq000cwu8cdejnmync appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzfzzb3000cwuys00nskvxq",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzfzzb3000cwuys00nskvxq appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg0qyd000cwuvgusdeed0m",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg0qyd000cwuvgusdeed0m appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg0x1i000fwuvgcotjd7vq",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg0x1i000fwuvgcotjd7vq appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg1v9i000cwud82el82rs1",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg1v9i000cwud82el82rs1 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg210w000fwud86by8e8j3",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg210w000fwud86by8e8j3 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg27qo000iwud8n122zfgt",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg27qo000iwud8n122zfgt appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg2dwm000lwud8y9txbi3r",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg2dwm000lwud8y9txbi3r appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg2mb9000owud8j6ortfex",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg2mb9000owud8j6ortfex appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztbim4000fwulgs05oat2r",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztbim4000fwulgs05oat2r appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztc7e20000wu0c12k30e4z",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztc7e20000wu0c12k30e4z appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzta5z00000wulgnjqio330",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzta5z00000wulgnjqio330 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzti3go000fwu78xfpk8pax",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzti3go000fwu78xfpk8pax appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztm8yb000fwuasbxn3no00",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztm8yb000fwuasbxn3no00 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztoxsy0000wuawmen9v0mp",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztoxsy0000wuawmen9v0mp appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztu6em000fwu9whz0voem0",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztu6em000fwu9whz0voem0 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzz8ej00000wuhgn04shfta",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzz8ej00000wuhgn04shfta appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzzj7b50000wu0gsm1l5cmp",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzzj7b50000wu0gsm1l5cmp appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzzn2rk0000wu6s09i59itr",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzzn2rk0000wu6s09i59itr appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzv07wf00v0wu3wfhpuvj5c",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzv07wf00v0wu3wfhpuvj5c appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztpq6c00lxwu3wdvb9knt9",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztpq6c00lxwu3wdvb9knt9 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztq8jv000fwuaw96j21q0l",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztq8jv000fwuaw96j21q0l appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztsvn20000wu9wcnxwbae4",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztsvn20000wu9wcnxwbae4 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzttnpu00newu3wog9hfs9r",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzttnpu00newu3wog9hfs9r appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztb1gn00ggwu3wcrxhkstz",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztb1gn00ggwu3wcrxhkstz appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztd1yx00h0wu3w0orutcd0",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztd1yx00h0wu3w0orutcd0 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztgttk0000wu782rjdid1j",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztgttk0000wu782rjdid1j appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzthmgp00hxwu3wjbg67lki",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzthmgp00hxwu3wjbg67lki appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngtkk014lwu8c6tzd5h14",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngtkk014lwu8c6tzd5h14 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh3l001bhwu8chq369g57",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh3l001bhwu8chq369g57 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh1oi019xwu8c72qlo234",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh1oi019xwu8c72qlo234 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngzxm019ewu8c7fgvzixo",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngzxm019ewu8c7fgvzixo appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngy780186wu8cm7dignbw",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngy780186wu8cm7dignbw appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngvry0168wu8cm5ez1hb7",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngvry0168wu8cm5ez1hb7 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngtay014dwu8cv7riz5gg",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngtay014dwu8cv7riz5gg appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngqhy012wwu8ckgxays6e",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngqhy012wwu8ckgxays6e appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngvrz016jwu8cjougqjgl",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngvrz016jwu8cjougqjgl appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngn7u0117wu8cv1ydrucu",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngn7u0117wu8cv1ydrucu appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngmzp010xwu8cl3848czf",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngmzp010xwu8cl3848czf appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngqt2013bwu8cjj6orz9m",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngqt2013bwu8cjj6orz9m appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh1fl019uwu8caimcrjnp",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh1fl019uwu8caimcrjnp appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngtkm014qwu8c7qq89z0w",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngtkm014qwu8c7qq89z0w appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh39b01b7wu8cqahbbkc1",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh39b01b7wu8cqahbbkc1 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngw28016owu8cyvgg6f5u",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngw28016owu8cyvgg6f5u appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngmzp010zwu8cqvupx7bo",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngmzp010zwu8cqvupx7bo appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngtkk014kwu8czro6mvdd",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngtkk014kwu8czro6mvdd appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngtay014fwu8cklof2yzi",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngtay014fwu8cklof2yzi appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngn8b0119wu8cypyy8yyq",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngn8b0119wu8cypyy8yyq appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngn9y011dwu8cnrbeh081",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngn9y011dwu8cnrbeh081 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngtmd014xwu8colhe6n68",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngtmd014xwu8colhe6n68 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngn720111wu8chpetfodn",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngn720111wu8chpetfodn appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngy45017ywu8c59t0d7sq",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngy45017ywu8c59t0d7sq appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngvrx0165wu8cknn593dr",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngvrx0165wu8cknn593dr appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngvry016ewu8cm2sou9go",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngvry016ewu8cm2sou9go appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngyep018ewu8c8d19ng0t",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngyep018ewu8c8d19ng0t appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngqhy012xwu8cso5v7lxo",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngqhy012xwu8cso5v7lxo appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngnhv011mwu8cidtdn3p8",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngnhv011mwu8cidtdn3p8 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh38o01azwu8cd9qzgnzj",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh38o01azwu8cd9qzgnzj appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngw28016rwu8ce6jzww8y",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngw28016rwu8ce6jzww8y appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh3ir01bfwu8c94rj13ut",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh3ir01bfwu8c94rj13ut appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh3b801bdwu8ca1mw6kq4",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh3b801bdwu8ca1mw6kq4 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngtmc014vwu8cmv2vhxzp",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngtmc014vwu8cmv2vhxzp appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngy45017vwu8c6m88lvc9",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngy45017vwu8c6m88lvc9 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh1t301a3wu8cd4451p66",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh1t301a3wu8cd4451p66 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngqhz012zwu8cd0t22yi7",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngqhz012zwu8cd0t22yi7 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngq8m012rwu8ce912z4q3",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngq8m012rwu8ce912z4q3 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngy45017zwu8cwuwajcrx",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngy45017zwu8cwuwajcrx appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh3b801bbwu8c3nn9urs9",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh3b801bbwu8c3nn9urs9 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngtkk014jwu8cxwwzdxjx",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngtkk014jwu8cxwwzdxjx appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngn9z011fwu8ccb4whsr0",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngn9z011fwu8ccb4whsr0 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh1p5019zwu8cyiad2xr1",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh1p5019zwu8cyiad2xr1 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngqir0139wu8cfqerbb21",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngqir0139wu8cfqerbb21 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngvi50163wu8ckuleaa4c",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngvi50163wu8ckuleaa4c appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngydp018bwu8cjac8fcof",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngydp018bwu8cjac8fcof appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngzxm019fwu8cf2w8u88u",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngzxm019fwu8cf2w8u88u appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngq6c012pwu8caqde37ei",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngq6c012pwu8caqde37ei appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngttz014zwu8c4304b3gc",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngttz014zwu8c4304b3gc appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh1r601a1wu8c3i8qaidq",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh1r601a1wu8c3i8qaidq appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngvry016bwu8csqnexza5",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngvry016bwu8csqnexza5 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh1fl019swu8c0lxfg5io",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh1fl019swu8c0lxfg5io appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh1cp019hwu8cfd6sx35e",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh1cp019hwu8cfd6sx35e appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngqvf013fwu8cxpcda6mc",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngqvf013fwu8cxpcda6mc appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzfxlyv0007wu68w4is5226",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzfxlyv0007wu68w4is5226 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzfxn55000bwu68tfd61nyy",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzfxn55000bwu68tfd61nyy appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzfyi1o000bwu5kp00v4zex",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzfyi1o000bwu5kp00v4zex appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzfz9ay000bwu8cnshktpo6",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzfz9ay000bwu8cnshktpo6 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzfzytx000bwuysyckrpb6d",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzfzytx000bwuysyckrpb6d appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg0qhi000bwuvgstlz9kv9",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg0qhi000bwuvgstlz9kv9 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg1uoo000bwud8rfncv05s",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg1uoo000bwud8rfncv05s appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzg5r1i000bwu2g999ij3oi",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzg5r1i000bwu2g999ij3oi appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngxug017rwu8cfbs4smnh",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngxug017rwu8cfbs4smnh appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngqhy012vwu8cxnv3dsu0",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngqhy012vwu8cxnv3dsu0 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngy3u017twu8cr4vechaj",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngy3u017twu8cr4vechaj appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngtax014bwu8cs7pk8fza",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngtax014bwu8cs7pk8fza appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngvi40161wu8ctx7lu2aq",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngvi40161wu8ctx7lu2aq appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh39501b3wu8cnva4fdcg",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh39501b3wu8cnva4fdcg appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngydj0189wu8czegfr6gp",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngydj0189wu8czegfr6gp appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngnhv011nwu8cwip1slbc",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngnhv011nwu8cwip1slbc appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngtkm014rwu8cz0764on5",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngtkm014rwu8cz0764on5 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngqip0133wu8cyaugnxxj",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngqip0133wu8cyaugnxxj appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh1fl019vwu8clk89ypbp",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh1fl019vwu8clk89ypbp appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngmzo010vwu8cru8rsdew",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngmzo010vwu8cru8rsdew appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngvi40160wu8cowib20bp",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngvi40160wu8cowib20bp appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzzj8wu0007wu0gzbft6qq4",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzzj8wu0007wu0gzbft6qq4 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztbmfh000lwulg852w2uew",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztbmfh000lwulg852w2uew appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztc8yi0007wu0chvldccne",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztc8yi0007wu0chvldccne appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztgvbq0007wu78eaffep8a",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztgvbq0007wu78eaffep8a appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztkz9h0007wuass2rrfrm4",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztkz9h0007wuass2rrfrm4 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztqbvj000lwuawg6zd4ajw",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztqbvj000lwuawg6zd4ajw appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztsx9n0007wu9w0gy4sfd1",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztsx9n0007wu9w0gy4sfd1 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzzn4h60007wu6s71f6dowc",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzzn4h60007wu6s71f6dowc appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzv8dw90007wus4zmpckdqw",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzv8dw90007wus4zmpckdqw appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzuzari0007wubkoc1om6ve",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzuzari0007wubkoc1om6ve appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzz8g5j0007wuhgcj8fibrl",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzz8g5j0007wuhgcj8fibrl appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzta7hi0007wulgxwf538f5",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzta7hi0007wulgxwf538f5 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzti6wa000lwu782o29n6en",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzti6wa000lwu782o29n6en appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztmcjr000lwuaslo43ea56",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztmcjr000lwuaslo43ea56 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztoz6f0007wuawo5z8xir3",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztoz6f0007wuawo5z8xir3 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtztu9rv000lwu9wd04d6r9n",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtztu9rv000lwu9wd04d6r9n appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8cn8w001fwuto6tejaiqt",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8cn8w001fwuto6tejaiqt appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngs73013pwu8c9v7ca9dz",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngs73013pwu8c9v7ca9dz appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngz0l018qwu8c2mwpk1n1",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngz0l018qwu8c2mwpk1n1 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngu710155wu8cv6fbxdtl",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngu710155wu8cv6fbxdtl appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngwls016xwu8c1b3hhhbx",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngwls016xwu8c1b3hhhbx appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh3xu01btwu8cxedueoob",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh3xu01btwu8cxedueoob appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngzc00199wu8cr94ehie1",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngzc00199wu8cr94ehie1 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngog2012ewu8cklck8bf8",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngog2012ewu8cklck8bf8 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngue7015bwu8cnek8k1ij",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngue7015bwu8cnek8k1ij appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngshv013xwu8chlo8iixb",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngshv013xwu8chlo8iixb appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh2jx01anwu8c4x7nnacq",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh2jx01anwu8c4x7nnacq appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngo4g011rwu8cnk4h5lbo",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngo4g011rwu8cnk4h5lbo appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngwg9016twu8c7oewau52",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngwg9016twu8c7oewau52 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznguh9015dwu8cb8tmvz4y",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznguh9015dwu8cb8tmvz4y appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh46a01c1wu8coxdd1pty",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh46a01c1wu8coxdd1pty appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh2nt01atwu8cltfz3jgm",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh2nt01atwu8cltfz3jgm appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznh24b01a7wu8cc4csarzv",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznh24b01a7wu8cc4csarzv appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngz5j018xwu8ccn685r0l",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngz5j018xwu8ccn685r0l appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngx150175wu8cw0q4d2l6",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngx150175wu8cw0q4d2l6 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngudf0157wu8ctbr7fdu7",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngudf0157wu8ctbr7fdu7 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngsbs013rwu8caymt2h2k",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngsbs013rwu8caymt2h2k appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzngx6o017dwu8c9kqg3tz4",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzngx6o017dwu8c9kqg3tz4 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznd0t9000dwu9seymm1rme",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznd0t9000dwu9seymm1rme appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznd1g7000fwu9sbx7crsdi",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznd1g7000fwu9sbx7crsdi appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznd2mo000iwu9si3568sku",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznd2mo000iwu9si3568sku appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznd1oy000gwu9sym0ldmhu",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznd1oy000gwu9sym0ldmhu appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznd2d9000hwu9sdhp6lamy",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznd2d9000hwu9sdhp6lamy appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznd2we000jwu9srd5emqg7",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznd2we000jwu9srd5emqg7 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznd35q000kwu9s58dm3mu9",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznd35q000kwu9s58dm3mu9 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznd3f4000lwu9stn5novtw",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznd3f4000lwu9stn5novtw appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8c2690001wutopv21lvnt",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8c2690001wutopv21lvnt appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gf6g001awujoefu8ca3v",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gf6g001awujoefu8ca3v appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gfw6001bwujo69xy97k9",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gfw6001bwujo69xy97k9 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8ggre001cwujohye1q31o",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8ggre001cwujohye1q31o appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8ghgz001dwujofdj9fw3i",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8ghgz001dwujofdj9fw3i appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8giy6001fwujoy6bd1p54",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8giy6001fwujoy6bd1p54 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gjqn001gwujotva4hshr",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gjqn001gwujotva4hshr appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gklo001hwujoh1m0shnr",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gklo001hwujoh1m0shnr appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8glcc001iwujosnjb7lc9",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8glcc001iwujosnjb7lc9 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gmox001kwujo7bnkcm92",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gmox001kwujo7bnkcm92 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gnbj001lwujoc20fgt8h",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gnbj001lwujoc20fgt8h appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8go12001mwujo067o2015",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8go12001mwujo067o2015 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8goqq001nwujo1r632mc0",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8goqq001nwujo1r632mc0 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gq5t001pwujok2to6x3n",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gq5t001pwujok2to6x3n appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gqvg001qwujogh7fs750",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gqvg001qwujogh7fs750 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8grl4001rwujo4ub1p98c",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8grl4001rwujo4ub1p98c appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gsao001swujo5f1glhfd",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gsao001swujo5f1glhfd appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzncynt0005wu9s85zgb9jw",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzncynt0005wu9s85zgb9jw appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzncxbg0000wu9sr66gk6ny",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzncxbg0000wu9sr66gk6ny appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzncz6g0007wu9swfz83di6",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzncz6g0007wu9swfz83di6 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzncyx10006wu9srgdeaw01",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzncyx10006wu9srgdeaw01 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznczh70008wu9sii94wue2",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznczh70008wu9sii94wue2 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznd0jy000cwu9s5cog7vg6",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznd0jy000cwu9s5cog7vg6 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznd09q000bwu9sinn4xh2l",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznd09q000bwu9sinn4xh2l appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznd00h000awu9s9470dyt8",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznd00h000awu9s9470dyt8 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gtpx001uwujosbhva13n",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gtpx001uwujosbhva13n appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8guia001vwujo5hyn6xt3",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8guia001vwujo5hyn6xt3 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gv7y001wwujopz4ixdzx",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gv7y001wwujopz4ixdzx appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gvxj001xwujood423v5h",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gvxj001xwujood423v5h appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gwnb001ywujoas3szbw4",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gwnb001ywujoas3szbw4 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzncxkq0001wu9sv9i3fh5q",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzncxkq0001wu9sv9i3fh5q appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzncxvo0002wu9s8l0mr44e",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzncxvo0002wu9s8l0mr44e appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzncye70004wu9slogfw9af",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzncye70004wu9slogfw9af appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gxcv001zwujoa7ja8tly",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gxcv001zwujoa7ja8tly appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gy510020wujowhewpr56",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gy510020wujowhewpr56 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gyut0021wujour2dzxqa",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gyut0021wujour2dzxqa appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gzkd0022wujorfrcexl8",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gzkd0022wujorfrcexl8 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8h0a00023wujolhyvfyhq",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8h0a00023wujolhyvfyhq appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8h0zo0024wujopbyxg0a7",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8h0zo0024wujopbyxg0a7 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8k2wc0025wubc2ytx5u2t",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8k2wc0025wubc2ytx5u2t appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8k3m10026wubcra6p517p",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8k3m10026wubcra6p517p appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8k4b20027wubc1ea2rok9",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8k4b20027wubc1ea2rok9 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8k5410028wubciaikfbo5",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8k5410028wubciaikfbo5 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8k5tl0029wubcvjitfm2e",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8k5tl0029wubcvjitfm2e appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8k6ma002awubcpw4eb9l5",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8k6ma002awubcpw4eb9l5 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8k78s002bwubc1osl9bkk",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8k78s002bwubc1osl9bkk appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8k7ye002cwubcwbkwzt6e",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8k7ye002cwubcwbkwzt6e appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8k8nk002dwubctkd9b0g6",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8k8nk002dwubctkd9b0g6 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8k9dn002ewubc3spxnt30",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8k9dn002ewubc3spxnt30 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8krfx002fwubkaemggv42",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8krfx002fwubkaemggv42 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8krfx002gwubkz4fces90",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8krfx002gwubkz4fces90 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8krfx002hwubk01rtecpd",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8krfx002hwubk01rtecpd appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8krfx002iwubkillewrwp",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8krfx002iwubkillewrwp appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8davp0031wutof8axqpst",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8davp0031wutof8axqpst appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8f7n4000ywuug33xnpfwt",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8f7n4000ywuug33xnpfwt appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8g9ml0013wujo2tyol5xc",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8g9ml0013wujo2tyol5xc appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8ge5i0019wujop7qdlzbt",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8ge5i0019wujop7qdlzbt appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gi9d001ewujo1bjxk7ni",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gi9d001ewujo1bjxk7ni appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gm1y001jwujoaghndxwu",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gm1y001jwujoaghndxwu appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gpg8001owujobitmqyor",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gpg8001owujobitmqyor appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8gt0d001twujojp4ziy4l",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8gt0d001twujojp4ziy4l appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtzncy4g0003wu9stgdwh10r",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtzncy4g0003wu9stgdwh10r appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznczr10009wu9sum2t3keu",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznczr10009wu9sum2t3keu appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtznd12q000ewu9s7c41m5be",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtznd12q000ewu9s7c41m5be appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2b008vwubk40sulv02",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2b008vwubk40sulv02 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2b007zwubka1tld5h7",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2b007zwubka1tld5h7 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2b0080wubkbw575j54",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2b0080wubkbw575j54 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2b0087wubk6161x3c8",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2b0087wubk6161x3c8 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2a0063wubkyf1yg7w3",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2a0063wubkyf1yg7w3 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2a0068wubkc19flv4k",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2a0068wubkc19flv4k appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2a006awubktfslj9x3",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2a006awubktfslj9x3 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2a006gwubkz1c6r33v",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2a006gwubkz1c6r33v appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2a006hwubk4n2c3v43",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2a006hwubk4n2c3v43 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2b007nwubkb8s0n00k",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2b007nwubkb8s0n00k appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2b007owubk12x2s7y2",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2b007owubk12x2s7y2 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2a006pwubkrx1g04y3",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2a006pwubkrx1g04y3 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2a006swubkw4n2c7x1",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2a006swubkw4n2c7x1 appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2b0083wubk9x5g1y2z",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2b0083wubk9x5g1y2z appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2b0086wubk3n5g7v1x",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2b0086wubk3n5g7v1x appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  },
+  {
+    "courseId": "cmtz8kt2a006xwubk0p9q1v3x",
+    "source": "Candidate Preview / Debug Listing",
+    "evidenceText": "Course ID cmtz8kt2a006xwubk0p9q1v3x appeared in candidate preview or debug query output",
+    "reason": "Excluded from completed ledger because it never received an explicit completed audit verdict."
+  }
+]
