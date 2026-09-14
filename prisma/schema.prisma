@@ -236,6 +236,7 @@ model StudentSkill {
 	skill Skill @relation(fields: [skillId], references: [id])
 	@@unique([studentId, skillId])
 	@@index([selectedCourseId])
+	@@index([studentId, state])
 }
 
 model Question {
@@ -293,6 +294,8 @@ model AssessmentAttempt {
 	answers AssessmentAnswer[]
 	violations AssessmentViolation[]
 	@@index([studentId, submittedAt])
+	@@index([studentId, skillId, submittedAt])
+	@@index([submittedAt, expiresAt, terminated])
 }
 
 model AssessmentAnswer {
@@ -362,6 +365,9 @@ model ActivityLog {
 	createdAt DateTime @default(now())
 	user User? @relation(fields: [userId], references: [id])
 	student StudentProfile? @relation(fields: [studentId], references: [id])
+	@@index([studentId, createdAt])
+	@@index([userId, createdAt])
+	@@index([action, createdAt])
 }
 
 model AdminSetting {

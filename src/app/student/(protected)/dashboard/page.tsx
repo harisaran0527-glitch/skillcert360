@@ -308,50 +308,63 @@ export default async function StudentDashboard() {
           </div>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {await Promise.all(
-              skills.map(async (entry) => {
-                const statusText = await getSkillProgressState(profile.id, entry.skillId);
-                const latestAttempt = latestMap.get(entry.skillId);
+            {skills.map((entry) => {
+              const cert = certificates.find((c) => c.skillId === entry.skillId);
+              const latestAttempt = latestMap.get(entry.skillId);
 
-                return (
-                  <div key={entry.id} className="glass-panel glass-panel-hover rounded-2xl p-5 flex flex-col justify-between space-y-4">
-                    <div>
-                      <div className="flex items-center justify-between gap-2">
-                        <span className="rounded-md border border-cyan-500/30 bg-cyan-500/10 px-2 py-0.5 text-[10px] font-bold text-cyan-300">
-                          {entry.skill.level.name}
-                        </span>
-                        <span className="text-[11px] font-semibold text-slate-400">
-                          {statusText}
-                        </span>
-                      </div>
-                      <h3 className="mt-3 text-base font-bold text-white font-display hover:text-cyan-300 transition-colors">
-                        <Link href={`/student/skills/${entry.skill.slug}`}>{entry.skill.name}</Link>
-                      </h3>
-                    </div>
+              let statusText = "LEARNING";
+              if (cert?.status === "VERIFIED" && latestAttempt?.passed) {
+                statusText = "VERIFIED";
+              } else if (cert && latestAttempt?.passed) {
+                statusText = cert.status === "UNLOCKED" ? "CERTIFICATE_UNLOCKED" : cert.status;
+              } else if (latestAttempt?.passed) {
+                statusText = "ASSESSMENT_PASSED";
+              } else if (latestAttempt?.passed === false) {
+                statusText = "REEXAM_REQUIRED";
+              } else if (latestAttempt && !latestAttempt.submittedAt) {
+                statusText = "ASSESSMENT_IN_PROGRESS";
+              } else if (entry.completedAt) {
+                statusText = "ASSESSMENT_AVAILABLE";
+              }
 
-                    <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
-                      {latestAttempt?.submittedAt === null ? (
-                        <Link
-                          href={`/student/assessment/${latestAttempt.id}`}
-                          className="font-bold text-amber-400 hover:underline flex items-center gap-1"
-                        >
-                          <span>Resume Exam</span>
-                          <ArrowRight className="h-3.5 w-3.5" />
-                        </Link>
-                      ) : (
-                        <Link
-                          href={`/student/skills/${entry.skill.slug}`}
-                          className="font-semibold text-cyan-400 hover:underline flex items-center gap-1"
-                        >
-                          <span>Skill Details</span>
-                          <ChevronRight className="h-3.5 w-3.5" />
-                        </Link>
-                      )}
+              return (
+                <div key={entry.id} className="glass-panel glass-panel-hover rounded-2xl p-5 flex flex-col justify-between space-y-4">
+                  <div>
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="rounded-md border border-cyan-500/30 bg-cyan-500/10 px-2 py-0.5 text-[10px] font-bold text-cyan-300">
+                        {entry.skill.level.name}
+                      </span>
+                      <span className="text-[11px] font-semibold text-slate-400">
+                        {statusText}
+                      </span>
                     </div>
+                    <h3 className="mt-3 text-base font-bold text-white font-display hover:text-cyan-300 transition-colors">
+                      <Link href={`/student/skills/${entry.skill.slug}`}>{entry.skill.name}</Link>
+                    </h3>
                   </div>
-                );
-              })
-            )}
+
+                  <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                    {latestAttempt?.submittedAt === null ? (
+                      <Link
+                        href={`/student/assessment/${latestAttempt.id}`}
+                        className="font-bold text-amber-400 hover:underline flex items-center gap-1"
+                      >
+                        <span>Resume Exam</span>
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
+                    ) : (
+                      <Link
+                        href={`/student/skills/${entry.skill.slug}`}
+                        className="font-semibold text-cyan-400 hover:underline flex items-center gap-1"
+                      >
+                        <span>Skill Details</span>
+                        <ChevronRight className="h-3.5 w-3.5" />
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         )}
       </section>

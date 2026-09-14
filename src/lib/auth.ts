@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { jwtVerify, SignJWT } from "jose";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
@@ -28,7 +29,7 @@ export async function createSession(session: Session) {
   });
 }
 
-export async function getSession(): Promise<Session | null> {
+export const getSession = cache(async (): Promise<Session | null> => {
   const token = (await cookies()).get(cookieName)?.value;
   if (!token) return null;
 
@@ -38,7 +39,10 @@ export async function getSession(): Promise<Session | null> {
       return null;
     }
 
-    const user = await db.user.findUnique({ where: { id: payload.userId } });
+    const user = await db.user.findUnique({
+      where: { id: payload.userId },
+      select: { status: true, role: true, mustChangePassword: true },
+    });
     if (!user || user.status !== "ACTIVE" || user.role !== payload.role) return null;
     return {
       userId: payload.userId,
@@ -48,7 +52,7 @@ export async function getSession(): Promise<Session | null> {
   } catch {
     return null;
   }
-}
+});
 
 export function getRoleLoginPath(role: UserRole) {
   return role === "ADMIN" ? "/admin/login" : "/student/login";

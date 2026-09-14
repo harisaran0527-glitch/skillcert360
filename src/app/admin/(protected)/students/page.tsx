@@ -17,6 +17,8 @@ import { PasswordField } from "@/components/password-field";
 import { EditStudentModal } from "@/components/edit-student-modal";
 import { DeleteStudentModal } from "@/components/delete-student-modal";
 
+import type { Prisma } from "@prisma/client";
+
 export default async function StudentsPage({
   searchParams,
 }: {
@@ -38,9 +40,31 @@ export default async function StudentsPage({
   const { error, created, deleted, edited, q, dept, section, status, cEmail, cReg, cName, cPwd } =
     await searchParams;
 
+  const query = (q ?? "").trim();
+  const selectedDept = (dept ?? "").trim();
+  const selectedStatus = (status ?? "").trim();
+
+  const whereCondition: Prisma.StudentProfileWhereInput = {
+    ...productionStudentWhere,
+    ...(selectedDept ? { departmentId: selectedDept } : {}),
+    ...(section && isValidSection(section) ? { section: { name: section } } : {}),
+    ...(selectedStatus === "ACTIVE" || selectedStatus === "DISABLED"
+      ? { user: { status: selectedStatus } }
+      : {}),
+    ...(query
+      ? {
+          OR: [
+            { fullName: { contains: query, mode: "insensitive" } },
+            { registerNumber: { contains: query, mode: "insensitive" } },
+            { user: { email: { contains: query, mode: "insensitive" } } },
+          ],
+        }
+      : {}),
+  };
+
   const [rawStudents, departments] = await Promise.all([
     db.studentProfile.findMany({
-      where: productionStudentWhere,
+      where: whereCondition,
       select: {
         id: true,
         fullName: true,
@@ -59,27 +83,10 @@ export default async function StudentsPage({
     getCleanDepartments(),
   ]);
 
-  const query = (q ?? "").trim().toLowerCase();
-  const selectedDept = (dept ?? "").trim();
-  const selectedStatus = (status ?? "").trim();
-
-  const students = rawStudents.map((st) => ({
+  const filteredStudents = rawStudents.map((st) => ({
     ...st,
     verifiedCount: st._count.certificates,
   }));
-
-  const filteredStudents = students.filter((st) => {
-    const matchesQ =
-      !query ||
-      [st.fullName, st.registerNumber, st.user.email]
-        .join(" ")
-        .toLowerCase()
-        .includes(query);
-    const matchesDept = !selectedDept || st.departmentId === selectedDept;
-    const matchesSec = !section || !isValidSection(section) || st.section.name === section;
-    const matchesStatus = !selectedStatus || st.user.status === selectedStatus;
-    return matchesQ && matchesDept && matchesSec && matchesStatus;
-  });
 
   return (
     <div className="space-y-8 pb-12">
@@ -279,7 +286,7 @@ export default async function StudentsPage({
               <span>Student Directory</span>
             </h2>
             <span className="text-xs font-mono text-slate-400">
-              Showing {filteredStudents.length} of {students.length} students
+              Showing {filteredStudents.length} student{filteredStudents.length !== 1 ? "s" : ""}
             </span>
           </div>
 

@@ -22,27 +22,31 @@ export default async function StudentCertificatesPage() {
   const session = await getSession();
   if (!session || session.role !== "STUDENT") redirect("/student/login");
 
-  const profile = await db.studentProfile.findUnique({ where: { userId: session.userId } });
-  if (!profile) redirect("/student/login");
-
-  const certificates = await db.certificate.findMany({
-    where: { studentId: profile.id },
-    include: {
-      skill: {
-        include: {
-          level: true,
+  const [profile, certificates] = await (async () => {
+    const prof = await db.studentProfile.findUnique({ where: { userId: session.userId }, select: { id: true } });
+    if (!prof) return [null, []] as const;
+    const certs = await db.certificate.findMany({
+      where: { studentId: prof.id },
+      include: {
+        skill: {
+          include: {
+            level: true,
+          },
+        },
+        verifiedBy: { select: { email: true } },
+        course: { select: { title: true, name: true } },
+        provider: { select: { name: true } },
+        reviews: {
+          include: { actor: { select: { email: true } } },
+          orderBy: { createdAt: "desc" },
         },
       },
-      verifiedBy: { select: { email: true } },
-      course: { select: { title: true, name: true } },
-      provider: { select: { name: true } },
-      reviews: {
-        include: { actor: { select: { email: true } } },
-        orderBy: { createdAt: "desc" },
-      },
-    },
-    orderBy: { submittedAt: "desc" },
-  });
+      orderBy: { submittedAt: "desc" },
+    });
+    return [prof, certs] as const;
+  })();
+
+  if (!profile) redirect("/student/login");
 
   const eligible = certificates.filter((c) =>
     ["UNLOCKED", "REJECTED", "NEEDS_RESUBMISSION", "PENDING_SUBMISSION"].includes(c.status)
