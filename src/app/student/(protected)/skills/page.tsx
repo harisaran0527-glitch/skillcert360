@@ -70,18 +70,18 @@ export default async function StudentSkillsPage({
     ];
   }
   
-  const courseWhere: Prisma.CourseWhereInput = { ...availableCourseWhere, AND: [productionCourseWhere], id: { in: courseIds } };
-  if (selectedProvider) courseWhere.providerId = selectedProvider;
-  if (selectedPrice === "free") courseWhere.pricingType = "FREE";
-  if (selectedPrice === "free_exam") courseWhere.pricingType = "FREE_LEARNING_PAID_EXAM";
-  if (selectedPrice === "paid") courseWhere.pricingType = "PAID";
-  if (selectedPrice === "subscription") courseWhere.pricingType = "SUBSCRIPTION";
-  if (selectedPrice === "unknown") courseWhere.pricingType = "UNKNOWN";
-  if (credentialFilter === "yes") courseWhere.credentialAvailable = true;
-  if (credentialFilter === "no") courseWhere.credentialAvailable = false;
-
-  const hasCoursesFilter = selectedProvider || selectedPrice || credentialFilter;
+  const hasCoursesFilter = Boolean(selectedProvider || selectedPrice || credentialFilter);
   if (hasCoursesFilter) {
+    const courseIds = await getCanonicalCourseIds();
+    const courseWhere: Prisma.CourseWhereInput = { ...availableCourseWhere, AND: [productionCourseWhere], id: { in: courseIds } };
+    if (selectedProvider) courseWhere.providerId = selectedProvider;
+    if (selectedPrice === "free") courseWhere.pricingType = "FREE";
+    if (selectedPrice === "free_exam") courseWhere.pricingType = "FREE_LEARNING_PAID_EXAM";
+    if (selectedPrice === "paid") courseWhere.pricingType = "PAID";
+    if (selectedPrice === "subscription") courseWhere.pricingType = "SUBSCRIPTION";
+    if (selectedPrice === "unknown") courseWhere.pricingType = "UNKNOWN";
+    if (credentialFilter === "yes") courseWhere.credentialAvailable = true;
+    if (credentialFilter === "no") courseWhere.credentialAvailable = false;
     whereClause.courses = { some: courseWhere };
   }
 

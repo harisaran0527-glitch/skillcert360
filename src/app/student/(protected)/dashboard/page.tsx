@@ -32,8 +32,6 @@ export default async function StudentDashboard() {
   });
   if (!profile) redirect("/student/login");
 
-  await expireStudentAttempts(profile.id);
-
   const [skills, attempts, certificates, progression] = await Promise.all([
     db.studentSkill.findMany({
       where: { studentId: profile.id },
@@ -61,6 +59,7 @@ export default async function StudentDashboard() {
       select: { id: true, skillId: true, status: true },
     }),
     getStudentProgression(profile.id),
+    expireStudentAttempts(profile.id),
   ]);
 
   const latestMap = new Map<string, typeof attempts[number]>();
