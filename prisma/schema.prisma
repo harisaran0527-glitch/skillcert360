@@ -330,6 +330,7 @@ model AssessmentViolation {
 
 model Certificate {
 	id String @id @default(cuid())
+	certificateNumber String? @unique
 	studentId String
 	skillId String
 	courseId String?

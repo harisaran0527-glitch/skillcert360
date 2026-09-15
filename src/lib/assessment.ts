@@ -5,6 +5,7 @@ import { db } from "@/lib/db";
 import { getAssessmentSettings } from "@/lib/settings";
 import { studentTransaction, transition, WorkflowError, type Tx } from "@/lib/workflow";
 import { assertSkillLevelUnlocked } from "@/lib/progression";
+import { ensureCertificateNumber } from "@/lib/certificate-number";
 
 const include = { answers: { orderBy: { position: "asc" as const }, include: { question: true } }, violations: true };
 type Attempt = Prisma.AssessmentAttemptGetPayload<{ include: typeof include }>;
@@ -42,8 +43,9 @@ async function finalize(tx: Tx, attempt: Attempt, reason: "MANUAL" | "TIMEOUT" |
     const request = await tx.certificate.findUnique({ where: { studentId_skillId: { studentId: attempt.studentId, skillId: attempt.skillId } } });
     if (!enrollment?.completedAt || !course || course.skillId !== attempt.skillId || request?.courseId !== course.id || !request.submittedAt) return updated;
     const attribution = course ? { courseId: course.id, providerId: course.providerId, credentialType: course.credentialType, credentialName: course.title ?? course.name } : {};
-    await tx.certificate.upsert({ where: { studentId_skillId: { studentId: attempt.studentId, skillId: attempt.skillId } },
+    const cert = await tx.certificate.upsert({ where: { studentId_skillId: { studentId: attempt.studentId, skillId: attempt.skillId } },
       create: { studentId: attempt.studentId, skillId: attempt.skillId, status: "UNLOCKED", issuedAt: submittedAt, ...attribution }, update: { status: "UNLOCKED", issuedAt: submittedAt, ...attribution } });
+    await ensureCertificateNumber(cert.id, tx);
     await transition(tx, attempt.studentId, attempt.skillId, ["CERTIFICATE_UNLOCKED"], { attemptId: attempt.id });
   } else {
     const existingPass = await tx.assessmentAttempt.findFirst({

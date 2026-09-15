@@ -191,22 +191,33 @@ export default async function StudentCertificatesPage() {
                       )}
 
                       {isAvailable && (
-                        <a
-                          href={`/api/certificates/${cert.id}/download`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-xs font-semibold text-emerald-300 hover:bg-emerald-500/20 transition-colors"
-                        >
-                          <Download className="h-3.5 w-3.5 text-emerald-400" />
-                          <span>View / Download Certificate</span>
-                        </a>
+                        <>
+                          <a
+                            href={`/api/certificates/${cert.id}/download`}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-1.5 rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-2.5 py-1 text-xs font-semibold text-cyan-300 hover:bg-cyan-500/20 transition-colors"
+                          >
+                            <FileCheck2 className="h-3.5 w-3.5 text-cyan-400" />
+                            <span>View Certificate</span>
+                          </a>
+                          <a
+                            href={`/api/certificates/${cert.id}/download?format=download`}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-xs font-semibold text-emerald-300 hover:bg-emerald-500/20 transition-colors"
+                          >
+                            <Download className="h-3.5 w-3.5 text-emerald-400" />
+                            <span>Download</span>
+                          </a>
+                        </>
                       )}
                     </div>
 
                     <div className="grid grid-cols-2 gap-2 pt-2 text-[11px] text-slate-400 border-t border-slate-800/60 font-mono">
                       <div>
-                        <span className="text-slate-500 block">Credential ID:</span>
-                        <span className="font-semibold text-slate-200">{cert.credentialId || "N/A"}</span>
+                        <span className="text-slate-500 block">Certificate No:</span>
+                        <span className="font-semibold text-amber-300">{cert.certificateNumber || cert.credentialId || "Assigned on Pass"}</span>
                       </div>
                       <div>
                         <span className="text-slate-500 block">Issued Date:</span>

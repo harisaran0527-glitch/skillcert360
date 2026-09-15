@@ -1,6 +1,8 @@
 import { getSession } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { canDownloadCertificate } from "@/lib/certificate-eligibility";
+import { ensureCertificateNumber } from "@/lib/certificate-number";
+import { generateQRCodeSVG } from "@/lib/qr";
 
 export async function GET(
   request: Request,
@@ -23,7 +25,7 @@ export async function GET(
           department: { select: { name: true } },
         },
       },
-      skill: { select: { name: true, level: { select: { name: true } } } },
+      skill: { select: { name: true, slug: true, level: { select: { name: true } } } },
       course: { select: { title: true, name: true } },
       provider: { select: { name: true } },
     },
@@ -44,8 +46,8 @@ export async function GET(
   }
 
   // Must be UNLOCKED or VERIFIED to generate a certificate view
-  if (!await canDownloadCertificate(certificate)) {
-    return new Response("Certificate not yet available for download.", {
+  if (!(await canDownloadCertificate(certificate))) {
+    return new Response("Certificate not yet available for download. Required: Assessment PASS.", {
       status: 403,
     });
   }
@@ -77,17 +79,20 @@ export async function GET(
     select: { completedAt: true, startedAt: true },
   });
 
-  const { searchParams } = new URL(request.url);
+  // Ensure persistent certificate number SC360-XX-YYYY-NNNNNN
+  const certNumber = await ensureCertificateNumber(certificate.id);
+
+  const { searchParams, origin } = new URL(request.url);
   const asDownload = searchParams.get("format") === "download";
 
   const studentName = certificate.student.fullName;
   const registerNumber = certificate.student.registerNumber;
-  const department = certificate.student.department?.name ?? "";
+  const department = certificate.student.department?.name ?? "Engineering & Technology";
   const skillName = certificate.skill.name;
   const levelName = certificate.skill.level.name;
   const courseName =
     certificate.course?.title ?? certificate.course?.name ?? "Official Course";
-  const providerName = certificate.provider?.name ?? "Accredited Provider";
+  const providerName = certificate.provider?.name ?? "SkillCert 360 Verified Provider";
 
   const score = validPassAttempt.score ?? 0;
   const questionCount = validPassAttempt.questionCount ?? 50;
@@ -102,327 +107,508 @@ export async function GET(
       })
     : "N/A";
 
-  const rawIssuedDate = certificate.issuedAt ?? validPassAttempt.submittedAt ?? new Date();
-  const issuedDate = new Date(rawIssuedDate).toLocaleDateString("en-IN", {
+  const rawIssueDate = certificate.issuedAt ?? validPassAttempt.submittedAt ?? new Date();
+  const issueDate = new Date(rawIssueDate).toLocaleDateString("en-IN", {
     day: "numeric",
     month: "long",
     year: "numeric",
   });
 
-  const certId = certificate.id;
+  // Base URL for QR Verification
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || origin || "http://localhost:3000";
+  const verifyUrl = `${baseUrl}/verify/${certNumber}`;
+  const qrSvg = generateQRCodeSVG(verifyUrl, { size: 100, color: "#1B2A4A", background: "#FFFFFF" });
 
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Certificate of Achievement — ${escapeHtml(studentName)} — SkillCert 360</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>SkillCert 360 Certificate - ${escapeHtml(studentName)} (${escapeHtml(certNumber)})</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { width: 100%; min-height: 100%; background: #0b0f19; display: flex; align-items: center; justify-content: center; padding: 32px 16px; font-family: 'Inter', sans-serif; color: #f8fafc; }
-
-    .cert-outer {
-      width: 100%;
-      max-width: 900px;
-      background: linear-gradient(135deg, #0f172a 0%, #090d16 50%, #1e1b4b 100%);
-      border: 2px solid #6366f1;
-      border-radius: 24px;
-      padding: 48px 56px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 0 80px rgba(99, 102, 241, 0.25), 0 24px 64px rgba(0, 0, 0, 0.8);
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    @page {
+      size: A4 landscape;
+      margin: 0;
     }
 
-    .cert-border-inner {
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #E2E8F0;
+      color: #2D3748;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .action-bar {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1B2A4A;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #0F172A;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: #FFFFFF;
+      color: #1B2A4A;
+      border: 1px solid #CBD5E1;
+    }
+
+    /* A4 Landscape Container */
+    .certificate-container {
+      width: 297mm;
+      height: 210mm;
+      background: #FDFCF8;
+      position: relative;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      padding: 12mm 16mm;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Outer Outer Border */
+    .border-outer {
       position: absolute;
-      top: 14px; left: 14px; right: 14px; bottom: 14px;
-      border: 1px solid rgba(165, 180, 252, 0.3);
-      border-radius: 16px;
+      top: 8mm;
+      left: 8mm;
+      right: 8mm;
+      bottom: 8mm;
+      border: 3px solid #1B2A4A;
       pointer-events: none;
     }
 
-    .cert-corner-tl, .cert-corner-tr, .cert-corner-bl, .cert-corner-br {
-      position: absolute; width: 24px; height: 24px; border-color: #818cf8; border-style: solid; pointer-events: none;
+    /* Inner Gold Border */
+    .border-inner {
+      position: absolute;
+      top: 10.5mm;
+      left: 10.5mm;
+      right: 10.5mm;
+      bottom: 10.5mm;
+      border: 1px solid #C9A84C;
+      pointer-events: none;
     }
-    .cert-corner-tl { top: 22px; left: 22px; border-width: 3px 0 0 3px; }
-    .cert-corner-tr { top: 22px; right: 22px; border-width: 3px 3px 0 0; }
-    .cert-corner-bl { bottom: 22px; left: 22px; border-width: 0 0 3px 3px; }
-    .cert-corner-br { bottom: 22px; right: 22px; border-width: 0 3px 3px 0; }
 
+    /* Background Watermark */
+    .watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-15deg);
+      font-family: 'Cinzel', serif;
+      font-size: 80px;
+      font-weight: 900;
+      color: rgba(27, 42, 74, 0.03);
+      letter-spacing: 12px;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Header Section */
     .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 32px;
+      text-align: center;
+      margin-top: 4mm;
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
 
-    .issuer-brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .issuer-logo {
-      width: 52px; height: 52px;
-      background: linear-gradient(135deg, #4f46e5, #9333ea);
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
+    .brand-title {
+      font-family: 'Cinzel', serif;
       font-size: 26px;
-      box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+      font-weight: 800;
+      color: #1B2A4A;
+      letter-spacing: 4px;
+      text-transform: uppercase;
     }
-    .issuer-title h2 {
+
+    .brand-sub {
+      font-size: 10px;
+      font-weight: 600;
+      color: #C9A84C;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .cert-heading {
       font-family: 'Cinzel', serif;
       font-size: 20px;
       font-weight: 700;
-      color: #ffffff;
-      letter-spacing: 0.05em;
-    }
-    .issuer-title p {
-      font-size: 11px;
-      color: #818cf8;
-      font-weight: 600;
-      letter-spacing: 0.1em;
+      color: #1B2A4A;
+      letter-spacing: 2px;
+      margin-top: 6mm;
       text-transform: uppercase;
     }
 
-    .badge-seal {
-      width: 76px; height: 76px;
-      border-radius: 50%;
-      background: conic-gradient(from 0deg, #6366f1, #a855f7, #06b6d4, #6366f1);
-      padding: 3px;
-      box-shadow: 0 0 28px rgba(99, 102, 241, 0.5);
-    }
-    .badge-seal-inner {
-      width: 100%; height: 100%;
-      border-radius: 50%;
-      background: #090d16;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      text-align: center;
-    }
-    .badge-seal-inner span {
-      font-size: 8px; font-weight: 800; color: #a5b4fc; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.2;
+    .divider-gold {
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+      margin: 6px auto 0;
     }
 
-    .cert-title-container {
+    /* Body Section */
+    .cert-body {
       text-align: center;
-      margin-bottom: 28px;
+      margin-top: 4mm;
+      position: relative;
+      z-index: 2;
     }
-    .cert-main-title {
+
+    .certify-text {
+      font-size: 13px;
+      color: #64748B;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .student-name {
       font-family: 'Cinzel', serif;
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      color: #c7d2fe;
+      font-size: 30px;
+      font-weight: 800;
+      color: #1B2A4A;
+      margin: 6px 0 2px;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
-    .cert-subtitle {
+
+    .student-meta {
       font-size: 12px;
-      color: #94a3b8;
-      letter-spacing: 0.12em;
+      color: #475569;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .course-details {
+      font-size: 13px;
+      color: #334155;
+      line-height: 1.6;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .course-name {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1B2A4A;
+      display: inline-block;
+      margin: 2px 0;
+    }
+
+    .highlight {
+      font-weight: 700;
+      color: #1B2A4A;
+    }
+
+    .provider-tag {
+      display: inline-block;
+      margin-top: 4px;
+      background: #F1F5F9;
+      color: #475569;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 12px;
+      border-radius: 12px;
+      border: 1px solid #E2E8F0;
+    }
+
+    /* Assessment Metrics Badge */
+    .metrics-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 5mm;
+    }
+
+    .metric-badge {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      padding: 6px 20px;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .metric-label {
+      font-size: 9px;
+      font-weight: 700;
+      color: #64748B;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .metric-value {
+      font-size: 15px;
+      font-weight: 800;
+      color: #1B2A4A;
+      margin-top: 1px;
+    }
+
+    .pass-tag {
+      color: #15803D;
+    }
+
+    /* Footer Section */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 4mm;
+      padding: 0 10mm;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-col {
+      flex: 1;
+    }
+
+    .footer-left {
+      text-align: left;
+    }
+
+    .footer-center {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-right {
+      text-align: right;
+    }
+
+    .meta-item {
+      font-size: 11px;
+      color: #64748B;
+      margin-bottom: 3px;
+    }
+
+    .meta-item strong {
+      color: #1B2A4A;
+      font-weight: 600;
+    }
+
+    .cert-id-badge {
+      font-family: monospace;
+      font-size: 12px;
+      font-weight: 700;
+      color: #1B2A4A;
+      background: #F8FAFC;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 1px dashed #CBD5E1;
+      display: inline-block;
       margin-top: 4px;
     }
 
-    .cert-body { text-align: center; position: relative; z-index: 1; }
-
-    .recipient-intro {
-      font-size: 11px; font-weight: 600; color: #818cf8; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px;
+    .qr-box {
+      background: #FFFFFF;
+      padding: 6px;
+      border-radius: 6px;
+      border: 1px solid #E2E8F0;
+      display: inline-block;
     }
-    .student-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 38px; font-weight: 700;
-      color: #ffffff;
-      background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 50%, #a5b4fc 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+
+    .qr-caption {
+      font-size: 8px;
+      font-weight: 600;
+      color: #64748B;
+      letter-spacing: 0.5px;
+      margin-top: 3px;
+      text-transform: uppercase;
+    }
+
+    .seal-img {
+      width: 70px;
+      height: 70px;
+      margin-left: auto;
       margin-bottom: 4px;
     }
-    .student-reg {
-      font-size: 12px; font-family: monospace; color: #94a3b8; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 20px;
-    }
 
-    .achievement-text {
-      font-size: 13px; color: #cbd5e1; margin-bottom: 12px; font-weight: 400;
-    }
-    .skill-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px; font-weight: 700; font-style: italic; color: #a5b4fc; margin-bottom: 6px;
-    }
-    .course-details {
-      display: inline-block;
-      background: rgba(99, 102, 241, 0.08);
-      border: 1px solid rgba(99, 102, 241, 0.25);
-      border-radius: 12px;
-      padding: 12px 24px;
-      margin-bottom: 24px;
-      max-width: 600px;
-    }
-    .course-title { font-size: 14px; font-weight: 600; color: #f1f5f9; }
-    .provider-tag { font-size: 11px; color: #38bdf8; font-weight: 600; margin-top: 3px; }
-
-    .perf-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      max-width: 520px;
-      margin: 0 auto 28px;
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(129, 140, 248, 0.3);
-      border-radius: 16px;
-      padding: 14px 20px;
-    }
-    .perf-item { text-align: center; }
-    .perf-label { font-size: 9px; font-weight: 700; text-transform: uppercase; color: #94a3b8; letter-spacing: 0.08em; display: block; margin-bottom: 4px; }
-    .perf-value { font-size: 18px; font-weight: 800; font-family: monospace; color: #ffffff; }
-    .perf-value.pass { color: #34d399; }
-    .perf-value.cyan { color: #38bdf8; }
-
-    .metadata-footer {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1.2fr;
-      gap: 16px;
-      border-top: 1px solid rgba(99, 102, 241, 0.25);
-      padding-top: 20px;
-      text-align: left;
+    .issuer-note {
       font-size: 10px;
+      font-weight: 700;
+      color: #1B2A4A;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
-    .meta-block .meta-lbl { font-size: 9px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 3px; }
-    .meta-block .meta-val { font-size: 11px; font-weight: 600; color: #e2e8f0; font-family: monospace; }
-    .meta-block.right { text-align: right; }
 
-    .print-bar {
-      margin-top: 24px; text-align: center;
+    .issuer-sub {
+      font-size: 9px;
+      color: #64748B;
     }
-    .print-btn {
-      padding: 10px 28px;
-      background: linear-gradient(135deg, #4f46e5, #7c3aed);
-      color: #ffffff; border: none; border-radius: 9999px;
-      font-size: 13px; font-weight: 700; cursor: pointer;
-      box-shadow: 0 4px 16px rgba(79, 70, 229, 0.4);
-      transition: all 0.2s;
-    }
-    .print-btn:hover { transform: translateY(-1px); opacity: 0.95; }
 
     @media print {
-      body { background: white; padding: 0; }
-      .cert-outer { box-shadow: none; border-color: #4f46e5; }
-      .print-bar { display: none; }
+      body {
+        background: none;
+        padding: 0;
+      }
+      .action-bar {
+        display: none !important;
+      }
+      .certificate-container {
+        box-shadow: none;
+        width: 297mm;
+        height: 210mm;
+      }
     }
   </style>
 </head>
 <body>
-  <div>
-    <div class="cert-outer">
-      <div class="cert-border-inner"></div>
-      <div class="cert-corner-tl"></div>
-      <div class="cert-corner-tr"></div>
-      <div class="cert-corner-bl"></div>
-      <div class="cert-corner-br"></div>
 
-      <!-- Header -->
-      <div class="header">
-        <div class="issuer-brand">
-          <div class="issuer-logo">🎓</div>
-          <div class="issuer-title">
-            <h2>SkillCert 360</h2>
-            <p>Certificate Authority</p>
-          </div>
-        </div>
-        <div class="badge-seal">
-          <div class="badge-seal-inner">
-            <span>OFFICIAL<br>VERIFIED<br>ISSUER</span>
-          </div>
-        </div>
+  <div class="action-bar">
+    <button onclick="window.print()" class="btn">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"></path></svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <div class="certificate-container">
+    <div class="border-outer"></div>
+    <div class="border-inner"></div>
+    <div class="watermark">SKILLCERT 360</div>
+
+    <!-- Header -->
+    <div class="header">
+      <div class="brand-title">SkillCert 360</div>
+      <div class="brand-sub">National Skill Accreditation & Assessment System</div>
+      <div class="cert-heading">Certificate of Skill Competency</div>
+      <div class="divider-gold"></div>
+    </div>
+
+    <!-- Body -->
+    <div class="cert-body">
+      <div class="certify-text">This is to certify that</div>
+      <div class="student-name">${escapeHtml(studentName)}</div>
+      <div class="student-meta">Register No: ${escapeHtml(registerNumber)} &nbsp;|&nbsp; Dept: ${escapeHtml(department)}</div>
+
+      <div class="course-details">
+        has successfully completed the prescribed curriculum and passed the official proctored skill assessment for
+        <br>
+        <span class="course-name">${escapeHtml(courseName)}</span>
+        <br>
+        in the domain of <span class="highlight">${escapeHtml(skillName)} (${escapeHtml(levelName)})</span>.
+        <br>
+        <span class="provider-tag">Learning Source: ${escapeHtml(providerName)}</span>
       </div>
 
-      <!-- Title -->
-      <div class="cert-title-container">
-        <h1 class="cert-main-title">Certificate of Achievement</h1>
-        <p class="cert-subtitle">Official Verified Credential</p>
-      </div>
-
-      <!-- Body -->
-      <div class="cert-body">
-        <p class="recipient-intro">This is proudly presented to</p>
-        <h2 class="student-name">${escapeHtml(studentName)}</h2>
-        <p class="student-reg">Register Number: ${escapeHtml(registerNumber)}${department ? ` · ${escapeHtml(department)}` : ""}</p>
-
-        <p class="achievement-text">for successfully completing the official course learning and passing the skill assessment for</p>
-        <p class="skill-title">${escapeHtml(skillName)} (${escapeHtml(levelName)} Level)</p>
-
-        <div class="course-details">
-          <p class="course-title">Course: ${escapeHtml(courseName)}</p>
-          <p class="provider-tag">Learning Source / Provider: ${escapeHtml(providerName)}</p>
+      <!-- Assessment Performance Badge -->
+      <div class="metrics-container">
+        <div class="metric-badge">
+          <div class="metric-label">Assessment Score</div>
+          <div class="metric-value">${score} / ${questionCount}</div>
         </div>
-
-        <!-- Performance Summary -->
-        <div class="perf-grid">
-          <div class="perf-item">
-            <span class="perf-label">Score</span>
-            <span class="perf-value cyan">${score} / ${questionCount}</span>
-          </div>
-          <div class="perf-item">
-            <span class="perf-label">Percentage</span>
-            <span class="perf-value cyan">${percentage}%</span>
-          </div>
-          <div class="perf-item">
-            <span class="perf-label">Outcome</span>
-            <span class="perf-value pass">PASS ✓</span>
-          </div>
+        <div class="metric-badge">
+          <div class="metric-label">Percentage</div>
+          <div class="metric-value">${percentage}%</div>
         </div>
-      </div>
-
-      <!-- Footer Metadata -->
-      <div class="metadata-footer">
-        <div class="meta-block">
-          <span class="meta-lbl">Course Completion Date</span>
-          <span class="meta-val">${escapeHtml(completionDate)}</span>
+        <div class="metric-badge">
+          <div class="metric-label">Result</div>
+          <div class="metric-value pass-tag">VERIFIED PASS</div>
         </div>
-        <div class="meta-block">
-          <span class="meta-lbl">Certificate Issue Date</span>
-          <span class="meta-val">${escapeHtml(issuedDate)}</span>
+        <div class="metric-badge">
+          <div class="metric-label">Verification</div>
+          <div class="metric-value">UNLOCKED</div>
         </div>
-        <div class="meta-block right">
-          <span class="meta-lbl">Unique Certificate ID</span>
-          <span class="meta-val">${escapeHtml(certId)}</span>
-        </div>
-      </div>
-      <div style="margin-top: 12px; text-align: center; font-size: 9px; color: #64748b; letter-spacing: 0.05em;">
-        Certificate Issuer: <strong>SkillCert 360</strong> &nbsp;|&nbsp; Learning Provider: <strong>${escapeHtml(providerName)}</strong>
       </div>
     </div>
 
-    <div class="print-bar">
-      <button class="print-btn" onclick="window.print()">🖨️ Print / Download Certificate PDF</button>
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-col footer-left">
+        <div class="meta-item">Completion Date: <strong>${escapeHtml(completionDate)}</strong></div>
+        <div class="meta-item">Issue Date: <strong>${escapeHtml(issueDate)}</strong></div>
+        <div class="meta-item" style="margin-top: 6px;">Certificate ID:</div>
+        <div class="cert-id-badge">${escapeHtml(certNumber)}</div>
+      </div>
+
+      <div class="footer-col footer-center">
+        <div class="qr-box">
+          ${qrSvg}
+        </div>
+        <div class="qr-caption">Scan to Verify Authenticity</div>
+      </div>
+
+      <div class="footer-col footer-right">
+        <!-- SVG Seal Graphic -->
+        <svg class="seal-img" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="46" stroke="#1B2A4A" stroke-width="3" fill="#FDFCF8"/>
+          <circle cx="50" cy="50" r="40" stroke="#C9A84C" stroke-width="1.5" stroke-dasharray="4 2"/>
+          <path d="M50 20 L58 35 L75 38 L62 50 L65 67 L50 58 L35 67 L38 50 L25 38 L42 35 Z" fill="#1B2A4A"/>
+          <circle cx="50" cy="50" r="14" fill="#C9A84C"/>
+          <path d="M44 50 L48 54 L56 45" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="issuer-note">SkillCert 360 Certification Board</div>
+        <div class="issuer-sub">Assessment & Certificate Issued by SkillCert 360</div>
+      </div>
     </div>
   </div>
+
+  ${
+    asDownload
+      ? `<script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        window.print();
+      }, 500);
+    });
+  </script>`
+      : ""
+  }
 </body>
 </html>`;
 
-  const disposition = asDownload
-    ? `attachment; filename="SkillCert360-${encodeURIComponent(skillName)}-${encodeURIComponent(registerNumber)}.html"`
-    : "inline";
-
   return new Response(html, {
-    status: 200,
     headers: {
       "Content-Type": "text/html; charset=utf-8",
-      "Content-Disposition": disposition,
-      "Cache-Control": "private, no-store",
-      "X-Content-Type-Options": "nosniff",
+      "Cache-Control": "private, no-cache, no-store, must-revalidate",
     },
   });
 }
 
-function escapeHtml(text: string): string {
-  return text
+function escapeHtml(str: string): string {
+  return str
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
+    .replace(/'/g, "&#039;");
 }

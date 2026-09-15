@@ -201,15 +201,26 @@ export default async function StudentResultsPage({ params }: { params: Promise<{
           {pass ? (
             <div className="flex flex-wrap items-center gap-3">
               {certAvailable && (
-                <a
-                  href={`/api/certificates/${certificate.id}/download`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 px-5 py-3 text-xs font-bold text-slate-950 shadow-lg shadow-cyan-500/20 transition-all"
-                >
-                  <Download className="h-4 w-4" />
-                  <span>View Certificate</span>
-                </a>
+                <>
+                  <a
+                    href={`/api/certificates/${certificate.id}/download`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 px-5 py-3 text-xs font-bold text-slate-950 shadow-lg shadow-cyan-500/20 transition-all"
+                  >
+                    <FileCheck2 className="h-4 w-4" />
+                    <span>View Certificate</span>
+                  </a>
+                  <a
+                    href={`/api/certificates/${certificate.id}/download?format=download`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-amber-500 hover:bg-amber-400 px-5 py-3 text-xs font-bold text-slate-950 shadow-lg shadow-amber-500/20 transition-all"
+                  >
+                    <Download className="h-4 w-4" />
+                    <span>Download Certificate</span>
+                  </a>
+                </>
               )}
               <Link
                 href="/student/certificates"
