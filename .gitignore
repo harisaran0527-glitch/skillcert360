@@ -34,10 +34,20 @@ yarn-error.log*
 next-env.d.ts
 
 # Temporary benchmark/auth scripts
+Untitled-2.txt
+scripts/audit-extra-questions.ts
+scripts/audit-question-banks-and-assessment.ts
 scripts/benchmark-5-runs*.ts
+scripts/inspect-active-attempts.ts
 scripts/profile-skills.ts
+scripts/sample-questions-quality.ts
+scripts/seed-course-question-banks.ts
 scripts/set-test-password.ts
 scripts/test-cached-metadata.ts
+scripts/test-certificate-request-ui.ts
+scripts/test-certificate-workflow.ts
 scripts/test-live-authenticated-5runs.ts
+scripts/test-parallel-assessments.ts
 scripts/test-single-batch.ts
 scripts/test-student-skills-live-5runs.ts
+scripts/verify-active-attempt-flow.ts
