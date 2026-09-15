@@ -96,9 +96,8 @@ export async function startAssessment(studentId: string, skillId: string) {
     const available = last?.reexamAvailableAt ?? (last?.submittedAt ? new Date(last.submittedAt.getTime() + last.cooldownHours * 3600000) : null);
     if (available && available > new Date()) throw new WorkflowError(`Re-exam available at ${available.toISOString()}`, 429);
     const courseId = enrollment.selectedCourseId;
-    const bank = courseId
-      ? await tx.question.findMany({ where: { courseId, active: true, type: { in: ["SINGLE_CHOICE", "MULTIPLE_CHOICE", "TRUE_FALSE", "FILL_BLANK"] } } })
-      : await tx.question.findMany({ where: { skillId, active: true, type: { in: ["SINGLE_CHOICE", "MULTIPLE_CHOICE", "TRUE_FALSE", "FILL_BLANK"] } } });
+    if (!courseId) throw new WorkflowError("Selected course required for assessment.", 400);
+    const bank = await tx.question.findMany({ where: { courseId, active: true, type: { in: ["SINGLE_CHOICE", "MULTIPLE_CHOICE", "TRUE_FALSE", "FILL_BLANK"] } } });
     if (bank.length < settings.questionCount) throw new WorkflowError(`Assessment needs ${settings.questionCount} active, automatically gradable questions; ${bank.length} available.`);
     const previous = new Set(last?.answers.map(a => a.questionId) ?? []);
     const selected = shuffle([...shuffle(bank.filter(q => !previous.has(q.id))), ...shuffle(bank.filter(q => previous.has(q.id)))].slice(0, settings.questionCount));

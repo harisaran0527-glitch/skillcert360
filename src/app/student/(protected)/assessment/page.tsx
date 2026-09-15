@@ -142,7 +142,9 @@ export default async function StudentAssessmentsListPage() {
                         </td>
                         <td className="px-5 py-4 font-mono text-slate-300">#{attempt.attemptNumber}</td>
                         <td className="px-5 py-4 font-bold text-white font-mono">
-                          {attempt.score !== null ? `${attempt.score} / ${attempt.questionCount}` : "N/A"}
+                          {attempt.score !== null
+                            ? `${attempt.score} / ${attempt.questionCount} (${Math.round((attempt.score / attempt.questionCount) * 100)}%)`
+                            : "N/A"}
                         </td>
                         <td className="px-5 py-4">
                           {isPassed ? (

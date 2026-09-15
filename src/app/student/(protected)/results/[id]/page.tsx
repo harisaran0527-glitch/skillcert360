@@ -14,6 +14,8 @@ import {
   ArrowRight,
   Sparkles,
   ChevronLeft,
+  Lock,
+  Download,
 } from "lucide-react";
 
 export default async function StudentResultsPage({ params }: { params: Promise<{ id: string }> }) {
@@ -42,6 +44,10 @@ export default async function StudentResultsPage({ params }: { params: Promise<{
   if (!attempt || attempt.student.userId !== session.userId) redirect("/student/dashboard");
   if (!attempt.submittedAt) redirect(`/student/assessment/${id}`);
 
+  const certificate = await db.certificate.findUnique({
+    where: { studentId_skillId: { studentId: attempt.studentId, skillId: attempt.skillId } },
+  });
+
   let correct = 0;
   let wrong = 0;
   let unanswered = 0;
@@ -67,6 +73,7 @@ export default async function StudentResultsPage({ params }: { params: Promise<{
 
   const percentage = attempt.answers.length ? Math.round((correct / attempt.answers.length) * 100) : 0;
   const pass = Boolean(attempt.passed);
+  const certAvailable = pass && certificate && ["UNLOCKED", "VERIFIED"].includes(certificate.status);
 
   return (
     <div className="mx-auto max-w-4xl space-y-8 pb-12">
@@ -94,13 +101,13 @@ export default async function StudentResultsPage({ params }: { params: Promise<{
             </p>
           </div>
 
-          <div>
+          <div className="flex flex-col items-end gap-2">
             {pass ? (
               <div className="flex items-center gap-2.5 rounded-2xl border border-emerald-500/40 bg-emerald-500/15 px-6 py-3 text-emerald-300 shadow-lg shadow-emerald-500/10">
                 <CheckCircle2 className="h-6 w-6 text-emerald-400" />
                 <div>
                   <span className="block text-xs font-bold uppercase tracking-wider text-emerald-400">Result</span>
-                  <span className="text-xl font-extrabold font-display">PASSED</span>
+                  <span className="text-xl font-extrabold font-display">PASS</span>
                 </div>
               </div>
             ) : (
@@ -108,9 +115,19 @@ export default async function StudentResultsPage({ params }: { params: Promise<{
                 <XCircle className="h-6 w-6 text-rose-400" />
                 <div>
                   <span className="block text-xs font-bold uppercase tracking-wider text-rose-400">Result</span>
-                  <span className="text-xl font-extrabold font-display">FAILED</span>
+                  <span className="text-xl font-extrabold font-display">FAIL</span>
                 </div>
               </div>
+            )}
+            
+            {pass ? (
+              <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-[11px] font-bold text-emerald-400">
+                <FileCheck2 className="h-3.5 w-3.5" /> Certificate Available / Issued
+              </span>
+            ) : (
+              <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-[11px] font-bold text-amber-400">
+                <Lock className="h-3.5 w-3.5" /> Certificate Locked
+              </span>
             )}
           </div>
         </div>
@@ -182,14 +199,27 @@ export default async function StudentResultsPage({ params }: { params: Promise<{
           </Link>
 
           {pass ? (
-            <Link
-              href="/student/certificates"
-              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 px-6 py-3 text-xs font-bold text-white shadow-lg shadow-emerald-500/20 hover:from-emerald-400 hover:to-teal-500 transition-all"
-            >
-              <FileCheck2 className="h-4 w-4" />
-              <span>Continue to Certificate Portal</span>
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            <div className="flex flex-wrap items-center gap-3">
+              {certAvailable && (
+                <a
+                  href={`/api/certificates/${certificate.id}/download`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 px-5 py-3 text-xs font-bold text-slate-950 shadow-lg shadow-cyan-500/20 transition-all"
+                >
+                  <Download className="h-4 w-4" />
+                  <span>View Certificate</span>
+                </a>
+              )}
+              <Link
+                href="/student/certificates"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 px-6 py-3 text-xs font-bold text-white shadow-lg shadow-emerald-500/20 hover:from-emerald-400 hover:to-teal-500 transition-all"
+              >
+                <FileCheck2 className="h-4 w-4" />
+                <span>Student Certificates Portal</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           ) : (
             <Link
               href="/student/skills"
