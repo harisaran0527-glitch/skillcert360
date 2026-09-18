@@ -41,8 +41,7 @@ export function AdminNavigation({ adminEmail = "Admin" }: AdminNavProps) {
     { label: "Students", href: "/admin/students", icon: Users },
     { label: "Courses", href: "/admin/courses", icon: GraduationCap },
     { label: "Questions", href: "/admin/questions", icon: HelpCircle },
-    { label: "Certificate Requests", href: "/admin/certificates/requests", icon: FileCheck2 },
-    { label: "Certificates HQ", href: "/admin/certificates", icon: Award },
+    { label: "SkillLocker HQ", href: "/admin/certificates", icon: FileCheck2 },
     { label: "Settings", href: "/admin/settings", icon: Settings },
   ];
 

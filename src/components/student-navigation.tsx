@@ -7,7 +7,6 @@ import {
   LayoutDashboard,
   Compass,
   BookOpen,
-  Award,
   FileCheck,
   User,
   LogOut,
@@ -36,7 +35,6 @@ export function StudentNavigation({ studentName = "Student", registerNumber = ""
   const navItems = [
     { label: "Dashboard", href: "/student/dashboard", icon: LayoutDashboard },
     { label: "Courses / Learning", href: "/student/skills", icon: Compass },
-    { label: "Assessments", href: "/student/assessment", icon: Award },
     { label: "Certificates", href: "/student/certificates", icon: FileCheck },
     { label: "Profile", href: "/student/profile", icon: User },
   ];

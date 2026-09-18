@@ -1,6 +1,5 @@
 import type { PrismaClient } from "@prisma/client";
 import { expect as baseExpect, type Page } from "@playwright/test";
-import { pathToFileURL } from "node:url";
 const expect = baseExpect.configure({ timeout: 20000 });
 
 export async function catalogueChecks(db: PrismaClient, admin: Page, student: Page, fixture: { skillId: string; courseId: string; providerId: string; studentId: string; tag: string }, check: (message: string) => void) {
@@ -109,7 +108,7 @@ export async function catalogueChecks(db: PrismaClient, admin: Page, student: Pa
     await student.reload();
     await expect(student.getByText("Your Selected Course", { exact: true })).toBeVisible();
     await student.getByRole("button", { name: "Mark Learning Complete", exact: true }).click();
-    await expect(student.getByRole("button", { name: "Start Assessment", exact: true })).toBeVisible();
+    await expect(student.getByRole("link", { name: "Upload Certificate", exact: true })).toBeVisible();
     const progress = await db.courseProgress.findMany({ where: { studentSkillId: enrollment.id } });
     expect(progress).toHaveLength(2);
     expect(progress.find(item => item.courseId === course.id)?.completedAt).not.toBeNull();
@@ -142,7 +141,4 @@ export async function catalogueChecks(db: PrismaClient, admin: Page, student: Pa
     if (extraCourseId) { await db.courseProgress.deleteMany({ where: { courseId: extraCourseId } }); await db.course.delete({ where: { id: extraCourseId } }); }
     if (extraProviderId) await db.provider.delete({ where: { id: extraProviderId } });
   }
-}
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
-  import("./e2e-workflow").then(({ runWorkflow }) => runWorkflow("catalogue")).catch(error => { console.error(error); process.exitCode = 1; });
 }

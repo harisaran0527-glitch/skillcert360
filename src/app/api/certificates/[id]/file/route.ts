@@ -1,6 +1,5 @@
 import { getSession } from "@/lib/auth";
 import { db } from "@/lib/db";
-import { hasPassedCertificateAssessment } from "@/lib/certificate-eligibility";
 import { getCertificateFileContent } from "@/lib/storage";
 
 export async function GET(
@@ -27,17 +26,14 @@ export async function GET(
   // Authorization Check:
   // - Admin can access any certificate file for verification
   // - Student can only access their OWN uploaded certificate
-  // - Other students receive 403 Forbidden
+  // - Other users receive 403 Forbidden
   const isOwner = session.role === "STUDENT" && certificate.student.userId === session.userId;
   const isAdmin = session.role === "ADMIN";
 
   if (!isOwner && !isAdmin) {
-    return Response.json({ error: "Forbidden: You do not have permission to view this certificate file." }, { status: 403 });
+    return Response.json({ error: "Forbidden: Access denied." }, { status: 403 });
   }
 
-  if (isOwner && (certificate.status === "LOCKED" || !await hasPassedCertificateAssessment(certificate))) {
-    return Response.json({ error: "Certificate locked until the assessment is passed." }, { status: 403 });
-  }
   const storageKey = certificate.filePath;
   if (!storageKey) {
     return Response.json({ error: "No file associated with this certificate record." }, { status: 404 });

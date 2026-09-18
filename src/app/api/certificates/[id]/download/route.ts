@@ -1,6 +1,5 @@
 import { getSession } from "@/lib/auth";
 import { db } from "@/lib/db";
-import { canDownloadCertificate } from "@/lib/certificate-eligibility";
 import { ensureCertificateNumber } from "@/lib/certificate-number";
 import { generateQRCodeSVG } from "@/lib/qr";
 
@@ -45,27 +44,11 @@ export async function GET(
     return new Response("Forbidden: Access denied.", { status: 403 });
   }
 
-  // Must be UNLOCKED or VERIFIED to generate a certificate view
-  if (!(await canDownloadCertificate(certificate))) {
-    return new Response("Certificate not yet available for download. Required: Assessment PASS.", {
+  // Must be VERIFIED to download
+  if (certificate.status !== "VERIFIED") {
+    return new Response("Certificate not yet verified.", {
       status: 403,
     });
-  }
-
-  // ── Belt-and-suspenders: re-verify assessment PASS directly ───────────────
-  const validPassAttempt = await db.assessmentAttempt.findFirst({
-    where: {
-      studentId: certificate.studentId,
-      skillId: certificate.skillId,
-      passed: true,
-      terminated: false,
-      NOT: { submittedAt: null },
-    },
-    orderBy: { submittedAt: "desc" },
-  });
-
-  if (!validPassAttempt) {
-    return new Response("Forbidden: Assessment not passed.", { status: 403 });
   }
 
   // Fetch studentSkill for course completion date
@@ -92,13 +75,9 @@ export async function GET(
   const levelName = certificate.skill.level.name;
   const courseName =
     certificate.course?.title ?? certificate.course?.name ?? "Official Course";
-  const providerName = certificate.provider?.name ?? "SkillCert 360 Verified Provider";
+  const providerName = certificate.provider?.name ?? "Official Provider";
 
-  const score = validPassAttempt.score ?? 0;
-  const questionCount = validPassAttempt.questionCount ?? 50;
-  const percentage = questionCount > 0 ? Math.round((score / questionCount) * 100) : 0;
-
-  const rawCompletionDate = studentSkill?.completedAt ?? certificate.submittedAt ?? certificate.issuedAt ?? validPassAttempt.submittedAt;
+  const rawCompletionDate = studentSkill?.completedAt ?? certificate.submittedAt ?? certificate.issueDate ?? certificate.issuedAt ?? certificate.createdAt;
   const completionDate = rawCompletionDate
     ? new Date(rawCompletionDate).toLocaleDateString("en-IN", {
         day: "numeric",
@@ -107,7 +86,7 @@ export async function GET(
       })
     : "N/A";
 
-  const rawIssueDate = certificate.issuedAt ?? validPassAttempt.submittedAt ?? new Date();
+  const rawIssueDate = certificate.issueDate ?? certificate.issuedAt ?? certificate.verifiedAt ?? certificate.createdAt;
   const issueDate = new Date(rawIssueDate).toLocaleDateString("en-IN", {
     day: "numeric",
     month: "long",
@@ -123,7 +102,7 @@ export async function GET(
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SkillCert 360 Certificate - ${escapeHtml(studentName)} (${escapeHtml(certNumber)})</title>
+  <title>SkillCert 360 Verified Credential Summary - ${escapeHtml(studentName)} (${escapeHtml(certNumber)})</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -348,7 +327,7 @@ export async function GET(
       border: 1px solid #E2E8F0;
     }
 
-    /* Assessment Metrics Badge */
+    /* Metrics Badge */
     .metrics-container {
       display: flex;
       justify-content: center;
@@ -509,8 +488,8 @@ export async function GET(
     <!-- Header -->
     <div class="header">
       <div class="brand-title">SkillCert 360</div>
-      <div class="brand-sub">National Skill Accreditation & Assessment System</div>
-      <div class="cert-heading">Certificate of Skill Competency</div>
+      <div class="brand-sub">Skill Learning, Credential Vault & Verification Platform</div>
+      <div class="cert-heading">Verified Credential Summary</div>
       <div class="divider-gold"></div>
     </div>
 
@@ -521,32 +500,24 @@ export async function GET(
       <div class="student-meta">Register No: ${escapeHtml(registerNumber)} &nbsp;|&nbsp; Dept: ${escapeHtml(department)}</div>
 
       <div class="course-details">
-        has successfully completed the prescribed curriculum and passed the official proctored skill assessment for
+        has earned a verified external learning credential for
         <br>
         <span class="course-name">${escapeHtml(courseName)}</span>
         <br>
         in the domain of <span class="highlight">${escapeHtml(skillName)} (${escapeHtml(levelName)})</span>.
         <br>
-        <span class="provider-tag">Learning Source: ${escapeHtml(providerName)}</span>
+        <span class="provider-tag">Original Certificate Issuer: ${escapeHtml(providerName)}</span>
       </div>
 
-      <!-- Assessment Performance Badge -->
+      <!-- Verification Badge -->
       <div class="metrics-container">
         <div class="metric-badge">
-          <div class="metric-label">Assessment Score</div>
-          <div class="metric-value">${score} / ${questionCount}</div>
+          <div class="metric-label">Verification Status</div>
+          <div class="metric-value pass-tag">VERIFIED CREDENTIAL</div>
         </div>
         <div class="metric-badge">
-          <div class="metric-label">Percentage</div>
-          <div class="metric-value">${percentage}%</div>
-        </div>
-        <div class="metric-badge">
-          <div class="metric-label">Result</div>
-          <div class="metric-value pass-tag">VERIFIED PASS</div>
-        </div>
-        <div class="metric-badge">
-          <div class="metric-label">Verification</div>
-          <div class="metric-value">UNLOCKED</div>
+          <div class="metric-label">Record Management</div>
+          <div class="metric-value">SkillCert 360</div>
         </div>
       </div>
     </div>
@@ -556,7 +527,7 @@ export async function GET(
       <div class="footer-col footer-left">
         <div class="meta-item">Completion Date: <strong>${escapeHtml(completionDate)}</strong></div>
         <div class="meta-item">Issue Date: <strong>${escapeHtml(issueDate)}</strong></div>
-        <div class="meta-item" style="margin-top: 6px;">Certificate ID:</div>
+        <div class="meta-item" style="margin-top: 6px;">Verification Record ID:</div>
         <div class="cert-id-badge">${escapeHtml(certNumber)}</div>
       </div>
 
@@ -576,8 +547,8 @@ export async function GET(
           <circle cx="50" cy="50" r="14" fill="#C9A84C"/>
           <path d="M44 50 L48 54 L56 45" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <div class="issuer-note">SkillCert 360 Certification Board</div>
-        <div class="issuer-sub">Assessment & Certificate Issued by SkillCert 360</div>
+        <div class="issuer-note">Original Certificate Issuer: ${escapeHtml(providerName)}</div>
+        <div class="issuer-sub">Verification & Record Management: SkillCert 360</div>
       </div>
     </div>
   </div>

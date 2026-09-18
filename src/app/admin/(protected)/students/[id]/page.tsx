@@ -1,6 +1,5 @@
 import { displaySection } from "@/lib/ui-options";
 import { SectionSelect } from "@/components/section-select";
-import { expireStudentAttempts } from "@/lib/assessment";
 import { getSkillProgressState } from "@/lib/progress";
 import { getStudentProgression, UNLOCK_THRESHOLDS, GATING_LEVEL } from "@/lib/progression";
 import Link from "next/link";
@@ -11,17 +10,13 @@ import { PasswordField } from "@/components/password-field";
 import { DeleteStudentModal } from "@/components/delete-student-modal";
 import {
   ShieldCheck,
-  Award,
   BookOpen,
   FileCheck2,
   Lock,
   Unlock,
-  AlertTriangle,
   ArrowLeft,
   Activity,
   Command,
-  CheckCircle2,
-  XCircle,
   Pencil,
   KeyRound,
   ShieldOff,
@@ -40,7 +35,6 @@ export default async function AdminStudent360Page({
 }) {
   const { id } = await params;
   const { error, updated, pwdReset, statusChanged } = await searchParams;
-  await expireStudentAttempts(id);
 
   const cleanDepts = await getCleanDepartments();
 
@@ -55,13 +49,6 @@ export default async function AdminStudent360Page({
           skill: true,
           courseProgress: { include: { course: { include: { provider: true } } } },
         },
-      },
-      attempts: {
-        include: {
-          skill: true,
-          violations: { orderBy: { occurredAt: "asc" } },
-        },
-        orderBy: { startedAt: "desc" },
       },
       certificates: {
         include: {
@@ -399,7 +386,7 @@ export default async function AdminStudent360Page({
             </div>
           </div>
           <div className="rounded-xl border border-rose-500/20 bg-rose-500/5 p-3.5 text-xs text-rose-200/80 leading-relaxed">
-            Permanently removes the student account, all skills, assessments, certificates, and activity logs. Certificate files are purged from storage.
+            Permanently removes the student account, all skills, certificates, and activity logs. Certificate files are purged from storage.
           </div>
           <DeleteStudentModal
             studentId={id}
@@ -549,96 +536,6 @@ export default async function AdminStudent360Page({
           </div>
         </section>
       </div>
-
-      {/* ── Assessment Attempts ───────────────────────────────── */}
-      <section className="glass-panel rounded-3xl p-6 sm:p-8 space-y-6">
-        <h2 className="text-lg font-bold text-white font-display flex items-center gap-2 border-b border-slate-800 pb-4">
-          <Award className="h-5 w-5 text-indigo-400" />
-          <span>Assessment Attempts & Security Log ({profile.attempts.length})</span>
-        </h2>
-
-        <div className="space-y-4">
-          {profile.attempts.length === 0 ? (
-            <p className="text-xs text-slate-500 p-6 text-center">
-              No assessment attempts logged for this student.
-            </p>
-          ) : (
-            profile.attempts.map((attempt) => (
-              <div
-                key={attempt.id}
-                className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 space-y-3 text-xs"
-              >
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                  <div>
-                    <span className="font-bold text-white font-display text-sm">
-                      {attempt.skill.name}
-                    </span>
-                    <span className="text-slate-400 ml-2 font-mono">
-                      Attempt #{attempt.attemptNumber}
-                    </span>
-                  </div>
-                  <div>
-                    {attempt.passed === true ? (
-                      <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/40 bg-emerald-500/15 px-3 py-0.5 text-[10px] font-bold text-emerald-300">
-                        <CheckCircle2 className="h-3 w-3" /> PASSED
-                      </span>
-                    ) : attempt.passed === false ? (
-                      <span className="inline-flex items-center gap-1 rounded-full border border-rose-500/40 bg-rose-500/15 px-3 py-0.5 text-[10px] font-bold text-rose-300">
-                        <XCircle className="h-3 w-3" /> FAILED
-                      </span>
-                    ) : (
-                      <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/40 bg-amber-500/15 px-3 py-0.5 text-[10px] font-bold text-amber-300">
-                        IN PROGRESS
-                      </span>
-                    )}
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 border-t border-slate-800/60 text-[11px] text-slate-400">
-                  <div>
-                    Score:{" "}
-                    <strong className="text-white font-mono">
-                      {attempt.score ?? "N/A"} / {attempt.questionCount}
-                    </strong>
-                  </div>
-                  <div>
-                    Violations:{" "}
-                    <strong className="text-amber-400 font-mono">
-                      {attempt.violations.length}
-                    </strong>
-                  </div>
-                  <div>
-                    Auto-Submitted:{" "}
-                    <strong className="text-slate-200">
-                      {attempt.autoSubmitted ? "Yes" : "No"}
-                    </strong>
-                  </div>
-                  <div>
-                    Started:{" "}
-                    <strong className="text-slate-200">
-                      {new Date(attempt.startedAt).toLocaleString()}
-                    </strong>
-                  </div>
-                </div>
-
-                {attempt.violations.length > 0 && (
-                  <div className="rounded-xl border border-rose-500/30 bg-rose-500/10 p-3 space-y-1">
-                    <span className="font-bold text-rose-300 flex items-center gap-1">
-                      <AlertTriangle className="h-3.5 w-3.5" /> Security Violations (
-                      {attempt.violations.length}):
-                    </span>
-                    {attempt.violations.map((v) => (
-                      <p key={v.id} className="text-[11px] text-rose-200/90 font-mono">
-                        • {v.type} at {new Date(v.occurredAt).toLocaleTimeString()}
-                      </p>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))
-          )}
-        </div>
-      </section>
 
       {/* ── Activity Log ─────────────────────────────────────── */}
       <section className="glass-panel rounded-3xl p-6 sm:p-8 space-y-4">

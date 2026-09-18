@@ -49,7 +49,7 @@ export async function POST(request: Request) {
    }
   }
   if (action === "complete") {
-   destination.pathname = `/student/certificate-request/${skillId}`;
+   destination.pathname = "/student/certificates";
    destination.search = "";
   }
   return request.headers.get("content-type")?.includes("application/json") ? Response.json({ ok: true, redirect: action === "complete" ? destination.pathname : undefined }) : NextResponse.redirect(destination, 303);

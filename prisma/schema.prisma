@@ -126,13 +126,20 @@ model SkillLevel {
 	id String @id @default(cuid())
 	name String @unique
 	order Int @unique
+
+	// Old assessment field - historical safety-kaga retain pannrom
 	passMark Int
+
+	// Verified certificate target
+	// Beginner = 25, Advanced = 50, Pro = 75, Expert = 100
+	certificateTarget Int?
+
 	active Boolean @default(true)
+
 	skills Skill[]
 	courses Course[]
 	questions Question[]
 }
-
 model SkillCategory {
 	id String @id @default(cuid())
 	name String @unique
@@ -148,24 +155,35 @@ model Skill {
 	description String?
 	icon String?
 	active Boolean @default(true)
+
 	categoryId String
 	levelId String
+
 	category SkillCategory @relation(fields: [categoryId], references: [id])
 	level SkillLevel @relation(fields: [levelId], references: [id])
+
 	courses Course[]
 	questions Question[]
 	studentSkills StudentSkill[]
+
 	prerequisites SkillPrerequisite[] @relation("SkillPrerequisiteTarget")
 	requiredFor SkillPrerequisite[] @relation("SkillPrerequisiteSource")
+
 	certificates Certificate[]
+
+	// New Smart Skill Guide topics
+	topics SkillTopic[]
+
+	// Old assessment relations retained temporarily for existing data safety
 	assessmentConfig AssessmentConfig?
 	attempts AssessmentAttempt[]
+
 	createdAt DateTime @default(now())
 	updatedAt DateTime @updatedAt
+
 	@@index([active, levelId, name])
 	@@index([categoryId, active])
 }
-
 model SkillPrerequisite {
 	skillId String
 	prerequisiteId String
@@ -192,36 +210,48 @@ model Course {
 	skillId String
 	providerId String
 	levelId String
+
 	name String
 	title String?
 	officialUrl String
 	officialUrlStatus UrlStatus @default(OFFICIAL_LINK_PENDING)
+
 	durationMinutes Int?
 	duration String?
+
 	isFree Boolean @default(true)
 	pricingType PricingType @default(FREE)
+
 	certificateAvailable Boolean @default(false)
 	credentialAvailable Boolean @default(false)
 	credentialType CredentialType @default(NONE)
 	credentialUrl String?
+
 	description String?
 	prerequisites String?
 	learningOutcomes Json?
+
 	active Boolean @default(true)
 	verifiedAt DateTime?
+
 	progress CourseProgress[]
 	selectedByStudentSkills StudentSkill[] @relation("SelectedCourse")
 	certificates Certificate[]
 	questions Question[]
+
+	// New Smart Skill Guide mapping
+	topicMappings CourseTopic[]
+
 	skill Skill @relation(fields: [skillId], references: [id])
 	provider Provider @relation(fields: [providerId], references: [id])
 	level SkillLevel @relation(fields: [levelId], references: [id])
+
 	createdAt DateTime @default(now())
+
 	@@index([skillId, active, providerId])
 	@@index([providerId, active])
 	@@index([active, name])
 }
-
 model StudentSkill {
 	id String @id @default(cuid())
 	studentId String
@@ -335,29 +365,37 @@ model Certificate {
 	skillId String
 	courseId String?
 	providerId String?
-	status CertificateStatus @default(LOCKED)
+	status CertificateStatus @default(PENDING_VERIFICATION)
 	credentialType CredentialType @default(NONE)
 	credentialName String?
+	certificateTitle String?
+	credentialUrl String?
+	issueDate DateTime?
+	expiryDate DateTime?
 	officialUrl String?
 	credentialId String?
 	filePath String?
 	originalFileName String?
 	mimeType String?
 	fileSize Int?
+	fileHash String?
 	uploadedAt DateTime?
 	storageProvider String?
 	remarks String?
+	rejectionReason String?
 	verifiedById String?
 	submittedAt DateTime?
 	verifiedAt DateTime?
 	issuedAt DateTime?
+	createdAt DateTime @default(now())
+	updatedAt DateTime @default(now()) @updatedAt
 	reviews CertificateReview[]
 	student StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
 	skill Skill @relation(fields: [skillId], references: [id])
 	course Course? @relation(fields: [courseId], references: [id], onDelete: SetNull)
 	provider Provider? @relation(fields: [providerId], references: [id], onDelete: SetNull)
 	verifiedBy User? @relation("VerifiedBy", fields: [verifiedById], references: [id])
-	@@unique([studentId, skillId])
+	@@index([studentId, skillId])
 	@@index([studentId, status])
 	@@index([status])
 }
@@ -409,4 +447,34 @@ model CertificateReview {
 	createdAt DateTime @default(now())
 	certificate Certificate @relation(fields: [certificateId], references: [id], onDelete: Cascade)
 	actor User @relation(fields: [actorId], references: [id])
+}
+model SkillTopic {
+	id String @id @default(cuid())
+	skillId String
+
+	name String
+	slug String
+	description String?
+	order Int @default(0)
+	active Boolean @default(true)
+
+	skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+
+	courseMappings CourseTopic[]
+
+	createdAt DateTime @default(now())
+	updatedAt DateTime @updatedAt
+
+	@@unique([skillId, slug])
+	@@index([skillId, active, order])
+}
+model CourseTopic {
+	courseId String
+	topicId String
+
+	course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+	topic SkillTopic @relation(fields: [topicId], references: [id], onDelete: Cascade)
+
+	@@id([courseId, topicId])
+	@@index([topicId])
 }

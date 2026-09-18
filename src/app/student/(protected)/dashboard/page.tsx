@@ -3,14 +3,10 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/auth";
 import { db } from "@/lib/db";
-import { expireStudentAttempts } from "@/lib/assessment";
-import { getSkillProgressState } from "@/lib/progress";
 import { getStudentProgression, UNLOCK_THRESHOLDS, GATING_LEVEL } from "@/lib/progression";
 import {
   BookOpen,
-  Award,
   FileCheck2,
-  RotateCcw,
   Unlock,
   Lock,
   ArrowRight,
@@ -32,7 +28,7 @@ export default async function StudentDashboard() {
   });
   if (!profile) redirect("/student/login");
 
-  const [skills, attempts, certificates, progression] = await Promise.all([
+  const [skills, certificates, progression] = await Promise.all([
     db.studentSkill.findMany({
       where: { studentId: profile.id },
       select: {
@@ -50,30 +46,29 @@ export default async function StudentDashboard() {
         },
       },
     }),
-    db.assessmentAttempt.findMany({
-      where: { studentId: profile.id },
-      select: { id: true, skillId: true, passed: true, submittedAt: true, startedAt: true },
-      orderBy: { startedAt: "desc" },
-    }),
     db.certificate.findMany({
       where: { studentId: profile.id },
-      select: { id: true, skillId: true, status: true, submittedAt: true, courseId: true },
+      select: {
+        id: true,
+        skillId: true,
+        status: true,
+      },
     }),
     getStudentProgression(profile.id),
-    expireStudentAttempts(profile.id),
   ]);
-
-  const latestMap = new Map<string, typeof attempts[number]>();
-  for (const attempt of attempts) {
-    if (!latestMap.has(attempt.skillId)) latestMap.set(attempt.skillId, attempt);
-  }
-
-  // Exact real metrics
+  // SkillLocker metrics
   const skillsStarted = skills.length;
-  const assessmentsPassed = attempts.filter((a) => a.passed === true).length;
-  const certificatesVerified = certificates.filter((c) => c.status === "VERIFIED").length;
-  const reexamsPending = [...latestMap.values()].filter((a) => a.passed === false).length;
-
+  const certificatesVerified = certificates.filter(
+    (certificate) => certificate.status === "VERIFIED"
+  ).length;
+  const pendingVerification = certificates.filter(
+    (certificate) => certificate.status === "PENDING_VERIFICATION"
+  ).length;
+  const needsAttention = certificates.filter(
+    (certificate) =>
+      certificate.status === "REJECTED" ||
+      certificate.status === "NEEDS_RESUBMISSION"
+  ).length;
   const currentHighestLevel = progression.levels.filter((l) => l.unlocked).pop()?.name || "Beginner";
 
   return (
@@ -93,7 +88,7 @@ export default async function StudentDashboard() {
               Welcome back, <span className="text-gradient-cyan">{profile.fullName}</span>
             </h1>
             <p className="text-sm text-slate-400 max-w-xl">
-              Track your skill development, complete verified assessments, and earn official credentials across 4 progression tiers.
+              Track your learning, upload original provider certificates to SkillLocker, and build verified skill progression across 4 levels.
             </p>
 
             {/* Student Metadata Pills */}
@@ -145,20 +140,25 @@ export default async function StudentDashboard() {
               View all <ChevronRight className="h-3.5 w-3.5" />
             </Link>
           </div>
-        </div>
-
-        {/* Assessments Passed */}
+        </div>        {/* Pending Verification */}
         <div className="glass-panel glass-panel-hover rounded-2xl p-5 relative overflow-hidden">
           <div className="flex items-center justify-between">
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Assessments Passed</p>
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-              <Award className="h-5 w-5" />
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+              Pending Verification
+            </p>
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
+              <ShieldCheck className="h-5 w-5" />
             </div>
           </div>
           <div className="mt-4 flex items-baseline justify-between">
-            <p className="text-3xl font-extrabold text-white font-display">{assessmentsPassed}</p>
-            <Link href="/student/assessment" className="text-xs font-medium text-emerald-400 hover:underline flex items-center gap-0.5">
-              History <ChevronRight className="h-3.5 w-3.5" />
+            <p className="text-3xl font-extrabold text-white font-display">
+              {pendingVerification}
+            </p>
+            <Link
+              href="/student/certificates"
+              className="text-xs font-medium text-amber-400 hover:underline flex items-center gap-0.5"
+            >
+              SkillLocker <ChevronRight className="h-3.5 w-3.5" />
             </Link>
           </div>
         </div>
@@ -177,19 +177,30 @@ export default async function StudentDashboard() {
               Certificates <ChevronRight className="h-3.5 w-3.5" />
             </Link>
           </div>
-        </div>
-
-        {/* Re-exams Pending */}
+        </div>        {/* Needs Attention */}
         <div className="glass-panel glass-panel-hover rounded-2xl p-5 relative overflow-hidden">
           <div className="flex items-center justify-between">
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Re-exams Pending</p>
-            <div className={`flex h-10 w-10 items-center justify-center rounded-xl border ${reexamsPending > 0 ? "bg-amber-500/10 text-amber-400 border-amber-500/20" : "bg-slate-800/60 text-slate-400 border-slate-700/50"}`}>
-              <RotateCcw className="h-5 w-5" />
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+              Needs Attention
+            </p>
+            <div
+              className={`flex h-10 w-10 items-center justify-center rounded-xl border ${
+                needsAttention > 0
+                  ? "bg-rose-500/10 text-rose-400 border-rose-500/20"
+                  : "bg-slate-800/60 text-slate-400 border-slate-700/50"
+              }`}
+            >
+              <ShieldCheck className="h-5 w-5" />
             </div>
           </div>
           <div className="mt-4 flex items-baseline justify-between">
-            <p className="text-3xl font-extrabold text-white font-display">{reexamsPending}</p>
-            <Link href="/student/assessment" className="text-xs font-medium text-amber-400 hover:underline flex items-center gap-0.5">
+            <p className="text-3xl font-extrabold text-white font-display">
+              {needsAttention}
+            </p>
+            <Link
+              href="/student/certificates"
+              className="text-xs font-medium text-rose-400 hover:underline flex items-center gap-0.5"
+            >
               Review <ChevronRight className="h-3.5 w-3.5" />
             </Link>
           </div>
@@ -331,24 +342,24 @@ export default async function StudentDashboard() {
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {skills.map((entry) => {
-              const cert = certificates.find((c) => c.skillId === entry.skillId);
-              const latestAttempt = latestMap.get(entry.skillId);
-
+              const skillCertificates = certificates.filter(
+                (certificate) => certificate.skillId === entry.skillId
+              );
+              const statuses = skillCertificates.map(
+                (certificate) => certificate.status
+              );
               let statusText = "LEARNING";
-              if (cert?.status === "VERIFIED" && latestAttempt?.passed) {
+              if (statuses.includes("VERIFIED")) {
                 statusText = "VERIFIED";
-              } else if (cert && latestAttempt?.passed) {
-                statusText = cert.status === "UNLOCKED" ? "CERTIFICATE_UNLOCKED" : cert.status;
-              } else if (latestAttempt?.passed) {
-                statusText = "ASSESSMENT_PASSED";
-              } else if (latestAttempt?.passed === false) {
-                statusText = "REEXAM_REQUIRED";
-              } else if (latestAttempt && !latestAttempt.submittedAt) {
-                statusText = "ASSESSMENT_IN_PROGRESS";
+              } else if (statuses.includes("PENDING_VERIFICATION")) {
+                statusText = "PENDING_VERIFICATION";
+              } else if (statuses.includes("NEEDS_RESUBMISSION")) {
+                statusText = "NEEDS_RESUBMISSION";
+              } else if (statuses.includes("REJECTED")) {
+                statusText = "REJECTED";
               } else if (entry.completedAt) {
-                statusText = cert?.submittedAt && cert.courseId === entry.selectedCourseId ? "REQUEST_SUBMITTED · ASSESSMENT_READY · CERTIFICATE_LOCKED" : "LEARNING_COMPLETED · REQUEST_NOT_SUBMITTED · CERTIFICATE_LOCKED";
+                statusText = "READY_TO_UPLOAD";
               }
-
               return (
                 <div key={entry.id} className="glass-panel glass-panel-hover rounded-2xl p-5 flex flex-col justify-between space-y-4">
                   <div>
@@ -366,13 +377,26 @@ export default async function StudentDashboard() {
                   </div>
 
                   <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
-                    {latestAttempt?.submittedAt === null ? (
+                    {statusText === "READY_TO_UPLOAD" ? (
                       <Link
-                        href={`/student/assessment/${latestAttempt.id}`}
-                        className="font-bold text-amber-400 hover:underline flex items-center gap-1"
+                        href="/student/certificates"
+                        className="font-bold text-cyan-400 hover:underline flex items-center gap-1"
                       >
-                        <span>Resume Exam</span>
+                        <span>Upload Certificate</span>
                         <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
+                    ) : [
+                        "PENDING_VERIFICATION",
+                        "VERIFIED",
+                        "REJECTED",
+                        "NEEDS_RESUBMISSION",
+                      ].includes(statusText) ? (
+                      <Link
+                        href="/student/certificates"
+                        className="font-semibold text-emerald-400 hover:underline flex items-center gap-1"
+                      >
+                        <span>Open SkillLocker</span>
+                        <ChevronRight className="h-3.5 w-3.5" />
                       </Link>
                     ) : (
                       <Link

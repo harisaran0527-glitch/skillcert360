@@ -1,244 +1,255 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
-import { hasPassedCertificateAssessment } from "@/lib/certificate-eligibility";
 import { getSession } from "@/lib/auth";
-import { isStorageConfigured } from "@/lib/storage";
-import { CertificateSubmissionForm } from "@/components/certificate-submission-form";
+import { SkillLockerUploadForm } from "@/components/skill-locker-upload-form";
 import {
-  FileCheck2,
   ShieldCheck,
-  AlertCircle,
-  ExternalLink,
   Clock,
   XCircle,
   Sparkles,
-  Award,
   FileText,
-  Paperclip,
+  ExternalLink,
   Download,
+  AlertTriangle,
+  CheckCircle2,
+  RefreshCw,
 } from "lucide-react";
 
-export default async function StudentCertificatesPage() {
+export default async function StudentSkillLockerPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ skillId?: string; courseId?: string }>;
+}) {
   const session = await getSession();
   if (!session || session.role !== "STUDENT") redirect("/student/login");
 
-  const [profile, certificates] = await (async () => {
-    const prof = await db.studentProfile.findUnique({ where: { userId: session.userId }, select: { id: true } });
-    if (!prof) return [null, []] as const;
-    const certs = await db.certificate.findMany({
-      where: { studentId: prof.id },
-      include: {
-        skill: {
-          include: {
-            level: true,
-          },
-        },
-        verifiedBy: { select: { email: true } },
-        course: { select: { title: true, name: true } },
-        provider: { select: { name: true } },
-        reviews: {
-          include: { actor: { select: { email: true } } },
-          orderBy: { createdAt: "desc" },
-        },
-      },
-      orderBy: { submittedAt: "desc" },
-    });
-    return [prof, certs] as const;
-  })();
+  const { skillId, courseId } = await searchParams;
+
+  const profile = await db.studentProfile.findUnique({
+    where: { userId: session.userId },
+    select: { id: true, fullName: true },
+  });
 
   if (!profile) redirect("/student/login");
 
-  const passedIds = new Set((await Promise.all(certificates.map(async certificate =>
-    await hasPassedCertificateAssessment(certificate) ? certificate.id : null))).filter(Boolean));
-  const eligible = certificates.filter((c) =>
-    passedIds.has(c.id) && ["UNLOCKED", "REJECTED", "NEEDS_RESUBMISSION", "PENDING_SUBMISSION"].includes(c.status)
+  const [skills, courses, certificates] = await Promise.all([
+    db.skill.findMany({
+      where: { active: true },
+      select: { id: true, name: true },
+      orderBy: { name: "asc" },
+    }),
+    db.course.findMany({
+      where: { active: true },
+      select: {
+        id: true,
+        name: true,
+        title: true,
+        skillId: true,
+        provider: { select: { name: true } },
+      },
+      orderBy: { name: "asc" },
+    }),
+    db.certificate.findMany({
+      where: { studentId: profile.id },
+      include: {
+        skill: { select: { name: true } },
+        course: { select: { name: true, title: true } },
+        provider: { select: { name: true } },
+      },
+      orderBy: { createdAt: "desc" },
+    }),
+  ]);
+
+  // Filter valid statuses for display
+  const validCertificates = certificates.filter((c) =>
+    ["PENDING_VERIFICATION", "VERIFIED", "REJECTED", "NEEDS_RESUBMISSION"].includes(c.status)
   );
-
-  const storageConfigured = isStorageConfigured();
-
-  function formatBytes(bytes: number | null): string {
-    if (!bytes) return "File";
-    if (bytes < 1024) return `${bytes} B`;
-    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
-    return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
-  }
 
   return (
     <div className="space-y-8 pb-12">
-      {/* Header */}
-      <div>
-        <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-xs font-semibold text-cyan-300 mb-2">
-          <Sparkles className="h-3.5 w-3.5" />
-          <span>Official Credential Verification Engine</span>
+      {/* Header Banner */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3.5 py-1 text-xs font-bold text-cyan-300 mb-2">
+            <Sparkles className="h-3.5 w-3.5" />
+            <span>Digital Credential Vault</span>
+          </div>
+          <h1 className="text-3xl font-extrabold text-white font-display tracking-tight">
+            SkillLocker
+          </h1>
+          <p className="text-xs text-slate-400 mt-1">
+            Upload and manage original certificates issued by official learning providers.
+          </p>
         </div>
-        <h1 className="text-3xl font-extrabold text-white font-display">Certificates & Requests</h1>
-        <p className="text-xs text-slate-400 mt-1">
-          Pass your assessment to unlock and download your SkillCert 360 certificate. External credential verification is available separately for progression.
-        </p>
+        <div className="rounded-2xl border border-slate-800 bg-slate-900/90 px-4 py-2 text-xs font-mono text-cyan-400 font-bold">
+          {validCertificates.length} Certificates Stored
+        </div>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
-        {/* Left Column: Certificate Submission Form Component */}
-        <CertificateSubmissionForm
-          eligible={eligible}
-          storageConfigured={storageConfigured}
-        />
+      {/* Upload Section */}
+      <SkillLockerUploadForm
+        skills={skills}
+        courses={courses}
+        preselectedSkillId={skillId}
+        preselectedCourseId={courseId}
+      />
 
-        {/* Right Column: Submission History */}
-        <div className="glass-panel rounded-3xl p-6 sm:p-8 space-y-6">
-          <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+      {/* Certificate History Section */}
+      <div className="glass-panel rounded-3xl p-6 sm:p-8 space-y-6">
+        <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+          <div>
             <h2 className="text-lg font-bold text-white font-display flex items-center gap-2">
-              <Award className="h-5 w-5 text-cyan-400" />
-              <span>Certificate History & Status</span>
+              <FileText className="h-5 w-5 text-cyan-400" />
+              <span>Certificate History</span>
             </h2>
-            <span className="text-xs text-slate-400 font-mono">{certificates.length} Total</span>
+            <p className="text-xs text-slate-400 mt-0.5">
+              Review verification status and access your verified credential summaries.
+            </p>
           </div>
+        </div>
 
-          <div className="space-y-4">
-            {certificates.length === 0 ? (
-              <div className="p-8 text-center text-xs text-slate-400 space-y-2">
-                <FileCheck2 className="h-8 w-8 text-slate-500 mx-auto" />
-                <p className="font-semibold text-white">No certificate records submitted yet.</p>
-                <p>Complete learning, submit the request form, then pass the assessment to unlock your certificate.</p>
-              </div>
-            ) : (
-              certificates.map((cert) => {
-                const hasPassed = passedIds.has(cert.id);
-                const isAvailable = hasPassed && ["UNLOCKED", "VERIFIED"].includes(cert.status);
-                const isVerified = hasPassed && cert.status === "VERIFIED";
-                const isPending = hasPassed && ["SUBMITTED", "PENDING_VERIFICATION"].includes(cert.status);
-                const isRejected = cert.status === "REJECTED";
-                const isResubmit = cert.status === "NEEDS_RESUBMISSION";
+        {validCertificates.length === 0 ? (
+          <div className="text-center py-12 space-y-3 rounded-2xl border border-slate-800 bg-slate-900/40 p-8">
+            <FileText className="h-10 w-10 text-slate-600 mx-auto" />
+            <h3 className="text-sm font-bold text-slate-300 font-display">No Certificates Uploaded</h3>
+            <p className="text-xs text-slate-400 max-w-md mx-auto">
+              You have not uploaded any original certificates yet. Complete an official provider course and upload your certificate above.
+            </p>
+          </div>
+        ) : (
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
+            {validCertificates.map((cert) => {
+              const providerName = cert.provider?.name || "Official Provider";
+              const courseTitle = cert.course?.title || cert.course?.name || "Official Course";
+              const formattedIssueDate = cert.issueDate
+                ? new Date(cert.issueDate).toLocaleDateString("en-IN", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                  })
+                : "N/A";
 
-                return (
-                  <div
-                    key={cert.id}
-                    className={`rounded-2xl border p-5 space-y-3 transition-all ${
-                      isVerified
-                        ? "border-emerald-500/40 bg-gradient-to-r from-emerald-500/10 via-teal-500/5 to-transparent shadow-lg shadow-emerald-500/5"
-                        : isPending
-                        ? "border-cyan-500/30 bg-slate-900/80"
-                        : isRejected
-                        ? "border-rose-500/40 bg-rose-500/10"
-                        : "border-amber-500/40 bg-amber-500/10"
-                    }`}
-                  >
-                    <div className="flex items-start justify-between gap-3">
-                      <div>
-                        <span className="rounded bg-slate-900 border border-slate-800 px-2 py-0.5 text-[10px] font-bold text-cyan-300">
-                          {cert.skill.level.name}
+              return (
+                <div
+                  key={cert.id}
+                  className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 space-y-4 text-xs flex flex-col justify-between"
+                >
+                  <div className="space-y-3">
+                    {/* Header: Status badge */}
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-bold text-white font-display text-sm">
+                        {cert.skill.name}
+                      </span>
+                      {cert.status === "VERIFIED" && (
+                        <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/40 bg-emerald-500/15 px-3 py-0.5 text-[10px] font-bold text-emerald-300">
+                          <CheckCircle2 className="h-3 w-3" /> VERIFIED
                         </span>
-                        <h3 className="mt-1.5 text-base font-bold text-white font-display">{cert.skill.name}</h3>
-                        {cert.course && (
-                          <p className="mt-2 text-xs text-cyan-300">
-                            {cert.provider?.name} · {cert.course.title ?? cert.course.name} · {cert.credentialType}
-                          </p>
-                        )}
-                      </div>
-
-                      <div>
-                        {!hasPassed || cert.status === "LOCKED" ? (
-                          <span className="text-xs font-bold text-amber-300">CERTIFICATE LOCKED{cert.submittedAt ? " · Request Submitted" : ""}</span>
-                        ) : cert.status === "UNLOCKED" ? (
-                          <span className="text-xs font-bold text-emerald-300">PASSED · CERTIFICATE AVAILABLE / ISSUED</span>
-                        ) : isVerified ? (
-                          <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/40 bg-emerald-500/20 px-2.5 py-0.5 text-[10px] font-bold text-emerald-300">
-                            <ShieldCheck className="h-3 w-3" /> VERIFIED ✓
-                          </span>
-                        ) : isPending ? (
-                          <span className="inline-flex items-center gap-1 rounded-full border border-cyan-500/40 bg-cyan-500/20 px-2.5 py-0.5 text-[10px] font-bold text-cyan-300">
-                            <Clock className="h-3 w-3" /> PENDING REVIEW
-                          </span>
-                        ) : isRejected ? (
-                          <span className="inline-flex items-center gap-1 rounded-full border border-rose-500/40 bg-rose-500/20 px-2.5 py-0.5 text-[10px] font-bold text-rose-300">
-                            <XCircle className="h-3 w-3" /> REJECTED
-                          </span>
-                        ) : (
-                          <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/40 bg-amber-500/20 px-2.5 py-0.5 text-[10px] font-bold text-amber-300">
-                            <AlertCircle className="h-3 w-3" /> RESUBMIT
-                          </span>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Verified Evidence Links / Badges */}
-                    <div className="flex flex-wrap items-center gap-3 pt-1">
-                      {hasPassed && cert.officialUrl && (
-                        <a
-                          href={cert.officialUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center gap-1 text-xs font-semibold text-cyan-400 hover:underline"
-                        >
-                          <span>Verify Link: {cert.officialUrl}</span>
-                          <ExternalLink className="h-3 w-3" />
-                        </a>
                       )}
-
-                      {hasPassed && cert.status !== "LOCKED" && cert.filePath && (
-                        <a
-                          href={`/api/certificates/${cert.id}/file`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center gap-1.5 rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-2.5 py-1 text-xs font-semibold text-cyan-300 hover:bg-cyan-500/20 transition-colors"
-                        >
-                          <Paperclip className="h-3.5 w-3.5 text-cyan-400" />
-                          <span>
-                            View File ({cert.originalFileName || "Certificate"} • {formatBytes(cert.fileSize)})
-                          </span>
-                        </a>
-                      )}
-
-                      {isAvailable && (
-                        <>
-                          <a
-                            href={`/api/certificates/${cert.id}/download`}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-1.5 rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-2.5 py-1 text-xs font-semibold text-cyan-300 hover:bg-cyan-500/20 transition-colors"
-                          >
-                            <FileCheck2 className="h-3.5 w-3.5 text-cyan-400" />
-                            <span>View Certificate</span>
-                          </a>
-                          <a
-                            href={`/api/certificates/${cert.id}/download?format=download`}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-xs font-semibold text-emerald-300 hover:bg-emerald-500/20 transition-colors"
-                          >
-                            <Download className="h-3.5 w-3.5 text-emerald-400" />
-                            <span>Download</span>
-                          </a>
-                        </>
-                      )}
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-2 pt-2 text-[11px] text-slate-400 border-t border-slate-800/60 font-mono">
-                      <div>
-                        <span className="text-slate-500 block">Certificate No:</span>
-                        <span className="font-semibold text-amber-300">{cert.certificateNumber || cert.credentialId || "Assigned on Pass"}</span>
-                      </div>
-                      <div>
-                        <span className="text-slate-500 block">Issued Date:</span>
-                        <span className="font-semibold text-slate-200">
-                          {cert.issuedAt ? new Date(cert.issuedAt).toLocaleDateString() : "N/A"}
+                      {cert.status === "PENDING_VERIFICATION" && (
+                        <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/40 bg-amber-500/15 px-3 py-0.5 text-[10px] font-bold text-amber-300">
+                          <Clock className="h-3 w-3" /> PENDING VERIFICATION
                         </span>
+                      )}
+                      {cert.status === "REJECTED" && (
+                        <span className="inline-flex items-center gap-1 rounded-full border border-rose-500/40 bg-rose-500/15 px-3 py-0.5 text-[10px] font-bold text-rose-300">
+                          <XCircle className="h-3 w-3" /> REJECTED
+                        </span>
+                      )}
+                      {cert.status === "NEEDS_RESUBMISSION" && (
+                        <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/40 bg-amber-500/15 px-3 py-0.5 text-[10px] font-bold text-amber-300">
+                          <RefreshCw className="h-3 w-3" /> NEEDS RESUBMISSION
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Metadata */}
+                    <div className="space-y-1 pt-1 border-t border-slate-800/60 text-slate-300">
+                      <div>
+                        <span className="text-slate-400">Course: </span>
+                        <strong className="text-slate-200">{courseTitle}</strong>
+                      </div>
+                      <div>
+                        <span className="text-slate-400">Original Provider: </span>
+                        <strong className="text-cyan-300">{providerName}</strong>
+                      </div>
+                      <div>
+                        <span className="text-slate-400">Title: </span>
+                        <strong className="text-white">{cert.certificateTitle || courseTitle}</strong>
+                      </div>
+                      <div>
+                        <span className="text-slate-400">Credential ID: </span>
+                        <strong className="font-mono text-slate-200">{cert.credentialId || "N/A"}</strong>
+                      </div>
+                      <div>
+                        <span className="text-slate-400">Issue Date: </span>
+                        <strong className="text-slate-200">{formattedIssueDate}</strong>
+                      </div>
+                      <div>
+                        <span className="text-slate-400">Original File: </span>
+                        <strong className="font-mono text-slate-300">{cert.originalFileName || "Uploaded File"}</strong>
                       </div>
                     </div>
 
-                    {cert.remarks && (
-                      <div className="rounded-xl border border-slate-800 bg-slate-950/80 p-3 text-xs text-slate-300">
-                        <span className="font-bold text-amber-300">Admin Remarks: </span>
-                        {cert.remarks}
+                    {/* Status Messages */}
+                    {cert.status === "PENDING_VERIFICATION" && (
+                      <div className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-3 text-amber-300 text-[11px] font-medium flex items-center gap-2">
+                        <Clock className="h-4 w-4 shrink-0 text-amber-400" />
+                        <span>Pending Admin Verification — Your uploaded certificate is being reviewed by SkillCert 360 administrators.</span>
+                      </div>
+                    )}
+
+                    {cert.status === "REJECTED" && (
+                      <div className="rounded-xl border border-rose-500/20 bg-rose-500/5 p-3 text-rose-300 text-[11px] font-medium space-y-1">
+                        <div className="flex items-center gap-1.5 font-bold">
+                          <AlertTriangle className="h-3.5 w-3.5" /> Rejection Reason:
+                        </div>
+                        <p className="text-rose-200/90">{cert.rejectionReason || cert.remarks || "Certificate could not be verified."}</p>
+                      </div>
+                    )}
+
+                    {cert.status === "NEEDS_RESUBMISSION" && (
+                      <div className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-3 text-amber-300 text-[11px] font-medium space-y-1">
+                        <div className="flex items-center gap-1.5 font-bold">
+                          <RefreshCw className="h-3.5 w-3.5" /> Resubmission Required:
+                        </div>
+                        <p className="text-amber-200/90">{cert.rejectionReason || cert.remarks || "Please upload a clearer or updated certificate."}</p>
                       </div>
                     )}
                   </div>
-                );
-              })
-            )}
+
+                  {/* Actions for VERIFIED certificates */}
+                  {cert.status === "VERIFIED" && (
+                    <div className="pt-3 border-t border-slate-800/80 flex flex-wrap items-center gap-2">
+                      <a
+                        href={`/api/certificates/${cert.id}/file`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-xl border border-slate-700 bg-slate-800 px-3 py-1.5 text-[11px] font-semibold text-slate-200 hover:bg-slate-700 hover:text-white transition-all"
+                      >
+                        <ExternalLink className="h-3.5 w-3.5" /> View Original Certificate
+                      </a>
+                      <a
+                        href={`/api/certificates/${cert.id}/download`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-xl border border-cyan-500/30 bg-cyan-500/10 px-3 py-1.5 text-[11px] font-semibold text-cyan-300 hover:bg-cyan-500/20 transition-all"
+                      >
+                        <ShieldCheck className="h-3.5 w-3.5" /> View Verified Credential Summary
+                      </a>
+                      <a
+                        href={`/api/certificates/${cert.id}/download?format=download`}
+                        className="inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-3 py-1.5 text-[11px] font-bold text-white shadow-sm hover:from-emerald-500 hover:to-teal-500 transition-all"
+                      >
+                        <Download className="h-3.5 w-3.5" /> Download Summary
+                      </a>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

@@ -1,72 +1,187 @@
 import { db } from "@/lib/db";
 
-export type StudentProgressState = string;
+export type StudentProgressState =
+  | "NOT_STARTED"
+  | "LEARNING"
+  | "LEARNING_COMPLETED"
+  | "PENDING_VERIFICATION"
+  | "VERIFIED"
+  | "REJECTED"
+  | "NEEDS_RESUBMISSION";
 
-export async function getSkillProgressState(studentId: string, skillId: string) {
-  const [entry, attempt, certificate] = await Promise.all([
-    db.studentSkill.findUnique({ where: { studentId_skillId: { studentId, skillId } } }),
-    db.assessmentAttempt.findFirst({ where: { studentId, skillId }, orderBy: { startedAt: "desc" } }),
-    db.certificate.findUnique({ where: { studentId_skillId: { studentId, skillId } } }),
+function resolveCertificateState(
+  statuses: string[]
+): StudentProgressState | null {
+  if (statuses.includes("VERIFIED")) {
+    return "VERIFIED";
+  }
+
+  if (
+    statuses.includes("PENDING_VERIFICATION") ||
+    statuses.includes("SUBMITTED") ||
+    statuses.includes("PENDING_SUBMISSION")
+  ) {
+    return "PENDING_VERIFICATION";
+  }
+
+  if (statuses.includes("NEEDS_RESUBMISSION")) {
+    return "NEEDS_RESUBMISSION";
+  }
+
+  if (statuses.includes("REJECTED")) {
+    return "REJECTED";
+  }
+
+  return null;
+}
+
+export async function getSkillProgressState(
+  studentId: string,
+  skillId: string
+): Promise<StudentProgressState> {
+  const [entry, certificates] = await Promise.all([
+    db.studentSkill.findUnique({
+      where: {
+        studentId_skillId: {
+          studentId,
+          skillId,
+        },
+      },
+    }),
+
+    db.certificate.findMany({
+      where: {
+        studentId,
+        skillId,
+      },
+      select: {
+        status: true,
+      },
+      orderBy: {
+        createdAt: "desc",
+      },
+    }),
   ]);
-  if (certificate?.status === "VERIFIED" && attempt?.passed) return "VERIFIED";
-  if (certificate && attempt?.passed) return certificate.status === "UNLOCKED" ? "CERTIFICATE_UNLOCKED" : certificate.status;
-  if (attempt?.passed) return "ASSESSMENT_PASSED";
-  if (attempt?.passed === false) return "REEXAM_REQUIRED";
-  if (attempt && !attempt.submittedAt) return "ASSESSMENT_IN_PROGRESS";
-  if (entry?.completedAt) return certificate?.submittedAt && certificate.courseId === entry.selectedCourseId ? "ASSESSMENT_AVAILABLE" : "LEARNING_COMPLETED";
-  return entry ? "LEARNING" : "NOT_STARTED";
+
+  const certificateState = resolveCertificateState(
+    certificates.map((certificate) => certificate.status)
+  );
+
+  if (certificateState) {
+    return certificateState;
+  }
+
+  if (entry?.completedAt) {
+    return "LEARNING_COMPLETED";
+  }
+
+  if (entry) {
+    return "LEARNING";
+  }
+
+  return "NOT_STARTED";
 }
 
 export async function getSkillProgressSummary(studentId: string) {
-  const [skills, studentSkills, attempts, certificates] = await Promise.all([
-    db.skill.findMany({ select: { id: true, name: true } }),
-    db.studentSkill.findMany({ where: { studentId } }),
-    db.assessmentAttempt.findMany({
-      where: { studentId },
-      orderBy: { startedAt: "desc" },
+  const [skills, studentSkills, certificates] = await Promise.all([
+    db.skill.findMany({
+      where: {
+        active: true,
+      },
+      select: {
+        id: true,
+        name: true,
+      },
     }),
-    db.certificate.findMany({ where: { studentId } }),
+
+    db.studentSkill.findMany({
+      where: {
+        studentId,
+      },
+    }),
+
+    db.certificate.findMany({
+      where: {
+        studentId,
+      },
+      select: {
+        skillId: true,
+        status: true,
+      },
+    }),
   ]);
 
-  const skillMap = new Map(studentSkills.map((s) => [s.skillId, s]));
-  const certMap = new Map(certificates.map((c) => [c.skillId, c]));
-  
-  // Latest attempt per skill
-  const attemptMap = new Map<string, (typeof attempts)[0]>();
-  for (const a of attempts) {
-    if (!attemptMap.has(a.skillId)) {
-      attemptMap.set(a.skillId, a);
-    }
+  const skillMap = new Map(
+    studentSkills.map((studentSkill) => [
+      studentSkill.skillId,
+      studentSkill,
+    ])
+  );
+
+  const certificatesBySkill = new Map<
+    string,
+    typeof certificates
+  >();
+
+  for (const certificate of certificates) {
+    const current =
+      certificatesBySkill.get(certificate.skillId) ?? [];
+
+    current.push(certificate);
+
+    certificatesBySkill.set(
+      certificate.skillId,
+      current
+    );
   }
 
   return skills.map((skill) => {
     const entry = skillMap.get(skill.id);
-    const attempt = attemptMap.get(skill.id);
-    const certificate = certMap.get(skill.id);
 
-    let state = "NOT_STARTED";
-    if (certificate?.status === "VERIFIED" && attempt?.passed) {
-      state = "VERIFIED";
-    } else if (certificate && attempt?.passed) {
-      state = certificate.status === "UNLOCKED" ? "CERTIFICATE_UNLOCKED" : certificate.status;
-    } else if (attempt?.passed) {
-      state = "ASSESSMENT_PASSED";
-    } else if (attempt?.passed === false) {
-      state = "REEXAM_REQUIRED";
-    } else if (attempt && !attempt.submittedAt) {
-      state = "ASSESSMENT_IN_PROGRESS";
+    const skillCertificates =
+      certificatesBySkill.get(skill.id) ?? [];
+
+    const certificateState = resolveCertificateState(
+      skillCertificates.map(
+        (certificate) => certificate.status
+      )
+    );
+
+    let state: StudentProgressState = "NOT_STARTED";
+
+    if (certificateState) {
+      state = certificateState;
     } else if (entry?.completedAt) {
-      state = certificate?.submittedAt && certificate.courseId === entry.selectedCourseId ? "ASSESSMENT_AVAILABLE" : "LEARNING_COMPLETED";
+      state = "LEARNING_COMPLETED";
     } else if (entry) {
       state = "LEARNING";
     }
+
+    const verifiedCertificateCount =
+      skillCertificates.filter(
+        (certificate) =>
+          certificate.status === "VERIFIED"
+      ).length;
+
+    const pendingCertificateCount =
+      skillCertificates.filter(
+        (certificate) =>
+          certificate.status === "PENDING_VERIFICATION" ||
+          certificate.status === "SUBMITTED" ||
+          certificate.status === "PENDING_SUBMISSION"
+      ).length;
 
     return {
       skillId: skill.id,
       skillName: skill.name,
       state,
+
       started: state !== "NOT_STARTED",
-      completed: ["ASSESSMENT_PASSED", "CERTIFICATE_UNLOCKED", "VERIFIED"].includes(state),
+
+      completed: state === "VERIFIED",
+
+      verifiedCertificateCount,
+      pendingCertificateCount,
     };
   });
 }

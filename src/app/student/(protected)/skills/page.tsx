@@ -8,7 +8,6 @@ import type { StudentProgression } from "@/lib/progression";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import { getSession } from "@/lib/auth";
-import { expireStudentAttempts } from "@/lib/assessment";
 import { getStudentProgression, UNLOCK_THRESHOLDS, GATING_LEVEL, type LevelName, LEVEL_NAMES } from "@/lib/progression";
 import {
   Search,
@@ -483,7 +482,7 @@ function SkillCard({
               <button className="text-xs text-cyan-300 font-semibold hover:underline">Mark Learning Complete</button>
             </form>
           ) : (
-            <Link href={`/student/certificate-request/${skill.id}`} className="text-xs text-cyan-300 font-semibold hover:underline">Certificate Request / Assessment</Link>
+            <Link href="/student/certificates" className="text-xs text-cyan-300 font-semibold hover:underline">Upload Certificate / SkillLocker</Link>
           )}
         </div>
       )}
