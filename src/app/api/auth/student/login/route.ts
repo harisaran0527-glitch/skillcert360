@@ -9,10 +9,15 @@ export async function POST(request: Request) {
   const parsed = loginSchema.safeParse(form);
   if (!parsed.success) return NextResponse.redirect(new URL("/student/login?error=Enter a valid email or register number and password", request.url), 303);
 
+  const identifier = parsed.data.identifier.trim();
+
   const user = await db.user.findFirst({
     where: {
       role: "STUDENT",
-      OR: [{ email: parsed.data.identifier.toLowerCase() }, { studentProfile: { registerNumber: parsed.data.identifier } }],
+      OR: [
+        { email: identifier.toLowerCase() },
+        { studentProfile: { registerNumber: { equals: identifier, mode: "insensitive" } } },
+      ],
     },
     include: { studentProfile: true },
   });

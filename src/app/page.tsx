@@ -1,82 +1,80 @@
-// SkillCert 360 Public Homepage
 import Link from "next/link";
+import { getSession } from "@/lib/auth";
 import {
-  GraduationCap,
   ShieldCheck,
   Award,
-  Lock,
-  Unlock,
-  CheckCircle2,
+  BookOpen,
   ArrowRight,
   Sparkles,
-  BookOpen,
-  LogIn,
-  UserCheck,
+  CheckCircle2,
   FileCheck2,
-  ClipboardList,
-  MonitorCheck,
-  Trophy,
+  Layers,
+  GraduationCap,
+  Users,
   AlertTriangle,
   ChevronRight,
+  UploadCloud,
 } from "lucide-react";
 
-export default function Home() {
+export default async function HomePage() {
+  const session = await getSession();
+
   const steps = [
     {
       num: "01",
-      icon: LogIn,
-      title: "Sign In",
+      icon: Users,
+      title: "Admin Account Setup",
       color: "cyan",
-      desc: "Students receive their login credentials from the Admin. Accounts are created and issued by an authorised administrator.",
+      desc: "Admin creates your student account with login credentials, department, and academic level assignment.",
     },
     {
       num: "02",
-      icon: BookOpen,
-      title: "Choose a Skill",
+      icon: Layers,
+      title: "Select Skill & Level",
       color: "blue",
-      desc: "Browse industry-relevant skills including C, C++, Python, Java, JavaScript, Web Development, AI, Machine Learning, Cloud, SQL, and more.",
+      desc: "Choose an active skill aligned with your current progression level (Beginner, Advanced, Pro, or Expert).",
     },
     {
       num: "03",
-      icon: UserCheck,
-      title: "Choose an Official Provider",
+      icon: BookOpen,
+      title: "Select Official Course",
       color: "indigo",
-      desc: "Each skill lists verified learning providers (e.g. Cisco, IBM, Microsoft, Oracle). Select your official learning pathway.",
+      desc: "Pick an official course provider (Google, AWS, IBM, Microsoft, Coursera, NPTEL, etc.) for your selected skill.",
     },
     {
       num: "04",
-      icon: MonitorCheck,
+      icon: GraduationCap,
       title: "Learn Officially",
       color: "purple",
-      desc: "Open the official provider course and complete the learning directly on the provider's platform.",
+      desc: "Open the official provider course link and complete the learning directly on the provider's platform.",
     },
     {
       num: "05",
       icon: CheckCircle2,
       title: "Mark Learning Complete",
       color: "teal",
-      desc: "After finishing the course, return to SkillCert 360 and mark the learning pathway as complete to unlock certificate requesting.",
+      desc: "After finishing the course, return to SkillCert 360 and mark your learning pathway as complete to unlock SkillLocker.",
     },
     {
       num: "06",
-      icon: FileCheck2,
-      title: "Submit Certificate Request",
+      icon: UploadCloud,
+      title: "Upload Original Certificate",
       color: "sky",
-      desc: "Confirm your student details, course title, and provider information in the Certificate Request Form and submit your request.",
+      desc: "Upload your original provider certificate file (PDF/Image) to SkillLocker with issuer details and issue date.",
     },
     {
       num: "07",
       icon: ShieldCheck,
-      title: "Take Internal Assessment",
+      title: "Admin Verification",
       color: "amber",
-      desc: "Complete the proctored assessment with 50 randomized questions, anti-cheat tab-switch detection, timer, and server-side scoring.",
+      desc: "SkillCert 360 Admin reviews the uploaded certificate file for authenticity and sets status to VERIFIED.",
     },
     {
       num: "08",
-      icon: Trophy,
-      title: "Pass Assessment & Issue Certificate",
+      icon: Award,
+      title: "Verified Progression & Summary",
       color: "emerald",
-      desc: "Achieve a passing score of 50% or higher. Upon passing, your certificate instantly unlocks from LOCKED to AVAILABLE / ISSUED with a unique verification code.",
+      desc: "Only VERIFIED certificates unlock higher skill levels and generate an official SkillCert 360 Verified Credential Summary.",
     },
   ];
 
@@ -99,142 +97,135 @@ export default function Home() {
       <div className="absolute top-1/3 -right-60 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 -left-60 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Navigation */}
-      <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-6 border-b border-slate-800/80">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
-            <GraduationCap className="h-5 w-5" />
+      {/* Header / Nav */}
+      <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-6 border-b border-slate-800/80">
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+            <Award className="h-6 w-6 text-white" />
           </div>
           <div>
-            <span className="font-display text-xl font-extrabold tracking-tight text-white">
-              SkillCert <span className="text-cyan-400">360</span>
-            </span>
-            <span className="block text-[10px] uppercase tracking-widest text-slate-400 font-mono">
-              Verified Progression
-            </span>
-          </div>
-        </Link>
-
-        <Link
-          href="/student/login"
-          className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-cyan-500/20 hover:from-blue-500 hover:to-cyan-500 transition-all active:scale-[0.98]"
-        >
-          <LogIn className="w-4 h-4" /> Sign In
-        </Link>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="relative z-10 mx-auto max-w-7xl px-6 pt-20 pb-16 lg:pt-28 lg:pb-24">
-        <div className="text-center space-y-6 max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-semibold text-cyan-400">
-            <Sparkles className="w-3.5 h-3.5" /> Verified Skill Certification Platform
-          </div>
-
-          <h1 className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl leading-[1.08]">
-            Discover Skills. Learn Officially. <br />
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
-              Get Verified.
-            </span>
-          </h1>
-
-          <p className="text-base text-slate-400 sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            SkillCert 360 helps students discover industry-relevant skills, learn using official provider courses, mark learning complete, submit certificate requests, pass secure assessments, and earn verified skill certificates.
-          </p>
-
-          <div className="pt-4">
-            <Link
-              href="/student/login"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 px-10 py-4 text-sm font-bold text-white shadow-xl shadow-cyan-500/20 hover:from-blue-500 hover:to-cyan-500 transition-all active:scale-[0.98]"
-            >
-              Sign In <ArrowRight className="w-4 h-4" />
-            </Link>
+            <span className="font-display font-extrabold text-xl tracking-tight text-white block">SkillCert 360</span>
+            <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold block">Verification Platform</span>
           </div>
         </div>
 
-        {/* 4-Level Progression Grid */}
-        <div className="mt-20 pt-10 border-t border-slate-800/80">
-          <div className="text-center mb-10 space-y-2">
-            <h2 className="text-xs font-bold uppercase tracking-widest text-cyan-400">Level Journey</h2>
-            <p className="text-2xl font-bold text-white">4-Level Certificate Progression</p>
+        <div className="flex items-center gap-4">
+          {session ? (
+            <Link
+              href={session.role === "ADMIN" ? "/admin/dashboard" : "/student/dashboard"}
+              className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 font-semibold text-sm hover:opacity-90 transition shadow-lg shadow-cyan-500/20 flex items-center gap-2"
+            >
+              Dashboard <ArrowRight className="w-4 h-4" />
+            </Link>
+          ) : (
+            <>
+              <Link
+                href="/student/login"
+                className="px-4 py-2 rounded-xl text-slate-300 hover:text-white font-medium text-sm transition hover:bg-slate-800/50"
+              >
+                Student Portal
+              </Link>
+              <Link
+                href="/admin/login"
+                className="px-4 py-2 rounded-xl border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-200 font-medium text-sm transition"
+              >
+                Admin Portal
+              </Link>
+            </>
+          )}
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative z-10 mx-auto max-w-5xl px-6 pt-20 pb-16 text-center">
+        <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-semibold text-cyan-400 mb-8 backdrop-blur-md">
+          <Sparkles className="h-4 w-4" /> Official Skill Accreditation &amp; Verification Platform
+        </div>
+
+        <h1 className="font-display text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-[1.1] max-w-4xl mx-auto">
+          Learn Officially. Upload Credentials.{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400">
+            Get Verified.
+          </span>
+        </h1>
+
+        <p className="mt-6 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-normal">
+          SkillCert 360 is an enterprise skill verification system. Complete courses from official providers, upload your certificates to SkillLocker, and earn verified level progression.
+        </p>
+
+        {/* CTA buttons */}
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
+            href="/student/login"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 font-bold text-base hover:opacity-95 transition shadow-xl shadow-cyan-500/25 flex items-center justify-center gap-2"
+          >
+            Student Login <ArrowRight className="w-5 h-5" />
+          </Link>
+          <Link
+            href="/admin/login"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 border border-slate-700 hover:border-slate-600 font-bold text-base hover:bg-slate-800/80 transition flex items-center justify-center gap-2 text-slate-200"
+          >
+            <ShieldCheck className="w-5 h-5 text-amber-400" /> Admin Portal
+          </Link>
+        </div>
+
+        {/* Stats banner */}
+        <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl">
+          <div className="text-center">
+            <div className="font-display text-2xl sm:text-3xl font-extrabold text-cyan-400">4 Levels</div>
+            <div className="text-xs text-slate-400 mt-1 font-medium">Beginner to Expert</div>
           </div>
-
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="glass-panel p-6 border-l-4 border-l-emerald-500">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest">Beginner</span>
-                <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-semibold text-emerald-400">
-                  <Unlock className="w-3 h-3" /> Available
-                </span>
-              </div>
-              <p className="mt-3 text-xs text-slate-400">Available immediately on enrolment. No prior certificates required.</p>
-              <div className="mt-4 pt-3 border-t border-slate-800/80 text-[11px] text-slate-500 font-mono">Req: 0 Certificates</div>
-            </div>
-
-            <div className="glass-panel p-6 border-l-4 border-l-blue-500">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-blue-400 uppercase tracking-widest">Advanced</span>
-                <span className="inline-flex items-center gap-1 rounded-full bg-blue-500/10 px-2 py-0.5 text-[10px] font-semibold text-blue-400">
-                  <Lock className="w-3 h-3" /> Locked
-                </span>
-              </div>
-              <p className="mt-3 text-xs text-slate-400">Unlocks after earning 25 verified Beginner credentials.</p>
-              <div className="mt-4 pt-3 border-t border-slate-800/80 text-[11px] text-blue-400 font-mono font-semibold">Unlock: 25 Verified Beginner Certs</div>
-            </div>
-
-            <div className="glass-panel p-6 border-l-4 border-l-purple-500">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-purple-400 uppercase tracking-widest">Pro</span>
-                <span className="inline-flex items-center gap-1 rounded-full bg-purple-500/10 px-2 py-0.5 text-[10px] font-semibold text-purple-400">
-                  <Lock className="w-3 h-3" /> Locked
-                </span>
-              </div>
-              <p className="mt-3 text-xs text-slate-400">Unlocks after earning 50 verified Advanced credentials.</p>
-              <div className="mt-4 pt-3 border-t border-slate-800/80 text-[11px] text-purple-400 font-mono font-semibold">Unlock: 50 Verified Advanced Certs</div>
-            </div>
-
-            <div className="glass-panel p-6 border-l-4 border-l-amber-500">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-amber-400 uppercase tracking-widest">Expert</span>
-                <span className="inline-flex items-center gap-1 rounded-full bg-amber-500/10 px-2 py-0.5 text-[10px] font-semibold text-amber-400">
-                  <Lock className="w-3 h-3" /> Locked
-                </span>
-              </div>
-              <p className="mt-3 text-xs text-slate-400">Unlocks after earning 75 verified Pro credentials.</p>
-              <div className="mt-4 pt-3 border-t border-slate-800/80 text-[11px] text-amber-400 font-mono font-semibold">Unlock: 75 Verified Pro Certs</div>
-            </div>
+          <div className="text-center border-l border-slate-800">
+            <div className="font-display text-2xl sm:text-3xl font-extrabold text-blue-400">SkillLocker</div>
+            <div className="text-xs text-slate-400 mt-1 font-medium">Secure Private Storage</div>
+          </div>
+          <div className="text-center border-l border-slate-800">
+            <div className="font-display text-2xl sm:text-3xl font-extrabold text-indigo-400">Admin Audit</div>
+            <div className="text-xs text-slate-400 mt-1 font-medium">Verification Control</div>
+          </div>
+          <div className="text-center border-l border-slate-800">
+            <div className="font-display text-2xl sm:text-3xl font-extrabold text-emerald-400">Instant PDF</div>
+            <div className="text-xs text-slate-400 mt-1 font-medium">Verified Credential Summary</div>
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="relative z-10 bg-slate-950/60 border-y border-slate-800/80 py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center mb-14 space-y-3">
-            <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-semibold text-blue-400 uppercase tracking-widest">
-              <BookOpen className="w-3.5 h-3.5" /> Student Guide
-            </div>
-            <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">How SkillCert 360 Works</h2>
-            <p className="text-sm text-slate-400 max-w-xl mx-auto">A clear step-by-step journey from sign-in to verified certificates.</p>
+      {/* Workflow Section */}
+      <section className="relative z-10 mx-auto max-w-7xl px-6 py-20">
+        <div className="text-center mb-16 space-y-3">
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-semibold text-blue-400 uppercase tracking-widest">
+            End-to-End Skill Flow
           </div>
+          <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">How SkillCert 360 Works</h2>
+          <p className="text-slate-400 text-sm max-w-xl mx-auto">
+            From initial course selection to admin verification and official progression.
+          </p>
+        </div>
 
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {steps.map((step) => {
-              const c = colorMap[step.color];
-              const Icon = step.icon;
-              return (
-                <div key={step.num} className={`glass-panel p-6 border-l-4 ${c.border} space-y-3`}>
-                  <div className="flex items-center gap-3">
-                    <div className={`p-2.5 rounded-xl border ${c.icon} shrink-0`}>
-                      <Icon className="w-4 h-4" />
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {steps.map((step) => {
+            const colors = colorMap[step.color] || colorMap.cyan;
+            const IconComponent = step.icon;
+            return (
+              <div
+                key={step.num}
+                className={`glass-panel p-6 border-l-4 ${colors.border} flex flex-col justify-between hover:translate-y-[-2px] transition duration-200`}
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className={`text-xs font-bold font-mono px-2 py-0.5 rounded border ${colors.badge}`}>
+                      STEP {step.num}
+                    </span>
+                    <div className={`p-2 rounded-lg border ${colors.icon}`}>
+                      <IconComponent className="w-5 h-5" />
                     </div>
-                    <span className={`font-mono text-xl font-bold ${c.num}`}>{step.num}</span>
                   </div>
-                  <h3 className="font-bold text-white text-sm">{step.title}</h3>
+                  <h3 className="font-bold text-white text-base mb-2">{step.title}</h3>
                   <p className="text-xs text-slate-400 leading-relaxed">{step.desc}</p>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -247,36 +238,36 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-3">
           <div className="glass-panel p-6 flex gap-4 items-start">
             <div className="p-3 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 shrink-0">
-              <ShieldCheck className="w-6 h-6" />
+              <UploadCloud className="w-6 h-6" />
             </div>
             <div>
-              <h3 className="font-bold text-white text-base">Proctored Assessment</h3>
+              <h3 className="font-bold text-white text-base">SkillLocker Storage</h3>
               <p className="mt-1 text-xs text-slate-400 leading-relaxed">
-                Tab-switch monitoring, heartbeat locks, answer autosave, violation tracking, and server-side scoring.
+                Secure private blob upload for original provider certificates with SHA-256 duplicate detection.
               </p>
             </div>
           </div>
 
           <div className="glass-panel p-6 flex gap-4 items-start">
             <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 shrink-0">
-              <Award className="w-6 h-6" />
+              <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
-              <h3 className="font-bold text-white text-base">Admin Certificate Audit</h3>
+              <h3 className="font-bold text-white text-base">Admin Verification Audit</h3>
               <p className="mt-1 text-xs text-slate-400 leading-relaxed">
-                Admin tracks student progress, reviews certificate requests, and audits issued credentials.
+                Admin checks original documents, validates provider matching, and approves or rejects submissions.
               </p>
             </div>
           </div>
 
           <div className="glass-panel p-6 flex gap-4 items-start">
             <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 shrink-0">
-              <CheckCircle2 className="w-6 h-6" />
+              <Award className="w-6 h-6" />
             </div>
             <div>
-              <h3 className="font-bold text-white text-base">Real Analytics</h3>
+              <h3 className="font-bold text-white text-base">Verified Level Progression</h3>
               <p className="mt-1 text-xs text-slate-400 leading-relaxed">
-                Live database metrics, instant progression recalculations, and transparent audit trails for every student.
+                Threshold-based level unlocking (Advanced, Pro, Expert) driven strictly by VERIFIED certificates.
               </p>
             </div>
           </div>
@@ -290,7 +281,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-400 uppercase tracking-widest">
               <AlertTriangle className="w-3.5 h-3.5" /> Student Responsibilities
             </div>
-            <h2 className="font-display text-3xl font-extrabold text-white">Student Rules</h2>
+            <h2 className="font-display text-3xl font-extrabold text-white">Student Guidelines</h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -310,34 +301,30 @@ export default function Home() {
               <h3 className="font-bold text-white text-sm border-b border-slate-800 pb-2">Learning</h3>
               <ul className="space-y-2 text-xs text-slate-400">
                 <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />Use the official provider course linked in SkillCert 360.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />Do not mark learning complete without genuinely finishing the course.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />Course and certificate availability depend on official provider content.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />Complete the entire course on the official provider platform.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />Mark learning complete only after finishing official course requirements.</li>
               </ul>
             </div>
 
-            {/* Assessment Rules */}
+            {/* Upload Rules */}
             <div className="glass-panel p-6 space-y-3">
-              <h3 className="font-bold text-white text-sm border-b border-slate-800 pb-2">Assessment</h3>
+              <h3 className="font-bold text-white text-sm border-b border-slate-800 pb-2">SkillLocker Upload</h3>
               <ul className="space-y-2 text-xs text-slate-400">
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Submit Certificate Request before starting the assessment.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Fullscreen may be required. Do not exit fullscreen during assessment.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Do not switch tabs or windows during assessment.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Do not copy or paste assessment content.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Violations may result in automatic termination.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Refreshing the page will not reset the server timer.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Re-exam cooldown rules must be followed.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Upload original certificate file issued by official provider.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Supported formats: PDF, PNG, JPG, WEBP up to 10 MB.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Provide accurate issue date and matching provider details.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />Fraudulent or altered certificates will be rejected by Admin.</li>
               </ul>
             </div>
 
-            {/* Credential Rules */}
+            {/* Verification Rules */}
             <div className="glass-panel p-6 space-y-3">
-              <h3 className="font-bold text-white text-sm border-b border-slate-800 pb-2">Certificates</h3>
+              <h3 className="font-bold text-white text-sm border-b border-slate-800 pb-2">Verification</h3>
               <ul className="space-y-2 text-xs text-slate-400">
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Submit accurate details in the Certificate Request Form.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Complete the assessment legitimately to earn your certificate.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Passing score of ≥ 50% automatically unlocks the certificate.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Certificates feature unique verification codes and QR links.</li>
-                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Earned certificates count directly toward level progression.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Uploaded certificates start in PENDING_VERIFICATION status.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Admin reviews uploaded files and sets status to VERIFIED or REJECTED.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Only VERIFIED certificates count toward skill level progression.</li>
+                <li className="flex gap-2"><ChevronRight className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />Verified credentials receive an official SkillCert 360 record ID.</li>
               </ul>
             </div>
           </div>
@@ -348,12 +335,10 @@ export default function Home() {
       <footer className="relative z-10 border-t border-slate-800/80 py-8 bg-slate-950/80">
         <div className="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div className="flex items-center gap-2">
-            <GraduationCap className="w-4 h-4 text-cyan-400" />
-            <span>© {new Date().getFullYear()} SkillCert 360 Platform. All rights reserved.</span>
+            <Award className="w-4 h-4 text-cyan-400" />
+            <span className="font-bold text-slate-300">SkillCert 360</span> &bull; Official Skill Accreditation &amp; Verification System
           </div>
-          <Link href="/student/login" className="hover:text-slate-300 transition">
-            Sign In
-          </Link>
+          <div>&copy; {new Date().getFullYear()} SkillCert 360. All rights reserved.</div>
         </div>
       </footer>
     </main>

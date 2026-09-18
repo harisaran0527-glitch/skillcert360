@@ -39,9 +39,11 @@ export function AdminNavigation({ adminEmail = "Admin" }: AdminNavProps) {
   const navItems = [
     { label: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
     { label: "Students", href: "/admin/students", icon: Users },
+    { label: "Skills", href: "/admin/skills", icon: BookOpen },
     { label: "Courses", href: "/admin/courses", icon: GraduationCap },
-    { label: "Questions", href: "/admin/questions", icon: HelpCircle },
+    { label: "Providers", href: "/admin/providers", icon: Building },
     { label: "SkillLocker HQ", href: "/admin/certificates", icon: FileCheck2 },
+    { label: "Analytics", href: "/admin/analytics", icon: BarChart3 },
     { label: "Settings", href: "/admin/settings", icon: Settings },
   ];
 

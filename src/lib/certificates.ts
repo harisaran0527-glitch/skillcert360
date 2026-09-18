@@ -1,186 +1,103 @@
 import { z } from "zod";
 import { db } from "@/lib/db";
-import { WorkflowError } from "@/lib/workflow";
+import { studentTransaction, WorkflowError } from "@/lib/workflow";
 
 export const reviewSchema = z
   .object({
     certificateId: z.string().cuid(),
-    status: z.enum([
-      "VERIFIED",
-      "REJECTED",
-      "NEEDS_RESUBMISSION",
-    ]),
+    status: z.enum(["VERIFIED", "REJECTED", "NEEDS_RESUBMISSION"]),
     remarks: z.string().trim().max(2000).default(""),
   })
   .strict()
   .refine(
-    (data) =>
-      data.status === "VERIFIED" ||
-      data.remarks.length > 0,
-    "Provide a reason for rejection or resubmission"
+    (v) => v.status === "VERIFIED" || v.remarks.length > 0,
+    "Provide remarks/reason for rejection or resubmission"
   );
 
-export async function reviewCertificate(
-  adminId: string,
-  data: z.infer<typeof reviewSchema>
-) {
-  const certificate = await db.certificate.findUnique({
-    where: {
-      id: data.certificateId,
-    },
-  });
+export async function reviewCertificate(adminId: string, data: z.infer<typeof reviewSchema>) {
+  const certificate = await db.certificate.findUnique({ where: { id: data.certificateId } });
+  if (!certificate) throw new WorkflowError("Certificate not found", 404);
 
-  if (!certificate) {
-    throw new WorkflowError(
-      "Certificate not found",
-      404
-    );
-  }
+  return studentTransaction(certificate.studentId, async (tx) => {
+    const current = await tx.certificate.findUniqueOrThrow({ where: { id: certificate.id } });
+    if (current.status !== "PENDING_VERIFICATION") {
+      throw new WorkflowError("Only a PENDING_VERIFICATION submission can be reviewed.");
+    }
 
-  if (certificate.status !== "PENDING_VERIFICATION") {
-    throw new WorkflowError(
-      "Only certificates pending verification can be reviewed.",
-      400
-    );
-  }
+    if (!current.filePath) {
+      throw new WorkflowError("Original certificate file is required for verification.");
+    }
 
-  if (!certificate.filePath) {
-    throw new WorkflowError(
-      "Original certificate file is missing.",
-      400
-    );
-  }
+    if (!current.courseId) {
+      throw new WorkflowError("Course selection is required for verification.");
+    }
 
-  if (!certificate.courseId) {
-    throw new WorkflowError(
-      "Certificate course information is missing.",
-      400
-    );
-  }
+    if (!current.providerId) {
+      throw new WorkflowError("Provider is required for verification.");
+    }
 
-  if (!certificate.providerId) {
-    throw new WorkflowError(
-      "Certificate provider information is missing.",
-      400
-    );
-  }
+    if (!current.certificateTitle) {
+      throw new WorkflowError("Certificate title is required for verification.");
+    }
 
-  if (!certificate.certificateTitle) {
-    throw new WorkflowError(
-      "Certificate title is missing.",
-      400
-    );
-  }
+    if (!current.issueDate) {
+      throw new WorkflowError("Issue date is required for verification.");
+    }
 
-  const originalIssueDate =
-    certificate.issueDate ?? certificate.issuedAt;
-
-  if (!originalIssueDate) {
-    throw new WorkflowError(
-      "Certificate issue date is missing.",
-      400
-    );
-  }
-
-  const verifiedAt =
-    data.status === "VERIFIED"
-      ? new Date()
-      : null;
-
-  const rejectionReason =
-    data.status === "VERIFIED"
-      ? null
-      : data.remarks || null;
-
-  return db.$transaction(async (tx) => {
-    const current = await tx.certificate.findUnique({
-      where: {
-        id: certificate.id,
+    const verifiedAt = data.status === "VERIFIED" ? new Date() : null;
+    const updated = await tx.certificate.update({
+      where: { id: current.id },
+      data: {
+        status: data.status,
+        remarks: data.remarks || null,
+        rejectionReason: data.status !== "VERIFIED" ? (data.remarks || null) : null,
+        verifiedAt,
+        verifiedById: verifiedAt ? adminId : null,
       },
     });
-
-    if (!current) {
-      throw new WorkflowError(
-        "Certificate not found",
-        404
-      );
-    }
-
-    if (current.status !== "PENDING_VERIFICATION") {
-      throw new WorkflowError(
-        "Certificate has already been reviewed.",
-        400
-      );
-    }
-
-    const updatedCertificate =
-      await tx.certificate.update({
-        where: {
-          id: current.id,
-        },
-        data: {
-          status: data.status,
-
-          remarks:
-            data.remarks || null,
-
-          rejectionReason,
-
-          verifiedAt,
-
-          verifiedById:
-            data.status === "VERIFIED"
-              ? adminId
-              : null,
-        },
-      });
 
     await tx.certificateReview.create({
       data: {
         certificateId: current.id,
         actorId: adminId,
-
         status: data.status,
-
-        remarks:
-          data.remarks || null,
-
-        officialUrl:
-          current.credentialUrl ??
-          current.officialUrl ??
-          null,
-
-        credentialId:
-          current.credentialId,
-
-        filePath:
-          current.filePath,
-
-        originalFileName:
-          current.originalFileName,
-
-        mimeType:
-          current.mimeType,
-
-        fileSize:
-          current.fileSize,
-
-        issuedAt: originalIssueDate,
+        remarks: data.remarks || null,
+        officialUrl: current.officialUrl,
+        credentialId: current.credentialId,
+        filePath: current.filePath,
+        originalFileName: current.originalFileName,
+        mimeType: current.mimeType,
+        fileSize: current.fileSize,
+        issuedAt: current.issueDate,
       },
     });
 
-    if (data.status === "VERIFIED") {
-      await tx.studentSkill.updateMany({
-        where: {
-          studentId: current.studentId,
-          skillId: current.skillId,
-        },
+    const studentSkill = await tx.studentSkill.findFirst({
+      where: { studentId: current.studentId, skillId: current.skillId },
+    });
+    if (studentSkill) {
+      await tx.studentSkill.update({
+        where: { id: studentSkill.id },
         data: {
-          verifiedAt,
+          verifiedAt: data.status === "VERIFIED" ? (studentSkill.verifiedAt || new Date()) : studentSkill.verifiedAt,
+          state: data.status === "VERIFIED" ? "VERIFIED" : studentSkill.state,
         },
       });
     }
 
-    return updatedCertificate;
+    await tx.activityLog.create({
+      data: {
+        studentId: current.studentId,
+        action: `CERTIFICATE_${data.status}`,
+        metadata: {
+          certificateId: current.id,
+          skillId: current.skillId,
+          reviewedBy: adminId,
+          remarks: data.remarks,
+        },
+      },
+    });
+
+    return updated;
   });
 }

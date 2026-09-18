@@ -1,5 +1,4 @@
 import { productionStudentWhere, productionSkillWhere, productionCourseWhere } from "@/lib/production-ui";
-import { getCanonicalCourseIds } from "@/lib/catalogue-visibility";
 import Link from "next/link";
 import { db } from "@/lib/db";
 import {
@@ -9,10 +8,12 @@ import {
   GraduationCap,
   Award,
   FileCheck2,
+  Clock,
+  XCircle,
+  RefreshCw,
   ArrowRight,
   Command,
 } from "lucide-react";
-
 
 export default async function AdminDashboard() {
   const [
@@ -20,25 +21,23 @@ export default async function AdminDashboard() {
     activeStudents,
     totalSkills,
     totalCourses,
-    totalAssessments,
-    passedAssessments,
-    failedAssessments,
-    certificatesSubmitted,
+    certificatesPending,
     certificatesVerified,
+    certificatesRejected,
+    certificatesResubmission,
   ] = await Promise.all([
     db.studentProfile.count({ where: productionStudentWhere }),
     db.user.count({ where: { role: "STUDENT", status: "ACTIVE", studentProfile: productionStudentWhere } }),
     db.skill.count({ where: productionSkillWhere }),
     db.course.count({ where: productionCourseWhere }),
-    db.assessmentAttempt.count({ where: { student: productionStudentWhere, skill: productionSkillWhere } }),
-    db.assessmentAttempt.count({ where: { AND: [{ student: productionStudentWhere, skill: productionSkillWhere }], passed: true } }),
-    db.assessmentAttempt.count({ where: { AND: [{ student: productionStudentWhere, skill: productionSkillWhere }], passed: false } }),
-    db.certificate.count({ where: { student: productionStudentWhere, skill: productionSkillWhere, submittedAt: { not: null } } }),
+    db.certificate.count({ where: { student: productionStudentWhere, skill: productionSkillWhere, status: "PENDING_VERIFICATION" } }),
     db.certificate.count({ where: { student: productionStudentWhere, skill: productionSkillWhere, status: "VERIFIED" } }),
+    db.certificate.count({ where: { student: productionStudentWhere, skill: productionSkillWhere, status: "REJECTED" } }),
+    db.certificate.count({ where: { student: productionStudentWhere, skill: productionSkillWhere, status: "NEEDS_RESUBMISSION" } }),
   ]);
 
-  const passRate = totalAssessments > 0 ? Math.round((passedAssessments / totalAssessments) * 100) : 0;
-  const verificationRate = certificatesSubmitted > 0 ? Math.round((certificatesVerified / certificatesSubmitted) * 100) : 0;
+  const totalUploaded = certificatesPending + certificatesVerified + certificatesRejected + certificatesResubmission;
+  const verificationRate = totalUploaded > 0 ? Math.round((certificatesVerified / totalUploaded) * 100) : 0;
 
   return (
     <div className="space-y-8 pb-12">
@@ -54,7 +53,7 @@ export default async function AdminDashboard() {
             </div>
             <h1 className="text-3xl font-extrabold text-white font-display">Administrator Command Center</h1>
             <p className="text-xs text-slate-400 max-w-xl">
-              Real-time platform metrics, student progression standings, evaluation logs, and credential verification queues.
+              Real-time platform metrics, student progression standings, and SkillLocker certificate verification queues.
             </p>
           </div>
 
@@ -64,7 +63,7 @@ export default async function AdminDashboard() {
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 px-5 py-3 text-xs font-bold text-white shadow-lg shadow-indigo-500/20 hover:from-indigo-400 hover:to-purple-500 transition-all"
             >
               <FileCheck2 className="h-4 w-4" />
-              <span>Verification Queue</span>
+              <span>Verification Queue ({certificatesPending})</span>
             </Link>
             <Link
               href="/admin/students"
@@ -116,51 +115,37 @@ export default async function AdminDashboard() {
         </div>
       </section>
 
-      {/* Assessment & Verification Metrics Section */}
+      {/* SkillLocker & Certificate Verification Metrics Section */}
       <section className="grid gap-6 lg:grid-cols-2">
-        {/* Assessment Evaluation Breakdown */}
+        {/* Verification Queue Breakdown */}
         <div className="glass-panel rounded-3xl p-6 space-y-5">
           <div className="flex items-center justify-between border-b border-slate-800 pb-4">
             <h2 className="text-base font-bold text-white font-display flex items-center gap-2">
-              <Award className="h-5 w-5 text-indigo-400" />
-              <span>Assessment Evaluation Metrics</span>
+              <Clock className="h-5 w-5 text-amber-400" />
+              <span>SkillLocker Verification Queue</span>
             </h2>
-            <Link href="/admin/assessments" className="text-xs font-semibold text-indigo-400 hover:underline flex items-center gap-1">
-              View All <ArrowRight className="h-3.5 w-3.5" />
+            <Link href="/admin/certificates" className="text-xs font-semibold text-amber-400 hover:underline flex items-center gap-1">
+              Review Now <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
 
           <div className="grid grid-cols-3 gap-3">
             <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-4">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Attempted</span>
-              <span className="text-2xl font-extrabold text-white font-mono mt-1 block">{totalAssessments}</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400 block">Pending</span>
+              <span className="text-2xl font-extrabold text-amber-400 font-mono mt-1 block">{certificatesPending}</span>
             </div>
             <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-4">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 block">Passed</span>
-              <span className="text-2xl font-extrabold text-emerald-400 font-mono mt-1 block">{passedAssessments}</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-rose-400 block">Rejected</span>
+              <span className="text-2xl font-extrabold text-rose-400 font-mono mt-1 block">{certificatesRejected}</span>
             </div>
             <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-4">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-rose-400 block">Failed</span>
-              <span className="text-2xl font-extrabold text-rose-400 font-mono mt-1 block">{failedAssessments}</span>
-            </div>
-          </div>
-
-          {/* Real Bar */}
-          <div className="space-y-2 pt-2">
-            <div className="flex justify-between text-xs font-medium">
-              <span className="text-slate-400">Pass Rate:</span>
-              <span className="font-bold text-emerald-400 font-mono">{passRate}%</span>
-            </div>
-            <div className="h-3.5 w-full rounded-full bg-slate-900 border border-slate-800 overflow-hidden">
-              <div
-                className="h-full bg-gradient-to-r from-indigo-500 via-emerald-500 to-teal-400 transition-all duration-500"
-                style={{ width: `${passRate}%` }}
-              />
+              <span className="text-[10px] font-bold uppercase tracking-wider text-amber-300 block">Resubmit</span>
+              <span className="text-2xl font-extrabold text-amber-300 font-mono mt-1 block">{certificatesResubmission}</span>
             </div>
           </div>
         </div>
 
-        {/* Certificate Verification Metrics */}
+        {/* Certificate Credential Standing */}
         <div className="glass-panel rounded-3xl p-6 space-y-5">
           <div className="flex items-center justify-between border-b border-slate-800 pb-4">
             <h2 className="text-base font-bold text-white font-display flex items-center gap-2">
@@ -174,8 +159,8 @@ export default async function AdminDashboard() {
 
           <div className="grid grid-cols-2 gap-4">
             <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-4">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-cyan-400 block">Submitted</span>
-              <span className="text-3xl font-extrabold text-white font-mono mt-1 block">{certificatesSubmitted}</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-cyan-400 block">Total Uploads</span>
+              <span className="text-3xl font-extrabold text-white font-mono mt-1 block">{totalUploaded}</span>
             </div>
             <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-4">
               <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 block">Verified ✓</span>
@@ -186,8 +171,8 @@ export default async function AdminDashboard() {
           {/* Real Bar */}
           <div className="space-y-2 pt-2">
             <div className="flex justify-between text-xs font-medium">
-              <span className="text-slate-400">Verification Completion Rate:</span>
-              <span className="font-bold text-cyan-400 font-mono">{verificationRate}%</span>
+              <span className="text-slate-400">Verification Rate:</span>
+              <span className="font-bold text-emerald-400 font-mono">{verificationRate}%</span>
             </div>
             <div className="h-3.5 w-full rounded-full bg-slate-900 border border-slate-800 overflow-hidden">
               <div
