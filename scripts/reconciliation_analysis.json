@@ -1,0 +1,19 @@
+{
+  "totalDbRecords": 594,
+  "activeRecords": 592,
+  "inactiveRecords": 2,
+  "statusBreakdown": {
+    "verified": 448,
+    "unavailable": 144,
+    "retired": 0,
+    "pending": 0
+  },
+  "urlMetrics": {
+    "nullUrl": 0,
+    "emptyUrl": 0,
+    "uniqueUrlCourses": 76,
+    "duplicateUrlCourses": 500,
+    "genericUrls": 35
+  },
+  "statusSumCheck": true
+}

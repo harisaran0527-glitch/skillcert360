@@ -1,0 +1,2459 @@
+[
+  {
+    "url": "https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials",
+    "courseCount": 17,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8kt2b007ewubk4yafo7g9",
+        "skillName": "AWS Cloud Practitioner Basics",
+        "level": "Beginner",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtznf79d001lwu8chl1l8k42",
+        "skillName": "AWS Fundamentals",
+        "level": "Beginner",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtz8kt2b007dwubkth27wc2h",
+        "skillName": "Cloud Computing Fundamentals",
+        "level": "Beginner",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtznf6m1001bwu8cqwl39337",
+        "skillName": "Cloud Computing Fundamentals",
+        "level": "Beginner",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtznfdcq003nwu8cnitdx0ux",
+        "skillName": "DevOps Fundamentals",
+        "level": "Beginner",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtznfe0o004bwu8cghr5nj1d",
+        "skillName": "Generative AI Fundamentals",
+        "level": "Beginner",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtz8kt2b007hwubkxkrsra6f",
+        "skillName": "Serverless Computing Overview",
+        "level": "Beginner",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtznftg000exwu8cwj5342vp",
+        "skillName": "AWS Solutions Architecture Fundamentals",
+        "level": "Advanced",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtzng25z00ltwu8cy2kekofo",
+        "skillName": "AWS SysOps Administration",
+        "level": "Advanced",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtzng83m00qxwu8ck4vl1fkq",
+        "skillName": "AI Engineering & Fine-Tuning",
+        "level": "Pro",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtzngagg00snwu8cbpglbzd9",
+        "skillName": "AWS Certified Data Analytics Specialty",
+        "level": "Pro",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtzng83m00qvwu8cau7nj785",
+        "skillName": "Cloud Security Engineering",
+        "level": "Pro",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtzng82d00qtwu8ctc6pex0o",
+        "skillName": "DevOps Engineering & Automation",
+        "level": "Pro",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtzng7tz00qiwu8cgyt8b4cd",
+        "skillName": "Machine Learning Engineering & MLOps",
+        "level": "Pro",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtznglyg0109wu8cmxc17ajt",
+        "skillName": "Serverless Microservices Architecture",
+        "level": "Pro",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtzngoey0129wu8c90y8lige",
+        "skillName": "Enterprise Cloud Architecture",
+        "level": "Expert",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      },
+      {
+        "courseId": "cmtzngpii012lwu8cmjwsz7vi",
+        "skillName": "Enterprise Cloud Architecture",
+        "level": "Expert",
+        "provider": "Amazon Web Services (AWS)",
+        "courseName": "AWS Cloud Practitioner Essentials"
+      }
+    ]
+  },
+  {
+    "url": "https://docs.ansible.com/ansible/latest/getting_started/index.html",
+    "courseCount": 2,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfrls00ddwu8cjcie82eo",
+        "skillName": "Ansible Introduction",
+        "level": "Beginner",
+        "provider": "Red Hat",
+        "courseName": "Ansible Official Getting Started Guide"
+      },
+      {
+        "courseId": "cmtzng0c600kewu8c19hvgiua",
+        "skillName": "Ansible Configuration Management",
+        "level": "Advanced",
+        "provider": "Red Hat",
+        "courseName": "Ansible Official Getting Started Guide"
+      }
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+    "courseCount": 10,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfl430091wu8ccpbg8g4l",
+        "skillName": "Array & String Manipulation",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN JavaScript Official Language Guide"
+      },
+      {
+        "courseId": "cmtznf65p000twu8ccthfcguy",
+        "skillName": "JavaScript",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN JavaScript Official Language Guide"
+      },
+      {
+        "courseId": "cmtznf822001nwu8cjxp9tqg3",
+        "skillName": "JavaScript",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN JavaScript Official Language Guide"
+      },
+      {
+        "courseId": "cmtznf9ew002bwu8cflyjnhsk",
+        "skillName": "JavaScript",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN JavaScript Official Language Guide"
+      },
+      {
+        "courseId": "cmtz8co29001hwutolduc598z",
+        "skillName": "Modern JavaScript (ES6+)",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN JavaScript Official Language Guide"
+      },
+      {
+        "courseId": "cmtz8kt2a0063wubk2is06d2e",
+        "skillName": "Modern JavaScript (ES6+)",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN JavaScript Official Language Guide"
+      },
+      {
+        "courseId": "cmtz8cljr001bwutobinffiru",
+        "skillName": "TypeScript Essentials",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN JavaScript Official Language Guide"
+      },
+      {
+        "courseId": "cmtz8kt2a0062wubkn3qegs98",
+        "skillName": "TypeScript Essentials",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN JavaScript Official Language Guide"
+      },
+      {
+        "courseId": "cmtznfiqj006zwu8cv2jliqvg",
+        "skillName": "TypeScript Introduction",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN JavaScript Official Language Guide"
+      },
+      {
+        "courseId": "cmtznftbw00epwu8coaba42k3",
+        "skillName": "TypeScript Advanced Programming",
+        "level": "Advanced",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN JavaScript Official Language Guide"
+      }
+    ]
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/",
+    "courseCount": 11,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8kt2b007fwubklarhwqzr",
+        "skillName": "Azure Fundamentals Concepts",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Azure Fundamentals & Administration"
+      },
+      {
+        "courseId": "cmtz8kt2b007swubkf6ig8w28",
+        "skillName": "CI/CD Pipeline Fundamentals",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Azure Fundamentals & Administration"
+      },
+      {
+        "courseId": "cmtznf8o70021wu8c6f7dm791",
+        "skillName": "Cloud Computing Fundamentals",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Azure Fundamentals & Administration"
+      },
+      {
+        "courseId": "cmtznfpz800cnwu8cg0skg75l",
+        "skillName": "Event-Driven Architecture Basics",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Azure Fundamentals & Administration"
+      },
+      {
+        "courseId": "cmtznfdar003hwu8czvmk0u6i",
+        "skillName": "Microsoft Azure Fundamentals",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Azure Fundamentals & Administration"
+      },
+      {
+        "courseId": "cmtznfle30098wu8cehgfd91f",
+        "skillName": "Virtualization Basics",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Azure Fundamentals & Administration"
+      },
+      {
+        "courseId": "cmtz8kt2b007uwubklmjr06nd",
+        "skillName": "YAML & Configuration Syntax",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Azure Fundamentals & Administration"
+      },
+      {
+        "courseId": "cmtznftem00erwu8ccx37npqz",
+        "skillName": "Azure Administration (AZ-104)",
+        "level": "Advanced",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Azure Fundamentals & Administration"
+      },
+      {
+        "courseId": "cmtzng2a900m0wu8crfjg4h2z",
+        "skillName": "Azure Security Technologies",
+        "level": "Advanced",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Azure Fundamentals & Administration"
+      },
+      {
+        "courseId": "cmtzngaid00srwu8ch6zhea7o",
+        "skillName": "Azure Data Engineer Associate (DP-203)",
+        "level": "Pro",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Azure Fundamentals & Administration"
+      },
+      {
+        "courseId": "cmtzngoy2012jwu8ck0fdb9kk",
+        "skillName": "Enterprise Cloud Architecture",
+        "level": "Expert",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Azure Fundamentals & Administration"
+      }
+    ]
+  },
+  {
+    "url": "https://skillsforall.com/course/getting-started-cisco-packet-tracer",
+    "courseCount": 43,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8kt2b007owubkf8ogfrbq",
+        "skillName": "Bash Shell Scripting",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtz8kt2b0080wubkfik8dguw",
+        "skillName": "Cryptography & Hashing Basics",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznf8k1001ywu8cwdq9yzk9",
+        "skillName": "Cybersecurity Fundamentals",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtz8kt2b0083wubkn1vz6q0l",
+        "skillName": "Ethical Hacking Intro",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtz8kt2b0082wubkod0ymp4k",
+        "skillName": "Firewall & Network Defense",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznfnb100arwu8c3i3y2ctb",
+        "skillName": "Firewalls & NAT Fundamentals",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznfn4g00anwu8cr2w4ogz0",
+        "skillName": "IP Subnetting & CIDR",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtz8kt2b0081wubk2hgpx9be",
+        "skillName": "Information Security Policies",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznfle4009bwu8clne34urf",
+        "skillName": "Linux File Management",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznfl41008zwu8c6ef9m0mu",
+        "skillName": "Linux Networking Basics",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznfl41008xwu8c47ct6bxg",
+        "skillName": "Linux Process Management",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtz8kt2b007ywubkshzm0v42",
+        "skillName": "Network Protocol Essentials",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznf6i60014wu8cj7gn8nkn",
+        "skillName": "Networking Fundamentals",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznf8k1001zwu8cxyxvgcao",
+        "skillName": "Networking Fundamentals",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznfnbb00avwu8cp5lcgwbw",
+        "skillName": "Password Security & Auth",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznfn4g00aowu8c6s8a6k4n",
+        "skillName": "Phishing Awareness & Defense",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznfj9a007dwu8coibxtn6q",
+        "skillName": "PowerShell Fundamentals",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznfjay007jwu8c1ufpwjwi",
+        "skillName": "Shell Scripting Basics",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtz8kt2b007zwubko5s3cwnx",
+        "skillName": "Web Application Security (OWASP)",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznfnda00aywu8cong62ezp",
+        "skillName": "Wireless Network Fundamentals",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtz8kt2b0084wubkm8f058d0",
+        "skillName": "Wireless Network Security",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzng1ye00ljwu8ct3tn1srs",
+        "skillName": "Ethical Hacking Operations",
+        "level": "Advanced",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznfwj700gxwu8cgbc9jff2",
+        "skillName": "JWT & Session Security",
+        "level": "Advanced",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzng2a900m2wu8cjp32quzi",
+        "skillName": "Linux Networking & Routing",
+        "level": "Advanced",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzng1yb00lhwu8cdopt59ts",
+        "skillName": "Penetration Testing Methodology",
+        "level": "Advanced",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznfw8300ghwu8c9ijxm7g4",
+        "skillName": "Web Security & OWASP Top 10",
+        "level": "Advanced",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzng1zs00llwu8cclkcikfi",
+        "skillName": "Wireshark Packet Analysis",
+        "level": "Advanced",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzng7tz00qhwu8ciydcluqh",
+        "skillName": "Enterprise Network Engineering (CCNP)",
+        "level": "Pro",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzngijm00xjwu8c9p9f8ijt",
+        "skillName": "Generative Adversarial Networks (GANs)",
+        "level": "Pro",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzngksi00zdwu8chjva9y5a",
+        "skillName": "High-Frequency Network Packet Processing",
+        "level": "Pro",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzngfv500w2wu8cqj6x47t0",
+        "skillName": "IoT Enterprise Network Security",
+        "level": "Pro",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzngemp00viwu8cl3o0tjcv",
+        "skillName": "Microcontroller Firmware Development",
+        "level": "Pro",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzngz0g018nwu8cbff5uecf",
+        "skillName": "Deep Space Communication Network Protocol Design",
+        "level": "Expert",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzngo4y011twu8cbnr9hzag",
+        "skillName": "Enterprise Network Architecture (CCIE Level)",
+        "level": "Expert",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznguqe015twu8clp5voq7k",
+        "skillName": "Global Telecom 5G Core Network Architecture",
+        "level": "Expert",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzngwie016vwu8crxnov9v4",
+        "skillName": "Low-Latency Gaming Engine Networking Architecture",
+        "level": "Expert",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzngzbi0193wu8cypzklz2q",
+        "skillName": "Medical Device Firmware Architecture (FDA Compliant)",
+        "level": "Expert",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzngunm015pwu8c2lusr8d5",
+        "skillName": "National Infrastructure Cybersecurity Strategy",
+        "level": "Expert",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznh2af01abwu8c2bd8khtb",
+        "skillName": "Open-Source Firmware Architecture (OpenBMC/Coreboot)",
+        "level": "Expert",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzngz0l018qwu8c2mwpk1n1",
+        "skillName": "Quantum Key Distribution (QKD) Networks",
+        "level": "Expert",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznh2jx01anwu8c4x7nnacq",
+        "skillName": "Satellite Constellation Network Routing Design",
+        "level": "Expert",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtznh46a01c1wu8coxdd1pty",
+        "skillName": "Subsea Cable Network Infrastructure Systems",
+        "level": "Expert",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      },
+      {
+        "courseId": "cmtzngz5j018xwu8ccn685r0l",
+        "skillName": "Ultra-Low Latency Kernel Bypass Networking (RDMA/DPDK)",
+        "level": "Expert",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cisco CCNA: Introduction to Networks"
+      }
+    ]
+  },
+  {
+    "url": "https://playwright.dev/docs/intro",
+    "courseCount": 3,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8kt2b008mwubkmw5fvmtw",
+        "skillName": "Browser Automation with Playwright",
+        "level": "Beginner",
+        "provider": "Microsoft Playwright Team",
+        "courseName": "Getting Started with Playwright"
+      },
+      {
+        "courseId": "cmtzng65s00pbwu8csw5xs1h6",
+        "skillName": "Playwright Test Automation",
+        "level": "Advanced",
+        "provider": "Microsoft Playwright Team",
+        "courseName": "Getting Started with Playwright"
+      },
+      {
+        "courseId": "cmtzngfv500w3wu8c88uog2yb",
+        "skillName": "Playwright Enterprise E2E Test Suite",
+        "level": "Pro",
+        "provider": "Microsoft Playwright Team",
+        "courseName": "Getting Started with Playwright"
+      }
+    ]
+  },
+  {
+    "url": "https://vitejs.dev/guide/",
+    "courseCount": 2,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8kt2c0096wubkbg0fazor",
+        "skillName": "Build Tools (Vite / Webpack Intro)",
+        "level": "Beginner",
+        "provider": "Vite Docs",
+        "courseName": "Vite Official Getting Started Guide"
+      },
+      {
+        "courseId": "cmtzng5vb00otwu8clbmtgufc",
+        "skillName": "Jest & Vitest Unit Testing",
+        "level": "Advanced",
+        "provider": "Vite Docs",
+        "courseName": "Vite Official Getting Started Guide"
+      }
+    ]
+  },
+  {
+    "url": "https://skillsforall.com/course/c-programming",
+    "courseCount": 4,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznf6ce0011wu8cze12393c",
+        "skillName": "C Programming",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "C Programming Essentials"
+      },
+      {
+        "courseId": "cmtznf8b2001vwu8c2dwzqgh2",
+        "skillName": "C Programming",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "C Programming Essentials"
+      },
+      {
+        "courseId": "cmtz8c3r60005wutobaup4si1",
+        "skillName": "C Programming Basics",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "C Programming Essentials"
+      },
+      {
+        "courseId": "cmtz8kt2a005vwubkctvssygi",
+        "skillName": "C Programming Basics",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "C Programming Essentials"
+      }
+    ]
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/training/paths/take-first-steps-c-sharp/",
+    "courseCount": 7,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8cj5t0015wuto7jgpcmwg",
+        "skillName": "C# Essentials",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Take Your First Steps with C#"
+      },
+      {
+        "courseId": "cmtz8kt2a0061wubk7kybxm4t",
+        "skillName": "C# Essentials",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Take Your First Steps with C#"
+      },
+      {
+        "courseId": "cmtznfl1z008twu8cj6lzvvdl",
+        "skillName": "Debugging Techniques",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Take Your First Steps with C#"
+      },
+      {
+        "courseId": "cmtz8kt2b007iwubk5rpny488",
+        "skillName": "Microservices Architecture Basics",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Take Your First Steps with C#"
+      },
+      {
+        "courseId": "cmtznfpvd00cjwu8cl3uho3t4",
+        "skillName": "Microservices Introduction",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Take Your First Steps with C#"
+      },
+      {
+        "courseId": "cmtznfldb0094wu8cpi78sipo",
+        "skillName": "Unit Testing Basics",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Take Your First Steps with C#"
+      },
+      {
+        "courseId": "cmtznfzth00jnwu8cnwqqzegm",
+        "skillName": "ASP.NET Core Web APIs",
+        "level": "Advanced",
+        "provider": "Microsoft Learn",
+        "courseName": "Take Your First Steps with C#"
+      }
+    ]
+  },
+  {
+    "url": "https://skillsforall.com/course/c-plus-plus-programming",
+    "courseCount": 5,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8c6ae000bwuto8t9d5ppd",
+        "skillName": "C++ Fundamentals",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "C++ Programming Essentials"
+      },
+      {
+        "courseId": "cmtz8kt2a005wwubkiibwfo5t",
+        "skillName": "C++ Fundamentals",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "C++ Programming Essentials"
+      },
+      {
+        "courseId": "cmtznf6ae000ywu8c4f6ax8ux",
+        "skillName": "C++ Programming",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "C++ Programming Essentials"
+      },
+      {
+        "courseId": "cmtznf86q001pwu8cgvi5tm2m",
+        "skillName": "C++ Programming",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "C++ Programming Essentials"
+      },
+      {
+        "courseId": "cmtzngf8o00vnwu8c46rk417b",
+        "skillName": "High-Performance C++ Systems",
+        "level": "Pro",
+        "provider": "Cisco Networking Academy",
+        "courseName": "C++ Programming Essentials"
+      }
+    ]
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web",
+    "courseCount": 7,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznf71d001jwu8cx0k7lkku",
+        "skillName": "CSS Styling Fundamentals",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN Web Docs: Structuring the Web with HTML & CSS"
+      },
+      {
+        "courseId": "cmtz8d0dz002bwutox2dh04k7",
+        "skillName": "CSS3 & Flexbox Layouts",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN Web Docs: Structuring the Web with HTML & CSS"
+      },
+      {
+        "courseId": "cmtz8kt2a0068wubkq0tsnj4r",
+        "skillName": "CSS3 & Flexbox Layouts",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN Web Docs: Structuring the Web with HTML & CSS"
+      },
+      {
+        "courseId": "cmtznf6wu001ewu8c78z1rcjy",
+        "skillName": "HTML & Web Fundamentals",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN Web Docs: Structuring the Web with HTML & CSS"
+      },
+      {
+        "courseId": "cmtznf8oo0024wu8ckej5ahct",
+        "skillName": "HTML & Web Fundamentals",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN Web Docs: Structuring the Web with HTML & CSS"
+      },
+      {
+        "courseId": "cmtz8cy3g0025wutohvhv3bkm",
+        "skillName": "HTML5 & Semantic Web",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN Web Docs: Structuring the Web with HTML & CSS"
+      },
+      {
+        "courseId": "cmtz8kt2a0067wubkzufqgps2",
+        "skillName": "HTML5 & Semantic Web",
+        "level": "Beginner",
+        "provider": "MDN Web Docs",
+        "courseName": "MDN Web Docs: Structuring the Web with HTML & CSS"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cloudskillsboost.google/course_templates/153",
+    "courseCount": 78,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8kt2c0091wubk9fply9ct",
+        "skillName": "Chrome DevTools Essentials",
+        "level": "Beginner",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznfa6k002hwu8cynk5oak5",
+        "skillName": "Cloud Computing Fundamentals",
+        "level": "Beginner",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznfdkt0041wu8ch0t1g1xa",
+        "skillName": "Data Analytics Fundamentals",
+        "level": "Beginner",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznfdau003lwu8c02e743al",
+        "skillName": "Generative AI Fundamentals",
+        "level": "Beginner",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznfdlr0043wu8c8cbwn7pq",
+        "skillName": "Google Cloud Fundamentals",
+        "level": "Beginner",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtz8kt2b007gwubkg94hmyh2",
+        "skillName": "Google Cloud Platform Essentials",
+        "level": "Beginner",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtz8kt2a006rwubko0xou61f",
+        "skillName": "Large Language Models Overview",
+        "level": "Beginner",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtz8kt2a006twubk0fl511nr",
+        "skillName": "Machine Learning Fundamentals",
+        "level": "Beginner",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtz8d2x3002hwutouru23hdk",
+        "skillName": "Responsive Web Design",
+        "level": "Beginner",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtz8kt2a0069wubk84wb4411",
+        "skillName": "Responsive Web Design",
+        "level": "Beginner",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznfh1d005zwu8crxots2mg",
+        "skillName": "Responsive Web Design",
+        "level": "Beginner",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtz8kt2a006ewubkx1rog3vo",
+        "skillName": "Web Accessibility (a11y)",
+        "level": "Beginner",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznfgk2005kwu8ck9r73toe",
+        "skillName": "Web Accessibility (a11y)",
+        "level": "Beginner",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtz8kt2a006iwubkbwrjmzqe",
+        "skillName": "Web Performance Optimization",
+        "level": "Beginner",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznftfz00evwu8cad9wq231",
+        "skillName": "Advanced Data Structures",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng3yt00n5wu8c1c1coq4i",
+        "skillName": "BigQuery Data Warehousing",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznfwj700gwwu8cvbyt3pji",
+        "skillName": "Database Indexing Strategies",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng29n00lvwu8c9oulf1vu",
+        "skillName": "ELK Stack Log Analytics",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng3sd00n1wu8c8th83fjb",
+        "skillName": "Google Cloud Associate Engineer",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng5qb00opwu8c6lxu0yv2",
+        "skillName": "LangChain LLM Orchestration",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng40u00n9wu8c3yfk0jk3",
+        "skillName": "NLTK & spaCy NLP Basics",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng5o400onwu8cwnfjivqn",
+        "skillName": "OpenAI API Integration",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng48d00nkwu8cr88fx9kq",
+        "skillName": "OpenCV Computer Vision Basics",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng61d00p6wu8c33nzwhge",
+        "skillName": "Prompt Flow & Evaluation",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng43100newu8cd3cv33id",
+        "skillName": "R Programming for Statistics",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng3yt00n4wu8ciaoz988e",
+        "skillName": "Scikit-Learn Model Pipeline",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng43100nfwu8czfidkv2i",
+        "skillName": "Tableau Dashboard Design",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng46l00nhwu8cu8ii247x",
+        "skillName": "TensorFlow Basics",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng5xl00p0wu8c7uh29jzo",
+        "skillName": "Vector Database Vector Search",
+        "level": "Advanced",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznga6y00s9wu8ch5ndzu36",
+        "skillName": "Advanced API Engineering",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng81d00qnwu8cqvwl4wbs",
+        "skillName": "Advanced Database Administration",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngis900xrwu8c92yuah6y",
+        "skillName": "Algorithmic Trading System Design",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngce000ufwu8c8icmowep",
+        "skillName": "Android Native Mobile Engineering",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngfzj00w6wu8c66bt1gp0",
+        "skillName": "Automated Software Testing Engineering",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngiky00xlwu8clc2tm0kn",
+        "skillName": "Autonomous Systems Software",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngi9a00x7wu8co3mbx56e",
+        "skillName": "Bioinformatics Data Analytics",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngkj200z3wu8c6zjrppg7",
+        "skillName": "Blockchain Smart Contract Engineering",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznglyh010bwu8cn9m4mqr9",
+        "skillName": "Cloud Cost Optimization & FinOps",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngbyf00ttwu8ce9yppft8",
+        "skillName": "Cloud Forensics & Incident Analysis",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngm98010hwu8c1ejhubda",
+        "skillName": "DDoS Mitigation & Rate Limiting Systems",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng7tz00qjwu8caxbpdd6z",
+        "skillName": "Data Engineering & ETL Pipelines",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngkvf00zjwu8cfgijoxdf",
+        "skillName": "Database Engine Internals & Storage",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngkh800yzwu8cfmhpczhz",
+        "skillName": "Decentralized Finance (DeFi) Protocols",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngkst00zfwu8cvctictja",
+        "skillName": "Distributed Search Engine Engineering",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngksu00zhwu8cidnkqrtz",
+        "skillName": "Distributed System Consensus (Raft/Paxos)",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngfd400vvwu8clchquk3s",
+        "skillName": "Django Enterprise Systems Architecture",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngfzj00w7wu8chpp6tabq",
+        "skillName": "Embedded Systems Engineering",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngmdj010rwu8conwi9q7l",
+        "skillName": "Enterprise API Gateway Management (Kong)",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng82d00qqwu8c4kp5bogf",
+        "skillName": "Enterprise Cloud Engineering",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznga8y00sfwu8c1vfqc04n",
+        "skillName": "Enterprise Data Platforms",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngc9y00u9wu8cpt1ncldv",
+        "skillName": "Enterprise Identity Governance (Okta/Entra ID)",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngfd400vxwu8czfhsimj2",
+        "skillName": "FastAPI Production Async Microservices",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngcg100ulwu8cd4njkt6m",
+        "skillName": "Flutter Mobile Architecture",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngf4b00vlwu8cj4pq8sm4",
+        "skillName": "Go Enterprise Backend Engineering",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznga8t00sbwu8cbpa4ur13",
+        "skillName": "Google Cloud Professional Data Engineer",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngmdk010twu8cx2kur6w9",
+        "skillName": "Infrastructure as Code Policy Enforcement",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngm9k010pwu8crfutawi5",
+        "skillName": "Multi-Cloud Cloud-Native Governance",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngigd00xfwu8c95c4ftz8",
+        "skillName": "Natural Language Processing & Speech AI",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngiuo00xvwu8c6f8uu9e9",
+        "skillName": "Quantitative Financial Analytics",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngipe00xnwu8ci1t799vb",
+        "skillName": "Reinforcement Learning & Q-Learning",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngi9a00x6wu8cbhqgo7k9",
+        "skillName": "SAP S/4HANA Analytics",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzng7s500qbwu8c7g1xplex",
+        "skillName": "Site Reliability Engineering (SRE)",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngkfp00yvwu8c84g7hxdi",
+        "skillName": "Solidity Ethereum Development",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngifx00x9wu8c4rfcmnxo",
+        "skillName": "Statistical Modeling & Hypothesis Testing",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngkqg00z9wu8c25mtp0c3",
+        "skillName": "System Call Optimization & eBPF",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngifx00xbwu8cicrz221y",
+        "skillName": "Tableau Server Administration",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngiuo00xwwu8cc0x34xa8",
+        "skillName": "Time Series Forecasting & Analysis",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngc9x00u5wu8c04885n3n",
+        "skillName": "iOS Native Mobile Engineering",
+        "level": "Pro",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngoai0121wu8c2654ghco",
+        "skillName": "Advanced Data Platform Architecture",
+        "level": "Expert",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznh2er01alwu8c2x7gi0b8",
+        "skillName": "Advanced Radar Signal Analytics Systems",
+        "level": "Expert",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznh2m901arwu8cj8jjnban",
+        "skillName": "Custom Database Query Optimizer Architecture",
+        "level": "Expert",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngslf0141wu8c8k7tu8s0",
+        "skillName": "Enterprise Graph Data Architecture",
+        "level": "Expert",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngz57018uwu8c429vcutk",
+        "skillName": "Exascale Data Storage Architecture",
+        "level": "Expert",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngzc00198wu8cgpnt98zk",
+        "skillName": "Global Climate Modeling Data Platform",
+        "level": "Expert",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngogf012hwu8c3da1fecu",
+        "skillName": "Global Database Architecture & Sharding",
+        "level": "Expert",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznh2o001axwu8cl8vozlaj",
+        "skillName": "High-Energy Physics Particle Tracker Analytics",
+        "level": "Expert",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtznh44x01bxwu8cqerf4zui",
+        "skillName": "Hyperscale Cloud Data Center Automation Design",
+        "level": "Expert",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      },
+      {
+        "courseId": "cmtzngsdi013vwu8cjomxkxiy",
+        "skillName": "Large-Scale Vector Database Engine Design",
+        "level": "Expert",
+        "provider": "Google Cloud",
+        "courseName": "Google Cloud Computing Foundations"
+      }
+    ]
+  },
+  {
+    "url": "https://skillsforall.com/course/cybersecurity-essentials",
+    "courseCount": 7,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfmtf00a9wu8crtjwni4w",
+        "skillName": "Cyber Hygiene Basics",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cybersecurity Essentials"
+      },
+      {
+        "courseId": "cmtz8kt2b007xwubkc5mk6cu2",
+        "skillName": "Cybersecurity Fundamentals",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cybersecurity Essentials"
+      },
+      {
+        "courseId": "cmtznf6m00018wu8crodp66lq",
+        "skillName": "Cybersecurity Fundamentals",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cybersecurity Essentials"
+      },
+      {
+        "courseId": "cmtznfa3m002fwu8cwjmd1ewj",
+        "skillName": "Cybersecurity Fundamentals",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cybersecurity Essentials"
+      },
+      {
+        "courseId": "cmtznft7g00elwu8cgh9uzvzx",
+        "skillName": "Network Security & Firewalls",
+        "level": "Advanced",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cybersecurity Essentials"
+      },
+      {
+        "courseId": "cmtzng8n600r9wu8cvsc7v1v5",
+        "skillName": "Cloud Security Engineering",
+        "level": "Pro",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cybersecurity Essentials"
+      },
+      {
+        "courseId": "cmtzngo59011ywu8cb5yh7tf9",
+        "skillName": "Enterprise Security Architecture",
+        "level": "Expert",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Cybersecurity Essentials"
+      }
+    ]
+  },
+  {
+    "url": "https://skillsforall.com/course/python-essentials-1",
+    "courseCount": 13,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfdcy003pwu8cv5wn21fw",
+        "skillName": "Data Science Fundamentals",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Python Essentials 1"
+      },
+      {
+        "courseId": "cmtznf6ae000zwu8c3dares8x",
+        "skillName": "Python",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Python Essentials 1"
+      },
+      {
+        "courseId": "cmtznf86q001twu8cv7zylv7c",
+        "skillName": "Python",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Python Essentials 1"
+      },
+      {
+        "courseId": "cmtz8kt2b008fwubki6u7f1vd",
+        "skillName": "Python Automation & Scripting",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Python Essentials 1"
+      },
+      {
+        "courseId": "cmtz8cb5i000nwuto9w6g6fq7",
+        "skillName": "Python Essentials",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Python Essentials 1"
+      },
+      {
+        "courseId": "cmtz8kt2a005ywubkgf9t0wt3",
+        "skillName": "Python Essentials",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Python Essentials 1"
+      },
+      {
+        "courseId": "cmtz8kt2a006uwubk39pbwmn4",
+        "skillName": "Python for Data Science",
+        "level": "Beginner",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Python Essentials 1"
+      },
+      {
+        "courseId": "cmtzng00r00jtwu8cqcee1m8r",
+        "skillName": "FastAPI Python Microservices",
+        "level": "Advanced",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Python Essentials 1"
+      },
+      {
+        "courseId": "cmtzng48f00nnwu8c7jmhj6e9",
+        "skillName": "NumPy Scientific Computing",
+        "level": "Advanced",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Python Essentials 1"
+      },
+      {
+        "courseId": "cmtzng40y00nbwu8cwa1tim49",
+        "skillName": "Pandas Data Wrangling",
+        "level": "Advanced",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Python Essentials 1"
+      },
+      {
+        "courseId": "cmtzngkgz00yxwu8cixj1u68e",
+        "skillName": "Geospatial Data Science & GIS",
+        "level": "Pro",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Python Essentials 1"
+      },
+      {
+        "courseId": "cmtznh2nt01atwu8cltfz3jgm",
+        "skillName": "Synthetic Biology Data Analytics Architecture",
+        "level": "Expert",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Python Essentials 1"
+      },
+      {
+        "courseId": "cmtznh24b01a7wu8cc4csarzv",
+        "skillName": "Time-Series Database Storage Engine Architecture",
+        "level": "Expert",
+        "provider": "Cisco Networking Academy",
+        "courseName": "Python Essentials 1"
+      }
+    ]
+  },
+  {
+    "url": "https://docs.docker.com/get-started/",
+    "courseCount": 4,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfdeh003swu8cx4lumnb9",
+        "skillName": "Docker Container Fundamentals",
+        "level": "Beginner",
+        "provider": "Docker",
+        "courseName": "Docker Overview & Getting Started Guide"
+      },
+      {
+        "courseId": "cmtz8kt2b007rwubkul3yaf8s",
+        "skillName": "Docker Containerization Essentials",
+        "level": "Beginner",
+        "provider": "Docker",
+        "courseName": "Docker Overview & Getting Started Guide"
+      },
+      {
+        "courseId": "cmtz8kt2b007jwubkxlhilupp",
+        "skillName": "Virtualization & Containers Intro",
+        "level": "Beginner",
+        "provider": "Docker",
+        "courseName": "Docker Overview & Getting Started Guide"
+      },
+      {
+        "courseId": "cmtzng0bj00kbwu8cigryooty",
+        "skillName": "Docker Compose Orchestration",
+        "level": "Advanced",
+        "provider": "Docker",
+        "courseName": "Docker Overview & Getting Started Guide"
+      }
+    ]
+  },
+  {
+    "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs",
+    "courseCount": 8,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfiyb0075wu8c2k54stw5",
+        "skillName": "Express.js Fundamentals",
+        "level": "Beginner",
+        "provider": "Node.js Org",
+        "courseName": "Node.js Official Introduction & Getting Started Guide"
+      },
+      {
+        "courseId": "cmtz8kt2a006hwubkagg7kmh6",
+        "skillName": "Node.js Core Principles",
+        "level": "Beginner",
+        "provider": "Node.js Org",
+        "courseName": "Node.js Official Introduction & Getting Started Guide"
+      },
+      {
+        "courseId": "cmtznfj5f0077wu8c66gy2022",
+        "skillName": "Node.js Introduction",
+        "level": "Beginner",
+        "provider": "Node.js Org",
+        "courseName": "Node.js Official Introduction & Getting Started Guide"
+      },
+      {
+        "courseId": "cmtz8kt2c0092wubkcrnodzsy",
+        "skillName": "RegEx (Regular Expressions) Basics",
+        "level": "Beginner",
+        "provider": "Node.js Org",
+        "courseName": "Node.js Official Introduction & Getting Started Guide"
+      },
+      {
+        "courseId": "cmtznfldb0095wu8c9l6ji2py",
+        "skillName": "Regular Expressions (Regex)",
+        "level": "Beginner",
+        "provider": "Node.js Org",
+        "courseName": "Node.js Official Introduction & Getting Started Guide"
+      },
+      {
+        "courseId": "cmtznftbw00enwu8cr20nzp0z",
+        "skillName": "Node.js & Express API Development",
+        "level": "Advanced",
+        "provider": "Node.js Org",
+        "courseName": "Node.js Official Introduction & Getting Started Guide"
+      },
+      {
+        "courseId": "cmtznftx800fbwu8cgcei1jwr",
+        "skillName": "Node.js & Express API Development",
+        "level": "Advanced",
+        "provider": "Node.js Org",
+        "courseName": "Node.js Official Introduction & Getting Started Guide"
+      },
+      {
+        "courseId": "cmtzngaau00siwu8cfd7h6xq7",
+        "skillName": "Full Stack Backend Architecture",
+        "level": "Pro",
+        "provider": "Node.js Org",
+        "courseName": "Node.js Official Introduction & Getting Started Guide"
+      }
+    ]
+  },
+  {
+    "url": "https://help.figma.com/hc/en-us/articles/360040314193-Guide-to-prototyping-in-Figma",
+    "courseCount": 3,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfpv900chwu8cqx7hr81q",
+        "skillName": "Figma Basics",
+        "level": "Beginner",
+        "provider": "Figma",
+        "courseName": "Guide to Prototyping in Figma"
+      },
+      {
+        "courseId": "cmtz8kt2b0088wubkak3ymt0k",
+        "skillName": "Figma Interface Design Basics",
+        "level": "Beginner",
+        "provider": "Figma",
+        "courseName": "Guide to Prototyping in Figma"
+      },
+      {
+        "courseId": "cmtz8kt2b008awubkocvcrv7j",
+        "skillName": "Wireframing & Prototyping",
+        "level": "Beginner",
+        "provider": "Figma",
+        "courseName": "Guide to Prototyping in Figma"
+      }
+    ]
+  },
+  {
+    "url": "https://go.dev/tour/welcome/1",
+    "courseCount": 3,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8ce3t000twutou1rfgkzn",
+        "skillName": "Go Programming Basics",
+        "level": "Beginner",
+        "provider": "Go Dev Team",
+        "courseName": "A Tour of Go (Official Interactive Tutorial)"
+      },
+      {
+        "courseId": "cmtz8kt2a005zwubk0q9fscib",
+        "skillName": "Go Programming Basics",
+        "level": "Beginner",
+        "provider": "Go Dev Team",
+        "courseName": "A Tour of Go (Official Interactive Tutorial)"
+      },
+      {
+        "courseId": "cmtznfj7e0079wu8cwe5v2zci",
+        "skillName": "Go Programming Introduction",
+        "level": "Beginner",
+        "provider": "Go Dev Team",
+        "courseName": "A Tour of Go (Official Interactive Tutorial)"
+      }
+    ]
+  },
+  {
+    "url": "https://education.oracle.com/java-se-11-developer/pexam_1Z0-819",
+    "courseCount": 2,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8c8qf000hwutodhy5j2ii",
+        "skillName": "Java Foundations",
+        "level": "Beginner",
+        "provider": "Oracle University",
+        "courseName": "Java Explorer & Programming Foundations"
+      },
+      {
+        "courseId": "cmtz8kt2a005xwubk7g4rpauq",
+        "skillName": "Java Foundations",
+        "level": "Beginner",
+        "provider": "Oracle University",
+        "courseName": "Java Explorer & Programming Foundations"
+      }
+    ]
+  },
+  {
+    "url": "https://www.jenkins.io/doc/pipeline/tour/getting-started/",
+    "courseCount": 2,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfrjv00d5wu8cig92cnwf",
+        "skillName": "Jenkins Basics",
+        "level": "Beginner",
+        "provider": "Jenkins Project",
+        "courseName": "Jenkins User Documentation & User Handbook"
+      },
+      {
+        "courseId": "cmtzng00r00jwwu8cdthfoloa",
+        "skillName": "Jenkins Pipeline Architecture",
+        "level": "Advanced",
+        "provider": "Jenkins Project",
+        "courseName": "Jenkins User Documentation & User Handbook"
+      }
+    ]
+  },
+  {
+    "url": "https://kafka.apache.org/quickstart",
+    "courseCount": 3,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfpkh00c9wu8c8fdf2f97",
+        "skillName": "Kafka Introduction",
+        "level": "Beginner",
+        "provider": "Apache Kafka",
+        "courseName": "Apache Kafka Quick Start Guide"
+      },
+      {
+        "courseId": "cmtznfwax00grwu8cy6m9w5wo",
+        "skillName": "Kafka Message Streaming",
+        "level": "Advanced",
+        "provider": "Apache Kafka",
+        "courseName": "Apache Kafka Quick Start Guide"
+      },
+      {
+        "courseId": "cmtzngc4000tzwu8c59p4t12f",
+        "skillName": "Kafka Event Streaming Engineering",
+        "level": "Pro",
+        "provider": "Apache Kafka",
+        "courseName": "Apache Kafka Quick Start Guide"
+      }
+    ]
+  },
+  {
+    "url": "https://developer.android.com/courses/kotlin-android-basics/overview",
+    "courseCount": 4,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8cvt5001zwutomhsqcehq",
+        "skillName": "Kotlin Fundamentals",
+        "level": "Beginner",
+        "provider": "Android Developers / Google",
+        "courseName": "Kotlin Basics for Android Developers"
+      },
+      {
+        "courseId": "cmtz8kt2a0066wubksx82uzqh",
+        "skillName": "Kotlin Fundamentals",
+        "level": "Beginner",
+        "provider": "Android Developers / Google",
+        "courseName": "Kotlin Basics for Android Developers"
+      },
+      {
+        "courseId": "cmtznfjax007gwu8c4kl0lyvq",
+        "skillName": "Kotlin Fundamentals",
+        "level": "Beginner",
+        "provider": "Android Developers / Google",
+        "courseName": "Kotlin Basics for Android Developers"
+      },
+      {
+        "courseId": "cmtznfy8p00idwu8c6k6d906o",
+        "skillName": "Android Kotlin Development",
+        "level": "Advanced",
+        "provider": "Android Developers / Google",
+        "courseName": "Kotlin Basics for Android Developers"
+      }
+    ]
+  },
+  {
+    "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+    "courseCount": 8,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfrjv00d7wu8cb4w3ga6a",
+        "skillName": "Kubernetes Concepts",
+        "level": "Beginner",
+        "provider": "Linux Foundation / CNCF",
+        "courseName": "Kubernetes Basics & Tutorials"
+      },
+      {
+        "courseId": "cmtz8kt2b007twubkpxb69tfr",
+        "skillName": "Kubernetes Core Concepts",
+        "level": "Beginner",
+        "provider": "Linux Foundation / CNCF",
+        "courseName": "Kubernetes Basics & Tutorials"
+      },
+      {
+        "courseId": "cmtzng2a900m3wu8c5cdw8858",
+        "skillName": "Helm Package Management",
+        "level": "Advanced",
+        "provider": "Linux Foundation / CNCF",
+        "courseName": "Kubernetes Basics & Tutorials"
+      },
+      {
+        "courseId": "cmtzng1w300lbwu8cu2xgs4x6",
+        "skillName": "Kubernetes Pod & Deployment Management",
+        "level": "Advanced",
+        "provider": "Linux Foundation / CNCF",
+        "courseName": "Kubernetes Basics & Tutorials"
+      },
+      {
+        "courseId": "cmtzngaja00sxwu8c8txujlen",
+        "skillName": "Advanced Kubernetes Security (CKS)",
+        "level": "Pro",
+        "provider": "Linux Foundation / CNCF",
+        "courseName": "Kubernetes Basics & Tutorials"
+      },
+      {
+        "courseId": "cmtzng7iq00q7wu8csdi52sha",
+        "skillName": "Kubernetes Administration (CKA)",
+        "level": "Pro",
+        "provider": "Linux Foundation / CNCF",
+        "courseName": "Kubernetes Basics & Tutorials"
+      },
+      {
+        "courseId": "cmtzng8c100r1wu8c5dkby9lw",
+        "skillName": "Kubernetes Administration (CKA)",
+        "level": "Pro",
+        "provider": "Linux Foundation / CNCF",
+        "courseName": "Kubernetes Basics & Tutorials"
+      },
+      {
+        "courseId": "cmtzngoed0127wu8cm48pbv7f",
+        "skillName": "Kubernetes Ecosystem Architecture",
+        "level": "Expert",
+        "provider": "Linux Foundation / CNCF",
+        "courseName": "Kubernetes Basics & Tutorials"
+      }
+    ]
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/training/paths/data-analytics-microsoft/",
+    "courseCount": 4,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfdjp003vwu8cdmjtljlx",
+        "skillName": "Microsoft Power BI Fundamentals",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Power BI Data Analyst Course"
+      },
+      {
+        "courseId": "cmtz8kt2b0079wubkfn6u4kc4",
+        "skillName": "Power BI Dashboarding Fundamentals",
+        "level": "Beginner",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Power BI Data Analyst Course"
+      },
+      {
+        "courseId": "cmtzng4a300nqwu8ct4dxgihq",
+        "skillName": "Power BI Data Modeling (DAX)",
+        "level": "Advanced",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Power BI Data Analyst Course"
+      },
+      {
+        "courseId": "cmtzngijh00xhwu8cl3diw4qt",
+        "skillName": "Power BI Enterprise Analytics & Admin",
+        "level": "Pro",
+        "provider": "Microsoft Learn",
+        "courseName": "Microsoft Power BI Data Analyst Course"
+      }
+    ]
+  },
+  {
+    "url": "https://learn.mongodb.com/courses/m001-mongodb-basics",
+    "courseCount": 4,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfpgq00bzwu8caudm2y3e",
+        "skillName": "MongoDB Fundamentals",
+        "level": "Beginner",
+        "provider": "MongoDB University",
+        "courseName": "M001: MongoDB Basics"
+      },
+      {
+        "courseId": "cmtznfpgq00c0wu8cp9e1pp58",
+        "skillName": "NoSQL Database Introduction",
+        "level": "Beginner",
+        "provider": "MongoDB University",
+        "courseName": "M001: MongoDB Basics"
+      },
+      {
+        "courseId": "cmtznft7g00ekwu8cjcg2pmvy",
+        "skillName": "MongoDB Database Development",
+        "level": "Advanced",
+        "provider": "MongoDB University",
+        "courseName": "M001: MongoDB Basics"
+      },
+      {
+        "courseId": "cmtzngc4v00u1wu8cspitkp97",
+        "skillName": "MongoDB Enterprise Cluster Administration",
+        "level": "Pro",
+        "provider": "MongoDB University",
+        "courseName": "M001: MongoDB Basics"
+      }
+    ]
+  },
+  {
+    "url": "https://dev.mysql.com/doc/refman/8.0/en/tutorial.html",
+    "courseCount": 3,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8kt2a0076wubkfh4t6c03",
+        "skillName": "MySQL Basics",
+        "level": "Beginner",
+        "provider": "Oracle / MySQL",
+        "courseName": "MySQL Reference Manual & Tutorial"
+      },
+      {
+        "courseId": "cmtznfpii00c5wu8cngafc4gv",
+        "skillName": "MySQL Fundamentals",
+        "level": "Beginner",
+        "provider": "Oracle / MySQL",
+        "courseName": "MySQL Reference Manual & Tutorial"
+      },
+      {
+        "courseId": "cmtznfwj700gzwu8cmz8o2tm6",
+        "skillName": "MySQL Query Tuning",
+        "level": "Advanced",
+        "provider": "Oracle / MySQL",
+        "courseName": "MySQL Reference Manual & Tutorial"
+      }
+    ]
+  },
+  {
+    "url": "https://www.postgresql.org/docs/current/tutorial.html",
+    "courseCount": 4,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfpam00bvwu8c5pwdoiwb",
+        "skillName": "PostgreSQL Basics",
+        "level": "Beginner",
+        "provider": "PostgreSQL Group",
+        "courseName": "PostgreSQL Official Tutorial"
+      },
+      {
+        "courseId": "cmtz8kt2a0075wubkoubv9e5j",
+        "skillName": "PostgreSQL Essentials",
+        "level": "Beginner",
+        "provider": "PostgreSQL Group",
+        "courseName": "PostgreSQL Official Tutorial"
+      },
+      {
+        "courseId": "cmtznfw8x00gjwu8cvcpumgrj",
+        "skillName": "PostgreSQL Administration",
+        "level": "Advanced",
+        "provider": "PostgreSQL Group",
+        "courseName": "PostgreSQL Official Tutorial"
+      },
+      {
+        "courseId": "cmtzngbyn00tvwu8cou0my77a",
+        "skillName": "PostgreSQL High Availability & Replication",
+        "level": "Pro",
+        "provider": "PostgreSQL Group",
+        "courseName": "PostgreSQL Official Tutorial"
+      }
+    ]
+  },
+  {
+    "url": "https://academy.postman.com/student-expert",
+    "courseCount": 3,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfivt0073wu8ct4lf27ic",
+        "skillName": "Postman API Client Basics",
+        "level": "Beginner",
+        "provider": "Postman",
+        "courseName": "Postman API Student Expert & Testing Foundations"
+      },
+      {
+        "courseId": "cmtz8kt2c0090wubkfeg8grwq",
+        "skillName": "Postman API Testing Basics",
+        "level": "Beginner",
+        "provider": "Postman",
+        "courseName": "Postman API Student Expert & Testing Foundations"
+      },
+      {
+        "courseId": "cmtznfh5v0065wu8c1wq6dozr",
+        "skillName": "REST API Concepts",
+        "level": "Beginner",
+        "provider": "Postman",
+        "courseName": "Postman API Student Expert & Testing Foundations"
+      }
+    ]
+  },
+  {
+    "url": "https://guides.rubyonrails.org/getting_started.html",
+    "courseCount": 4,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8cqif001nwutotggoc1xa",
+        "skillName": "Ruby Foundations",
+        "level": "Beginner",
+        "provider": "Ruby on Rails Guides",
+        "courseName": "Getting Started with Rails (Official Guide)"
+      },
+      {
+        "courseId": "cmtz8kt2a0064wubk9qe6dh4t",
+        "skillName": "Ruby Foundations",
+        "level": "Beginner",
+        "provider": "Ruby on Rails Guides",
+        "courseName": "Getting Started with Rails (Official Guide)"
+      },
+      {
+        "courseId": "cmtznfj9a007cwu8csm5bolr8",
+        "skillName": "Ruby Programming Basics",
+        "level": "Beginner",
+        "provider": "Ruby on Rails Guides",
+        "courseName": "Getting Started with Rails (Official Guide)"
+      },
+      {
+        "courseId": "cmtzng0c600kfwu8ci8ei9ovq",
+        "skillName": "Ruby on Rails Applications",
+        "level": "Advanced",
+        "provider": "Ruby on Rails Guides",
+        "courseName": "Getting Started with Rails (Official Guide)"
+      }
+    ]
+  },
+  {
+    "url": "https://doc.rust-lang.org/book/",
+    "courseCount": 7,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8cgk0000zwutoylyp8t7b",
+        "skillName": "Rust Fundamentals",
+        "level": "Beginner",
+        "provider": "Rust Foundation",
+        "courseName": "The Rust Programming Language (Official Guide)"
+      },
+      {
+        "courseId": "cmtz8kt2a0060wubkqgj1rfhj",
+        "skillName": "Rust Fundamentals",
+        "level": "Beginner",
+        "provider": "Rust Foundation",
+        "courseName": "The Rust Programming Language (Official Guide)"
+      },
+      {
+        "courseId": "cmtznfjci007lwu8cmzmbbfhy",
+        "skillName": "Rust Fundamentals",
+        "level": "Beginner",
+        "provider": "Rust Foundation",
+        "courseName": "The Rust Programming Language (Official Guide)"
+      },
+      {
+        "courseId": "cmtzng09l00k7wu8c5gmn4t4a",
+        "skillName": "Rust Systems Programming",
+        "level": "Advanced",
+        "provider": "Rust Foundation",
+        "courseName": "The Rust Programming Language (Official Guide)"
+      },
+      {
+        "courseId": "cmtzngfd400vuwu8c3mt2zbfp",
+        "skillName": "Rust Production Systems Development",
+        "level": "Pro",
+        "provider": "Rust Foundation",
+        "courseName": "The Rust Programming Language (Official Guide)"
+      },
+      {
+        "courseId": "cmtzngce100ujwu8c1cc3phlq",
+        "skillName": "Zero Trust Architecture Implementation",
+        "level": "Pro",
+        "provider": "Rust Foundation",
+        "courseName": "The Rust Programming Language (Official Guide)"
+      },
+      {
+        "courseId": "cmtzngsbs013rwu8caymt2h2k",
+        "skillName": "Zero Trust IAM Infrastructure Architecture",
+        "level": "Expert",
+        "provider": "Rust Foundation",
+        "courseName": "The Rust Programming Language (Official Guide)"
+      }
+    ]
+  },
+  {
+    "url": "https://developer.apple.com/documentation/swift",
+    "courseCount": 4,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8ct74001twuton7ild73l",
+        "skillName": "Swift Basics",
+        "level": "Beginner",
+        "provider": "Apple Developer",
+        "courseName": "Develop in Swift Explorations (Official Apple Guide)"
+      },
+      {
+        "courseId": "cmtz8kt2a0065wubkyjo0nmbj",
+        "skillName": "Swift Basics",
+        "level": "Beginner",
+        "provider": "Apple Developer",
+        "courseName": "Develop in Swift Explorations (Official Apple Guide)"
+      },
+      {
+        "courseId": "cmtznfjck007nwu8cz8skpkpn",
+        "skillName": "Swift Basics",
+        "level": "Beginner",
+        "provider": "Apple Developer",
+        "courseName": "Develop in Swift Explorations (Official Apple Guide)"
+      },
+      {
+        "courseId": "cmtznfy5300i7wu8cdtrs0dyp",
+        "skillName": "iOS Swift Development",
+        "level": "Advanced",
+        "provider": "Apple Developer",
+        "courseName": "Develop in Swift Explorations (Official Apple Guide)"
+      }
+    ]
+  },
+  {
+    "url": "https://tailwindcss.com/docs/installation",
+    "courseCount": 3,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8kt2a006dwubkyjzrug2o",
+        "skillName": "Tailwind CSS Basics",
+        "level": "Beginner",
+        "provider": "Tailwind Labs",
+        "courseName": "Tailwind CSS Official Utility-First Guide"
+      },
+      {
+        "courseId": "cmtznfh7u0067wu8cw1wksi50",
+        "skillName": "Tailwind CSS Introduction",
+        "level": "Beginner",
+        "provider": "Tailwind Labs",
+        "courseName": "Tailwind CSS Official Utility-First Guide"
+      },
+      {
+        "courseId": "cmtznfxyy00i1wu8c9szugn8l",
+        "skillName": "Tailwind CSS Component Architecture",
+        "level": "Advanced",
+        "provider": "Tailwind Labs",
+        "courseName": "Tailwind CSS Official Utility-First Guide"
+      }
+    ]
+  },
+  {
+    "url": "https://developer.hashicorp.com/terraform/tutorials",
+    "courseCount": 3,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfrlt00dfwu8cmke91q8r",
+        "skillName": "Terraform Introduction",
+        "level": "Beginner",
+        "provider": "HashiCorp",
+        "courseName": "HashiCorp Certified: Terraform Associate Track"
+      },
+      {
+        "courseId": "cmtzng0bd00k9wu8c36z5aa2q",
+        "skillName": "Terraform Infrastructure as Code",
+        "level": "Advanced",
+        "provider": "HashiCorp",
+        "courseName": "HashiCorp Certified: Terraform Associate Track"
+      },
+      {
+        "courseId": "cmtznga8y00sdwu8cb8tdi06x",
+        "skillName": "HashiCorp Terraform Automation (Vault & Consul)",
+        "level": "Pro",
+        "provider": "HashiCorp",
+        "courseName": "HashiCorp Certified: Terraform Associate Track"
+      }
+    ]
+  },
+  {
+    "url": "https://vuejs.org/guide/quick-start.html",
+    "courseCount": 3,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtz8da05002zwutoiktauilz",
+        "skillName": "Vue.js Basics",
+        "level": "Beginner",
+        "provider": "Vue.js Core Team",
+        "courseName": "Vue.js Official Getting Started Guide"
+      },
+      {
+        "courseId": "cmtz8kt2a006cwubk9wff3y9o",
+        "skillName": "Vue.js Basics",
+        "level": "Beginner",
+        "provider": "Vue.js Core Team",
+        "courseName": "Vue.js Official Getting Started Guide"
+      },
+      {
+        "courseId": "cmtznfyah00ifwu8c7y08u67m",
+        "skillName": "Vue.js Framework",
+        "level": "Advanced",
+        "provider": "Vue.js Core Team",
+        "courseName": "Vue.js Official Getting Started Guide"
+      }
+    ]
+  },
+  {
+    "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html",
+    "courseCount": 2,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfw9n00glwu8cqu54ksd3",
+        "skillName": "Elasticsearch & Logstash",
+        "level": "Advanced",
+        "provider": "Elastic",
+        "courseName": "Elasticsearch Quick Start Guide"
+      },
+      {
+        "courseId": "cmtzngce000ugwu8c3jg2mwso",
+        "skillName": "Elasticsearch Cluster Operations",
+        "level": "Pro",
+        "provider": "Elastic",
+        "courseName": "Elasticsearch Quick Start Guide"
+      }
+    ]
+  },
+  {
+    "url": "https://react.dev/learn",
+    "courseCount": 6,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfw8000gfwu8cw2dourhn",
+        "skillName": "Functional Reactive Programming",
+        "level": "Advanced",
+        "provider": "React Core Team",
+        "courseName": "React Official Documentation & Interactive Guide"
+      },
+      {
+        "courseId": "cmtznft5s00eewu8cym45i3be",
+        "skillName": "React Frontend Development",
+        "level": "Advanced",
+        "provider": "React Core Team",
+        "courseName": "React Official Documentation & Interactive Guide"
+      },
+      {
+        "courseId": "cmtznftvb00f7wu8cfpeac6gf",
+        "skillName": "React Frontend Development",
+        "level": "Advanced",
+        "provider": "React Core Team",
+        "courseName": "React Official Documentation & Interactive Guide"
+      },
+      {
+        "courseId": "cmtznfy5200i4wu8czgv4kvcw",
+        "skillName": "React Native Mobile Development",
+        "level": "Advanced",
+        "provider": "React Core Team",
+        "courseName": "React Official Documentation & Interactive Guide"
+      },
+      {
+        "courseId": "cmtzngemp00vjwu8ceewvs80g",
+        "skillName": "React Native Enterprise Systems",
+        "level": "Pro",
+        "provider": "React Core Team",
+        "courseName": "React Official Documentation & Interactive Guide"
+      },
+      {
+        "courseId": "cmtznh2e901ajwu8cyo8606mg",
+        "skillName": "Nuclear Reactor Safety Control Software Architecture",
+        "level": "Expert",
+        "provider": "React Core Team",
+        "courseName": "React Official Documentation & Interactive Guide"
+      }
+    ]
+  },
+  {
+    "url": "https://graphql.org/learn/",
+    "courseCount": 2,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfw7w00gbwu8ckw1i4hhv",
+        "skillName": "GraphQL API Development",
+        "level": "Advanced",
+        "provider": "GraphQL Foundation",
+        "courseName": "Introduction to GraphQL (Official Guide)"
+      },
+      {
+        "courseId": "cmtzngm9d010lwu8c53oeq9q3",
+        "skillName": "GraphQL Federation & Mesh Architecture",
+        "level": "Pro",
+        "provider": "GraphQL Foundation",
+        "courseName": "Introduction to GraphQL (Official Guide)"
+      }
+    ]
+  },
+  {
+    "url": "https://www.rabbitmq.com/getstarted.html",
+    "courseCount": 2,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfw8000gewu8c362wa9vl",
+        "skillName": "RabbitMQ Message Queuing",
+        "level": "Advanced",
+        "provider": "RabbitMQ",
+        "courseName": "RabbitMQ Official Getting Started Tutorials"
+      },
+      {
+        "courseId": "cmtzngc9y00u8wu8c05s9dnd8",
+        "skillName": "RabbitMQ Enterprise Cluster Management",
+        "level": "Pro",
+        "provider": "RabbitMQ",
+        "courseName": "RabbitMQ Official Getting Started Tutorials"
+      }
+    ]
+  },
+  {
+    "url": "https://university.redis.io/courses/ru101/",
+    "courseCount": 2,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtznfwj000gtwu8c4ql28n3y",
+        "skillName": "Redis Caching Architecture",
+        "level": "Advanced",
+        "provider": "Redis Inc",
+        "courseName": "Redis University: RU101 Introduction to Redis Data Structures"
+      },
+      {
+        "courseId": "cmtzngkvf00zlwu8c87mpqe5y",
+        "skillName": "Distributed Cache Architecture (Memcached/Redis)",
+        "level": "Pro",
+        "provider": "Redis Inc",
+        "courseName": "Redis University: RU101 Introduction to Redis Data Structures"
+      }
+    ]
+  },
+  {
+    "url": "https://trailhead.salesforce.com/en/credentials/administrator",
+    "courseCount": 4,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtzng5xl00p1wu8cissn66d3",
+        "skillName": "Salesforce Admin Development",
+        "level": "Advanced",
+        "provider": "Salesforce",
+        "courseName": "Salesforce Administrator Trail"
+      },
+      {
+        "courseId": "cmtzngaav00slwu8c3qdnfwj8",
+        "skillName": "Salesforce Certified Developer",
+        "level": "Pro",
+        "provider": "Salesforce",
+        "courseName": "Salesforce Administrator Trail"
+      },
+      {
+        "courseId": "cmtzngis900xqwu8cgzkyoast",
+        "skillName": "Salesforce Enterprise Integration",
+        "level": "Pro",
+        "provider": "Salesforce",
+        "courseName": "Salesforce Administrator Trail"
+      },
+      {
+        "courseId": "cmtzngue60159wu8c7siujiy6",
+        "skillName": "Enterprise Salesforce System Architecture",
+        "level": "Expert",
+        "provider": "Salesforce",
+        "courseName": "Salesforce Administrator Trail"
+      }
+    ]
+  },
+  {
+    "url": "https://nowlearning.servicenow.com/",
+    "courseCount": 4,
+    "classification": "LEGITIMATE DUPLICATE",
+    "courses": [
+      {
+        "courseId": "cmtzng63a00p9wu8c3t2br780",
+        "skillName": "ServiceNow System Administration",
+        "level": "Advanced",
+        "provider": "ServiceNow",
+        "courseName": "ServiceNow System Administrator Path"
+      },
+      {
+        "courseId": "cmtzngiuo00xxwu8cfe71ib28",
+        "skillName": "ServiceNow Application Development",
+        "level": "Pro",
+        "provider": "ServiceNow",
+        "courseName": "ServiceNow System Administrator Path"
+      },
+      {
+        "courseId": "cmtznga2600s7wu8ctears1uj",
+        "skillName": "ServiceNow Certified System Administrator",
+        "level": "Pro",
+        "provider": "ServiceNow",
+        "courseName": "ServiceNow System Administrator Path"
+      },
+      {
+        "courseId": "cmtznguh9015hwu8cmsv7kf2e",
+        "skillName": "Enterprise ServiceNow Platform Architecture",
+        "level": "Expert",
+        "provider": "ServiceNow",
+        "courseName": "ServiceNow System Administrator Path"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1326 @@
+{
+  "totalActiveCourses": 592,
+  "statusCounts": {
+    "PASS": 13,
+    "WRONG_DESTINATION": 0,
+    "BROKEN": 0,
+    "DEPRECATED": 0,
+    "DUPLICATE": 310,
+    "UNAVAILABLE": 269,
+    "UNKNOWN": 0
+  },
+  "qualityMetrics": {
+    "genericLandingPagesRemaining": 14,
+    "incorrectDuplicateGroupsRemaining": 0,
+    "exactDirectCourseLinks": 13,
+    "unavailableCoursesWithDocumentedReasons": 269
+  },
+  "changedRecords": [
+    {
+      "id": "cmtz8cj5t0015wuto7jgpcmwg",
+      "skill": "C# Essentials",
+      "level": "Beginner",
+      "oldUrl": "https://learn.microsoft.com/en-us/training/paths/csharp-first-steps/",
+      "newUrl": "https://learn.microsoft.com/en-us/training/paths/take-first-steps-c-sharp/",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8kt2a0061wubk7kybxm4t",
+      "skill": "C# Essentials",
+      "level": "Beginner",
+      "oldUrl": "https://learn.microsoft.com/en-us/training/paths/csharp-first-steps/",
+      "newUrl": "https://learn.microsoft.com/en-us/training/paths/take-first-steps-c-sharp/",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8kt2c0091wubk9fply9ct",
+      "skill": "Chrome DevTools Essentials",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfa6k002hwu8cynk5oak5",
+      "skill": "Cloud Computing Fundamentals",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfdkt0041wu8ch0t1g1xa",
+      "skill": "Data Analytics Fundamentals",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfl1z008twu8cj6lzvvdl",
+      "skill": "Debugging Techniques",
+      "level": "Beginner",
+      "oldUrl": "https://learn.microsoft.com/en-us/training/modules/dotnet-debug/",
+      "newUrl": "https://learn.microsoft.com/en-us/training/paths/take-first-steps-c-sharp/",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfdau003lwu8c02e743al",
+      "skill": "Generative AI Fundamentals",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfdlr0043wu8c8cbwn7pq",
+      "skill": "Google Cloud Fundamentals",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8kt2b007gwubkg94hmyh2",
+      "skill": "Google Cloud Platform Essentials",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfrjv00d5wu8cig92cnwf",
+      "skill": "Jenkins Basics",
+      "level": "Beginner",
+      "oldUrl": "https://www.jenkins.io/doc/tutorials/",
+      "newUrl": "https://www.jenkins.io/doc/pipeline/tour/getting-started/",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfpkh00c9wu8c8fdf2f97",
+      "skill": "Kafka Introduction",
+      "level": "Beginner",
+      "oldUrl": "https://kafka.apache.org/documentation/#gettingStarted",
+      "newUrl": "https://kafka.apache.org/quickstart",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8kt2a006rwubko0xou61f",
+      "skill": "Large Language Models Overview",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8kt2a006twubk0fl511nr",
+      "skill": "Machine Learning Fundamentals",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8kt2b007iwubk5rpny488",
+      "skill": "Microservices Architecture Basics",
+      "level": "Beginner",
+      "oldUrl": "https://learn.microsoft.com/en-us/training/modules/dotnet-microservices/",
+      "newUrl": "https://learn.microsoft.com/en-us/training/paths/take-first-steps-c-sharp/",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfpvd00cjwu8cl3uho3t4",
+      "skill": "Microservices Introduction",
+      "level": "Beginner",
+      "oldUrl": "https://learn.microsoft.com/en-us/training/modules/dotnet-microservices/",
+      "newUrl": "https://learn.microsoft.com/en-us/training/paths/take-first-steps-c-sharp/",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8kt2a0076wubkfh4t6c03",
+      "skill": "MySQL Basics",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://dev.mysql.com/doc/refman/8.0/en/tutorial.html",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfpii00c5wu8cngafc4gv",
+      "skill": "MySQL Fundamentals",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://dev.mysql.com/doc/refman/8.0/en/tutorial.html",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8kt2a006vwubkfc1u545o",
+      "skill": "NumPy & Pandas Essentials",
+      "level": "Beginner",
+      "oldUrl": "https://www.kaggle.com/learn/pandas",
+      "newUrl": "https://pandas.pydata.org/docs/getting_started/index.html",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8d2x3002hwutouru23hdk",
+      "skill": "Responsive Web Design",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8kt2a0069wubk84wb4411",
+      "skill": "Responsive Web Design",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfh1d005zwu8crxots2mg",
+      "skill": "Responsive Web Design",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfpii00c3wu8cecrhajnx",
+      "skill": "SQLite Essentials",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.sqlite.org/whentouse.html",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8kt2a006xwubkc6sg6i1a",
+      "skill": "Scikit-Learn Basics",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://scikit-learn.org/stable/getting_started.html",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8cljr001bwutobinffiru",
+      "skill": "TypeScript Essentials",
+      "level": "Beginner",
+      "oldUrl": "https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-typescript/",
+      "newUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8kt2a0062wubkn3qegs98",
+      "skill": "TypeScript Essentials",
+      "level": "Beginner",
+      "oldUrl": "https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-typescript/",
+      "newUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfiqj006zwu8cv2jliqvg",
+      "skill": "TypeScript Introduction",
+      "level": "Beginner",
+      "oldUrl": "https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-typescript/",
+      "newUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfldb0094wu8cpi78sipo",
+      "skill": "Unit Testing Basics",
+      "level": "Beginner",
+      "oldUrl": "https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices",
+      "newUrl": "https://learn.microsoft.com/en-us/training/paths/take-first-steps-c-sharp/",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8kt2a006ewubkx1rog3vo",
+      "skill": "Web Accessibility (a11y)",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfgk2005kwu8ck9r73toe",
+      "skill": "Web Accessibility (a11y)",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtz8kt2a006iwubkbwrjmzqe",
+      "skill": "Web Performance Optimization",
+      "level": "Beginner",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfzth00jnwu8cnwqqzegm",
+      "skill": "ASP.NET Core Web APIs",
+      "level": "Advanced",
+      "oldUrl": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/",
+      "newUrl": "https://learn.microsoft.com/en-us/training/paths/take-first-steps-c-sharp/",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznftfz00evwu8cad9wq231",
+      "skill": "Advanced Data Structures",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng3yt00n5wu8c1c1coq4i",
+      "skill": "BigQuery Data Warehousing",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfwj700gwwu8cvbyt3pji",
+      "skill": "Database Indexing Strategies",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng29n00lvwu8c9oulf1vu",
+      "skill": "ELK Stack Log Analytics",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfw9n00glwu8cqu54ksd3",
+      "skill": "Elasticsearch & Logstash",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng3sd00n1wu8c8th83fjb",
+      "skill": "Google Cloud Associate Engineer",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfwj700gxwu8cgbc9jff2",
+      "skill": "JWT & Session Security",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://skillsforall.com/course/getting-started-cisco-packet-tracer",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng00r00jwwu8cdthfoloa",
+      "skill": "Jenkins Pipeline Architecture",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.jenkins.io/doc/pipeline/tour/getting-started/",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfwax00grwu8cy6m9w5wo",
+      "skill": "Kafka Message Streaming",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://kafka.apache.org/quickstart",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng5qb00opwu8c6lxu0yv2",
+      "skill": "LangChain LLM Orchestration",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfwj700gzwu8cmz8o2tm6",
+      "skill": "MySQL Query Tuning",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://dev.mysql.com/doc/refman/8.0/en/tutorial.html",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng40u00n9wu8c3yfk0jk3",
+      "skill": "NLTK & spaCy NLP Basics",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng5o400onwu8cwnfjivqn",
+      "skill": "OpenAI API Integration",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng48d00nkwu8cr88fx9kq",
+      "skill": "OpenCV Computer Vision Basics",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng1ya00lfwu8cf0qcvxec",
+      "skill": "Prometheus & Grafana Monitoring",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://prometheus.io/docs/prometheus/latest/getting_started/",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng43100newu8cd3cv33id",
+      "skill": "R Programming for Statistics",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznfw8000gewu8c362wa9vl",
+      "skill": "RabbitMQ Message Queuing",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.rabbitmq.com/getstarted.html",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng3yt00n4wu8ciaoz988e",
+      "skill": "Scikit-Learn Model Pipeline",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng43100nfwu8czfidkv2i",
+      "skill": "Tableau Dashboard Design",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng46l00nhwu8cu8ii247x",
+      "skill": "TensorFlow Basics",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznftbw00epwu8coaba42k3",
+      "skill": "TypeScript Advanced Programming",
+      "level": "Advanced",
+      "oldUrl": "https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-typescript/",
+      "newUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng5xl00p0wu8c7uh29jzo",
+      "skill": "Vector Database Vector Search",
+      "level": "Advanced",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznga6y00s9wu8ch5ndzu36",
+      "skill": "Advanced API Engineering",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng81d00qnwu8cqvwl4wbs",
+      "skill": "Advanced Database Administration",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngis900xrwu8c92yuah6y",
+      "skill": "Algorithmic Trading System Design",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngce000ufwu8c8icmowep",
+      "skill": "Android Native Mobile Engineering",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngfzj00w6wu8c66bt1gp0",
+      "skill": "Automated Software Testing Engineering",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngiky00xlwu8clc2tm0kn",
+      "skill": "Autonomous Systems Software",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngi9a00x7wu8co3mbx56e",
+      "skill": "Bioinformatics Data Analytics",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngkj200z3wu8c6zjrppg7",
+      "skill": "Blockchain Smart Contract Engineering",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngc6700u3wu8c47wuv51k",
+      "skill": "Cassandra Distributed Database Administration",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://cassandra.apache.org/_/quickstart.html",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznglyh010bwu8cn9m4mqr9",
+      "skill": "Cloud Cost Optimization & FinOps",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngbyf00ttwu8ce9yppft8",
+      "skill": "Cloud Forensics & Incident Analysis",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngm98010hwu8c1ejhubda",
+      "skill": "DDoS Mitigation & Rate Limiting Systems",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngkvf00zjwu8cfgijoxdf",
+      "skill": "Database Engine Internals & Storage",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngkh800yzwu8cfmhpczhz",
+      "skill": "Decentralized Finance (DeFi) Protocols",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngkst00zfwu8cvctictja",
+      "skill": "Distributed Search Engine Engineering",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngksu00zhwu8cidnkqrtz",
+      "skill": "Distributed System Consensus (Raft/Paxos)",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngfd400vvwu8clchquk3s",
+      "skill": "Django Enterprise Systems Architecture",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngce000ugwu8c3jg2mwso",
+      "skill": "Elasticsearch Cluster Operations",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngfzj00w7wu8chpp6tabq",
+      "skill": "Embedded Systems Engineering",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngmdj010rwu8conwi9q7l",
+      "skill": "Enterprise API Gateway Management (Kong)",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng82d00qqwu8c4kp5bogf",
+      "skill": "Enterprise Cloud Engineering",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznga8y00sfwu8c1vfqc04n",
+      "skill": "Enterprise Data Platforms",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngc9y00u9wu8cpt1ncldv",
+      "skill": "Enterprise Identity Governance (Okta/Entra ID)",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngfd400vxwu8czfhsimj2",
+      "skill": "FastAPI Production Async Microservices",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngcg100ulwu8cd4njkt6m",
+      "skill": "Flutter Mobile Architecture",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngf4b00vlwu8cj4pq8sm4",
+      "skill": "Go Enterprise Backend Engineering",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznga8t00sbwu8cbpa4ur13",
+      "skill": "Google Cloud Professional Data Engineer",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngm9d010lwu8c53oeq9q3",
+      "skill": "GraphQL Federation & Mesh Architecture",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://graphql.org/learn/",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngmdk010twu8cx2kur6w9",
+      "skill": "Infrastructure as Code Policy Enforcement",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngc4000tzwu8c59p4t12f",
+      "skill": "Kafka Event Streaming Engineering",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://kafka.apache.org/quickstart",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngm9k010pwu8crfutawi5",
+      "skill": "Multi-Cloud Cloud-Native Governance",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngigd00xfwu8c95c4ftz8",
+      "skill": "Natural Language Processing & Speech AI",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngiuo00xvwu8c6f8uu9e9",
+      "skill": "Quantitative Financial Analytics",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngc9y00u8wu8c05s9dnd8",
+      "skill": "RabbitMQ Enterprise Cluster Management",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.rabbitmq.com/getstarted.html",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngipe00xnwu8ci1t799vb",
+      "skill": "Reinforcement Learning & Q-Learning",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngi9a00x6wu8cbhqgo7k9",
+      "skill": "SAP S/4HANA Analytics",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzng7s500qbwu8c7g1xplex",
+      "skill": "Site Reliability Engineering (SRE)",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngkfp00yvwu8c84g7hxdi",
+      "skill": "Solidity Ethereum Development",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngifx00x9wu8c4rfcmnxo",
+      "skill": "Statistical Modeling & Hypothesis Testing",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngkqg00z9wu8c25mtp0c3",
+      "skill": "System Call Optimization & eBPF",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngifx00xbwu8cicrz221y",
+      "skill": "Tableau Server Administration",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngiuo00xwwu8cc0x34xa8",
+      "skill": "Time Series Forecasting & Analysis",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngc9x00u5wu8c04885n3n",
+      "skill": "iOS Native Mobile Engineering",
+      "level": "Pro",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngoai0121wu8c2654ghco",
+      "skill": "Advanced Data Platform Architecture",
+      "level": "Expert",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznh2er01alwu8c2x7gi0b8",
+      "skill": "Advanced Radar Signal Analytics Systems",
+      "level": "Expert",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznh2m901arwu8cj8jjnban",
+      "skill": "Custom Database Query Optimizer Architecture",
+      "level": "Expert",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngslf0141wu8c8k7tu8s0",
+      "skill": "Enterprise Graph Data Architecture",
+      "level": "Expert",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngz57018uwu8c429vcutk",
+      "skill": "Exascale Data Storage Architecture",
+      "level": "Expert",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngzc00198wu8cgpnt98zk",
+      "skill": "Global Climate Modeling Data Platform",
+      "level": "Expert",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngogf012hwu8c3da1fecu",
+      "skill": "Global Database Architecture & Sharding",
+      "level": "Expert",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznh2o001axwu8cl8vozlaj",
+      "skill": "High-Energy Physics Particle Tracker Analytics",
+      "level": "Expert",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtznh44x01bxwu8cqerf4zui",
+      "skill": "Hyperscale Cloud Data Center Automation Design",
+      "level": "Expert",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    },
+    {
+      "id": "cmtzngsdi013vwu8cjomxkxiy",
+      "skill": "Large-Scale Vector Database Engine Design",
+      "level": "Expert",
+      "oldUrl": "OFFICIAL_LINK_PENDING",
+      "newUrl": "https://www.cloudskillsboost.google/course_templates/153",
+      "status": "VERIFIED",
+      "reason": "Mapped to authentic, topic-specific official learning resource"
+    }
+  ],
+  "unavailableResults": [
+    {
+      "id": "cmtz8kt2a006swubk40aeal8k",
+      "skill": "AI Agents & Autonomous Workflows",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2a006jwubkkfahdyjx",
+      "skill": "AI Concepts & Applications",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2a006nwubksnuos7fn",
+      "skill": "AI Ethics & Responsible AI",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2a006mwubkc8kymhem",
+      "skill": "AI Tools for Productivity",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2b008kwubk4w3854m1",
+      "skill": "API Integration & Webhooks",
+      "level": "Beginner",
+      "provider": "Microsoft",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2b008owubk44r2uqml",
+      "skill": "Agile & Scrum Methodology",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfgml005rwu8c5157b3e4",
+      "skill": "Algorithmic Thinking",
+      "level": "Beginner",
+      "provider": "Khan Academy",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfdat003jwu8c63ncmicw",
+      "skill": "Artificial Intelligence Fundamentals",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfdyo0049wu8cojmauokc",
+      "skill": "Artificial Intelligence Fundamentals",
+      "level": "Beginner",
+      "provider": "Microsoft",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfegh004jwu8cghb5vkuj",
+      "skill": "Artificial Intelligence Fundamentals",
+      "level": "Beginner",
+      "provider": "NVIDIA",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2b008lwubkh1n8hzqb",
+      "skill": "Automated Email & Reporting",
+      "level": "Beginner",
+      "provider": "Microsoft",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfdtn0047wu8cq76ie7ig",
+      "skill": "Automation & RPA Fundamentals",
+      "level": "Beginner",
+      "provider": "UiPath",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfkv1008lwu8c2cjlz53j",
+      "skill": "Basic Sorting Algorithms",
+      "level": "Beginner",
+      "provider": "Khan Academy",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfjea007pwu8cf9vc33nh",
+      "skill": "Batch Scripting",
+      "level": "Beginner",
+      "provider": "Microsoft",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfn2600afwu8cze3fd59q",
+      "skill": "Big Data Concepts",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfn1a00adwu8cv0yxlpmg",
+      "skill": "Binary & Hexadecimal Math",
+      "level": "Beginner",
+      "provider": "GitHub",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2b007cwubk1cqyq4dg",
+      "skill": "Business Intelligence Overview",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfrjw00dbwu8cugbsnzbe",
+      "skill": "CI/CD Pipeline Concepts",
+      "level": "Beginner",
+      "provider": "GitHub",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfgo4005twu8cerm3d0ur",
+      "skill": "Career & Workplace Readiness",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2b007mwubkfl84e1ue",
+      "skill": "Cloud Cost Optimization",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2b007lwubk7hypmkwp",
+      "skill": "Cloud IAM & Access Control",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfnda00b0wu8cz98xi6ty",
+      "skill": "Cloud IAM Basics",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2b0086wubkvoraszhh",
+      "skill": "Cloud Security Principles",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfnbb00auwu8coqiafxoi",
+      "skill": "Cloud Storage Concepts",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2b007kwubkch4wq3bh",
+      "skill": "Cloud Storage Solutions",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfn3400ajwu8cy8n7j64a",
+      "skill": "Cloud Virtual Machines",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2b008ywubkrjsbjieh",
+      "skill": "Command Line Productivity",
+      "level": "Beginner",
+      "provider": "Canonical / Ubuntu",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznflgr009dwu8cct4keza1",
+      "skill": "Computer Architecture Basics",
+      "level": "Beginner",
+      "provider": "Coursera",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfglq005pwu8cjku3y2ts",
+      "skill": "Computer Fundamentals",
+      "level": "Beginner",
+      "provider": "Harvard University / edX",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2a006pwubk3o2d90t3",
+      "skill": "Computer Vision Fundamentals",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2a006qwubkrcz38sk3",
+      "skill": "Copilot & AI Code Assistants",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfn4g00apwu8cbklwhrxh",
+      "skill": "DNS & Domain Systems",
+      "level": "Beginner",
+      "provider": "Cloudflare",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfe9k004hwu8c46po10da",
+      "skill": "Data Analytics Fundamentals",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfe3x004fwu8clg42jbli",
+      "skill": "Data Science Fundamentals",
+      "level": "Beginner",
+      "provider": "Microsoft",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfl1x008qwu8cckyqqg8q",
+      "skill": "Data Structures Introduction",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfpgq00c1wu8c7mfxgu1i",
+      "skill": "Data Visualization Concepts",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2a006wwubkv9rqk88r",
+      "skill": "Data Visualization with Matplotlib",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2b007bwubkaradnmos",
+      "skill": "Data Wrangling & Cleaning",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfgk2005lwu8c41emn0ix",
+      "skill": "Database Systems Overview",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2b008ewubkgkr1bijy",
+      "skill": "Design Handoff & Developer Specs",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2b008bwubkkyjapasq",
+      "skill": "Design Systems Concepts",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfe2j004dwu8czrifnjm1",
+      "skill": "DevOps Fundamentals",
+      "level": "Beginner",
+      "provider": "Microsoft",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2b008pwubkt0hzh852",
+      "skill": "Effective Team Communication",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2b0085wubki7eg2b7m",
+      "skill": "Endpoint Protection Essentials",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2c0093wubkdc7a59yt",
+      "skill": "Environment Variables & Configuration",
+      "level": "Beginner",
+      "provider": "Salesforce",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2a0078wubkcn60bk4e",
+      "skill": "Excel Formulas & Functions",
+      "level": "Beginner",
+      "provider": "Microsoft",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfpti00cdwu8c49a2t4i7",
+      "skill": "Excel Formulas & Functions",
+      "level": "Beginner",
+      "provider": "IBM SkillsBuild",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfpv900cgwu8czv6iuhky",
+      "skill": "Excel Pivot Tables",
+      "level": "Beginner",
+      "provider": "Microsoft",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtz8kt2a006ywubkubop23eg",
+      "skill": "Feature Engineering Principles",
+      "level": "Beginner",
+      "provider": "Kaggle",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    },
+    {
+      "id": "cmtznfl1x008rwu8cwkxgtfrp",
+      "skill": "Functional Programming Concepts",
+      "level": "Beginner",
+      "provider": "Coursera",
+      "reason": "TOPIC_TOO_SPECIALIZED: No verified direct official course endpoint available in catalog"
+    }
+  ]
+}

@@ -2,15 +2,13 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   LayoutDashboard,
   Users,
   BookOpen,
   Building,
   GraduationCap,
-  HelpCircle,
-  Award,
   FileCheck2,
   BarChart3,
   Settings,
@@ -31,10 +29,6 @@ export function AdminNavigation({ adminEmail = "Admin" }: AdminNavProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loggingOut, setLoggingOut] = useState(false);
   const [pendingHref, setPendingHref] = useState<string | null>(null);
-
-  useEffect(() => {
-    setPendingHref(null);
-  }, [pathname]);
 
   const navItems = [
     { label: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
@@ -120,7 +114,7 @@ export function AdminNavigation({ adminEmail = "Admin" }: AdminNavProps) {
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.href || (item.href !== "/admin/dashboard" && pathname.startsWith(item.href));
-            const isPending = pendingHref === item.href;
+            const isPending = pendingHref === item.href && pathname !== item.href;
 
             return (
               <Link

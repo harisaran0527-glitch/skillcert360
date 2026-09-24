@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   LayoutDashboard,
   Compass,
-  BookOpen,
   FileCheck,
   User,
   LogOut,
@@ -27,10 +26,6 @@ export function StudentNavigation({ studentName = "Student", registerNumber = ""
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loggingOut, setLoggingOut] = useState(false);
   const [pendingHref, setPendingHref] = useState<string | null>(null);
-
-  useEffect(() => {
-    setPendingHref(null);
-  }, [pathname]);
 
   const navItems = [
     { label: "Dashboard", href: "/student/dashboard", icon: LayoutDashboard },
@@ -110,7 +105,7 @@ export function StudentNavigation({ studentName = "Student", registerNumber = ""
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.href || (item.href !== "/student/dashboard" && pathname.startsWith(item.href));
-            const isPending = pendingHref === item.href;
+            const isPending = pendingHref === item.href && pathname !== item.href;
 
             return (
               <Link

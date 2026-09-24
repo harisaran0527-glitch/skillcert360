@@ -13,15 +13,8 @@ import {
   Search,
   Filter,
   Lock,
-  Award,
-  CheckCircle2,
-  ExternalLink,
   BookOpen,
   Sparkles,
-  Users,
-  BadgeCheck,
-  ShieldCheck,
-  Globe,
   Zap,
 } from "lucide-react";
 
@@ -381,9 +374,6 @@ function SkillCard({
   skill,
   levelUnlocked,
   progression,
-  credTypeLabel,
-  pricingLabel,
-  pricingColor,
 }: {
   skill: {
     id: string;

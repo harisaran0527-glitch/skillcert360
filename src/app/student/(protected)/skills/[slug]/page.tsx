@@ -12,18 +12,14 @@ import { SubmitButton } from "@/components/submit-button";
 import {
   ArrowLeft,
   BookOpen,
-  Award,
   Lock,
   Clock,
   CheckCircle2,
-  ExternalLink,
   ShieldCheck,
-  Zap,
   Sparkles,
   BadgeCheck,
   Users,
   Globe,
-  Star,
   AlertTriangle,
   Layers,
 } from "lucide-react";
@@ -427,8 +423,8 @@ export default async function StudentSkillDetailPage({
             <div className="text-xs text-slate-400 space-y-1">
               <p className="font-semibold text-slate-200">How the learning flow works:</p>
               <ol className="list-decimal list-inside space-y-0.5 ml-1">
-                <li>Click <strong className="text-white">Learn Officially</strong> to open the provider's official course page.</li>
-                <li>Complete the course on the provider's platform at your own pace.</li>
+                <li>Click <strong className="text-white">Learn Officially</strong> to open the provider&apos;s official course page.</li>
+                <li>Complete the course on the provider&apos;s platform at your own pace.</li>
                 <li>Return here and click <strong className="text-white">Mark Learning Complete</strong>.</li>
                 <li>Upload your original provider certificate to <strong className="text-white">SkillLocker</strong>.</li>
                 <li>The uploaded certificate will remain pending until an admin verifies it.</li>

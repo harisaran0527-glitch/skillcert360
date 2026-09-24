@@ -1,0 +1,53 @@
+{
+  "reconciliationTable": [
+    {
+      "category": "Total Course Records in Database",
+      "count": 594
+    },
+    {
+      "category": "Active Courses Total",
+      "count": 592
+    },
+    {
+      "category": "Inactive / Archived Courses",
+      "count": 2
+    },
+    {
+      "category": "VERIFIED Active Courses",
+      "count": 317
+    },
+    {
+      "category": "  ├─ PASS (Unique Direct Verified Links)",
+      "count": 14
+    },
+    {
+      "category": "  ├─ Legitimate Duplicate URL Courses (Track Sharing)",
+      "count": 303
+    },
+    {
+      "category": "  └─ Generic Provider Homepage VERIFIED",
+      "count": 7
+    },
+    {
+      "category": "UNAVAILABLE Active Courses (Unverified Fallbacks Removed)",
+      "count": 275
+    },
+    {
+      "category": "RETIRED Active Courses",
+      "count": 0
+    },
+    {
+      "category": "PENDING Active Courses",
+      "count": 0
+    },
+    {
+      "category": "Null URL Courses",
+      "count": 0
+    },
+    {
+      "category": "Empty URL Courses",
+      "count": 0
+    }
+  ],
+  "mathCheck": true
+}

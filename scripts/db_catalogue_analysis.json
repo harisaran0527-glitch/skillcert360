@@ -1,0 +1,3480 @@
+{
+  "generatedAt": "2026-09-24T05:21:02.763Z",
+  "metrics": {
+    "totalLevels": 5,
+    "totalCategories": 36,
+    "totalProviders": 130,
+    "totalSkills": 527,
+    "totalActiveCourses": 592,
+    "duplicateUrlCount": 47,
+    "providerMismatchCount": 0,
+    "genericIndexPageCount": 1
+  },
+  "levelBreakdown": {
+    "Beginner": {
+      "skillsCount": 222,
+      "coursesCount": 276
+    },
+    "Advanced": {
+      "skillsCount": 104,
+      "coursesCount": 110
+    },
+    "Pro": {
+      "skillsCount": 101,
+      "coursesCount": 106
+    },
+    "Expert": {
+      "skillsCount": 100,
+      "coursesCount": 100
+    },
+    "Professional": {
+      "skillsCount": 0,
+      "coursesCount": 0
+    }
+  },
+  "duplicates": [
+    {
+      "url": "https://skillsforall.com/course/c-programming",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtz8c3r60005wutobaup4si1",
+          "skill": "C Programming Basics",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "C Programming Essentials"
+        },
+        {
+          "id": "cmtz8kt2a005vwubkctvssygi",
+          "skill": "C Programming Basics",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "C Programming Essentials"
+        }
+      ]
+    },
+    {
+      "url": "https://skillsforall.com/course/c-plus-plus-programming",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtz8c6ae000bwuto8t9d5ppd",
+          "skill": "C++ Fundamentals",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "C++ Programming Essentials"
+        },
+        {
+          "id": "cmtz8kt2a005wwubkiibwfo5t",
+          "skill": "C++ Fundamentals",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "C++ Programming Essentials"
+        }
+      ]
+    },
+    {
+      "url": "https://education.oracle.com/java-se-11-developer/pexam_1Z0-819",
+      "count": 4,
+      "sampleCourses": [
+        {
+          "id": "cmtz8c8qf000hwutodhy5j2ii",
+          "skill": "Java Foundations",
+          "level": "Beginner",
+          "provider": "Oracle University",
+          "title": "Java Explorer & Programming Foundations"
+        },
+        {
+          "id": "cmtz8kt2a005xwubk7g4rpauq",
+          "skill": "Java Foundations",
+          "level": "Beginner",
+          "provider": "Oracle University",
+          "title": "Java Explorer & Programming Foundations"
+        },
+        {
+          "id": "cmtznfydw00ipwu8c2mcovlnl",
+          "skill": "Spring Boot Microservices",
+          "level": "Advanced",
+          "provider": "Oracle",
+          "title": "Oracle Certified Professional: Java SE Developer"
+        },
+        {
+          "id": "cmtzngfd400vtwu8cenh4jqqc",
+          "skill": "Spring Cloud Microservices",
+          "level": "Pro",
+          "provider": "Oracle",
+          "title": "Oracle Certified Professional: Java SE Developer"
+        }
+      ]
+    },
+    {
+      "url": "https://skillsforall.com/course/python-essentials-1",
+      "count": 4,
+      "sampleCourses": [
+        {
+          "id": "cmtz8cb5i000nwuto9w6g6fq7",
+          "skill": "Python Essentials",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Python Essentials 1"
+        },
+        {
+          "id": "cmtz8kt2a005ywubkgf9t0wt3",
+          "skill": "Python Essentials",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Python Essentials 1"
+        },
+        {
+          "id": "cmtz8kt2a006uwubk39pbwmn4",
+          "skill": "Python for Data Science",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Python Essentials 1"
+        },
+        {
+          "id": "cmtz8kt2b008fwubki6u7f1vd",
+          "skill": "Python Automation & Scripting",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Python Essentials 1"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtzng2a900m0wu8crfjg4h2z",
+          "skill": "Azure Security Technologies",
+          "level": "Advanced",
+          "provider": "Microsoft",
+          "title": "Microsoft Certified: Azure Administrator Associate (AZ-104)"
+        },
+        {
+          "id": "cmtznftem00erwu8ccx37npqz",
+          "skill": "Azure Administration (AZ-104)",
+          "level": "Advanced",
+          "provider": "Microsoft",
+          "title": "Microsoft Certified: Azure Administrator Associate (AZ-104)"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ibm.com/training/badge/enterprise-design-thinking-practitioner",
+      "count": 219,
+      "sampleCourses": [
+        {
+          "id": "cmtz8cqif001nwutotggoc1xa",
+          "skill": "Ruby Foundations",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngue60159wu8c7siujiy6",
+          "skill": "Enterprise Salesforce System Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b008hwubkosv8sizd",
+          "skill": "No-Code Workflow Automation",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a0074wubkf3yiuikf",
+          "skill": "Relational Database Concepts",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b007mwubkfl84e1ue",
+          "skill": "Cloud Cost Optimization",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b008owubk44r2uqml",
+          "skill": "Agile & Scrum Methodology",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a0065wubkyjo0nmbj",
+          "skill": "Swift Basics",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b008nwubk6dcqjmlw",
+          "skill": "Technical Writing Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b008pwubkt0hzh852",
+          "skill": "Effective Team Communication",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznf86q001swu8cu2puim81",
+          "skill": "Java",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfn2600afwu8cze3fd59q",
+          "skill": "Big Data Concepts",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a0064wubk9qe6dh4t",
+          "skill": "Ruby Foundations",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b008mwubkmw5fvmtw",
+          "skill": "Browser Automation with Playwright",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng40q00n7wu8c2t77rryq",
+          "skill": "Matplotlib & Seaborn Visualization",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngsp20147wu8cz66lmnkl",
+          "skill": "Cloud Disaster Recovery & Business Continuity",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b007wwubke24b1yqb",
+          "skill": "System Monitoring & Logging",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfydw00imwu8c6vwp1p7q",
+          "skill": "PWA & Service Workers",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8d7kt002twutopk8v1e5e",
+          "skill": "Next.js Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b007cwubk1cqyq4dg",
+          "skill": "Business Intelligence Overview",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznftg600ezwu8cl1iaras6",
+          "skill": "Graph Algorithms & Trees",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b008vwubk40sulv02",
+          "skill": "Project Management Essentials",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a006mwubkc8kymhem",
+          "skill": "AI Tools for Productivity",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a006qwubkrcz38sk3",
+          "skill": "Copilot & AI Code Assistants",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng04800k2wu8cbs7jdemf",
+          "skill": "Go Microservices Architecture",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngs72013nwu8cn8gmubw3",
+          "skill": "High-Frequency Trading System Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a006nwubksnuos7fn",
+          "skill": "AI Ethics & Responsible AI",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b008xwubkljsg5p6e",
+          "skill": "VS Code Power User Guide",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2c0092wubkcrnodzsy",
+          "skill": "RegEx (Regular Expressions) Basics",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfdog0045wu8c8wlcl8wy",
+          "skill": "Prompt Engineering Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a006lwubky606c2si",
+          "skill": "Prompt Engineering Basics",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfy5200i4wu8czgv4kvcw",
+          "skill": "React Native Mobile Development",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfl1x008qwu8cckyqqg8q",
+          "skill": "Data Structures Introduction",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfgo4005twu8cerm3d0ur",
+          "skill": "Career & Workplace Readiness",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznf6wu001fwu8c86kdx30a",
+          "skill": "SQL Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b008jwubkh53cjhh6",
+          "skill": "Web Scraping & Data Extraction",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfdat003jwu8c63ncmicw",
+          "skill": "Artificial Intelligence Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfdjv003ywu8cwjjvv5f3",
+          "skill": "Professional Communication Skills",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfgk3005nwu8cov8gkk2v",
+          "skill": "Software Engineering Basics",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfek0004nwu8c40vudgpa",
+          "skill": "Generative AI Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b007awubksu6ej2ai",
+          "skill": "Tableau Data Visualization",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznf8oo0024wu8ckej5ahct",
+          "skill": "HTML & Web Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfgi2005hwu8chnv4uk29",
+          "skill": "Project Management Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfgpb005vwu8cz26n4v7j",
+          "skill": "JSON & Data Formats",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznf9ew002bwu8cflyjnhsk",
+          "skill": "JavaScript",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfaa5002lwu8c5qr6bvgs",
+          "skill": "SQL Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfe9k004hwu8c46po10da",
+          "skill": "Data Analytics Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfgk2005lwu8c41emn0ix",
+          "skill": "Database Systems Overview",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfh5v0065wu8c1wq6dozr",
+          "skill": "REST API Concepts",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfnbb00auwu8coqiafxoi",
+          "skill": "Cloud Storage Concepts",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfrht00d3wu8ce7x9o4lh",
+          "skill": "GraphQL Concepts",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfpkh00cbwu8c0845o32b",
+          "skill": "Tableau Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfwax00grwu8cy6m9w5wo",
+          "skill": "Kafka Message Streaming",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtznfpam00bvwu8c5pwdoiwb",
+          "skill": "PostgreSQL Basics",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfpgq00c1wu8c7mfxgu1i",
+          "skill": "Data Visualization Concepts",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfnda00b0wu8cz98xi6ty",
+          "skill": "Cloud IAM Basics",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfpii00c5wu8cngafc4gv",
+          "skill": "MySQL Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfpgq00c0wu8cp9e1pp58",
+          "skill": "NoSQL Database Introduction",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfpii00c3wu8cecrhajnx",
+          "skill": "SQLite Essentials",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfpkh00cawu8cc10k773p",
+          "skill": "Google Analytics Basics",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfw9n00glwu8cqu54ksd3",
+          "skill": "Elasticsearch & Logstash",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfydv00ijwu8c2rpx0q66",
+          "skill": "Django Web Framework",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfzyt00jpwu8cfulsxhb5",
+          "skill": "PowerShell Scripting Administration",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngce000uewu8cwiwmrf67",
+          "skill": "SOC Tier 2 Incident Response & Threat Hunting",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngkfh00ytwu8ckskip26x",
+          "skill": "Healthcare Data Compliance & Security",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngkrk00zbwu8cp0lypu84",
+          "skill": "Quantum Computing Fundamentals (Qiskit)",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngm9a010jwu8ctx20kbko",
+          "skill": "CDN & Edge Computing Security",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngo4g011rwu8cnk4h5lbo",
+          "skill": "Scalable Backend Infrastructure Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngsp80149wu8cgnoan45m",
+          "skill": "Custom Silicon & ASIC Software Acceleration",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngis900xqwu8cgzkyoast",
+          "skill": "Salesforce Enterprise Integration",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngo59011xwu8co8q7p2oe",
+          "skill": "Enterprise Solution Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngujd015kwu8ccalhdgtj",
+          "skill": "Industrial IoT & SCADA Security Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngog2012ewu8cklck8bf8",
+          "skill": "Real-Time Streaming Systems Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngue7015bwu8cnek8k1ij",
+          "skill": "Robotic Systems Fleet Orchestration",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngunm015nwu8csubyu8lt",
+          "skill": "Advanced Machine Perception Systems",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngm9k010nwu8c68fy1dzz",
+          "skill": "WebSocket Scale Engineering",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngs73013pwu8c9v7ca9dz",
+          "skill": "Quantum Cryptography & Post-Quantum Security",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngsn20143wu8czzqbvlwm",
+          "skill": "Autonomous AI Agent Swarm Systems",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngx6o017cwu8ck79ckejs",
+          "skill": "Advanced Cryptographic Protocol Design",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngyuu018jwu8c2kyhiaqj",
+          "skill": "Custom OS Kernel Development for Edge",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngx8q017lwu8cmawxmqpz",
+          "skill": "Global Freight Logistics Platform Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngyyo018lwu8cm5g4exn3",
+          "skill": "Automotive Software Architecture (AUTOSAR)",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznh2a601a9wu8c8a6bgi4f",
+          "skill": "Brain-Computer Interface Signal Processing Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznh2cd01adwu8cc2nr0m9s",
+          "skill": "Enterprise Identity Federation at Billion Scale",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngz58018vwu8c7t0yt6e4",
+          "skill": "Hardware Security Module (HSM) Infrastructure",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngx85017jwu8cnpo0pnq6",
+          "skill": "Energy Grid Microgrid Automation Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngz9d0191wu8cu2n1ml9b",
+          "skill": "Bare-Metal Cloud Infrastructure Automation",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngyr9018hwu8cw3hey7ga",
+          "skill": "Post-Quantum Encryption Implementation",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngzc00197wu8c92mau2iq",
+          "skill": "Distributed Memory Storage Fabric (NVMe-oF)",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznh2cd01ahwu8cr210ecs9",
+          "skill": "Distributed Graph Query Processing Engine",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznh3vg01bjwu8ci9peoylc",
+          "skill": "Global Supply Chain Resilience Simulation Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznh43z01bvwu8c5gkq9wlo",
+          "skill": "Enterprise Knowledge Graph Reasoning Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngzc00199wu8cr94ehie1",
+          "skill": "Real-Time Embedded Safety-Critical Systems (MISRA C)",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtznh2cd01agwu8cumpvhzf6",
+          "skill": "Distributed GPU Tensor Parallelism Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznh3xt01bnwu8cfcj0cguj",
+          "skill": "Autonomous Cyber Defense Threat Engine Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznh22u01a5wu8cp2djp404",
+          "skill": "Molecular Dynamics Simulation Infrastructure",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznh2m301apwu8c9tja5fjq",
+          "skill": "Large Language Model Pre-Training Infrastructure",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznh46a01bzwu8cky9w541r",
+          "skill": "Global Privacy & Sovereignty Compliance Systems",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngz0l018rwu8cjvpbea8w",
+          "skill": "High-Throughput Genomic Sequencing Pipeline Design",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznh3vg01blwu8cakdwk5zd",
+          "skill": "Distributed Autonomous Agent Negotiation Systems",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznh2e901ajwu8cyo8606mg",
+          "skill": "Nuclear Reactor Safety Control Software Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngz9d0190wu8c9ikiuhxn",
+          "skill": "Aerospace Flight Software Control Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznh3xt01bpwu8cl6s5soqj",
+          "skill": "Global Fraud Detection ML System Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfd5x003fwu8cgerygluu",
+          "skill": "UI/UX Design Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznftnk00f3wu8cpgi5ln35",
+          "skill": "Applied Machine Learning",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznftx800fbwu8cgcei1jwr",
+          "skill": "Node.js & Express API Development",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng7vz00qlwu8chdnwiuk4",
+          "skill": "Full Stack Engineering",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8d5ad002nwutobpc9kjce",
+          "skill": "React Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8ct74001twuton7ild73l",
+          "skill": "Swift Basics",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a006jwubkkfahdyjx",
+          "skill": "AI Concepts & Applications",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a006gwubkqt81ffmk",
+          "skill": "GraphQL Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a006awubk5mqbwve9",
+          "skill": "React Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a006bwubkoq0r04gi",
+          "skill": "Next.js Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a0076wubkfh4t6c03",
+          "skill": "MySQL Basics",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a0075wubkoubv9e5j",
+          "skill": "PostgreSQL Essentials",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a006pwubk3o2d90t3",
+          "skill": "Computer Vision Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a006swubk40aeal8k",
+          "skill": "AI Agents & Autonomous Workflows",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b007bwubkaradnmos",
+          "skill": "Data Wrangling & Cleaning",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a006xwubkc6sg6i1a",
+          "skill": "Scikit-Learn Basics",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a006wwubkv9rqk88r",
+          "skill": "Data Visualization with Matplotlib",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2a0073wubkmfg1ylgk",
+          "skill": "SQL Querying Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b007kwubkch4wq3bh",
+          "skill": "Cloud Storage Solutions",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b007lwubk7hypmkwp",
+          "skill": "Cloud IAM & Access Control",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b008cwubk9v1yeau7",
+          "skill": "Mobile Interface Design",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b0085wubki7eg2b7m",
+          "skill": "Endpoint Protection Essentials",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b0086wubkvoraszhh",
+          "skill": "Cloud Security Principles",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b008bwubkkyjapasq",
+          "skill": "Design Systems Concepts",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b008ewubkgkr1bijy",
+          "skill": "Design Handoff & Developer Specs",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b008iwubka60onm3j",
+          "skill": "Task Scheduling & Cron Jobs",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtz8kt2b008twubk818otz3d",
+          "skill": "Remote Work & Async Communication",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznftgc00f1wu8c4luazndl",
+          "skill": "Design Patterns in OOP",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfy5300i7wu8cdtrs0dyp",
+          "skill": "iOS Swift Development",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfydw00inwu8c1xoqacgh",
+          "skill": "Flutter Cross-Platform Apps",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng22500lpwu8cvic1n4fe",
+          "skill": "Incident Response Playbooks",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng5m500olwu8cgkebdmgb",
+          "skill": "RAG System Architecture",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfn3400ajwu8cy8n7j64a",
+          "skill": "Cloud Virtual Machines",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfw7w00gbwu8ckw1i4hhv",
+          "skill": "GraphQL API Development",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngaau00sjwu8cchi63uz8",
+          "skill": "SAP Certified Application Associate",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfwax00gqwu8cww3303d8",
+          "skill": "Microservices Communication",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfyg100irwu8cebw4xlgi",
+          "skill": "Canvas & WebGL Graphics",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng04800k3wu8causxtkq9",
+          "skill": "Shell Scripting Automation",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfy6z00i9wu8cbg87ya5g",
+          "skill": "Frontend Performance Optimization",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfxyy00hzwu8c8kciey46",
+          "skill": "WebAssembly (Wasm)",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfy8p00ibwu8cnfrf9cvr",
+          "skill": "Electron Desktop App Development",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng00s00jxwu8c521320bo",
+          "skill": "Flask Web Services",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng09l00k7wu8c5gmn4t4a",
+          "skill": "Rust Systems Programming",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng0c600kewu8c19hvgiua",
+          "skill": "Ansible Configuration Management",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng5vb00otwu8clbmtgufc",
+          "skill": "Jest & Vitest Unit Testing",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng5vp00ovwu8c9vzoc6qv",
+          "skill": "Cypress E2E Testing",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfw8000gfwu8cw2dourhn",
+          "skill": "Functional Reactive Programming",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfwj700gzwu8cmz8o2tm6",
+          "skill": "MySQL Query Tuning",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng65s00pbwu8csw5xs1h6",
+          "skill": "Playwright Test Automation",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngce100ujwu8c1cc3phlq",
+          "skill": "Zero Trust Architecture Implementation",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtznfwlb00h3wu8c58ezk26j",
+          "skill": "gRPC & Protocol Buffers",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfxyy00i1wu8c9szugn8l",
+          "skill": "Tailwind CSS Component Architecture",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfy8p00idwu8c6k6d906o",
+          "skill": "Android Kotlin Development",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng00r00jwwu8cdthfoloa",
+          "skill": "Jenkins Pipeline Architecture",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng1ya00lewu8c25vmh5rp",
+          "skill": "Metasploit Framework",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng5vq00oxwu8cp6eclsi1",
+          "skill": "Pinecone Vector Indexing",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznft5s00eewu8cym45i3be",
+          "skill": "React Frontend Development",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfyah00ifwu8c7y08u67m",
+          "skill": "Vue.js Framework",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngemp00vjwu8ceewvs80g",
+          "skill": "React Native Enterprise Systems",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngc4000tzwu8c59p4t12f",
+          "skill": "Kafka Event Streaming Engineering",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngce000uhwu8clcdw2nes",
+          "skill": "Advanced Penetration Testing & Exploit Dev",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngfd400vswu8cvwloxuy4",
+          "skill": "Edge Computing Architecture",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtznfw9q00gnwu8cmezguie9",
+          "skill": "OAuth 2.0 & OpenID Connect",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfwlb00h2wu8csz7gcc4h",
+          "skill": "RESTful API Engineering",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfy5200i5wu8chg4ki4i6",
+          "skill": "Next.js App Router",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng00r00jswu8czqtaj9n3",
+          "skill": "Packer Machine Image Building",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfydv00ihwu8ck9p2sxnf",
+          "skill": "Angular Web Development",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng84c00qzwu8c9vr2ppy1",
+          "skill": "Enterprise RPA Engineering",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngg4h00w9wu8cjrfh3fbf",
+          "skill": "UiPath Enterprise Automation Architecture",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfpti00cdwu8c49a2t4i7",
+          "skill": "Excel Formulas & Functions",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngaav00slwu8c3qdnfwj8",
+          "skill": "Salesforce Certified Developer",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng82d00qrwu8cjpmna82o",
+          "skill": "Cloud-Native Security Engineering",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznfw8000gewu8c362wa9vl",
+          "skill": "RabbitMQ Message Queuing",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng0c600kfwu8ci8ei9ovq",
+          "skill": "Ruby on Rails Applications",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng1ya00lfwu8cf0qcvxec",
+          "skill": "Prometheus & Grafana Monitoring",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng5tu00orwu8cz5xcwso5",
+          "skill": "Selenium Web Automation",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng7l600q9wu8crlv5qd9l",
+          "skill": "LLMOps & Generative AI Production",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngkis00z1wu8c1b5onuvx",
+          "skill": "Zero-Knowledge Proof Cryptography",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzng20300lnwu8cfpf9k2tu",
+          "skill": "OpenTelemetry Tracing",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzng08600k5wu8cmxn1cerd",
+          "skill": "CI/CD Pipeline Automation",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngfqt00vzwu8cr6nbe6zz",
+          "skill": "Robotics Software Engineering (ROS)",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngudf0157wu8ctbr7fdu7",
+          "skill": "Web3 Enterprise Infrastructure Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngc4000tywu8chml1jehz",
+          "skill": "Malware Analysis & Reverse Engineering",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngigd00xewu8cqiv2mpfb",
+          "skill": "Computer Vision Object Detection & Segmentation",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngock0125wu8cukeqpgcn",
+          "skill": "Enterprise Security Operations & CISO Frameworks",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngofw012bwu8cnrwaknap",
+          "skill": "Cloud Financial Operations (FinOps) Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngr71013hwu8c80neq3uj",
+          "skill": "Multi-Cloud Hybrid Mesh Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngsbx013twu8chu21f84h",
+          "skill": "Enterprise API Mesh Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngshv013xwu8chlo8iixb",
+          "skill": "SaaS Multi-Tenant Platform Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngrye013jwu8c96l3g11z",
+          "skill": "Compiler Engineering & LLVM Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngsld013zwu8czwz47sf3",
+          "skill": "Global Content Delivery & Edge Compute Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngu710155wu8cv6fbxdtl",
+          "skill": "Quantum Software Algorithm Engineering",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtznguh9015dwu8cb8tmvz4y",
+          "skill": "Spaceborne & Aerospace Edge Computing Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngsbs013rwu8caymt2h2k",
+          "skill": "Zero Trust IAM Infrastructure Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngm94010fwu8cwjcxo78q",
+          "skill": "Continuous Compliance & Audit Automation",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngkpq00z7wu8c7c0jqp4q",
+          "skill": "Web3 Infrastructure Engineering",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngm3j010dwu8c0ocxgzvs",
+          "skill": "WebRTC Real-Time Media Streaming",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngocb0123wu8cppmyczye",
+          "skill": "Advanced MLOps & AI Governance",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngo32011pwu8cwetqhi17",
+          "skill": "Enterprise DevOps Strategy & Governance",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznguh9015fwu8cnn4e4jfh",
+          "skill": "Autonomous Vehicle Fleet Compute Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngwg9016twu8c7oewau52",
+          "skill": "Smart City Edge Systems Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngwls016xwu8c1b3hhhbx",
+          "skill": "Real-Time Audio DSP Engine Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngwn9016zwu8cthcse6v1",
+          "skill": "Global Banking Ledger Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngwnt0171wu8coy13rfnr",
+          "skill": "Fault-Tolerant State Machine Replication",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngwpa0173wu8cy6lqunzm",
+          "skill": "Distributed Transaction Engine Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngx150175wu8cw0q4d2l6",
+          "skill": "Ultra-Scalable Event Store Engineering",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngm9d010lwu8c53oeq9q3",
+          "skill": "GraphQL Federation & Mesh Architecture",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznguxc015vwu8clbxyv2hr",
+          "skill": "Biomedical AI Platform Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngujd015lwu8c1k4noio8",
+          "skill": "Enterprise Intelligent Automation Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngs6w013lwu8czpkuc70m",
+          "skill": "High-Performance Supercomputing (HPC)",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngsn30145wu8ca2mtrz07",
+          "skill": "Operating System Kernel Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngx170177wu8cx0j3irjd",
+          "skill": "Next-Gen Video Encoding & Broadcast Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngx330179wu8cok24fwev",
+          "skill": "Algorithmic Risk Management Engine Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtzngx6o017fwu8cmfdmbcge",
+          "skill": "Automated Formal Code Verification",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznh2o001avwu8crvdruq2q",
+          "skill": "Neuromorphic Computing Hardware Acceleration",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        },
+        {
+          "id": "cmtznh3xu01btwu8cxedueoob",
+          "skill": "Real-Time Credit Decisioning Engine Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Computing Foundations"
+        },
+        {
+          "id": "cmtzngx6x017hwu8codywfqg2",
+          "skill": "Enterprise Micro-Frontend Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Enterprise System Architecture & Applied Computing"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ibm.com/training/badge/data-science-foundations-level-1",
+      "count": 8,
+      "sampleCourses": [
+        {
+          "id": "cmtz8kt2a0072wubkf9lsg017",
+          "skill": "Statistical Methods for Data Science",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Data Science Foundations"
+        },
+        {
+          "id": "cmtznf86q001twu8cv7zylv7c",
+          "skill": "Python",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Data Science & Python Programming Foundations"
+        },
+        {
+          "id": "cmtznfdcy003pwu8cv5wn21fw",
+          "skill": "Data Science Fundamentals",
+          "level": "Beginner",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Data Science & Python Programming Foundations"
+        },
+        {
+          "id": "cmtznh2nt01atwu8cltfz3jgm",
+          "skill": "Synthetic Biology Data Analytics Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Data Science & Python Programming Foundations"
+        },
+        {
+          "id": "cmtznh24b01a7wu8cc4csarzv",
+          "skill": "Time-Series Database Storage Engine Architecture",
+          "level": "Expert",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Data Science & Python Programming Foundations"
+        },
+        {
+          "id": "cmtzng40y00nbwu8cwa1tim49",
+          "skill": "Pandas Data Wrangling",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Data Science & Python Programming Foundations"
+        },
+        {
+          "id": "cmtzng48f00nnwu8c7jmhj6e9",
+          "skill": "NumPy Scientific Computing",
+          "level": "Advanced",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Data Science & Python Programming Foundations"
+        },
+        {
+          "id": "cmtzngkgz00yxwu8cixj1u68e",
+          "skill": "Geospatial Data Science & GIS",
+          "level": "Pro",
+          "provider": "IBM SkillsBuild",
+          "title": "IBM Data Science & Python Programming Foundations"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/data-analyst-associate/",
+      "count": 3,
+      "sampleCourses": [
+        {
+          "id": "cmtz8kt2b0079wubkfn6u4kc4",
+          "skill": "Power BI Dashboarding Fundamentals",
+          "level": "Beginner",
+          "provider": "Microsoft Learn",
+          "title": "Microsoft Power BI Data Analyst Course"
+        },
+        {
+          "id": "cmtzng4a300nqwu8ct4dxgihq",
+          "skill": "Power BI Data Modeling (DAX)",
+          "level": "Advanced",
+          "provider": "Microsoft",
+          "title": "Microsoft Certified: Power BI Data Analyst Associate (PL-300)"
+        },
+        {
+          "id": "cmtzngijh00xhwu8cl3diw4qt",
+          "skill": "Power BI Enterprise Analytics & Admin",
+          "level": "Pro",
+          "provider": "Microsoft",
+          "title": "Microsoft Certified: Power BI Data Analyst Associate (PL-300)"
+        }
+      ]
+    },
+    {
+      "url": "https://www.cloudskillsboost.google/course_templates/153",
+      "count": 80,
+      "sampleCourses": [
+        {
+          "id": "cmtz8kt2a005zwubk0q9fscib",
+          "skill": "Go Programming Basics",
+          "level": "Beginner",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtz8kt2b007gwubkg94hmyh2",
+          "skill": "Google Cloud Platform Essentials",
+          "level": "Beginner",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Computing Foundations"
+        },
+        {
+          "id": "cmtzngksu00zhwu8cidnkqrtz",
+          "skill": "Distributed System Consensus (Raft/Paxos)",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzng46l00nhwu8cu8ii247x",
+          "skill": "TensorFlow Basics",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Computing Foundations"
+        },
+        {
+          "id": "cmtzngfd400vxwu8czfhsimj2",
+          "skill": "FastAPI Production Async Microservices",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtznga6y00s9wu8ch5ndzu36",
+          "skill": "Advanced API Engineering",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngce000ugwu8c3jg2mwso",
+          "skill": "Elasticsearch Cluster Operations",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzng40u00n9wu8c3yfk0jk3",
+          "skill": "NLTK & spaCy NLP Basics",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtz8kt2c0091wubk9fply9ct",
+          "skill": "Chrome DevTools Essentials",
+          "level": "Beginner",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtznftfz00evwu8cad9wq231",
+          "skill": "Advanced Data Structures",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtznfj7e0079wu8cwe5v2zci",
+          "skill": "Go Programming Introduction",
+          "level": "Beginner",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtznfdkt0041wu8ch0t1g1xa",
+          "skill": "Data Analytics Fundamentals",
+          "level": "Beginner",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtznfdlr0043wu8c8cbwn7pq",
+          "skill": "Google Cloud Fundamentals",
+          "level": "Beginner",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Computing Foundations"
+        },
+        {
+          "id": "cmtznfh1d005zwu8crxots2mg",
+          "skill": "Responsive Web Design",
+          "level": "Beginner",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtznfgk2005kwu8ck9r73toe",
+          "skill": "Web Accessibility (a11y)",
+          "level": "Beginner",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtznfwj700gwwu8cvbyt3pji",
+          "skill": "Database Indexing Strategies",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzng81d00qnwu8cqvwl4wbs",
+          "skill": "Advanced Database Administration",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngbyf00ttwu8ce9yppft8",
+          "skill": "Cloud Forensics & Incident Analysis",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngc9x00u5wu8c04885n3n",
+          "skill": "iOS Native Mobile Engineering",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngfd400vuwu8c3mt2zbfp",
+          "skill": "Rust Production Systems Development",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngiky00xlwu8clc2tm0kn",
+          "skill": "Autonomous Systems Software",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngifx00xbwu8cicrz221y",
+          "skill": "Tableau Server Administration",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngogf012hwu8c3da1fecu",
+          "skill": "Global Database Architecture & Sharding",
+          "level": "Expert",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngiuo00xwwu8cc0x34xa8",
+          "skill": "Time Series Forecasting & Analysis",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngkfp00yvwu8c84g7hxdi",
+          "skill": "Solidity Ethereum Development",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtznglyh010bwu8cn9m4mqr9",
+          "skill": "Cloud Cost Optimization & FinOps",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngsdi013vwu8cjomxkxiy",
+          "skill": "Large-Scale Vector Database Engine Design",
+          "level": "Expert",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngigd00xfwu8c95c4ftz8",
+          "skill": "Natural Language Processing & Speech AI",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngkj200z3wu8c6zjrppg7",
+          "skill": "Blockchain Smart Contract Engineering",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngkst00zfwu8cvctictja",
+          "skill": "Distributed Search Engine Engineering",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngm9k010pwu8crfutawi5",
+          "skill": "Multi-Cloud Cloud-Native Governance",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngipe00xnwu8ci1t799vb",
+          "skill": "Reinforcement Learning & Q-Learning",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngm98010hwu8c1ejhubda",
+          "skill": "DDoS Mitigation & Rate Limiting Systems",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngkqg00z9wu8c25mtp0c3",
+          "skill": "System Call Optimization & eBPF",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngz57018uwu8c429vcutk",
+          "skill": "Exascale Data Storage Architecture",
+          "level": "Expert",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtznh2m901arwu8cj8jjnban",
+          "skill": "Custom Database Query Optimizer Architecture",
+          "level": "Expert",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngzc00198wu8cgpnt98zk",
+          "skill": "Global Climate Modeling Data Platform",
+          "level": "Expert",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtznh44x01bxwu8cqerf4zui",
+          "skill": "Hyperscale Cloud Data Center Automation Design",
+          "level": "Expert",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtznh2er01alwu8c2x7gi0b8",
+          "skill": "Advanced Radar Signal Analytics Systems",
+          "level": "Expert",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtznfa6k002hwu8cynk5oak5",
+          "skill": "Cloud Computing Fundamentals",
+          "level": "Beginner",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtz8ce3t000twutou1rfgkzn",
+          "skill": "Go Programming Basics",
+          "level": "Beginner",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtz8d2x3002hwutouru23hdk",
+          "skill": "Responsive Web Design",
+          "level": "Beginner",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtz8kt2a006ewubkx1rog3vo",
+          "skill": "Web Accessibility (a11y)",
+          "level": "Beginner",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtz8kt2a006iwubkbwrjmzqe",
+          "skill": "Web Performance Optimization",
+          "level": "Beginner",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtz8kt2a0069wubk84wb4411",
+          "skill": "Responsive Web Design",
+          "level": "Beginner",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzng5xl00p0wu8c7uh29jzo",
+          "skill": "Vector Database Vector Search",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngc9y00u8wu8c05s9dnd8",
+          "skill": "RabbitMQ Enterprise Cluster Management",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngkvf00zjwu8cfgijoxdf",
+          "skill": "Database Engine Internals & Storage",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzng5o400onwu8cwnfjivqn",
+          "skill": "OpenAI API Integration",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngcg100ulwu8cd4njkt6m",
+          "skill": "Flutter Mobile Architecture",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngfzj00w7wu8chpp6tabq",
+          "skill": "Embedded Systems Engineering",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngkh800yzwu8cfmhpczhz",
+          "skill": "Decentralized Finance (DeFi) Protocols",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzng29n00lvwu8c9oulf1vu",
+          "skill": "ELK Stack Log Analytics",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngc6700u3wu8c47wuv51k",
+          "skill": "Cassandra Distributed Database Administration",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngi9a00x6wu8cbhqgo7k9",
+          "skill": "SAP S/4HANA Analytics",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzng7s500qbwu8c7g1xplex",
+          "skill": "Site Reliability Engineering (SRE)",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzng43100nfwu8czfidkv2i",
+          "skill": "Tableau Dashboard Design",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzng48d00nkwu8cr88fx9kq",
+          "skill": "OpenCV Computer Vision Basics",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzng3yt00n4wu8ciaoz988e",
+          "skill": "Scikit-Learn Model Pipeline",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzng3sd00n1wu8c8th83fjb",
+          "skill": "Google Cloud Associate Engineer",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Computing Foundations"
+        },
+        {
+          "id": "cmtzng43100newu8cd3cv33id",
+          "skill": "R Programming for Statistics",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtznga8y00sfwu8c1vfqc04n",
+          "skill": "Enterprise Data Platforms",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzng82d00qqwu8c4kp5bogf",
+          "skill": "Enterprise Cloud Engineering",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngc9y00u9wu8cpt1ncldv",
+          "skill": "Enterprise Identity Governance (Okta/Entra ID)",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngf4b00vlwu8cj4pq8sm4",
+          "skill": "Go Enterprise Backend Engineering",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngifx00x9wu8c4rfcmnxo",
+          "skill": "Statistical Modeling & Hypothesis Testing",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzng3yt00n5wu8c1c1coq4i",
+          "skill": "BigQuery Data Warehousing",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Computing Foundations"
+        },
+        {
+          "id": "cmtzngiuo00xvwu8c6f8uu9e9",
+          "skill": "Quantitative Financial Analytics",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzng5qb00opwu8c6lxu0yv2",
+          "skill": "LangChain LLM Orchestration",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngce000ufwu8c8icmowep",
+          "skill": "Android Native Mobile Engineering",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngfd400vvwu8clchquk3s",
+          "skill": "Django Enterprise Systems Architecture",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngfzj00w6wu8c66bt1gp0",
+          "skill": "Automated Software Testing Engineering",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngmdk010twu8cx2kur6w9",
+          "skill": "Infrastructure as Code Policy Enforcement",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngmdj010rwu8conwi9q7l",
+          "skill": "Enterprise API Gateway Management (Kong)",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngfv500w3wu8c88uog2yb",
+          "skill": "Playwright Enterprise E2E Test Suite",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngis900xrwu8c92yuah6y",
+          "skill": "Algorithmic Trading System Design",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngi9a00x7wu8co3mbx56e",
+          "skill": "Bioinformatics Data Analytics",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngoai0121wu8c2654ghco",
+          "skill": "Advanced Data Platform Architecture",
+          "level": "Expert",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtzngslf0141wu8c8k7tu8s0",
+          "skill": "Enterprise Graph Data Architecture",
+          "level": "Expert",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        },
+        {
+          "id": "cmtznh2o001axwu8cl8vozlaj",
+          "skill": "High-Energy Physics Particle Tracker Analytics",
+          "level": "Expert",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional Data & System Architecture"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-typescript/",
+      "count": 4,
+      "sampleCourses": [
+        {
+          "id": "cmtz8cljr001bwutobinffiru",
+          "skill": "TypeScript Essentials",
+          "level": "Beginner",
+          "provider": "Microsoft",
+          "title": "Microsoft Learn: Build JavaScript Applications with TypeScript"
+        },
+        {
+          "id": "cmtz8kt2a0062wubkn3qegs98",
+          "skill": "TypeScript Essentials",
+          "level": "Beginner",
+          "provider": "Microsoft",
+          "title": "Microsoft Learn: Build JavaScript Applications with TypeScript"
+        },
+        {
+          "id": "cmtznfiqj006zwu8cv2jliqvg",
+          "skill": "TypeScript Introduction",
+          "level": "Beginner",
+          "provider": "Microsoft",
+          "title": "Microsoft Learn: Build JavaScript Applications with TypeScript"
+        },
+        {
+          "id": "cmtznftbw00epwu8coaba42k3",
+          "skill": "TypeScript Advanced Programming",
+          "level": "Advanced",
+          "provider": "Microsoft",
+          "title": "Microsoft Learn: Build JavaScript Applications with TypeScript"
+        }
+      ]
+    },
+    {
+      "url": "https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtzng1w300lbwu8cu2xgs4x6",
+          "skill": "Kubernetes Pod & Deployment Management",
+          "level": "Advanced",
+          "provider": "Linux Foundation",
+          "title": "Kubernetes Certified Application Developer (CKAD) Preparation"
+        },
+        {
+          "id": "cmtzng2a900m3wu8c5cdw8858",
+          "skill": "Helm Package Management",
+          "level": "Advanced",
+          "provider": "Linux Foundation",
+          "title": "Kubernetes Certified Application Developer (CKAD) Preparation"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/training/online/",
+      "count": 3,
+      "sampleCourses": [
+        {
+          "id": "cmtzngaic00spwu8ck1du8gdm",
+          "skill": "NVIDIA GPU Acceleration & CUDA",
+          "level": "Pro",
+          "provider": "NVIDIA",
+          "title": "NVIDIA DLI: Fundamentals of Deep Learning & Acceleration"
+        },
+        {
+          "id": "cmtznfegh004jwu8cghb5vkuj",
+          "skill": "Artificial Intelligence Fundamentals",
+          "level": "Beginner",
+          "provider": "NVIDIA",
+          "title": "NVIDIA AI Essentials"
+        },
+        {
+          "id": "cmtzng7s600qdwu8c55skoght",
+          "skill": "Deep Learning & Neural Networks",
+          "level": "Pro",
+          "provider": "NVIDIA",
+          "title": "NVIDIA Deep Learning Institute: Fundamentals of Deep Learning"
+        }
+      ]
+    },
+    {
+      "url": "https://skillsforall.com/course/networking-essentials",
+      "count": 15,
+      "sampleCourses": [
+        {
+          "id": "cmtzng1ye00ljwu8ct3tn1srs",
+          "skill": "Ethical Hacking Operations",
+          "level": "Advanced",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        },
+        {
+          "id": "cmtz8kt2b0081wubk2hgpx9be",
+          "skill": "Information Security Policies",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        },
+        {
+          "id": "cmtz8kt2b0080wubkfik8dguw",
+          "skill": "Cryptography & Hashing Basics",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        },
+        {
+          "id": "cmtz8kt2b0083wubkn1vz6q0l",
+          "skill": "Ethical Hacking Intro",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        },
+        {
+          "id": "cmtznfl41008xwu8c47ct6bxg",
+          "skill": "Linux Process Management",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        },
+        {
+          "id": "cmtznfj9a007dwu8coibxtn6q",
+          "skill": "PowerShell Fundamentals",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        },
+        {
+          "id": "cmtznfjay007jwu8c1ufpwjwi",
+          "skill": "Shell Scripting Basics",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        },
+        {
+          "id": "cmtznfnbb00avwu8cp5lcgwbw",
+          "skill": "Password Security & Auth",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        },
+        {
+          "id": "cmtznfw8300ghwu8c9ijxm7g4",
+          "skill": "Web Security & OWASP Top 10",
+          "level": "Advanced",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        },
+        {
+          "id": "cmtz8kt2b007zwubko5s3cwnx",
+          "skill": "Web Application Security (OWASP)",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        },
+        {
+          "id": "cmtz8kt2b007owubkf8ogfrbq",
+          "skill": "Bash Shell Scripting",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        },
+        {
+          "id": "cmtznfle4009bwu8clne34urf",
+          "skill": "Linux File Management",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        },
+        {
+          "id": "cmtznfn4g00anwu8cr2w4ogz0",
+          "skill": "IP Subnetting & CIDR",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        },
+        {
+          "id": "cmtzng1yb00lhwu8cdopt59ts",
+          "skill": "Penetration Testing Methodology",
+          "level": "Advanced",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        },
+        {
+          "id": "cmtznfwj700gxwu8cgbc9jff2",
+          "skill": "JWT & Session Security",
+          "level": "Advanced",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco Enterprise Networking & Network Security Systems"
+        }
+      ]
+    },
+    {
+      "url": "https://nowlearning.servicenow.com/lxp/en/pages/learning-path-detail?id=lp_detail&path_id=53b1b6891b65e910c2ecb99e034bcbd6",
+      "count": 4,
+      "sampleCourses": [
+        {
+          "id": "cmtznguh9015hwu8cmsv7kf2e",
+          "skill": "Enterprise ServiceNow Platform Architecture",
+          "level": "Expert",
+          "provider": "ServiceNow",
+          "title": "ServiceNow Certified System Administrator (CSA) Learning Path"
+        },
+        {
+          "id": "cmtznga2600s7wu8ctears1uj",
+          "skill": "ServiceNow Certified System Administrator",
+          "level": "Pro",
+          "provider": "ServiceNow",
+          "title": "ServiceNow Certified System Administrator (CSA) Learning Path"
+        },
+        {
+          "id": "cmtzng63a00p9wu8c3t2br780",
+          "skill": "ServiceNow System Administration",
+          "level": "Advanced",
+          "provider": "ServiceNow",
+          "title": "ServiceNow Certified System Administrator (CSA) Learning Path"
+        },
+        {
+          "id": "cmtzngiuo00xxwu8cfe71ib28",
+          "skill": "ServiceNow Application Development",
+          "level": "Pro",
+          "provider": "ServiceNow",
+          "title": "ServiceNow Certified System Administrator (CSA) Learning Path"
+        }
+      ]
+    },
+    {
+      "url": "https://training.linuxfoundation.org/express-learning/introduction-to-kubernetes-lfs158x/",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtz8kt2b007twubkpxb69tfr",
+          "skill": "Kubernetes Core Concepts",
+          "level": "Beginner",
+          "provider": "Linux Foundation",
+          "title": "Introduction to Kubernetes (LFS158x)"
+        },
+        {
+          "id": "cmtznfrjv00d7wu8cb4w3ga6a",
+          "skill": "Kubernetes Concepts",
+          "level": "Beginner",
+          "provider": "Linux Foundation",
+          "title": "Introduction to Kubernetes (LFS158x)"
+        }
+      ]
+    },
+    {
+      "url": "https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials",
+      "count": 5,
+      "sampleCourses": [
+        {
+          "id": "cmtz8kt2b007hwubkxkrsra6f",
+          "skill": "Serverless Computing Overview",
+          "level": "Beginner",
+          "provider": "Amazon Web Services (AWS)",
+          "title": "AWS Cloud Practitioner Essentials"
+        },
+        {
+          "id": "cmtzngpii012lwu8cmjwsz7vi",
+          "skill": "Enterprise Cloud Architecture",
+          "level": "Expert",
+          "provider": "Amazon Web Services (AWS)",
+          "title": "AWS Cloud Practitioner Essentials"
+        },
+        {
+          "id": "cmtznglyg0109wu8cmxc17ajt",
+          "skill": "Serverless Microservices Architecture",
+          "level": "Pro",
+          "provider": "Amazon Web Services (AWS)",
+          "title": "AWS Cloud Practitioner Essentials"
+        },
+        {
+          "id": "cmtz8kt2b007dwubkth27wc2h",
+          "skill": "Cloud Computing Fundamentals",
+          "level": "Beginner",
+          "provider": "Amazon Web Services (AWS)",
+          "title": "AWS Cloud Practitioner Essentials"
+        },
+        {
+          "id": "cmtz8kt2b007ewubk4yafo7g9",
+          "skill": "AWS Cloud Practitioner Basics",
+          "level": "Beginner",
+          "provider": "Amazon Web Services (AWS)",
+          "title": "AWS Cloud Practitioner Essentials"
+        }
+      ]
+    },
+    {
+      "url": "https://kotlinlang.org/docs/getting-started.html",
+      "count": 3,
+      "sampleCourses": [
+        {
+          "id": "cmtz8cvt5001zwutomhsqcehq",
+          "skill": "Kotlin Fundamentals",
+          "level": "Beginner",
+          "provider": "JetBrains / Kotlin Team",
+          "title": "Get Started with Kotlin — Official JetBrains Documentation"
+        },
+        {
+          "id": "cmtznfjax007gwu8c4kl0lyvq",
+          "skill": "Kotlin Fundamentals",
+          "level": "Beginner",
+          "provider": "JetBrains / Kotlin Team",
+          "title": "Get Started with Kotlin — Official JetBrains Documentation"
+        },
+        {
+          "id": "cmtz8kt2a0066wubksx82uzqh",
+          "skill": "Kotlin Fundamentals",
+          "level": "Beginner",
+          "provider": "JetBrains / Kotlin Team",
+          "title": "Get Started with Kotlin — Official JetBrains Documentation"
+        }
+      ]
+    },
+    {
+      "url": "https://vuejs.org/guide/quick-start.html",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtz8da05002zwutoiktauilz",
+          "skill": "Vue.js Basics",
+          "level": "Beginner",
+          "provider": "Vue.js Core Team",
+          "title": "Quick Start — Vue.js Official Documentation"
+        },
+        {
+          "id": "cmtz8kt2a006cwubk9wff3y9o",
+          "skill": "Vue.js Basics",
+          "level": "Beginner",
+          "provider": "Vue.js Core Team",
+          "title": "Quick Start — Vue.js Official Documentation"
+        }
+      ]
+    },
+    {
+      "url": "https://skillsforall.com/course/getting-started-cisco-packet-tracer",
+      "count": 22,
+      "sampleCourses": [
+        {
+          "id": "cmtzngksi00zdwu8chjva9y5a",
+          "skill": "High-Frequency Network Packet Processing",
+          "level": "Pro",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtznf8k1001ywu8cwdq9yzk9",
+          "skill": "Cybersecurity Fundamentals",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtznf8b2001vwu8c2dwzqgh2",
+          "skill": "C Programming",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtznf8k1001zwu8cxyxvgcao",
+          "skill": "Networking Fundamentals",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtznfl41008zwu8c6ef9m0mu",
+          "skill": "Linux Networking Basics",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtznfnda00aywu8cong62ezp",
+          "skill": "Wireless Network Fundamentals",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtzngf8o00vnwu8c46rk417b",
+          "skill": "High-Performance C++ Systems",
+          "level": "Pro",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtzngemp00viwu8cl3o0tjcv",
+          "skill": "Microcontroller Firmware Development",
+          "level": "Pro",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtzngfv500w2wu8cqj6x47t0",
+          "skill": "IoT Enterprise Network Security",
+          "level": "Pro",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtznh2af01abwu8c2bd8khtb",
+          "skill": "Open-Source Firmware Architecture (OpenBMC/Coreboot)",
+          "level": "Expert",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtznh46a01c1wu8coxdd1pty",
+          "skill": "Subsea Cable Network Infrastructure Systems",
+          "level": "Expert",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtzngz0g018nwu8cbff5uecf",
+          "skill": "Deep Space Communication Network Protocol Design",
+          "level": "Expert",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtzngz0l018qwu8c2mwpk1n1",
+          "skill": "Quantum Key Distribution (QKD) Networks",
+          "level": "Expert",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtzngzbi0193wu8cypzklz2q",
+          "skill": "Medical Device Firmware Architecture (FDA Compliant)",
+          "level": "Expert",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtznh2jx01anwu8c4x7nnacq",
+          "skill": "Satellite Constellation Network Routing Design",
+          "level": "Expert",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtzngz5j018xwu8ccn685r0l",
+          "skill": "Ultra-Low Latency Kernel Bypass Networking (RDMA/DPDK)",
+          "level": "Expert",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtz8kt2b0084wubkm8f058d0",
+          "skill": "Wireless Network Security",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtzngijm00xjwu8c9p9f8ijt",
+          "skill": "Generative Adversarial Networks (GANs)",
+          "level": "Pro",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtzng2a900m2wu8cjp32quzi",
+          "skill": "Linux Networking & Routing",
+          "level": "Advanced",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtzngunm015pwu8c2lusr8d5",
+          "skill": "National Infrastructure Cybersecurity Strategy",
+          "level": "Expert",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtznguqe015twu8clp5voq7k",
+          "skill": "Global Telecom 5G Core Network Architecture",
+          "level": "Expert",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        },
+        {
+          "id": "cmtzngwie016vwu8crxnov9v4",
+          "skill": "Low-Latency Gaming Engine Networking Architecture",
+          "level": "Expert",
+          "provider": "Cisco Networking Academy",
+          "title": "Cisco CCNA: Introduction to Networks"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/skills/introduction-to-github",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtznf6i60015wu8cmmo1u3kc",
+          "skill": "GitHub Platform Basics",
+          "level": "Beginner",
+          "provider": "GitHub",
+          "title": "Introduction to GitHub"
+        },
+        {
+          "id": "cmtz8kt2b007qwubkzkxqbuhs",
+          "skill": "GitHub Workflow & Collaboration",
+          "level": "Beginner",
+          "provider": "GitHub",
+          "title": "Introduction to GitHub"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.npmjs.com/getting-started",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtz8kt2c0094wubkcpt0mmgw",
+          "skill": "Package Managers (NPM / Yarn / PNPM)",
+          "level": "Beginner",
+          "provider": "Learning Provider: NPM Docs",
+          "title": "Getting Started with npm — npm Official Documentation"
+        },
+        {
+          "id": "cmtznfivs0071wu8cwvz6f902",
+          "skill": "NPM & Package Management",
+          "level": "Beginner",
+          "provider": "Learning Provider: NPM Docs",
+          "title": "Getting Started with npm — npm Official Documentation"
+        }
+      ]
+    },
+    {
+      "url": "https://academy.postman.com/student-expert",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtz8kt2c0090wubkfeg8grwq",
+          "skill": "Postman API Testing Basics",
+          "level": "Beginner",
+          "provider": "Postman",
+          "title": "Postman API Student Expert & Testing Foundations"
+        },
+        {
+          "id": "cmtznfivt0073wu8ct4lf27ic",
+          "skill": "Postman API Client Basics",
+          "level": "Beginner",
+          "provider": "Postman",
+          "title": "Postman API Student Expert & Testing Foundations"
+        }
+      ]
+    },
+    {
+      "url": "https://academy.uipath.com/learning-plans/automation-developer-associate-training",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtz8kt2b008gwubkn5gva70b",
+          "skill": "Robotic Process Automation Intro",
+          "level": "Beginner",
+          "provider": "UiPath",
+          "title": "UiPath Automation Developer Associate Training"
+        },
+        {
+          "id": "cmtzng61d00p7wu8cpsedrikd",
+          "skill": "UiPath Studio RPA Development",
+          "level": "Advanced",
+          "provider": "UiPath",
+          "title": "UiPath Automation Developer Associate Training"
+        }
+      ]
+    },
+    {
+      "url": "https://explore.skillbuilder.aws/learn/course/external/course/view/elearning/134/aws-cloud-practitioner-essentials",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtznf79d001lwu8chl1l8k42",
+          "skill": "AWS Fundamentals",
+          "level": "Beginner",
+          "provider": "Amazon Web Services (AWS)",
+          "title": "AWS Cloud Practitioner Essentials"
+        },
+        {
+          "id": "cmtznf6m1001bwu8cqwl39337",
+          "skill": "Cloud Computing Fundamentals",
+          "level": "Beginner",
+          "provider": "Amazon Web Services (AWS)",
+          "title": "AWS Cloud Practitioner Essentials"
+        }
+      ]
+    },
+    {
+      "url": "https://doc.rust-lang.org/book/",
+      "count": 3,
+      "sampleCourses": [
+        {
+          "id": "cmtznfjci007lwu8cmzmbbfhy",
+          "skill": "Rust Fundamentals",
+          "level": "Beginner",
+          "provider": "The Rust Foundation",
+          "title": "The Rust Programming Language (Official Book)"
+        },
+        {
+          "id": "cmtz8cgk0000zwutoylyp8t7b",
+          "skill": "Rust Fundamentals",
+          "level": "Beginner",
+          "provider": "The Rust Foundation",
+          "title": "The Rust Programming Language (Official Book)"
+        },
+        {
+          "id": "cmtz8kt2a0060wubkqgj1rfhj",
+          "skill": "Rust Fundamentals",
+          "level": "Beginner",
+          "provider": "The Rust Foundation",
+          "title": "The Rust Programming Language (Official Book)"
+        }
+      ]
+    },
+    {
+      "url": "https://cs50.harvard.edu/x/",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtznfgd0005fwu8c3yqerkva",
+          "skill": "Problem Solving with Logic",
+          "level": "Beginner",
+          "provider": "Harvard University / edX",
+          "title": "CS50x: Introduction to Computer Science — Harvard / edX"
+        },
+        {
+          "id": "cmtz8kt2b008qwubkw2aw85qn",
+          "skill": "Problem-Solving for Engineers",
+          "level": "Beginner",
+          "provider": "Harvard University / edX",
+          "title": "CS50x: Introduction to Computer Science — Harvard / edX"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtz8kt2b007fwubklarhwqzr",
+          "skill": "Azure Fundamentals Concepts",
+          "level": "Beginner",
+          "provider": "Microsoft",
+          "title": "Microsoft Azure Fundamentals (AZ-900)"
+        },
+        {
+          "id": "cmtznfdar003hwu8czvmk0u6i",
+          "skill": "Microsoft Azure Fundamentals",
+          "level": "Beginner",
+          "provider": "Microsoft",
+          "title": "Microsoft Azure Fundamentals Path"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/training/paths/intro-to-vc-git/",
+      "count": 3,
+      "sampleCourses": [
+        {
+          "id": "cmtznf6wv001hwu8cnnxaddyy",
+          "skill": "Git Version Control",
+          "level": "Beginner",
+          "provider": "Microsoft",
+          "title": "Introduction to Git — Version Control with Git"
+        },
+        {
+          "id": "cmtznf8se0029wu8c6mtfnq0j",
+          "skill": "Git Version Control",
+          "level": "Beginner",
+          "provider": "Microsoft",
+          "title": "Microsoft Learn: Introduction to Version Control with Git"
+        },
+        {
+          "id": "cmtz8kt2b007pwubk5npqd7m6",
+          "skill": "Git Version Control Basics",
+          "level": "Beginner",
+          "provider": "Microsoft",
+          "title": "Introduction to Git — Version Control with Git"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/training/modules/dotnet-microservices/",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtz8kt2b007iwubk5rpny488",
+          "skill": "Microservices Architecture Basics",
+          "level": "Beginner",
+          "provider": "Microsoft",
+          "title": "Introduction to .NET Microservices — Microsoft Learn"
+        },
+        {
+          "id": "cmtznfpvd00cjwu8cl3uho3t4",
+          "skill": "Microservices Introduction",
+          "level": "Beginner",
+          "provider": "Microsoft",
+          "title": "Introduction to .NET Microservices — Microsoft Learn"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-nodejs/",
+      "count": 4,
+      "sampleCourses": [
+        {
+          "id": "cmtznfj5f0077wu8c66gy2022",
+          "skill": "Node.js Introduction",
+          "level": "Beginner",
+          "provider": "Microsoft",
+          "title": "Microsoft Learn: Build Node.js Applications with Express"
+        },
+        {
+          "id": "cmtznftbw00enwu8cr20nzp0z",
+          "skill": "Node.js & Express API Development",
+          "level": "Advanced",
+          "provider": "Microsoft",
+          "title": "Microsoft Learn: Build Node.js Applications"
+        },
+        {
+          "id": "cmtz8kt2a006hwubkagg7kmh6",
+          "skill": "Node.js Core Principles",
+          "level": "Beginner",
+          "provider": "Microsoft",
+          "title": "Microsoft Learn: Build Node.js Applications with Express"
+        },
+        {
+          "id": "cmtzngaau00siwu8cfd7h6xq7",
+          "skill": "Full Stack Backend Architecture",
+          "level": "Pro",
+          "provider": "Microsoft",
+          "title": "Microsoft Learn: Build Node.js Applications with Express"
+        }
+      ]
+    },
+    {
+      "url": "https://skillsforall.com/course/network-defense",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtznfnb100arwu8c3i3y2ctb",
+          "skill": "Firewalls & NAT Fundamentals",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Network Defense — Cisco Networking Academy / Skills for All"
+        },
+        {
+          "id": "cmtz8kt2b0082wubkod0ymp4k",
+          "skill": "Firewall & Network Defense",
+          "level": "Beginner",
+          "provider": "Cisco Networking Academy",
+          "title": "Network Defense — Cisco Networking Academy"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.mongodb.com/pages/mongodb-associate-developer-exam-study-guide",
+      "count": 3,
+      "sampleCourses": [
+        {
+          "id": "cmtznfpgq00bzwu8caudm2y3e",
+          "skill": "MongoDB Fundamentals",
+          "level": "Beginner",
+          "provider": "MongoDB",
+          "title": "MongoDB Associate Developer & Administrator Learning Path"
+        },
+        {
+          "id": "cmtznft7g00ekwu8cjcg2pmvy",
+          "skill": "MongoDB Database Development",
+          "level": "Advanced",
+          "provider": "MongoDB",
+          "title": "MongoDB Developer Learning Path"
+        },
+        {
+          "id": "cmtzngc4v00u1wu8cspitkp97",
+          "skill": "MongoDB Enterprise Cluster Administration",
+          "level": "Pro",
+          "provider": "MongoDB",
+          "title": "MongoDB Associate Developer & Administrator Learning Path"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.snowflake.com/en/certifications/snowpro-core/",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtznga1e00s5wu8c2vajs6px",
+          "skill": "Snowflake Core Data Engineering",
+          "level": "Pro",
+          "provider": "Snowflake",
+          "title": "Snowflake SnowPro Core Certification Track"
+        },
+        {
+          "id": "cmtzng3qu00mzwu8ccogaw4bx",
+          "skill": "Snowflake Data Engineering",
+          "level": "Advanced",
+          "provider": "Snowflake",
+          "title": "Snowflake SnowPro Core Certification Track"
+        }
+      ]
+    },
+    {
+      "url": "https://developer.hashicorp.com/terraform/tutorials",
+      "count": 3,
+      "sampleCourses": [
+        {
+          "id": "cmtznga8y00sdwu8cb8tdi06x",
+          "skill": "HashiCorp Terraform Automation (Vault & Consul)",
+          "level": "Pro",
+          "provider": "HashiCorp",
+          "title": "HashiCorp Certified: Terraform Associate Track"
+        },
+        {
+          "id": "cmtznfrlt00dfwu8cmke91q8r",
+          "skill": "Terraform Introduction",
+          "level": "Beginner",
+          "provider": "HashiCorp",
+          "title": "HashiCorp Certified: Terraform Associate Track"
+        },
+        {
+          "id": "cmtzng0bd00k9wu8c36z5aa2q",
+          "skill": "Terraform Infrastructure as Code",
+          "level": "Advanced",
+          "provider": "HashiCorp",
+          "title": "HashiCorp Certified: Terraform Associate Track"
+        }
+      ]
+    },
+    {
+      "url": "https://www.databricks.com/learn/certification",
+      "count": 3,
+      "sampleCourses": [
+        {
+          "id": "cmtzngaj800stwu8cqsho5xoh",
+          "skill": "Databricks Spark Data Platform",
+          "level": "Pro",
+          "provider": "Databricks",
+          "title": "Databricks Certified Data Engineer Associate"
+        },
+        {
+          "id": "cmtzng8g700r3wu8ci835x0z5",
+          "skill": "Machine Learning Engineering & MLOps",
+          "level": "Pro",
+          "provider": "Databricks",
+          "title": "Databricks Certified Machine Learning Professional"
+        },
+        {
+          "id": "cmtzng48d00nlwu8cowu2ao7b",
+          "skill": "Databricks Spark Analytics",
+          "level": "Advanced",
+          "provider": "Databricks",
+          "title": "Databricks Certified Data Engineer Associate"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/cybersecurity-architect-expert/",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtzngo59011ywu8cb5yh7tf9",
+          "skill": "Enterprise Security Architecture",
+          "level": "Expert",
+          "provider": "Microsoft",
+          "title": "Microsoft Certified: Cybersecurity Architect Expert"
+        },
+        {
+          "id": "cmtzng8n600r9wu8cvsc7v1v5",
+          "skill": "Cloud Security Engineering",
+          "level": "Pro",
+          "provider": "Microsoft",
+          "title": "Microsoft Certified: Cybersecurity Architect Expert (SC-100)"
+        }
+      ]
+    },
+    {
+      "url": "https://redis.io/docs/latest/develop/get-started/",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtzngkvf00zlwu8c87mpqe5y",
+          "skill": "Distributed Cache Architecture (Memcached/Redis)",
+          "level": "Pro",
+          "provider": "Redis Inc",
+          "title": "Redis University: RU101 Introduction to Redis"
+        },
+        {
+          "id": "cmtznfwj000gtwu8c4ql28n3y",
+          "skill": "Redis Caching Architecture",
+          "level": "Advanced",
+          "provider": "Redis Inc",
+          "title": "Redis University: RU101 Introduction to Redis"
+        }
+      ]
+    },
+    {
+      "url": "https://www.netacad.com/courses/programming/pcap-programming-essentials-python",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtznf6ae000zwu8c3dares8x",
+          "skill": "Python",
+          "level": "Beginner",
+          "provider": "Cisco",
+          "title": "Cisco Python Essentials 1"
+        },
+        {
+          "id": "cmtznft5p00ebwu8cfm1hkdva",
+          "skill": "Advanced Python & OOP",
+          "level": "Advanced",
+          "provider": "Cisco",
+          "title": "Cisco PCAP: Programming Essentials in Python Part 2"
+        }
+      ]
+    },
+    {
+      "url": "https://explore.skillbuilder.aws/learn/course/external/course/view/elearning/12471/aws-certified-machine-learning-specialty-learning-plan",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtzng7tz00qiwu8cgyt8b4cd",
+          "skill": "Machine Learning Engineering & MLOps",
+          "level": "Pro",
+          "provider": "Amazon Web Services (AWS)",
+          "title": "AWS Certified Machine Learning - Specialty Track"
+        },
+        {
+          "id": "cmtzng83m00qxwu8ck4vl1fkq",
+          "skill": "AI Engineering & Fine-Tuning",
+          "level": "Pro",
+          "provider": "Amazon Web Services (AWS)",
+          "title": "AWS Certified Machine Learning - Specialty Learning Plan"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/devops-engineer/",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtzng8lf00r7wu8cr6hj7h6s",
+          "skill": "DevOps Engineering & Automation",
+          "level": "Pro",
+          "provider": "Microsoft",
+          "title": "Microsoft Certified: DevOps Engineer Expert (AZ-400)"
+        },
+        {
+          "id": "cmtzngaid00srwu8ch6zhea7o",
+          "skill": "Azure Data Engineer Associate (DP-203)",
+          "level": "Pro",
+          "provider": "Microsoft",
+          "title": "Microsoft Certified: Azure DevOps Engineer Expert (AZ-400)"
+        }
+      ]
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/training/paths/csharp-first-steps/",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtz8cj5t0015wuto7jgpcmwg",
+          "skill": "C# Essentials",
+          "level": "Beginner",
+          "provider": "Microsoft",
+          "title": "Write Your First Code Using C# — Microsoft Learn"
+        },
+        {
+          "id": "cmtz8kt2a0061wubk7kybxm4t",
+          "skill": "C# Essentials",
+          "level": "Beginner",
+          "provider": "Microsoft",
+          "title": "Write Your First Code Using C# — Microsoft Learn"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.docker.com/get-started/",
+      "count": 3,
+      "sampleCourses": [
+        {
+          "id": "cmtz8kt2b007jwubkxlhilupp",
+          "skill": "Virtualization & Containers Intro",
+          "level": "Beginner",
+          "provider": "Docker",
+          "title": "Docker Essentials: A Developer Introduction"
+        },
+        {
+          "id": "cmtz8kt2b007rwubkul3yaf8s",
+          "skill": "Docker Containerization Essentials",
+          "level": "Beginner",
+          "provider": "Docker",
+          "title": "Docker Essentials: A Developer Introduction"
+        },
+        {
+          "id": "cmtzng0bj00kbwu8cigryooty",
+          "skill": "Docker Compose Orchestration",
+          "level": "Advanced",
+          "provider": "Docker",
+          "title": "Docker Essentials: A Developer Introduction"
+        }
+      ]
+    },
+    {
+      "url": "https://www.coursera.org/learn/build-a-computer",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtznfn1a00abwu8c2emr4qh2",
+          "skill": "Logic Gates & Digital Circuits",
+          "level": "Beginner",
+          "provider": "Coursera",
+          "title": "Build a Modern Computer from First Principles: From Nand to Tetris"
+        },
+        {
+          "id": "cmtznflgr009dwu8cct4keza1",
+          "skill": "Computer Architecture Basics",
+          "level": "Beginner",
+          "provider": "Coursera",
+          "title": "Build a Modern Computer from First Principles: Nand to Tetris"
+        }
+      ]
+    },
+    {
+      "url": "https://learning.sap.com/learning-journeys/developing-with-sap-extension-suite",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtzng5zh00p3wu8cf1b194m2",
+          "skill": "SAP ABAP Programming",
+          "level": "Advanced",
+          "provider": "SAP",
+          "title": "SAP Learning: Enterprise Application Developer Track"
+        },
+        {
+          "id": "cmtzngupi015rwu8cotz1glys",
+          "skill": "Enterprise SAP Architecture",
+          "level": "Expert",
+          "provider": "SAP",
+          "title": "SAP Learning: Enterprise Application Developer Track"
+        }
+      ]
+    },
+    {
+      "url": "https://www.redhat.com/en/services/certification/rhce",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtzngaj800svwu8cqb62c781",
+          "skill": "Red Hat Enterprise Architect (RHCE)",
+          "level": "Pro",
+          "provider": "Red Hat",
+          "title": "Red Hat Certified Engineer (RHCE) Path"
+        },
+        {
+          "id": "cmtzngkot00z5wu8cc68qg5yb",
+          "skill": "Linux Kernel Module Development",
+          "level": "Pro",
+          "provider": "Red Hat",
+          "title": "Red Hat Certified Engineer (RHCE) Path"
+        }
+      ]
+    },
+    {
+      "url": "https://www.cloudskillsboost.google/paths/17",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtznga8t00sbwu8cbpa4ur13",
+          "skill": "Google Cloud Professional Data Engineer",
+          "level": "Pro",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Professional DevOps Engineer Path"
+        },
+        {
+          "id": "cmtzng61d00p6wu8c33nzwhge",
+          "skill": "Prompt Flow & Evaluation",
+          "level": "Advanced",
+          "provider": "Google Cloud",
+          "title": "Google Cloud Machine Learning Engineer Learning Path"
+        }
+      ]
+    },
+    {
+      "url": "https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/professional/ccnp-enterprise.html",
+      "count": 2,
+      "sampleCourses": [
+        {
+          "id": "cmtzng7tz00qhwu8ciydcluqh",
+          "skill": "Enterprise Network Engineering (CCNP)",
+          "level": "Pro",
+          "provider": "Cisco",
+          "title": "Cisco CCNP Enterprise: Core Networking Architecture"
+        },
+        {
+          "id": "cmtzngo4y011twu8cbnr9hzag",
+          "skill": "Enterprise Network Architecture (CCIE Level)",
+          "level": "Expert",
+          "provider": "Cisco",
+          "title": "Cisco CCNP Enterprise: Core Networking Architecture"
+        }
+      ]
+    }
+  ],
+  "mismatches": [],
+  "genericIndexPages": [
+    {
+      "id": "cmtzngo59011zwu8c07xj2xy5",
+      "skill": "Enterprise AI & LLM Platform Architecture",
+      "level": "Expert",
+      "provider": "NVIDIA",
+      "title": "NVIDIA DLI: Enterprise AI Infrastructure & GPU Cluster Design",
+      "url": "https://www.nvidia.com/en-us/training/"
+    }
+  ]
+}

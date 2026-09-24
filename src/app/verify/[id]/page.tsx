@@ -1,5 +1,4 @@
 import { db } from "@/lib/db";
-import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle2, XCircle, Award, Calendar, BookOpen, User, Building2, FileCheck } from "lucide-react";
 
@@ -52,15 +51,7 @@ export default async function VerifyCertificatePage({ params }: PageProps) {
     );
   }
 
-  const studentSkill = await db.studentSkill.findUnique({
-    where: {
-      studentId_skillId: {
-        studentId: certificate.studentId,
-        skillId: certificate.skillId,
-      },
-    },
-    select: { completedAt: true },
-  });
+
 
   const submissionDate = certificate.submittedAt
     ? new Date(certificate.submittedAt).toLocaleDateString("en-IN", {

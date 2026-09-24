@@ -1,0 +1,59 @@
+{
+  "tableA": [
+    {
+      "Status": "PASS",
+      "Count": 224
+    },
+    {
+      "Status": "UNAVAILABLE",
+      "Count": 357
+    },
+    {
+      "Status": "CATALOG_INVALID",
+      "Count": 11
+    },
+    {
+      "Status": "WRONG_DESTINATION",
+      "Count": 0
+    },
+    {
+      "Status": "BROKEN",
+      "Count": 0
+    },
+    {
+      "Status": "DEPRECATED",
+      "Count": 0
+    },
+    {
+      "Status": "UNKNOWN",
+      "Count": 0
+    },
+    {
+      "Status": "TOTAL",
+      "Count": 592
+    }
+  ],
+  "tableB": [
+    {
+      "Resource Type": "Official Course",
+      "Count": 1
+    },
+    {
+      "Resource Type": "Official Learning Path",
+      "Count": 0
+    },
+    {
+      "Resource Type": "Official Docs/Tutorial",
+      "Count": 3
+    },
+    {
+      "Resource Type": "Legitimate Track Variant",
+      "Count": 220
+    },
+    {
+      "Resource Type": "TOTAL PASS",
+      "Count": 224
+    }
+  ],
+  "isReconciled": true
+}

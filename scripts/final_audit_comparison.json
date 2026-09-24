@@ -1,0 +1,20 @@
+{
+  "before": {
+    "totalCourses": 594,
+    "pass": 142,
+    "duplicateUrls": 450,
+    "wrongDestinations": 0,
+    "broken": 0,
+    "unavailable": 2,
+    "verifyRoute": 404
+  },
+  "after": {
+    "totalCourses": 592,
+    "pass": 133,
+    "duplicateUrls": 332,
+    "wrongDestinations": 9,
+    "broken": 0,
+    "unavailable": 118,
+    "verifyRoute": 200
+  }
+}

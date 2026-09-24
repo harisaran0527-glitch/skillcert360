@@ -1,0 +1,58 @@
+[
+  {
+    "courseId": "cmtzngwnt0171wu8coy13rfnr",
+    "skillName": "Fault-Tolerant State Machine Replication",
+    "level": "Expert",
+    "courseTitle": "IBM Enterprise System Architecture & Applied Computing",
+    "provider": "IBM SkillsBuild",
+    "reason": "Synthetic/fabricated course title pattern"
+  },
+  {
+    "courseId": "cmtzngzc00198wu8cgpnt98zk",
+    "skillName": "Global Climate Modeling Data Platform",
+    "level": "Expert",
+    "courseTitle": "Google Cloud Computing Foundations",
+    "provider": "Google Cloud",
+    "reason": "Synthetic/fabricated course title pattern"
+  },
+  {
+    "courseId": "cmtzngx8q017lwu8cmawxmqpz",
+    "skillName": "Global Freight Logistics Platform Architecture",
+    "level": "Expert",
+    "courseTitle": "IBM Enterprise System Architecture & Applied Computing",
+    "provider": "IBM SkillsBuild",
+    "reason": "Synthetic/fabricated course title pattern"
+  },
+  {
+    "courseId": "cmtzngz58018vwu8c7t0yt6e4",
+    "skillName": "Hardware Security Module (HSM) Infrastructure",
+    "level": "Expert",
+    "courseTitle": "IBM Enterprise System Architecture & Applied Computing",
+    "provider": "IBM SkillsBuild",
+    "reason": "Synthetic/fabricated course title pattern"
+  },
+  {
+    "courseId": "cmtznh2o001axwu8cl8vozlaj",
+    "skillName": "High-Energy Physics Particle Tracker Analytics",
+    "level": "Expert",
+    "courseTitle": "Google Cloud Computing Foundations",
+    "provider": "Google Cloud",
+    "reason": "Synthetic/fabricated course title pattern"
+  },
+  {
+    "courseId": "cmtznh2o001avwu8crvdruq2q",
+    "skillName": "Neuromorphic Computing Hardware Acceleration",
+    "level": "Expert",
+    "courseTitle": "IBM Enterprise System Architecture & Applied Computing",
+    "provider": "IBM SkillsBuild",
+    "reason": "Synthetic/fabricated course title pattern"
+  },
+  {
+    "courseId": "cmtznguh9015dwu8cb8tmvz4y",
+    "skillName": "Spaceborne & Aerospace Edge Computing Architecture",
+    "level": "Expert",
+    "courseTitle": "IBM Enterprise System Architecture & Computing Foundations",
+    "provider": "IBM SkillsBuild",
+    "reason": "Synthetic/fabricated course title pattern"
+  }
+]
